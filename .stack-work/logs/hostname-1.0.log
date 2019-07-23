@@ -1,0 +1,6 @@
+Configuring hostname-1.0...
+Preprocessing library for hostname-1.0..
+Building library for hostname-1.0..
+[1 of 1] Compiling Network.HostName ( Network/HostName.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Network/HostName.o )
+Installing library in /Users/cat/.stack/snapshots/x86_64-osx/lts-13.28/8.6.5/lib/x86_64-osx-ghc-8.6.5/hostname-1.0-96RwzZJKf0mHYnt0kjXkqR
+Registering library for hostname-1.0..

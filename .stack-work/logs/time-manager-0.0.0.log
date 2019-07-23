@@ -1,0 +1,6 @@
+Configuring time-manager-0.0.0...
+Preprocessing library for time-manager-0.0.0..
+Building library for time-manager-0.0.0..
+[1 of 1] Compiling System.TimeManager ( System/TimeManager.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/System/TimeManager.o )
+Installing library in /Users/cat/.stack/snapshots/x86_64-osx/lts-13.28/8.6.5/lib/x86_64-osx-ghc-8.6.5/time-manager-0.0.0-9S7Nvs4axTpH7RFBjjJWQ
+Registering library for time-manager-0.0.0..

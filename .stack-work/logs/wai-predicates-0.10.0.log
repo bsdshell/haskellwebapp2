@@ -1,0 +1,32 @@
+Configuring wai-predicates-0.10.0...
+Preprocessing library for wai-predicates-0.10.0..
+Building library for wai-predicates-0.10.0..
+[ 1 of 11] Compiling Data.Predicate.Product ( src/Data/Predicate/Product.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Data/Predicate/Product.o )
+[ 2 of 11] Compiling Data.Predicate.Result ( src/Data/Predicate/Result.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Data/Predicate/Result.o )
+[ 3 of 11] Compiling Data.Predicate   ( src/Data/Predicate.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Data/Predicate.o )
+[ 4 of 11] Compiling Network.Wai.Predicate.Error ( src/Network/Wai/Predicate/Error.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Network/Wai/Predicate/Error.o )
+[ 5 of 11] Compiling Network.Wai.Predicate.MediaType ( src/Network/Wai/Predicate/MediaType.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Network/Wai/Predicate/MediaType.o )
+[ 6 of 11] Compiling Network.Wai.Predicate.Request ( src/Network/Wai/Predicate/Request.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Network/Wai/Predicate/Request.o )
+[ 7 of 11] Compiling Network.Wai.Predicate.Parser.MediaType ( src/Network/Wai/Predicate/Parser/MediaType.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Network/Wai/Predicate/Parser/MediaType.o )
+[ 8 of 11] Compiling Network.Wai.Predicate.Utility ( src/Network/Wai/Predicate/Utility.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Network/Wai/Predicate/Utility.o )
+[ 9 of 11] Compiling Network.Wai.Predicate.Content ( src/Network/Wai/Predicate/Content.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Network/Wai/Predicate/Content.o )
+
+[;1msrc/Network/Wai/Predicate/Content.hs:12:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m12 |[0m[0m [;1m[35mimport Data.Monoid hiding (All)[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[10 of 11] Compiling Network.Wai.Predicate.Accept ( src/Network/Wai/Predicate/Accept.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Network/Wai/Predicate/Accept.o )
+
+[;1msrc/Network/Wai/Predicate/Accept.hs:12:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m12 |[0m[0m [;1m[35mimport Data.Monoid hiding (All)[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[11 of 11] Compiling Network.Wai.Predicate ( src/Network/Wai/Predicate.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Network/Wai/Predicate.o )
+Installing library in /Users/cat/.stack/snapshots/x86_64-osx/lts-13.28/8.6.5/lib/x86_64-osx-ghc-8.6.5/wai-predicates-0.10.0-CUuDVeAnsCN3iCuxJ1yQa2
+Registering library for wai-predicates-0.10.0..

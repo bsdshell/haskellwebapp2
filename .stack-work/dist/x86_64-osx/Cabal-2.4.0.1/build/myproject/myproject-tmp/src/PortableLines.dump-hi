@@ -1,0 +1,59 @@
+
+==================== FINAL INTERFACE ====================
+2019-07-23 22:07:41.383747 UTC
+
+interface main:PortableLines 8065
+  interface hash: 0e3017b429948964e28bc84203c0d7e4
+  ABI hash: 81145eda9780e31226fd26ca486abd3b
+  export-list hash: efcdc07915efdcebad9917398ca8912d
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: db4f49232479871e8fc0bb1b7efc38c4
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  PortableLines.plines
+module dependencies:
+package dependencies: base-4.12.0.0* ghc-prim-0.5.3
+                      integer-gmp-1.0.2.0
+orphans: base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity base-4.12.0.0:Data.Monoid
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:GHC.Generics
+                         base-4.12.0.0:GHC.IO.Exception
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+23d9b7397529f3bf4f32f89efd80cc54
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   PortableLines.$trModule3
+                   PortableLines.$trModule1) -}
+b7e7cdaff8993bef83ada9cd51867720
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS PortableLines.$trModule2) -}
+7fb7259a7371986e236fd21fec4f6d5d
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("PortableLines"#) -}
+7928052a276c8c0b1de0d44c72bcdc09
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS PortableLines.$trModule4) -}
+d29e2c5d49d3073638a2c706da7928d4
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+37edb655837f2c82b29c07e082c06d3e
+  plines :: GHC.Base.String -> [GHC.Base.String]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

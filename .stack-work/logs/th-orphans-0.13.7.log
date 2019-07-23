@@ -1,0 +1,6 @@
+Configuring th-orphans-0.13.7...
+Preprocessing library for th-orphans-0.13.7..
+Building library for th-orphans-0.13.7..
+[1 of 1] Compiling Language.Haskell.TH.Instances ( src/Language/Haskell/TH/Instances.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Language/Haskell/TH/Instances.o )
+Installing library in /Users/cat/.stack/snapshots/x86_64-osx/lts-13.28/8.6.5/lib/x86_64-osx-ghc-8.6.5/th-orphans-0.13.7-90WEZNS3Gr634hcQeXvplK
+Registering library for th-orphans-0.13.7..

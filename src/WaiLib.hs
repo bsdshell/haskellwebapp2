@@ -48,6 +48,8 @@ import Data.ByteString.Builder (byteString, Builder)
 
 
 
+import Data.Text (Text)  -- strict Text
+import qualified Data.Text as TS 
 import qualified Data.Text.Lazy                 as DL 
 import qualified Data.Text.IO                   as TIO 
 
@@ -71,8 +73,7 @@ import AronHtml
 import qualified AronModule                 as A
 
 import qualified Turtle as TUR -- (empty, shellStrictWithErr, ExitCode)
-import Data.Text (Text)
-import qualified Data.Text as DT 
+-- import Data.Text.Lazy -- lazy Text
 
 import Network.HTTP.Types (status200)
 import Network.Wai
@@ -105,7 +106,7 @@ import qualified Data.Aeson as DA
 data Block = Block{bblock::[DL.Text]} deriving (Generic, Show)
 data MBlock = MBlock{mblock::[Integer]} deriving (Generic, Show)
 data GeneMatrix = GeneMatrix{
-                             cmd :: Text,
+                             cmd :: TS.Text,
                              ncol :: Integer,
                              nrow :: Integer 
                             } deriving (Generic, Show)
@@ -115,19 +116,35 @@ instance DA.ToJSON GeneMatrix where
     toEncoding = DA.genericToEncoding DA.defaultOptions
 
 data ReplyCode = ReplyCode{ 
-                            rcmd :: Text,
-                            rerror :: Text,
-                            stdout :: Text 
+                            rcmd :: TS.Text,
+                            rerror :: TS.Text,
+                            stdout :: TS.Text 
                           } deriving (Generic, Show)
+
+data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password::TS.Text, task::TS.Text, money::Integer} deriving (Show, Eq, Read)
+data Image = Image {iid::Int64, imagename::TS.Text, uid::Int64} deriving (Show, Eq, Read)
+
+instance FromRow User where
+  fromRow = User <$> field <*> field <*> field <*> field <*> field <*> field
+
+instance FromRow Image where
+  fromRow = Image <$> field <*> field <*> field
+
+instance ToRow User where
+  toRow (User _uid name email password task money) = toRow (name, email, password, task, money)
+
+instance ToRow Image where
+  toRow (Image _iid imagename uid) = toRow (imagename, uid)
+
 
 instance DA.FromJSON ReplyCode 
 instance DA.ToJSON ReplyCode where
     toEncoding = DA.genericToEncoding DA.defaultOptions
 
 data CompileCode = CompileCode{
-                                compiler :: Text,
-                                option :: Text,
-                                code :: Text 
+                                compiler :: TS.Text,
+                                option :: TS.Text,
+                                code :: TS.Text 
                               } deriving (Generic, Show)
 
 instance DA.FromJSON CompileCode 
@@ -136,7 +153,7 @@ instance DA.ToJSON CompileCode where
 
 
 -- Record MatInt, serialize, deserialize
-data MatInt = MatInt{name::Text, matrix::[[Integer]]} deriving (Generic, Show)
+data MatInt = MatInt{name::TS.Text, matrix::[[Integer]]} deriving (Generic, Show)
 instance DA.FromJSON MatInt 
 instance DA.ToJSON MatInt where
     toEncoding = DA.genericToEncoding DA.defaultOptions
@@ -161,8 +178,8 @@ instance DA.ToJSON MBlock where
 data Person =
   Person 
     { personId   :: Int64
-    , personName :: Text
-    , personAge  :: Text
+    , personName :: TS.Text
+    , personAge  :: TS.Text
     } deriving (Eq,Read,Show)
 
 
@@ -174,7 +191,7 @@ data Person =
 data UserInput =
   UserInput 
     { cmdId :: Int64
-    , xcmd :: Text
+    , xcmd :: TS.Text
     } deriving (Eq,Read,Show)
 
 instance FromRow Person where
@@ -191,9 +208,9 @@ instance ToRow Person where
 instance ToRow UserInput where
   toRow (UserInput _cmdId md) = toRow (Only md)
 
-updir = "/Users/cat/myfile/bitbucket/haskell_webapp/uploaddir/"
+updir = "/Users/cat/myfile/bitbucket/haskellwebapp2/uploaddir/"
 
-runSh :: Text -> IO (ExitCode, Text, Text)
+runSh :: TS.Text -> IO (ExitCode, TS.Text, TS.Text)
 runSh x' = TUR.shellStrictWithErr x' TUR.empty
 
 styleChar::String->String->Char->Char->String->String
@@ -448,7 +465,7 @@ foldListListTxt allBlock = L.foldr(\x y -> x ++ "\n" ++ y) []
 -- /Library/WebServer/Documents/zsurface/pdf
 pdfname   = "Very Important File"
 img     = "img.png"
-wapp    = "/Users/cat/myfile/bitbucket/haskell_webapp"
+wapp    = "/Users/cat/myfile/bitbucket/haskellwebapp2"
 pdfPath = "/Library/WebServer/Documents/zsurface/pdf"
 docRoot = "/Library/WebServer/Documents/zsurface"
 doc     = ""
@@ -479,7 +496,10 @@ app conn1 conn2 ref request respond = case rawPathInfo request of
     "/raw/"            -> respond plainIndex
     "/pdf/"            -> respond pdfFile
     "/up/"             -> respond uploadPage
-    "/insertinfo"     -> respond insertinfo 
+    "/insertinfo"      -> respond insertinfo 
+    "/listPage"        -> listPage conn1 request respond
+    "/insertUser"      -> respond insertUser 
+    "/insertUserDB"    -> insertUserDB conn1 request respond
     "/insert"          -> insertDatabase conn1 request respond
     "/upload"          -> upload updir request respond
     "/getjson"         -> upload updir request respond
@@ -516,6 +536,13 @@ insertinfo = responseFile
     status200
     [("Content-Type", "text/html")]
     "insert.html"
+    Nothing
+
+insertUser::Response
+insertUser = responseFile
+    status200
+    [("Content-Type", "text/html")]
+    "insertUser.html"
     Nothing
 
 searchUI::Response
@@ -597,7 +624,7 @@ snippetMap pplist ref = do
         return () 
 
 
--- | http://localhost:8080/snippet?id=keyinput
+-- | http://localhost:8000/snippet?id=keyinput
 -- | Conver ByteString to String or vice versa 
 -- | span block code: <span>text</span>
 -- | 
@@ -844,10 +871,10 @@ anyRoute conn ref req =
             toBS = strToStrictByteString
             b2s = strictTextToStr . strictByteStringToStrictText
 
--- | http://localhost:8080/up/
+-- | http://localhost:8000/up/
 -- | NOTE: file => /upload dir
 -- | Plz see uploadPage.html 
--- | /Users/cat/myfile/bitbucket/haskell_webapp/uploadPage.html
+-- | /Users/cat/myfile/bitbucket/haskellwebapp2/uploadPage.html
 -- | responseFile :: H.Status -> H.ResponseHeaders -> FilePath -> Maybe FilePart -> Response
 uploadPage :: Response
 uploadPage = responseFile
@@ -913,6 +940,55 @@ responseNothingBS bs = responseStream
               [(hContentType,  "application/json")] $ \write flush -> do                   
               write $ byteString bs  
 
+replyTaskHtml::BS.ByteString -> BS.ByteString 
+replyTaskHtml s = [r|
+            <HTML>   
+            <HEAD>   
+            <meta charset="utf-8">
+            <TITLE>Search Code Snippet</TITLE> 
+            <LINK rel="stylesheet" type="text/css" href="/style.css"> 
+            </HEAD>
+            <BODY> 
+            <div style="text-align:center;">
+            <br>
+            <p> |] <> s <> [r|</p><br><a href="http://localhost:8000/listPage">Back</a></div></BODY></HTML> |]
+
+listPageHtml::BS.ByteString -> BS.ByteString 
+listPageHtml s = [r|
+            <HTML>   
+            <HEAD>   
+            <meta charset="utf-8">
+            <TITLE>Search Code Snippet</TITLE> 
+            <LINK rel="stylesheet" type="text/css" href="/style.css"> 
+            </HEAD>
+            <BODY> 
+            <div style="text-align:center;">
+            <br>
+            <p>|] <> s <> [r|</div></BODY></HTML>|]
+
+--listPage::BS.ByteString -> Response                                               
+--listPage bs = responseStream                                                   
+--              status200                                                            
+--              [(hContentType,  "text/html")] $ \write flush -> do                   
+--              write $ byteString bs  
+
+listPage::Connection -> Application
+listPage conn req response = do
+              userList <- query_ conn "SELECT uid, name, email, password, task, money FROM user" :: IO [User]
+              let listTask = BS.concat $ map (\x -> [r|<div>|] <> (t2b $ task x) <> [r|</div><br>|]) userList -- => TS.Text
+              -- response $ responseTaskBS (task (head userList))
+              response $ responseTaskBS $ replyTaskHtml listTask 
+        where
+            t2b = strictTextToStrictByteString
+
+responseTaskBS::BS.ByteString -> Response                                               
+responseTaskBS bs = responseStream                                                   
+               status200                                                            
+               [(hContentType,  "text/html")] $ \write flush -> do                   
+               write $ byteString bs  
+
+
+
 --writeSB::String -> Builder
 --writeSB = write $ byteString $ strToStrictByteString 
 
@@ -957,7 +1033,7 @@ responseCmd conn cmd = responseStream
                   execute_ conn "CREATE TABLE IF NOT EXISTS userinput (id INTEGER PRIMARY KEY AUTOINCREMENT, xcmd TEXT)"
                   execute conn "INSERT INTO userinput (xcmd) VALUES (?)" (UserInput 0 (toText ccmd))
                   cmdsql <- query_ conn "SELECT id, xcmd FROM userinput"::IO [UserInput]
-                  let cmdList = map toStr (map (xcmd) cmdsql::[Text])
+                  let cmdList = map toStr (map (xcmd) cmdsql::[Text]) -- [UserInput] => [Text] => [String]
                   pa cmdList 
                   let sortList = groupCountFilter cmdList 
                   write $ byteString $ toBS $ htmlBody $ (htmlForm (optionHtml sortList)) ∘ (htmlPre shellRet)
@@ -1318,19 +1394,19 @@ updateMap ref req response = do
                             let keys = M.keys hmap
                             modifyIORef ref (mapClear keys)
                             snippetMap pplist ref
-                          -- url = "http://localhost:8080/snippet?id=s%20va" + currCmd
+                          -- url = "http://localhost:8000/snippet?id=s%20va" + currCmd
                           pp "dog"
                       -- currCmd <- readCurrCmd
-                      -- let Just myuri = parseURI ("http://localhost:8080/snippet?id=s%20va" ++ currCmd)
-                      response =<< let Just uri = parseURI "http://localhost:8080/snippet?id=s%20va" in redirect' status302 [] uri 
---                      response =<< let redUrl = "http://localhost:8080/snippet?id="
+                      -- let Just myuri = parseURI ("http://localhost:8000/snippet?id=s%20va" ++ currCmd)
+                      response =<< let Just uri = parseURI "http://localhost:8000/snippet?id=s%20va" in redirect' status302 [] uri 
+--                      response =<< let redUrl = "http://localhost:8000/snippet?id="
 --                                   in do 
 --                                      -- currCmd <- readCurrCmd
 --                                      let currCmd = "s%20va" 
 --                                      let mayuri = parseURI (redUrl ++ currCmd) 
 --                                      case mayuri of 
 --                                           Just uri ->redirect' status302 [] uri
---                                           _        ->redirect' status302 [] $ URI{uriPath="http://localhost:8080/snippet?id=s%20va"}
+--                                           _        ->redirect' status302 [] $ URI{uriPath="http://localhost:8000/snippet?id=s%20va"}
 --                                      case may of 
 --                                           Just uri -> redirect' status302 [] uri 
 --                                           _        -> redirect' status302 [] Nothing 
@@ -1348,7 +1424,7 @@ updateMap ref req response = do
 --        Nothing -> undefined
 --        Just x -> undefined
 
--- http://localhost:8080/up/
+-- http://localhost:8000/up/
 -- | NOTE: file => /upload dir
 -- | Plz see uploadPage.html 
 replyEditor :: Response
@@ -1397,7 +1473,7 @@ replyJS = responseFile
 {-| 
     === Insert name and age to MySqlite-simple file-based database.
 
-    http://localhost:8080/insert/
+    http://localhost:8000/insert/
 
     File: insert.html
     <form action="/insert" method="POST" enctype="multipart/form-data">
@@ -1426,13 +1502,57 @@ insertDatabase conn req response = do
               execute conn "INSERT INTO people (name, age) VALUES (?,?)" (Person 0 (s2t name) (s2t age))
               people <- query_ conn "SELECT id, name, age from people" :: IO [Person]
               print people
-              response =<< let Just uri = parseURI "http://localhost:8080/insertinfo/" in redirect' status302 [] uri 
+              response =<< let Just uri = parseURI "http://localhost:8000/insertinfo/" in redirect' status302 [] uri 
               -- response $ responseNothing $ b2s $ BS.concat [name, age]
         _      -> response $ responseNothing "post nothing"
 
     where 
         b2s = strictTextToStr . strictByteStringToStrictText
         s2t = strictByteStringToStrictText
+
+insertUserDB::Connection -> Application
+insertUserDB conn req response = do
+    (params, files) <- parseRequestBody lbsBackEnd req
+    case requestMethod req of
+        "POST" -> do 
+              let name_ = case lookup "name" params of 
+                                Just name -> name 
+                                _         -> "name nothing"
+              let email_ = case lookup "email" params of 
+                                Just email -> email 
+                                _          -> "email nothing" 
+
+              let password_ = case lookup "password" params of 
+                                Just password -> password 
+                                _             -> "password nothing" 
+
+              let task_ = case lookup "task" params of 
+                                Just task -> task 
+                                _         -> "task nothing" 
+
+              let money_ = case lookup "money" params of 
+                                Just money -> money 
+                                _         -> "money nothing" 
+
+              execute_ conn "CREATE TABLE IF NOT EXISTS user (uid INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT, password TEXT, task TEXT, money INTEGER)"
+              execute conn "INSERT INTO user (name, email, password, task, money) VALUES (?,?,?,?,?)" (User 0 (s2t name_) (s2t email_) (s2t password_) (s2t task_) (b2i money_))
+              changeRow <- changes conn
+              print $ "changeRow=" ++ (show changeRow)
+              if changeRow == 1 then do
+                  userList <- query_ conn "SELECT uid, name, email, password, task, money FROM user" :: IO [User]
+                  -- let listTask = TS.concat $ map (\x -> [r|<div>|] <> (t2b $ task x) <> [r|</div><br>|]) userList -- => TS.Text
+                  -- response $ responseTaskBS (task (head userList))
+                  response $ responseTaskBS $ replyTaskHtml task_ 
+              else do
+                  response $ responseTaskBS "Insect task field" 
+                  -- response =<< let Just uri = parseURI "http://localhost:8000/insertUser/" in redirect' status302 [] uri 
+        _      -> response $ responseNothing "user nothing"
+
+    where 
+        b2i = stringToInt . strictTextToStr . s2t
+        b2s = strictTextToStr . strictByteStringToStrictText
+        s2t = strictByteStringToStrictText
+        t2b = strictTextToStrictByteString
 
 -- | -------------------------------------------------------------------------------- 
 -- | Wed Dec  5 15:06:00 2018 
@@ -1444,7 +1564,7 @@ insertDatabase conn req response = do
 --  <input type="submit" value="submit">
 -- </form> 
 -- | -------------------------------------------------------------------------------- 
---   http://localhost:8080/up/
+--   http://localhost:8000/up/
 -- | File is uploaded to => haskell_web/uploaddir 
 upload::String -> Application
 upload updir req response = do

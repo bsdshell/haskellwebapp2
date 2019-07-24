@@ -1,0 +1,16 @@
+html,body {
+  height:10%;
+  width:10%;
+  margin:0;
+}
+body {
+  display:flex;
+}
+form {
+margin:auto;/* nice thing of auto margin if display:flex; it center both horizontal and vertical :) */
+}
+
+.input-element{
+height: 100px !important;
+width: 400px;
+}

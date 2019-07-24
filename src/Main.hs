@@ -97,8 +97,8 @@ main = do
     A.cd wapp
     curr <- A.getPwd
     A.pp curr
-    putStrLn $ "http://localhost:8080/"
+    putStrLn $ "http://localhost:8000/"
     pp "http starting"
-    run 8080 (app conn1 conn2 ref)
+    run 8000 (app conn1 conn2 ref)
     close conn1
     close conn2

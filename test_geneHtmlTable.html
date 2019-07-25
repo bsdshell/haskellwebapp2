@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.submitButton{
+    color: red;
+    font-size:22pt;
+    font-family: monospace;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+
+<div id="myDiv">
+</div>
+
+<div style="background-color:green;">
+<input id="mname" name="cmd" value="genematrix"></input>
+<input id="mncol" name="ncol" value="2"></input>
+<input id="mnrow" name="nrow" value="4"></input>
+</div>
+
+<div style="background-color:#DDDDDD;">
+<input type="submit" name="Submit" value="submit" onclick="runGeneHtmlTable()" class="submitButton"> 
+</div>
+
+<script>
+
+function runGeneHtmlTable(){
+        var ncol = document.getElementById("mncol").value;
+        var nrow = document.getElementById("mnrow").value;
+        var id = "myDiv";
+        var results = document.getElementById(id);//myDiv is the div id
+        results.innerHTML = geneHtmlTable(ncol, nrow, id);
+}
+
+function geneHtmlTable(ncol, nrow){
+    const sty = `style= 
+                    "background-color:#DDDFFD;
+                    font-size:20px;
+                    boarder: 1px solid black;
+                    ";
+                `;
+    var ret = '';
+        ret += '<table ' + sty + '>';
+        for(var i = 0; i < ncol; i++){
+            ret += '<tr>';
+            for(var j = 0; j < nrow; j++){
+                ret += "<td contenteditable='true'>";
+                ret += '0';
+                ret += '</td>';
+            }
+            ret += '</tr>';
+        }
+        ret += '</table>';
+    return ret;
+}
+
+</script>
+
+</div>
+
+</body>
+</html>

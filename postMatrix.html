@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.submitButton{
+    color: red;
+    font-size:22pt;
+    font-family: monospace;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+
+<div id="myDiv">
+</div>
+
+<div style="background-color:green;">
+<input id="mname" name="cmd" value="genematrix"></input>
+<input id="mncol" name="ncol" value="2"></input>
+<input id="mnrow" name="nrow" value="4"></input>
+</div>
+
+<div style="background-color:#DDDDDD;">
+<input type="submit" name="Submit" value="submit" onclick="submitFunc()" class="submitButton"> 
+</div>
+
+<script>
+
+function submitFunc() {
+    // Sending and receiving data in JSON format using POST method
+    //
+    let xhr = new XMLHttpRequest();
+    let url = "http://localhost:8080/json";
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            let json = JSON.parse(xhr.responseText);
+            // console.log(json.matrix);
+            var results = document.getElementById("myDiv");//myDiv is the div id
+
+            results.innerHTML = geneTable(json['matrix']); 
+        }
+    };
+    var obj = new Object();
+    obj.cmd = document.getElementById('mname').value;
+    console.log(obj.cmd);
+    obj.ncol = parseInt(document.getElementById('mncol').value);
+    console.log(obj.ncol);
+    obj.nrow = parseInt(document.getElementById('mnrow').value);
+    console.log(obj.nrow);
+    let data = JSON.stringify(obj);
+    xhr.send(data);
+}
+
+// build a html table here
+function geneTable(arr2d){
+    const sty = `style= 
+                    "background-color:#DDDFFD;
+                    font-size:20px;
+                    ";
+                `;
+    var ret = '';
+        ret += '<table ' + sty + '>';
+        for(var i = 0; i < arr2d.length; i++){
+            console.log(arr2d[i].length);
+            ret += '<tr>';
+            for(var j = 0; j < arr2d[i].length; j++){
+                console.log(arr2d[i][j]);
+                ret += "<td contenteditable='true'>";
+                ret += arr2d[i][j];
+                ret += '</td>';
+            }
+            ret += '</tr>';
+        }
+        ret += '</table>';
+    return ret;
+}
+
+function geneHtmlTable(ncol, nrow){
+    const sty = `style= 
+                    "background-color:#DDDFFD;
+                    font-size:20px;
+                    ";
+                `;
+    var ret = '';
+        ret += '<table ' + sty + '>';
+        for(var i = 0; i < ncol; i++){
+            ret += '<tr>';
+            for(var j = 0; j < nrow; j++){
+                ret += "<td contenteditable='true'>";
+                ret += '0';
+                ret += '</td>';
+            }
+            ret += '</tr>';
+        }
+        ret += '</table>';
+    return ret;
+}
+
+
+
+</script>
+</div>
+
+</body>
+</html>

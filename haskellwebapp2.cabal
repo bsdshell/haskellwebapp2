@@ -54,4 +54,5 @@ executable haskellwebapp2
                        safe,
                        wai-util,
                        wai-session,
-                       http-conduit
+                       http-conduit,
+                       word8

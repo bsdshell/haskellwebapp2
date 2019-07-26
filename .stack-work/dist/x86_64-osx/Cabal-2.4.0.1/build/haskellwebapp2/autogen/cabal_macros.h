@@ -429,6 +429,17 @@
   (major1) == 0 && (major2) == 12 && (minor) <= 5)
 #endif /* MIN_VERSION_websockets */
 
+/* package word8-0.1.3 */
+#ifndef VERSION_word8
+#define VERSION_word8 "0.1.3"
+#endif /* VERSION_word8 */
+#ifndef MIN_VERSION_word8
+#define MIN_VERSION_word8(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  1 || \
+  (major1) == 0 && (major2) == 1 && (minor) <= 3)
+#endif /* MIN_VERSION_word8 */
+
 /* tool alex-3.1.3 */
 #ifndef TOOL_VERSION_alex
 #define TOOL_VERSION_alex "3.1.3"
@@ -562,7 +573,7 @@
 #endif /* MIN_TOOL_VERSION_runghc */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-AsJwSVblgP48Lqkfy0izA6-haskellwebapp2"
+#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-1mGiUQKCLOY564vSyLjbuf-haskellwebapp2"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

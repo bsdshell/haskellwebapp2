@@ -48,6 +48,7 @@ import Data.ByteString.Builder (byteString, Builder)
 
 
 
+import qualified Data.Word8 as DW
 import Data.Text (Text)  -- strict Text
 import qualified Data.Text as TS 
 import qualified Data.Text.Lazy                 as DL 
@@ -499,6 +500,8 @@ app conn1 conn2 ref request respond = case rawPathInfo request of
     "/insertinfo"      -> respond insertinfo 
     "/listPage"        -> listPage conn1 request respond
     "/insertUser"      -> respond insertUser 
+    "/login"           -> respond loginHtml 
+    "/loginCheck"      -> loginCheck conn1 request respond
     "/insertUserDB"    -> insertUserDB conn1 request respond
     "/insert"          -> insertDatabase conn1 request respond
     "/upload"          -> upload updir request respond
@@ -515,7 +518,6 @@ app conn1 conn2 ref request respond = case rawPathInfo request of
     "/editcode"        -> respond $ responseHtml "compileCode.html"
     "/aronlib.js"      -> respond $ responseJavascript "aronlib.js"
     _                  -> respond $ responseHelp
-    -- _                  -> respond $ notFoundStr $ LA.fromChunks [rawPathInfo request]
 
 plainIndex::Response
 plainIndex = responseFile
@@ -543,6 +545,13 @@ insertUser = responseFile
     status200
     [("Content-Type", "text/html")]
     "insertUser.html"
+    Nothing
+
+loginHtml::Response
+loginHtml = responseFile
+    status200
+    [("Content-Type", "text/html")]
+    "login.html"
     Nothing
 
 searchUI::Response
@@ -1510,12 +1519,39 @@ insertDatabase conn req response = do
         b2s = strictTextToStr . strictByteStringToStrictText
         s2t = strictByteStringToStrictText
 
+loginCheck::Connection -> Application
+loginCheck conn req response = do
+    (params, files) <- parseRequestBody lbsBackEnd req
+    case requestMethod req of
+        "POST" -> do 
+              let email_ = case lookup "email" params of 
+                                Just email -> s2t email 
+                                _          -> "email nothing" 
+
+              let password_ = case lookup "password" params of 
+                                -- Just password -> BS.takeWhile (not.DW.isSpace) $ BS.dropWhile (DW.isSpace) password 
+                                Just password -> s2t password 
+                                _             -> "password nothing" 
+              print email_
+              print password_ 
+              -- row <- queryNamed conn "SELECT * FROM user WHERE uid = :uid" [":uid" := uid] :: IO [User]
+              row <- queryNamed conn "SELECT * FROM user WHERE email = :email AND password = :password" [":password" := password_, ":email" := email_] :: IO [User]
+              print row
+              response $ responseNothing "row nothing"
+        _      -> response $ responseNothing "user nothing"
+
+    where 
+        b2i = stringToInt . strictTextToStr . s2t
+        b2s = strictTextToStr . strictByteStringToStrictText
+        s2t = strictByteStringToStrictText
+        t2b = strictTextToStrictByteString
+
 insertUserDB::Connection -> Application
 insertUserDB conn req response = do
     (params, files) <- parseRequestBody lbsBackEnd req
     case requestMethod req of
         "POST" -> do 
-              let name_ = case lookup "name" params of 
+              let name_ = case lookup "name" params of    -- ByteString
                                 Just name -> name 
                                 _         -> "name nothing"
               let email_ = case lookup "email" params of 
@@ -1534,19 +1570,26 @@ insertUserDB conn req response = do
                                 Just money -> money 
                                 _         -> "money nothing" 
 
+              -- validate user input
+              -- formatValidate::User -> Bool
               execute_ conn "CREATE TABLE IF NOT EXISTS user (uid INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT, password TEXT, task TEXT, money INTEGER)"
-              execute conn "INSERT INTO user (name, email, password, task, money) VALUES (?,?,?,?,?)" (User 0 (s2t name_) (s2t email_) (s2t password_) (s2t task_) (b2i money_))
-              changeRow <- changes conn
-              print $ "changeRow=" ++ (show changeRow)
-              if changeRow == 1 then do
-                  userList <- query_ conn "SELECT uid, name, email, password, task, money FROM user" :: IO [User]
-                  -- let listTask = TS.concat $ map (\x -> [r|<div>|] <> (t2b $ task x) <> [r|</div><br>|]) userList -- => TS.Text
-                  -- response $ responseTaskBS (task (head userList))
-                  response $ responseTaskBS $ replyTaskHtml task_ 
+              row <- queryNamed conn "SELECT * FROM user WHERE email = :email" [":email" := (s2t email_)] :: IO [User]
+              if len row == 0 then do
+                  execute conn "INSERT INTO user (name, email, password, task, money) VALUES (?,?,?,?,?)" (User 0 (s2t name_) (s2t email_) (s2t password_) (s2t task_) (b2i money_))
+                  changeRow <- changes conn
+                  print $ "changeRow=" ++ (show changeRow)
+                  if changeRow == 1 then do
+                      userList <- query_ conn "SELECT uid, name, email, password, task, money FROM user" :: IO [User]
+                      mapM_ print userList
+                      -- let listTask = TS.concat $ map (\x -> [r|<div>|] <> (t2b $ task x) <> [r|</div><br>|]) userList -- => TS.Text
+                      -- response $ responseTaskBS (task (head userList))
+                      response $ responseTaskBS $ replyTaskHtml task_ 
+                  else do
+                      response $ responseTaskBS "Insect task field" 
+                      -- response =<< let Just uri = parseURI "http://localhost:8000/insertUser/" in redirect' status302 [] uri 
               else do
-                  response $ responseTaskBS "Insect task field" 
-                  -- response =<< let Just uri = parseURI "http://localhost:8000/insertUser/" in redirect' status302 [] uri 
-        _      -> response $ responseNothing "user nothing"
+                  response $ responseNothing "email exists"
+        _      -> response $ responseNothing "no POST"
 
     where 
         b2i = stringToInt . strictTextToStr . s2t

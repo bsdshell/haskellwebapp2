@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2019-07-24 22:58:08.763155 UTC
+2019-07-26 18:21:12.646943 UTC
 
 interface main:WaiLib [family instance module] 8065
-  interface hash: 5ecdcef843b025d455c7df49e3e4b47b
-  ABI hash: 61381e325cd9564cdbf2ddeac9ced46b
-  export-list hash: cab12fb656fbb337431209e128458aef
+  interface hash: 1231803290ca2f066673ab24fd3f5b4e
+  ABI hash: 7b16fd8b06b7a79d534ec972dd0265d5
+  export-list hash: 0114d2c0c40f10c9a2d0580f9dda097a
   orphan hash: 1990cd944f4b0914d52176c1a7f13fd1
   flag hash: fad253e6afaed579962e2029590c9053
   opt_hash: 6faf2de08de32d19db9870899d88e59a
@@ -62,6 +62,8 @@ exports:
   WaiLib.listToByteStr
   WaiLib.listen
   WaiLib.logCurrCmd
+  WaiLib.loginCheck
+  WaiLib.loginHtml
   WaiLib.mapClear
   WaiLib.matrixReply
   WaiLib.mysqlKeyWords
@@ -451,6 +453,7 @@ import  -/  warp-3.2.28:Network.Wai.Handler.Warp ae2fc77f19802ee6df02346eeb220fe
 import  -/  websockets-0.12.5.3:Network.WebSockets e97241a664976f1d629f3802ac48361a
 import  -/  websockets-0.12.5.3:Network.WebSockets.Connection a3da378e7d60ef69b94a1590f6c31c02
 import  -/  websockets-0.12.5.3:Network.WebSockets.Server 4af350d6a3c2a5631680abf6f566b68d
+import  -/  word8-0.1.3:Data.Word8 4c659cf945933bcecaaee8b1e623c7ae
 5c058fbb4e7f38eb00a6aff0794e1436
   $fEqImage :: GHC.Classes.Eq WaiLib.Image
   DFunId
@@ -692,7 +695,7 @@ import  -/  websockets-0.12.5.3:Network.WebSockets.Server 4af350d6a3c2a5631680ab
                                                            -> GHC.Integer.Type.eqInteger
                                                                 a6
                                                                 b6 } } } } } } } } } } } } } } } } } } } } } } } } }) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fFromJSONBlock :: Data.Aeson.Types.FromJSON.FromJSON WaiLib.Block
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -956,7 +959,7 @@ a74b9bca6e60bca475d17d6bfe06871c
 79a04f85c541f8f602962a86740c9836
   $fFromJSONBlock8 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("bblock"#) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fFromJSONBlock_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser WaiLib.Block
@@ -1257,7 +1260,7 @@ a74b9bca6e60bca475d17d6bfe06871c
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <GHC.Types.Any>_P))))))
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0] <WaiLib.Block>_R))) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fFromJSONBlock_$cparseJSONList ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser [WaiLib.Block]
@@ -1442,7 +1445,7 @@ f24921ad33f5ce7d9c389e5fa47b2ddd
                    @ GHC.Types.Any
                    WaiLib.$fFromJSONBlock_opts
                    (Data.Aeson.Types.FromJSON.$WNoFromArgs @ GHC.Types.Any)) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fFromJSONBlock_go ::
     GHC.Prim.Int#
     -> [Data.Aeson.Types.Internal.Value]
@@ -4106,7 +4109,7 @@ d9eeda8b96ee8108f72edb29d4af4c1a
     -> [Data.Aeson.Types.Internal.Value]
     -> Data.Aeson.Types.Internal.Parser [WaiLib.GeneMatrix]
   {- Arity: 2, Strictness: <L,U><S,1*U> -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fFromJSONMBlock ::
     Data.Aeson.Types.FromJSON.FromJSON WaiLib.MBlock
   DFunId
@@ -4360,7 +4363,7 @@ cf9ff9d88e6297d6d95939ccc5eb2ae6
 2dd1859500be4dac40f4ad7ae54c88a9
   $fFromJSONMBlock5 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("mblock"#) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fFromJSONMBlock_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser WaiLib.MBlock
@@ -4661,7 +4664,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <GHC.Types.Any>_P))))))
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0] <WaiLib.MBlock>_R))) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fFromJSONMBlock_$cparseJSONList ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser [WaiLib.MBlock]
@@ -4846,13 +4849,13 @@ d88525afe5a071c166f53d75cdbb8464
                    @ GHC.Types.Any
                    WaiLib.$fFromJSONBlock_opts
                    (Data.Aeson.Types.FromJSON.$WNoFromArgs @ GHC.Types.Any)) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fFromJSONMBlock_go ::
     GHC.Prim.Int#
     -> [Data.Aeson.Types.Internal.Value]
     -> Data.Aeson.Types.Internal.Parser [WaiLib.MBlock]
   {- Arity: 2, Strictness: <L,U><S,1*U> -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fFromJSONMatInt ::
     Data.Aeson.Types.FromJSON.FromJSON WaiLib.MatInt
   DFunId
@@ -5106,7 +5109,7 @@ cec5fb7e20ce9a28f218db90a203d99f
   $fFromJSONMatInt6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    WaiLib.$fFromJSONMatInt_addr#) -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fFromJSONMatInt_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser WaiLib.MatInt
@@ -5286,7 +5289,7 @@ cec5fb7e20ce9a28f218db90a203d99f
                                                                                           <GHC.Types.Any>_P) })))
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0] <WaiLib.MatInt>_R))) -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fFromJSONMatInt_$cparseJSONList ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser [WaiLib.MatInt]
@@ -5548,7 +5551,7 @@ cec5fb7e20ce9a28f218db90a203d99f
 80e060e3d1b1d8d582227430ae9a94df
   $fFromJSONMatInt_addr# :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("name"#) -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fFromJSONMatInt_go ::
     GHC.Prim.Int#
     -> [Data.Aeson.Types.Internal.Value]
@@ -7023,7 +7026,7 @@ bc8925bc34c759743f6dba3c96edb70f
                  case w1 of ww2 { (,) ww3 ww4 ->
                  case ww3 of ww5 { GHC.Types.I# ww6 ->
                  WaiLib.$w$cfromRow3 ww1 ww6 ww4 } } }) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fGenericBlock :: GHC.Generics.Generic WaiLib.Block
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
@@ -7053,7 +7056,7 @@ bc8925bc34c759743f6dba3c96edb70f
                                            GHC.Generics.R
                                            [Data.Text.Internal.Lazy.Text]))>_R) ; Sub (Sym (WaiLib.Rep_Block[0]))) <x>_N)
                   WaiLib.$fGenericBlock_$cto -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fGenericBlock1 ::
     WaiLib.Block
     -> GHC.Generics.M1
@@ -7107,7 +7110,7 @@ bc8925bc34c759743f6dba3c96edb70f
                                                                                                   (GHC.Generics.K1
                                                                                                      GHC.Generics.R
                                                                                                      [Data.Text.Internal.Lazy.Text])>_R)) <x>_N) }) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fGenericBlock_$cto ::
     GHC.Generics.Rep WaiLib.Block x -> WaiLib.Block
   {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
@@ -7598,7 +7601,7 @@ d9eeda8b96ee8108f72edb29d4af4c1a
                                                                  (GHC.Generics.K1
                                                                     GHC.Generics.R
                                                                     GHC.Integer.Type.Integer))>_R) <x>_N) }) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fGenericMBlock :: GHC.Generics.Generic WaiLib.MBlock
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
@@ -7628,7 +7631,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                                            GHC.Generics.R
                                            [GHC.Integer.Type.Integer]))>_R) ; Sub (Sym (WaiLib.Rep_MBlock[0]))) <x>_N)
                   WaiLib.$fGenericMBlock_$cto -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fGenericMBlock1 ::
     WaiLib.MBlock
     -> GHC.Generics.M1
@@ -7682,7 +7685,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                                                                                               (GHC.Generics.K1
                                                                                                  GHC.Generics.R
                                                                                                  [GHC.Integer.Type.Integer])>_R)) <x>_N) }) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fGenericMBlock_$cto ::
     GHC.Generics.Rep WaiLib.MBlock x -> WaiLib.MBlock
   {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
@@ -7747,7 +7750,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                                                                                                                                                                                                   <GHC.Generics.R>_P
                                                                                                                                                                                                   <[GHC.Integer.Type.Integer]>_R
                                                                                                                                                                                                   <x>_P)) -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fGenericMatInt :: GHC.Generics.Generic WaiLib.MatInt
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
@@ -7785,7 +7788,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                                                             GHC.Generics.R
                                                             [[GHC.Integer.Type.Integer]]))>_R) ; Sub (Sym (WaiLib.Rep_MatInt[0]))) <x>_N)
                   WaiLib.$fGenericMatInt_$cto -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fGenericMatInt1 ::
     WaiLib.MatInt
     -> GHC.Generics.M1
@@ -7889,7 +7892,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                                                (GHC.Generics.K1
                                                   GHC.Generics.R
                                                   [[GHC.Integer.Type.Integer]])>_R) <x>_N) }) -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fGenericMatInt_$cto ::
     GHC.Generics.Rep WaiLib.MatInt x -> WaiLib.MatInt
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -8580,7 +8583,7 @@ bc8925bc34c759743f6dba3c96edb70f
                       @ WaiLib.User
                       (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
                          @ WaiLib.User))) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fShowBlock :: GHC.Show.Show WaiLib.Block
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -8589,7 +8592,7 @@ bc8925bc34c759743f6dba3c96edb70f
                   WaiLib.$fShowBlock_$cshowsPrec
                   WaiLib.$fShowBlock_$cshow
                   WaiLib.$fShowBlock_$cshowList -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fShowBlock1 :: WaiLib.Block -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U(1*U)><L,U>,
      Unfolding: (\ (w :: WaiLib.Block) (w1 :: GHC.Base.String) ->
@@ -8604,7 +8607,7 @@ bc8925bc34c759743f6dba3c96edb70f
 28cbb7e23c42af55ad9e93d52f093dda
   $fShowBlock4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("Block {"#) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fShowBlock_$cshow :: WaiLib.Block -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -8613,13 +8616,13 @@ bc8925bc34c759743f6dba3c96edb70f
                    WaiLib.$fShowBlock_n
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fShowBlock_$cshowList :: [WaiLib.Block] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: InlineRule (2, True, False)
                 (\ (ls :: [WaiLib.Block]) (s :: GHC.Base.String) ->
                  GHC.Show.showList__ @ WaiLib.Block WaiLib.$fShowBlock1 ls s) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fShowBlock_$cshowsPrec ::
     GHC.Types.Int -> WaiLib.Block -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U)><L,U>,
@@ -8809,7 +8812,7 @@ bcf3f145b833e85d9e51289ef161b68e
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { WaiLib.Image ww3 ww4 ww5 ->
                  WaiLib.$w$cshowsPrec3 ww1 ww3 ww4 ww5 w2 } }) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fShowMBlock :: GHC.Show.Show WaiLib.MBlock
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -8818,7 +8821,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                   WaiLib.$fShowMBlock_$cshowsPrec
                   WaiLib.$fShowMBlock_$cshow
                   WaiLib.$fShowMBlock_$cshowList -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fShowMBlock1 :: WaiLib.MBlock -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U(1*U)><L,U>,
      Unfolding: (\ (w :: WaiLib.MBlock) (w1 :: GHC.Base.String) ->
@@ -8833,19 +8836,19 @@ f1c2a33f34d81dbe2664bc3c54310e82
 5b078788a1a619864ede9d6e5d5eaa16
   $fShowMBlock4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# WaiLib.$fShowBlock2) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fShowMBlock_$cshow :: WaiLib.MBlock -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U)>, Inline: [2],
      Unfolding: InlineRule (1, True, False)
                 (\ (w :: WaiLib.MBlock) ->
                  case w of ww { WaiLib.MBlock ww1 -> WaiLib.$w$cshow ww1 }) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fShowMBlock_$cshowList :: [WaiLib.MBlock] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: InlineRule (2, True, False)
                 (\ (ls :: [WaiLib.MBlock]) (s :: GHC.Base.String) ->
                  GHC.Show.showList__ @ WaiLib.MBlock WaiLib.$fShowMBlock1 ls s) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fShowMBlock_$cshowsPrec ::
     GHC.Types.Int -> WaiLib.MBlock -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U)><L,U>,
@@ -8857,7 +8860,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { WaiLib.MBlock ww3 ->
                  WaiLib.$w$cshowsPrec4 ww1 ww3 w2 } }) -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fShowMatInt :: GHC.Show.Show WaiLib.MatInt
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -8866,7 +8869,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                   WaiLib.$fShowMatInt_$cshowsPrec
                   WaiLib.$fShowMatInt_$cshow
                   WaiLib.$fShowMatInt_$cshowList -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fShowMatInt1 :: WaiLib.MatInt -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U(1*U(U,U,U),1*U)><L,U>,
      Unfolding: (\ (w :: WaiLib.MatInt) (w1 :: GHC.Base.String) ->
@@ -8884,7 +8887,7 @@ cfa0ee6d88a19299d02c0df600065ec5
 c4c4cd3386e392f2e45d41b18bf0c67a
   $fShowMatInt5 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("name = "#) -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fShowMatInt_$cshow :: WaiLib.MatInt -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U(U,U,U),1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -8893,13 +8896,13 @@ c4c4cd3386e392f2e45d41b18bf0c67a
                    WaiLib.$fShowBlock_n
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fShowMatInt_$cshowList :: [WaiLib.MatInt] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: InlineRule (2, True, False)
                 (\ (ls :: [WaiLib.MatInt]) (s :: GHC.Base.String) ->
                  GHC.Show.showList__ @ WaiLib.MatInt WaiLib.$fShowMatInt1 ls s) -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fShowMatInt_$cshowsPrec ::
     GHC.Types.Int -> WaiLib.MatInt -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U(U,U,U),1*U)><L,U>,
@@ -9132,7 +9135,7 @@ c2c25d7404a578515b8a8c22a2c42717
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { WaiLib.User ww3 ww4 ww5 ww6 ww7 ww8 ->
                  WaiLib.$w$cshowsPrec8 ww1 ww3 ww4 ww5 ww6 ww7 ww8 w2 } }) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fToJSONBlock :: Data.Aeson.Types.ToJSON.ToJSON WaiLib.Block
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -9199,7 +9202,7 @@ c2c25d7404a578515b8a8c22a2c42717
                                                                                                                                                                                                                           ->_R <Data.Aeson.Encoding.Internal.Encoding>_R))))
                   WaiLib.$fToJSONBlock_$ctoJSONList
                   WaiLib.$fToJSONBlock_$ctoEncodingList -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fToJSONBlock1 ::
     WaiLib.Block
     -> forall r.
@@ -9245,7 +9248,7 @@ dfdc820c542cc43d6484b41677ef5e27
                    WaiLib.$fFromJSONBlock7
                    0#
                    ipv1 }) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fToJSONBlock_$ctoEncodingList ::
     [WaiLib.Block] -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Inline: (sat-args=0),
@@ -9310,7 +9313,7 @@ dfdc820c542cc43d6484b41677ef5e27
                                                                                                                                                                                                                                    GHC.Types.Any>_R
                                                                                                                                                                                                                            ->_R Sub (Sym (WaiLib.Rep_Block[0])) <GHC.Types.Any>_N
                                                                                                                                                                                                                            ->_R <Data.Aeson.Encoding.Internal.Encoding>_R))))) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fToJSONBlock_$ctoJSON ::
     WaiLib.Block -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <L,1*U(1*U)>m1, Inline: [2],
@@ -9318,7 +9321,7 @@ dfdc820c542cc43d6484b41677ef5e27
                 (\ (w :: WaiLib.Block) ->
                  case WaiLib.$w$ctoJSON w of ww { Unit# ww1 ->
                  Data.Aeson.Types.Internal.Object ww1 }) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $fToJSONBlock_$ctoJSONList ::
     [WaiLib.Block] -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U>m2, Inline: (sat-args=0),
@@ -10015,7 +10018,7 @@ d9eeda8b96ee8108f72edb29d4af4c1a
                                      WaiLib.$fToJSONGeneMatrix_$ctoJSON)
                                   n1
                                   x)))))) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fToJSONMBlock :: Data.Aeson.Types.ToJSON.ToJSON WaiLib.MBlock
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -10075,7 +10078,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                                                                                                                                                     ->_R <Data.Aeson.Encoding.Internal.Encoding>_R))))
                   WaiLib.$fToJSONMBlock_$ctoJSONList
                   WaiLib.$fToJSONMBlock_$ctoEncodingList -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fToJSONMBlock1 ::
     WaiLib.MBlock
     -> forall r.
@@ -10166,7 +10169,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                      Data.Aeson.Encoding.Internal.$wcolon @ r w ww1 ww2 w6 }
                  } in
                  let {
-                   lvl318 :: Data.ByteString.Builder.Internal.BufferRange
+                   lvl339 :: Data.ByteString.Builder.Internal.BufferRange
                              -> GHC.Prim.State# GHC.Prim.RealWorld
                              -> (# GHC.Prim.State# GHC.Prim.RealWorld,
                                    Data.ByteString.Builder.Internal.BuildSignal r #)
@@ -10220,7 +10223,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                             @ r
                             1#
                             ww2
-                            lvl318
+                            lvl339
                               `cast`
                             (<Data.ByteString.Builder.Internal.BufferRange>_R
                              ->_R Sym (GHC.Types.N:IO[0]
@@ -10256,7 +10259,7 @@ a8ba4cdd6687238e1003735969165e63
                    WaiLib.$fFromJSONMBlock4
                    0#
                    ipv1 }) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fToJSONMBlock_$ctoEncodingList ::
     [WaiLib.MBlock] -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Inline: (sat-args=0),
@@ -10314,7 +10317,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                                                                                                                                                              GHC.Types.Any>_R
                                                                                                                                                      ->_R Sub (Sym (WaiLib.Rep_MBlock[0])) <GHC.Types.Any>_N
                                                                                                                                                      ->_R <Data.Aeson.Encoding.Internal.Encoding>_R))))) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fToJSONMBlock_$ctoJSON ::
     WaiLib.MBlock -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <L,1*U(1*U)>m1, Inline: [2],
@@ -10322,7 +10325,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                 (\ (w :: WaiLib.MBlock) ->
                  case WaiLib.$w$ctoJSON3 w of ww { Unit# ww1 ->
                  Data.Aeson.Types.Internal.Object ww1 }) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $fToJSONMBlock_$ctoJSONList ::
     [WaiLib.MBlock] -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U>m2, Inline: (sat-args=0),
@@ -10365,7 +10368,7 @@ e0bbbf827c930c5a3e6c119fdfad6b3b
     -> Data.Aeson.Encoding.Internal.Encoding'
          Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U> -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fToJSONMatInt :: Data.Aeson.Types.ToJSON.ToJSON WaiLib.MatInt
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -10439,7 +10442,7 @@ e0bbbf827c930c5a3e6c119fdfad6b3b
                                                                                                                                                     ->_R <Data.Aeson.Encoding.Internal.Encoding>_R))))
                   WaiLib.$fToJSONMatInt_$ctoJSONList
                   WaiLib.$fToJSONMatInt_$ctoEncodingList -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fToJSONMatInt1 ::
     WaiLib.MatInt
     -> forall r.
@@ -10577,7 +10580,7 @@ c39e17b94faa0c3d4635bcd4b990f009
                    WaiLib.$fFromJSONMatInt6
                    0#
                    ipv1 }) -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fToJSONMatInt_$ctoEncodingList ::
     [WaiLib.MatInt] -> Data.Aeson.Encoding.Internal.Encoding
   {- Arity: 1, Inline: (sat-args=0),
@@ -10649,7 +10652,7 @@ c39e17b94faa0c3d4635bcd4b990f009
                                                                                                                                                              GHC.Types.Any>_R
                                                                                                                                                      ->_R Sub (Sym (WaiLib.Rep_MatInt[0])) <GHC.Types.Any>_N
                                                                                                                                                      ->_R <Data.Aeson.Encoding.Internal.Encoding>_R))))) -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fToJSONMatInt_$ctoJSON ::
     WaiLib.MatInt -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(U,1*U)>m1, Inline: [2],
@@ -10658,7 +10661,7 @@ c39e17b94faa0c3d4635bcd4b990f009
                  case w of ww { WaiLib.MatInt ww1 ww2 ->
                  case WaiLib.$w$ctoJSON4 ww1 ww2 of ww3 { Unit# ww4 ->
                  Data.Aeson.Types.Internal.Object ww4 } }) -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $fToJSONMatInt_$ctoJSONList ::
     [WaiLib.MatInt] -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U>m2, Inline: (sat-args=0),
@@ -11326,7 +11329,7 @@ a180dad4d954a19a067e87ce4dfaa795
 3f36d078af4d4808b1546156057e6407
   $s$fConstructorMetaMetaCons8 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("ReplyCode"#) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $sel:bblock:Block :: WaiLib.Block -> [Data.Text.Internal.Lazy.Text]
   RecSel Left WaiLib.Block
   {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
@@ -11390,14 +11393,14 @@ d9eeda8b96ee8108f72edb29d4af4c1a
      Unfolding: InlineRule (1, True, False)
                 (\ (ds9 :: WaiLib.Image) ->
                  case ds9 of wild { WaiLib.Image ds10 ds11 ds12 -> ds11 }) -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $sel:matrix:MatInt :: WaiLib.MatInt -> [[GHC.Integer.Type.Integer]]
   RecSel Left WaiLib.MatInt
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds9 :: WaiLib.MatInt) ->
                  case ds9 of wild { WaiLib.MatInt ds10 ds11 -> ds11 }) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $sel:mblock:MBlock :: WaiLib.MBlock -> [GHC.Integer.Type.Integer]
   RecSel Left WaiLib.MBlock
   {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
@@ -11413,7 +11416,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                 (\ (ds9 :: WaiLib.User) ->
                  case ds9 of wild { WaiLib.User ds10 ds11 ds12 ds13 ds14 ds15 ->
                  ds15 }) -}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   $sel:name:MatInt :: WaiLib.MatInt -> Data.Text.Internal.Text
   RecSel Left WaiLib.MatInt
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U,U,U),A)>m,
@@ -12753,7 +12756,7 @@ ae983a61dde9aea0cb7f820a5328aa29
                    (GHC.CString.unpackAppendCString#
                       WaiLib.$fShowMBlock2
                       (GHC.Show.$fShowInteger_$cshowList ww WaiLib.$fShowMBlock4))) -}
-2e46c19b880975d4e17298905d592afb
+752ffb48286aa23017f3f350d29b90c5
   $w$cshowsPrec ::
     GHC.Prim.Int#
     -> [Data.Text.Internal.Lazy.Text]
@@ -12789,7 +12792,7 @@ ae983a61dde9aea0cb7f820a5328aa29
                                            @ GHC.Types.Char
                                            GHC.Show.$fShow(,)3
                                            (let {
-                                              lvl318 :: [GHC.Types.Char]
+                                              lvl339 :: [GHC.Types.Char]
                                               = GHC.Types.: @ GHC.Types.Char GHC.Show.showList__2 s
                                             } in
                                             letrec {
@@ -12798,7 +12801,7 @@ ae983a61dde9aea0cb7f820a5328aa29
                                                 {- Arity: 1, Strictness: <S,1*U> -}
                                               = \ (ds9 :: [Data.Text.Internal.Lazy.Text]) ->
                                                 case ds9 of wild1 {
-                                                  [] -> lvl318
+                                                  [] -> lvl339
                                                   : y ys
                                                   -> GHC.Types.:
                                                        @ GHC.Types.Char
@@ -13034,7 +13037,7 @@ fcb89e2e6e5a3bcbffb6bfb1c819fabc
                                  (GHC.CString.unpackAppendCString#
                                     WaiLib.$fShowBlock2
                                     (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w))))) }) -}
-7c24a6c45a4e82b5e8a07df8ebd37061
+804f0cd94ed58b5a9197afe0766702dc
   $w$cshowsPrec5 ::
     GHC.Prim.Int#
     -> Data.Text.Internal.Text
@@ -13074,7 +13077,7 @@ fcb89e2e6e5a3bcbffb6bfb1c819fabc
                                              (GHC.Show.$fShowInteger_$cshowList
                                                 x1
                                                 (let {
-                                                   lvl318 :: [GHC.Types.Char]
+                                                   lvl339 :: [GHC.Types.Char]
                                                    = GHC.Types.:
                                                        @ GHC.Types.Char
                                                        GHC.Show.showList__2
@@ -13086,7 +13089,7 @@ fcb89e2e6e5a3bcbffb6bfb1c819fabc
                                                      {- Arity: 1, Strictness: <S,1*U> -}
                                                    = \ (ds9 :: [[GHC.Integer.Type.Integer]]) ->
                                                      case ds9 of wild1 {
-                                                       [] -> lvl318
+                                                       [] -> lvl339
                                                        : y ys
                                                        -> GHC.Types.:
                                                             @ GHC.Types.Char
@@ -13312,7 +13315,7 @@ bf08a816d1194e739dfb319a087a9835
                                                ww4
                                                ww5 }))) of ww4 { (#,#) ww5 ww6 ->
                                GHC.Types.: @ GHC.Types.Char ww5 ww6 } }))) }) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $w$ctoEncoding ::
     WaiLib.Block
     -> forall r.
@@ -13340,7 +13343,7 @@ bf08a816d1194e739dfb319a087a9835
   {- Arity: 7,
      Strictness: <L,U(U,U,U)><L,U(U,U,U)><L,U(U,U,U)><L,C(C1(U(U,U)))><S,U><S,U><S,U>,
      Inline: [2] -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   $w$ctoJSON ::
     WaiLib.Block -> (# Data.Aeson.Types.Internal.Object #)
   {- Arity: 1, Strictness: <L,1*U(1*U)>, Inline: [2],
@@ -13503,7 +13506,7 @@ dd6d06386fd28e4bc91a1b8ab70e347a
                            @ Data.Text.Internal.Text
                            @ Data.Aeson.Types.Internal.Value) of ww3 { Data.Aeson.Types.Internal.Object ww4 ->
                  (# ww4 #) }) -}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   $w$ctoJSON3 ::
     WaiLib.MBlock -> (# Data.Aeson.Types.Internal.Object #)
   {- Arity: 1, Strictness: <L,1*U(1*U)>, Inline: [2],
@@ -13749,7 +13752,7 @@ a5d17841c64b554848405e78ee5a2924
     -> Network.HTTP.Types.URI.Query
     -> Network.Wai.Internal.Response
   {- Arity: 3, Strictness: <L,U(U)><L,U(U)><S,1*U>, Inline: [2] -}
-f0d82f0f919a5208926bbdeab7892df0
+2ce1c41b30929673f6085c37020fce49
   $wbroadcast ::
     WaiLib.ClientId
     -> GHC.Prim.MVar# GHC.Prim.RealWorld WaiLib.State
@@ -13767,7 +13770,7 @@ f0d82f0f919a5208926bbdeab7892df0
                         ww
                         w2 of ds9 { (#,#) ipv ipv1 ->
                  let {
-                   lvl318 :: Data.ByteString.Lazy.Internal.ByteString
+                   lvl339 :: Data.ByteString.Lazy.Internal.ByteString
                    = Data.Text.Lazy.Encoding.encodeUtf8
                        (Data.Text.Lazy.fromChunks_go
                           (GHC.Types.:
@@ -13776,24 +13779,24 @@ f0d82f0f919a5208926bbdeab7892df0
                              (GHC.Types.[] @ Data.Text.Internal.Text)))
                  } in
                  let {
-                   lvl319 :: Network.WebSockets.Types.DataMessage
+                   lvl340 :: Network.WebSockets.Types.DataMessage
                    = Network.WebSockets.Types.Text
-                       lvl318
+                       lvl339
                        (GHC.Maybe.Nothing @ Data.Text.Internal.Lazy.Text)
                  } in
                  let {
-                   lvl320 :: Network.WebSockets.Types.Message
+                   lvl341 :: Network.WebSockets.Types.Message
                    = Network.WebSockets.Types.DataMessage
                        GHC.Types.False
                        GHC.Types.False
                        GHC.Types.False
-                       lvl319
+                       lvl340
                  } in
                  let {
-                   lvl321 :: [Network.WebSockets.Types.Message]
+                   lvl342 :: [Network.WebSockets.Types.Message]
                    = GHC.Types.:
                        @ Network.WebSockets.Types.Message
-                       lvl320
+                       lvl341
                        (GHC.Types.[] @ Network.WebSockets.Types.Message)
                  } in
                  letrec {
@@ -13823,14 +13826,14 @@ f0d82f0f919a5208926bbdeab7892df0
                                           dt
                                           GHC.Types.True
                                           eta of s2# { DEFAULT ->
-                                   case (ds15 lvl321) `cast` (GHC.Types.N:IO[0] <()>_R)
+                                   case (ds15 lvl342) `cast` (GHC.Types.N:IO[0] <()>_R)
                                           s2# of ds16 { (#,#) ipv2 ipv3 ->
                                    go10 ys ipv2 } } }
                                } in
                                let {
                                  $j1 :: (# GHC.Prim.State# GHC.Prim.RealWorld, () #) <join 0>
                                  = case ds11 of wild4 { Network.WebSockets.Connection.Connection ds12 ds13 ds14 ds15 dt ->
-                                   case (ds15 lvl321) `cast` (GHC.Types.N:IO[0] <()>_R)
+                                   case (ds15 lvl342) `cast` (GHC.Types.N:IO[0] <()>_R)
                                           eta of ds16 { (#,#) ipv2 ipv3 ->
                                    go10 ys ipv2 } }
                                } in
@@ -13850,7 +13853,7 @@ f0d82f0f919a5208926bbdeab7892df0
                                           Network.WebSockets.Types.DataMessage ipv2 ipv3 ipv4 ipv5
                                           -> go11 ys1 } }
                                } in
-                               go11 lvl321 } } } } }
+                               go11 lvl342 } } } } }
                  } in
                  go10 ipv1 ipv }) -}
 1dd0c4ef986d0732ac57f41f842fbca9
@@ -14268,7 +14271,7 @@ f0d82f0f919a5208926bbdeab7892df0
   {- Arity: 6,
      Strictness: <L,U(U)><L,1*U(U,U,U,U)><S,1*U><L,C(U(U,1*U(U,U,U,U)))><L,1*C1(C1(U(U,U)))><S,U>,
      Inline: [2] -}
-7702d86d4b3bfa960a1231996f615f8e
+4497e1b60553f26344901917e10a365d
   $winsertUserDB ::
     Database.SQLite.Simple.Internal.Connection
     -> Network.HTTP.Types.Method.Method
@@ -14280,9 +14283,9 @@ f0d82f0f919a5208926bbdeab7892df0
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Network.Wai.Internal.ResponseReceived #)
   {- Arity: 6,
-     Strictness: <L,U(U)><L,1*U(U,U,U,U)><S,1*U><L,C(U(U,1*U(U,U,U,U)))><L,1*C1(C1(U(U,U)))><S,U>,
+     Strictness: <L,U(U)><L,1*U(U,U,U,U)><S,1*U><L,C(U(U,1*U(U,U,U,U)))><L,C(C1(U(U,U)))><S,U>,
      Inline: [2] -}
-7529244c3899d77329d349c908762136
+0448647a08e611b8498948919deb7d88
   $wlistPage ::
     Database.SQLite.Simple.Internal.Connection
     -> (Network.Wai.Internal.Response
@@ -14438,7 +14441,7 @@ db68809f4dc435a14a1a4f5c29a71e9e
                         ww11
                         ww12
                         ww13 } } }) -}
-e4c0581bae1d4b877d364f9e6a6b2b7d
+f00f0d054f889c55907178f8414b7c80
   $wlisten ::
     GHC.Types.IO ()
     -> GHC.Types.IO (GHC.Maybe.Maybe Network.WebSockets.Types.Message)
@@ -14480,6 +14483,20 @@ e4c0581bae1d4b877d364f9e6a6b2b7d
                      a' ipv2 } } }
                  } in
                  a' w2) -}
+00d1ac705e0551a95c11df14f77da0d4
+  $wloginCheck ::
+    Database.SQLite.Simple.Internal.Connection
+    -> Network.HTTP.Types.Method.Method
+    -> Network.HTTP.Types.Header.RequestHeaders
+    -> GHC.Types.IO Data.ByteString.Internal.ByteString
+    -> (Network.Wai.Internal.Response
+        -> GHC.Types.IO Network.Wai.Internal.ResponseReceived)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Network.Wai.Internal.ResponseReceived #)
+  {- Arity: 6,
+     Strictness: <L,U(U)><L,1*U(U,U,U,U)><S,1*U><L,C(U(U,1*U(U,U,U,U)))><L,1*C1(C1(U(U,U)))><S,U>,
+     Inline: [2] -}
 db6bcbdba97e10c469c52a8b3c6c88eb
   $wlvl ::
     GHC.Prim.ByteArray#
@@ -14922,7 +14939,7 @@ bac93e06ffba03fa8b29ad11ac1b8777
           Network.HTTP.Types.Header.ResponseHeaders,
           Network.Wai.Internal.StreamingBody #)
   {- Arity: 2, Strictness: <L,U(U)><L,1*U>, Inline: [2] -}
-fca2205b981c773c84b12cf962b0dd7e
+e18688687fd125316cfb734278fd58d2
   $wresponseHaskellHtml ::
     GHC.Base.String
     -> (# Network.HTTP.Types.Status.Status,
@@ -14934,7 +14951,7 @@ fca2205b981c773c84b12cf962b0dd7e
                    tcmd :: GHC.Base.String = AronModule.trim w
                  } in
                  let {
-                   lvl318 :: GHC.IO.Handle.Types.Handle -> GHC.Types.IO ()
+                   lvl339 :: GHC.IO.Handle.Types.Handle -> GHC.Types.IO ()
                      {- Arity: 1, Strictness: <L,U>,
                         Unfolding: InlineRule (1, True, False)
                                    (\ (hdl :: GHC.IO.Handle.Types.Handle)[OneShot] ->
@@ -14957,7 +14974,7 @@ fca2205b981c773c84b12cf962b0dd7e
                        GHC.Types.False
                  } in
                  let {
-                   lvl319 :: [GHC.Types.Char]
+                   lvl340 :: [GHC.Types.Char]
                    = GHC.CString.unpackAppendCString#
                        WaiLib.responseHaskellHtml2
                        (GHC.CString.unpackAppendCString#
@@ -14970,13 +14987,13 @@ fca2205b981c773c84b12cf962b0dd7e
                        (flush :: GHC.Types.IO ())
                        (eta :: GHC.Prim.State# GHC.Prim.RealWorld) ->
                      case AronModule.compileHaskellToBin8
-                            lvl319
+                            lvl340
                             eta of ds9 { (#,#) ipv ipv1 ->
                      case System.IO.appendFile2
                             @ ()
                             WaiLib.cmdLog
                             GHC.IO.IOMode.AppendMode
-                            lvl318
+                            lvl339
                             ipv of ds10 { (#,#) ipv2 ipv3 ->
                      case WaiLib.readCmd1
                             WaiLib.cmdLog
@@ -15081,7 +15098,7 @@ fca2205b981c773c84b12cf962b0dd7e
           Network.HTTP.Types.Header.ResponseHeaders,
           Network.Wai.Internal.StreamingBody #)
   {- Arity: 1, Strictness: <L,1*U>, Inline: [2] -}
-9eed131414e26dc5f94dc822fedd7e75
+a8b5c3e5eb42ef329d4a709054bafa53
   $wresponseNothing ::
     GHC.Base.String
     -> (# Network.HTTP.Types.Status.Status,
@@ -15170,7 +15187,7 @@ fca2205b981c773c84b12cf962b0dd7e
                                  w2 } } } }
                  } in
                  let {
-                   lvl318 :: forall r.
+                   lvl339 :: forall r.
                              Data.ByteString.Builder.Internal.BuildStep r
                              -> Data.ByteString.Builder.Internal.BufferRange
                              -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -15196,7 +15213,7 @@ fca2205b981c773c84b12cf962b0dd7e
                                 -> GHC.Types.IO ())
                       (flush :: GHC.Types.IO ()) ->
                     write
-                      lvl318
+                      lvl339
                         `cast`
                       ((forall (r :: <*>_N).
                         <Data.ByteString.Builder.Internal.BuildStep r>_R
@@ -15204,7 +15221,7 @@ fca2205b981c773c84b12cf962b0dd7e
                         ->_R Sym (GHC.Types.N:IO[0]
                                       <Data.ByteString.Builder.Internal.BuildSignal
                                          r>_R)) ; Sym (Data.ByteString.Builder.Internal.N:Builder[0])) #)) -}
-f0ac92f877e19fc0b33acabd0cca9858
+0a711433289556b54eed9c10b581c5ff
   $wresponseNothingBS ::
     Data.ByteString.Internal.ByteString
     -> (# Network.HTTP.Types.Status.Status,
@@ -15288,7 +15305,7 @@ f0ac92f877e19fc0b33acabd0cca9858
                                  w2 } } } }
                  } in
                  let {
-                   lvl318 :: forall r.
+                   lvl339 :: forall r.
                              Data.ByteString.Builder.Internal.BuildStep r
                              -> Data.ByteString.Builder.Internal.BufferRange
                              -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -15314,7 +15331,7 @@ f0ac92f877e19fc0b33acabd0cca9858
                                 -> GHC.Types.IO ())
                       (flush :: GHC.Types.IO ()) ->
                     write
-                      lvl318
+                      lvl339
                         `cast`
                       ((forall (r :: <*>_N).
                         <Data.ByteString.Builder.Internal.BuildStep r>_R
@@ -15331,7 +15348,7 @@ f0ac92f877e19fc0b33acabd0cca9858
           Network.HTTP.Types.Header.ResponseHeaders,
           Network.Wai.Internal.StreamingBody #)
   {- Arity: 3, Strictness: <L,U(U)><L,U><L,U(U)>, Inline: [2] -}
-07dfd17b27c6c6e5b0285d78d7a12a82
+3bf5450b6305874a9b1537d3130f2f9a
   $wresponseSnippetTxt ::
     GHC.Base.String
     -> GHC.IORef.IORef WaiLib.HMap
@@ -15345,16 +15362,16 @@ f0ac92f877e19fc0b33acabd0cca9858
                    sCmd :: GHC.Base.String = AronModule.trim w
                  } in
                  let {
-                   lvl318 :: Data.ByteString.Internal.ByteString
+                   lvl339 :: Data.ByteString.Internal.ByteString
                    = AronModule.strToStrictByteString
                        (WaiLib.$wunsafeDrop @ GHC.Types.Char 2# sCmd)
                  } in
                  let {
-                   lvl319 :: GHC.Maybe.Maybe Data.ByteString.Internal.ByteString
-                   = GHC.Maybe.Just @ Data.ByteString.Internal.ByteString lvl318
+                   lvl340 :: GHC.Maybe.Maybe Data.ByteString.Internal.ByteString
+                   = GHC.Maybe.Just @ Data.ByteString.Internal.ByteString lvl339
                  } in
                  let {
-                   lvl320 :: GHC.IO.Handle.Types.Handle -> GHC.Types.IO ()
+                   lvl341 :: GHC.IO.Handle.Types.Handle -> GHC.Types.IO ()
                      {- Arity: 1, Strictness: <L,U>,
                         Unfolding: InlineRule (1, True, False)
                                    (\ (hdl :: GHC.IO.Handle.Types.Handle)[OneShot] ->
@@ -15392,7 +15409,7 @@ f0ac92f877e19fc0b33acabd0cca9858
                             @ ()
                             WaiLib.cmdLog
                             GHC.IO.IOMode.AppendMode
-                            lvl320
+                            lvl341
                             ipv of ds10 { (#,#) ipv2 ipv3 ->
                      case w1
                             `cast`
@@ -15405,7 +15422,7 @@ f0ac92f877e19fc0b33acabd0cca9858
                      case (write
                              (let {
                                 bs1 :: Data.ByteString.Internal.ByteString
-                                = AronModule.strToStrictByteString (WaiLib.spanBlockXX ipv5 lvl319)
+                                = AronModule.strToStrictByteString (WaiLib.spanBlockXX ipv5 lvl340)
                               } in
                               (\ @ r
                                  (k :: Data.ByteString.Builder.Internal.BuildStep r)
@@ -15493,7 +15510,7 @@ f0ac92f877e19fc0b33acabd0cca9858
                     (<Data.ByteString.Builder.Internal.Builder -> GHC.Types.IO ()>_R
                      ->_R <GHC.Types.IO ()>_R
                      ->_R Sym (GHC.Types.N:IO[0] <()>_R)) #)) -}
-357892af8a7033d54ddc4d126098cf43
+ab99737402e46718541480d79feabef6
   $wresponseTaskBS ::
     Data.ByteString.Internal.ByteString
     -> (# Network.HTTP.Types.Status.Status,
@@ -15577,7 +15594,7 @@ f0ac92f877e19fc0b33acabd0cca9858
                                  w2 } } } }
                  } in
                  let {
-                   lvl318 :: forall r.
+                   lvl339 :: forall r.
                              Data.ByteString.Builder.Internal.BuildStep r
                              -> Data.ByteString.Builder.Internal.BufferRange
                              -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -15603,7 +15620,7 @@ f0ac92f877e19fc0b33acabd0cca9858
                                 -> GHC.Types.IO ())
                       (flush :: GHC.Types.IO ()) ->
                     write
-                      lvl318
+                      lvl339
                         `cast`
                       ((forall (r :: <*>_N).
                         <Data.ByteString.Builder.Internal.BuildStep r>_R
@@ -15883,7 +15900,7 @@ ad664f0d83eeede8caa45855913da73a
                              ww1
                              w2 of ds9 { (#,#) ipv ipv1 ->
                       case ipv1 of ww2 { (,) ww3 ww4 -> $w$j ipv ww4 } } }) -}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   data Block = Block {bblock :: [Data.Text.Internal.Lazy.Text]}
 e735b22270adfdee29cc2b76ea0f6587
   type Client =
@@ -15908,9 +15925,9 @@ d9eeda8b96ee8108f72edb29d4af4c1a
     = Image {iid :: GHC.Int.Int64,
              imagename :: Data.Text.Internal.Text,
              uid :: GHC.Int.Int64}
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   data MBlock = MBlock {mblock :: [GHC.Integer.Type.Integer]}
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   data MatInt
     = MatInt {name :: Data.Text.Internal.Text,
               matrix :: [[GHC.Integer.Type.Integer]]}
@@ -15919,7 +15936,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
     = Person {personId :: GHC.Int.Int64,
               personName :: Data.Text.Internal.Text,
               personAge :: Data.Text.Internal.Text}
-2e6591d6f8a356bd18eec7656dc8426a
+82a0f3848602c37a63315d8ed3c5e8ae
   axiom WaiLib.Rep_Block::
       GHC.Generics.Rep WaiLib.Block
         = GHC.Generics.D1
@@ -15994,7 +16011,7 @@ d9eeda8b96ee8108f72edb29d4af4c1a
                                                         'GHC.Generics.NoSourceStrictness
                                                         'GHC.Generics.DecidedLazy)
                                                      (GHC.Generics.Rec0 GHC.Integer.Type.Integer))))
-f1c2a33f34d81dbe2664bc3c54310e82
+9d420a1420d7546951c336c6448a67fe
   axiom WaiLib.Rep_MBlock::
       GHC.Generics.Rep WaiLib.MBlock
         = GHC.Generics.D1
@@ -16009,7 +16026,7 @@ f1c2a33f34d81dbe2664bc3c54310e82
                      'GHC.Generics.NoSourceStrictness
                      'GHC.Generics.DecidedLazy)
                   (GHC.Generics.Rec0 [GHC.Integer.Type.Integer])))
-40ee9c4d5927042ae32b48a5b2658a46
+cac754591adb48bf6771bd5f4d0c94ed
   axiom WaiLib.Rep_MatInt::
       GHC.Generics.Rep WaiLib.MatInt
         = GHC.Generics.D1
@@ -16186,7 +16203,7 @@ fcba824b61171cc5099f807ffdba2638
 5f6dcbb801cf97372e13dddac5bbb1cb
   bracketChar_l :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# WaiLib.bracketChar5) -}
-9f6d3314104d12b29f8cd7f023897326
+c9a6af2630a498fbbf6bdd3f785d8631
   broadcast ::
     WaiLib.ClientId
     -> GHC.MVar.MVar WaiLib.State
@@ -16200,7 +16217,7 @@ fcba824b61171cc5099f807ffdba2638
                  ->_R <GHC.MVar.MVar WaiLib.State>_R
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-2639e5705e7f5f75c820a6de5fb8eca2
+fc117a51c6c9423d1c09ccbb20861a74
   broadcast1 ::
     WaiLib.ClientId
     -> GHC.MVar.MVar WaiLib.State
@@ -17190,12 +17207,12 @@ f1fb9c1a0554841d4db9f07877e130c6
                    @ Data.ByteString.Internal.ByteString
                    (Data.ByteString.Internal.PS WaiLib.insertUser_addr#1 ipv2 0# ipv3)
                    dt1 } } }) -}
-9155ad986c39821e70f57e1afebd67c2
+3eafdb3443053387a4e3677dbcf89436
   insertUserDB ::
     Database.SQLite.Simple.Internal.Connection
     -> Network.Wai.Application
   {- Arity: 4,
-     Strictness: <L,U(U)><S(LLLLSLLLLLLLLLLL),1*U(1*U(U,U,U,U),A,A,A,1*U,A,A,A,A,C(U(U,1*U(U,U,U,U))),A,A,A,A,A,A)><L,1*C1(C1(U(U,U)))><S,U>,
+     Strictness: <L,U(U)><S(LLLLSLLLLLLLLLLL),1*U(1*U(U,U,U,U),A,A,A,1*U,A,A,A,A,C(U(U,1*U(U,U,U,U))),A,A,A,A,A,A)><L,C(C1(U(U,U)))><S,U>,
      Unfolding: InlineRule (0, True, True)
                 WaiLib.insertUserDB1
                   `cast`
@@ -17205,7 +17222,7 @@ f1fb9c1a0554841d4db9f07877e130c6
                        -> GHC.Types.IO Network.Wai.Internal.ResponseReceived>_R
                  ->_R Sym (GHC.Types.N:IO[0]
                                <Network.Wai.Internal.ResponseReceived>_R)) -}
-f2846f5dee2c15f690fdb8c3f6634446
+8ea3db0c5bbffb268b737f372516ff32
   insertUserDB1 ::
     Database.SQLite.Simple.Internal.Connection
     -> Network.Wai.Internal.Request
@@ -17215,7 +17232,7 @@ f2846f5dee2c15f690fdb8c3f6634446
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Network.Wai.Internal.ResponseReceived #)
   {- Arity: 4,
-     Strictness: <L,U(U)><S(LLLLSLLLLLLLLLLL),1*U(1*U(U,U,U,U),A,A,A,1*U,A,A,A,A,C(U(U,1*U(U,U,U,U))),A,A,A,A,A,A)><L,1*C1(C1(U(U,U)))><S,U>,
+     Strictness: <L,U(U)><S(LLLLSLLLLLLLLLLL),1*U(1*U(U,U,U,U),A,A,A,1*U,A,A,A,A,C(U(U,1*U(U,U,U,U))),A,A,A,A,A,A)><L,C(C1(U(U,U)))><S,U>,
      Inline: [2],
      Unfolding: InlineRule (4, True, False)
                 (\ (w :: Database.SQLite.Simple.Internal.Connection)
@@ -17749,7 +17766,7 @@ f4ba2f38cc4af28665e26eb16e33218f
                      `cast`
                    (Sym (Foreign.C.Types.N:CInt[0]) ; Sym (Text.Regex.Posix.Wrap.N:ExecOption[0]))
                    (GHC.CString.unpackCString# WaiLib.keyWord6)) -}
-de1191753bda03e6cccf894349298832
+e0172adf4a2388bb01c6c528406447cc
   listPage ::
     Database.SQLite.Simple.Internal.Connection
     -> Network.Wai.Application
@@ -17763,7 +17780,7 @@ de1191753bda03e6cccf894349298832
                        -> GHC.Types.IO Network.Wai.Internal.ResponseReceived>_R
                  ->_R Sym (GHC.Types.N:IO[0]
                                <Network.Wai.Internal.ResponseReceived>_R)) -}
-ec9813dd414f25976356483d2462c7f9
+19c369b9ecdb761fadd0b0746f55ddfe
   listPage1 ::
     Database.SQLite.Simple.Internal.Connection
     -> Network.Wai.Internal.Request
@@ -17999,7 +18016,7 @@ e3b3ea774bdb046334a35619452052ab
 41d7cf8dea8f5f819adab7b33239a967
   listToByteStr_go1 :: [[GHC.Types.Char]] -> [GHC.Types.Char]
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
-7bddcc127c0c0f06355ee1ea38e3d856
+c4883a6fd0c91318aa15c2026dee9adf
   listen ::
     Network.WebSockets.Connection.Connection
     -> WaiLib.ClientId -> GHC.MVar.MVar WaiLib.State -> GHC.Types.IO ()
@@ -18012,7 +18029,7 @@ e3b3ea774bdb046334a35619452052ab
                  ->_R <WaiLib.ClientId>_R
                  ->_R <GHC.MVar.MVar WaiLib.State>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-0a77b391b0d3be37af968b8886a2bde7
+82fb1e7fb87facb2d2d11acf958aa76d
   listen1 ::
     Network.WebSockets.Connection.Connection
     -> WaiLib.ClientId
@@ -18046,6 +18063,55 @@ e3b3ea774bdb046334a35619452052ab
      Unfolding: InlineRule (1, True, False)
                 (\ (cs :: [GHC.Base.String]) ->
                  AronModule.wfs1 WaiLib.currCmdFile cs) -}
+a81c55dd027ad7374f6cf82b1685fddd
+  loginCheck ::
+    Database.SQLite.Simple.Internal.Connection
+    -> Network.Wai.Application
+  {- Arity: 4,
+     Strictness: <L,U(U)><S(LLLLSLLLLLLLLLLL),1*U(1*U(U,U,U,U),A,A,A,1*U,A,A,A,A,C(U(U,1*U(U,U,U,U))),A,A,A,A,A,A)><L,1*C1(C1(U(U,U)))><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                WaiLib.loginCheck1
+                  `cast`
+                (<Database.SQLite.Simple.Internal.Connection>_R
+                 ->_R <Network.Wai.Internal.Request>_R
+                 ->_R <Network.Wai.Internal.Response
+                       -> GHC.Types.IO Network.Wai.Internal.ResponseReceived>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Network.Wai.Internal.ResponseReceived>_R)) -}
+242d8df3044f4b739e87cdd6ed567737
+  loginCheck1 ::
+    Database.SQLite.Simple.Internal.Connection
+    -> Network.Wai.Internal.Request
+    -> (Network.Wai.Internal.Response
+        -> GHC.Types.IO Network.Wai.Internal.ResponseReceived)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Network.Wai.Internal.ResponseReceived #)
+  {- Arity: 4,
+     Strictness: <L,U(U)><S(LLLLSLLLLLLLLLLL),1*U(1*U(U,U,U,U),A,A,A,1*U,A,A,A,A,C(U(U,1*U(U,U,U,U))),A,A,A,A,A,A)><L,1*C1(C1(U(U,U)))><S,U>,
+     Inline: [2],
+     Unfolding: InlineRule (4, True, False)
+                (\ (w :: Database.SQLite.Simple.Internal.Connection)
+                   (w1 :: Network.Wai.Internal.Request)
+                   (w2 :: Network.Wai.Internal.Response
+                          -> GHC.Types.IO Network.Wai.Internal.ResponseReceived)
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w1 of ww { Network.Wai.Internal.Request ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ->
+                 WaiLib.$wloginCheck w ww1 ww5 ww10 w2 w3 }) -}
+1664120abafd6de095f6e71e0a03a9c4
+  loginHtml :: Network.Wai.Internal.Response
+  {- Strictness: m1,
+     Unfolding: (Network.Wai.Internal.ResponseFile
+                   Network.HTTP.Types.Status.status200
+                   WaiLib.insertUser3
+                   WaiLib.loginHtml1
+                   (GHC.Maybe.Nothing @ Network.Wai.Internal.FilePart)) -}
+565fea83d337f06e013822965e613cf0
+  loginHtml1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# WaiLib.loginHtml2) -}
+32ba29fa9e54517cacc9c6dbcde5b55b
+  loginHtml2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("login.html"#) -}
 0b5b6026636beefebc8a9b6dc4e32a54
   mapClear :: [GHC.Base.String] -> WaiLib.HMap -> WaiLib.HMap
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
@@ -18586,7 +18652,7 @@ b09c3cd2267769fa683844adbbdd9fe4
 b25a8b6ba664d868bc3521b38969b520
   responseEditor2 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("compileCode.html"#) -}
-4e4c507564b03c531b687cb19083262a
+6714cc944ccf031b665327e7604bdc46
   responseHaskellHtml ::
     GHC.Base.String -> Network.Wai.Internal.Response
   {- Arity: 1, Strictness: <L,1*U>m3, Inline: [2],
@@ -18661,7 +18727,7 @@ dee816eb525de59d4f63080da2afba17
   {- Strictness: m,
      Unfolding: ((Network.HTTP.Types.Header.hContentType,
                   WaiLib.replyJS5)) -}
-36e3261e9c056d0c597c0234274cd4f9
+4db4b14d381d7b1be6f70a03ee3846bd
   responseNothing :: GHC.Base.String -> Network.Wai.Internal.Response
   {- Arity: 1, Strictness: <L,U>m3, Inline: [2],
      Unfolding: InlineRule (1, True, False)
@@ -18671,7 +18737,7 @@ dee816eb525de59d4f63080da2afba17
 9355109e517bb34437db212b4f55eeb9
   responseNothing1 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("responseNothing : "#) -}
-4bb873819ada02ea277dd8afbff22999
+28be3e8595833d3fe0e09d6f2c49a146
   responseNothingBS ::
     Data.ByteString.Internal.ByteString
     -> Network.Wai.Internal.Response
@@ -18728,7 +18794,7 @@ b5e0d8e628937a22a36747bf056a3d8b
                    (w2 :: GHC.IORef.IORef WaiLib.HMap) ->
                  case WaiLib.$wresponseSnippet w w1 w2 of ww { (#,,#) ww1 ww2 ww3 ->
                  Network.Wai.Internal.ResponseStream ww1 ww2 ww3 }) -}
-084c20555691743efb0fee794ec02c96
+7ab51910153092b59bdb25e3443a27ef
   responseSnippetTxt ::
     GHC.Base.String
     -> GHC.IORef.IORef WaiLib.HMap -> Network.Wai.Internal.Response
@@ -18737,7 +18803,7 @@ b5e0d8e628937a22a36747bf056a3d8b
                 (\ (w :: GHC.Base.String) (w1 :: GHC.IORef.IORef WaiLib.HMap) ->
                  case WaiLib.$wresponseSnippetTxt w w1 of ww { (#,,#) ww1 ww2 ww3 ->
                  Network.Wai.Internal.ResponseStream ww1 ww2 ww3 }) -}
-d8a56ea8f5223a7b40759113150d5c09
+aa5d7e0c3b498b0497d989c1f4ba3f33
   responseTaskBS ::
     Data.ByteString.Internal.ByteString
     -> Network.Wai.Internal.Response

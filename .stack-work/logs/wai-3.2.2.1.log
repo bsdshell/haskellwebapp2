@@ -1,7 +1,0 @@
-Configuring wai-3.2.2.1...
-Preprocessing library for wai-3.2.2.1..
-Building library for wai-3.2.2.1..
-[1 of 2] Compiling Network.Wai.Internal ( Network/Wai/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Network/Wai/Internal.o )
-[2 of 2] Compiling Network.Wai      ( Network/Wai.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Network/Wai.o )
-Installing library in /Users/cat/.stack/snapshots/x86_64-osx/lts-13.28/8.6.5/lib/x86_64-osx-ghc-8.6.5/wai-3.2.2.1-1ZiC0tyKwarA6jS1CNqT1y
-Registering library for wai-3.2.2.1..

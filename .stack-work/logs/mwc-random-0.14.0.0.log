@@ -1,9 +1,0 @@
-Configuring mwc-random-0.14.0.0...
-Preprocessing library for mwc-random-0.14.0.0..
-Building library for mwc-random-0.14.0.0..
-[1 of 4] Compiling System.Random.MWC.SeedSource ( System/Random/MWC/SeedSource.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/System/Random/MWC/SeedSource.o )
-[2 of 4] Compiling System.Random.MWC ( System/Random/MWC.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/System/Random/MWC.o )
-[3 of 4] Compiling System.Random.MWC.Distributions ( System/Random/MWC/Distributions.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/System/Random/MWC/Distributions.o )
-[4 of 4] Compiling System.Random.MWC.CondensedTable ( System/Random/MWC/CondensedTable.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/System/Random/MWC/CondensedTable.o )
-Installing library in /Users/cat/.stack/snapshots/x86_64-osx/lts-13.28/8.6.5/lib/x86_64-osx-ghc-8.6.5/mwc-random-0.14.0.0-EzU56L49v8v8tDyrd9g9bO
-Registering library for mwc-random-0.14.0.0..

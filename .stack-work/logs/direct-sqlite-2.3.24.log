@@ -1,9 +1,0 @@
-Configuring direct-sqlite-2.3.24...
-Preprocessing library for direct-sqlite-2.3.24..
-Building library for direct-sqlite-2.3.24..
-[1 of 4] Compiling Database.SQLite3.Bindings.Types ( .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Database/SQLite3/Bindings/Types.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Database/SQLite3/Bindings/Types.o )
-[2 of 4] Compiling Database.SQLite3.Bindings ( Database/SQLite3/Bindings.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Database/SQLite3/Bindings.o )
-[3 of 4] Compiling Database.SQLite3.Direct ( Database/SQLite3/Direct.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Database/SQLite3/Direct.o )
-[4 of 4] Compiling Database.SQLite3 ( Database/SQLite3.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Database/SQLite3.o )
-Installing library in /Users/cat/.stack/snapshots/x86_64-osx/lts-13.28/8.6.5/lib/x86_64-osx-ghc-8.6.5/direct-sqlite-2.3.24-JDCRBnG8fS8FPWQHn5P3Kx
-Registering library for direct-sqlite-2.3.24..

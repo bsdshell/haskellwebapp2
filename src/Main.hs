@@ -87,8 +87,9 @@ import qualified Data.Aeson as DA
 
 main :: IO ()
 main = do
-    conn1 <- open "/Users/cat/myfile/bitbucket/testfile/test.db"
-    conn2 <- open "/Users/cat/myfile/bitbucket/testfile/userinput.db"
+    home <- getEnv "HOME"
+    conn1 <- open $ home </> "myfile/bitbucket/testfile/test.db"
+    conn2 <- open $ home </> "myfile/bitbucket/testfile/userinput.db"
     pplist <- readSnippet snippetPath
     ref <- newIORef M.empty 
     snippetMap pplist ref

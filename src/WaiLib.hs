@@ -48,9 +48,11 @@ import Data.ByteString.Builder (byteString, Builder)
 
 
 
+
+import qualified Text.Email.Validate as EM 
 import qualified Data.Word8 as DW
 import Data.Text (Text)  -- strict Text
-import qualified Data.Text as TS 
+import qualified Data.Text as TS               -- strict Text         
 import qualified Data.Text.Lazy                 as DL 
 import qualified Data.Text.IO                   as TIO 
 
@@ -1545,6 +1547,29 @@ loginCheck conn req response = do
         b2s = strictTextToStr . strictByteStringToStrictText
         s2t = strictByteStringToStrictText
         t2b = strictTextToStrictByteString
+
+
+{-| 
+    validate user input and santize me
+-} 
+securityValidate:: BS.ByteString -> 
+                   BS.ByteString -> 
+                   BS.ByteString -> 
+                   BS.ByteString -> 
+                   BS.ByteString -> 
+                   Bool
+securityValidate name email password task money = nameBool && passwordBool && emailBool
+        where
+            nameT = s2t name
+            passwordT = s2t password
+            nameBool = if (TS.length nameT) > 0 && (TS.length nameT) < 40 && TS.all (isAlphaNum) nameT then True else False
+            passwordBool = if TS.all (isAlphaNum) passwordT then True else False
+            emailBool = EM.isValid email
+            --
+            b2i = stringToInt . strictTextToStr . s2t
+            b2s = strictTextToStr . strictByteStringToStrictText
+            s2t = strictByteStringToStrictText
+            t2b = strictTextToStrictByteString
 
 insertUserDB::Connection -> Application
 insertUserDB conn req response = do

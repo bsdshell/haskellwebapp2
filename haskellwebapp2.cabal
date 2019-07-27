@@ -55,4 +55,5 @@ executable haskellwebapp2
                        wai-util,
                        wai-session,
                        http-conduit,
-                       word8
+                       word8,
+                       email-validate

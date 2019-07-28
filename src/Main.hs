@@ -1,4 +1,6 @@
 {-# LANGUAGE QuasiQuotes       #-}
+{-# LANGUAGE MultiWayIf #-}
+
 module Main where
 
 import PortableLines 
@@ -83,11 +85,22 @@ import GHC.Generics
 import qualified Data.Aeson as DA
 
 
+lookupJust s m = fromJust $ M.lookup s m
+
 main :: IO ()
 main = do
     home <- getEnv "HOME"
-    conn1 <- open $ home </> "myfile/bitbucket/testfile/test.db"
-    conn2 <- open $ home </> "myfile/bitbucket/testfile/userinput.db"
+    configMap <- readConfig "./config.txt"
+    osv <- getEnv "OSTYPE"
+    let os = if | containStr "darwin" osv  -> "darwin"
+                | containStr "freebsd" osv -> "freebsd"
+                | otherwise                -> error "unknown"
+    let testdb = lookupJust "testdb" $ lookupJust os configMap
+    let userinputdb = lookupJust "userinputdb" $ lookupJust os configMap
+    let host = lookupJust "host" $ lookupJust os configMap
+
+    conn1 <- open $ home </> testdb
+    conn2 <- open $ home </> userinputdb 
     pplist <- readSnippet (home </> snippetP) 
     ref <- newIORef M.empty 
     snippetMap pplist ref
@@ -96,7 +109,7 @@ main = do
 --    A.cd wapp
 --    curr <- A.getPwd
 --    A.pp curr
-    putStrLn $ "http://uwspace.com:8000/"
+    putStrLn host 
     pp "http starting"
     run 8000 (app conn1 conn2 ref)
     close conn1

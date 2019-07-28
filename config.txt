@@ -1,0 +1,9 @@
+os = darwin
+testdb = myfile/bitbucket/testfile/test.db
+userinputdb = myfile/bitbucket/testfile/userinput.db
+host = http://locahost 
+
+os = freebsd 
+testdb = myfile/bitbucket/testfile/test.db
+userinputdb = myfile/bitbucket/testfile/userinput.db
+host = http://uwspace.com

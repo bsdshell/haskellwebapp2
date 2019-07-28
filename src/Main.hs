@@ -92,10 +92,10 @@ main = do
     ref <- newIORef M.empty 
     snippetMap pplist ref
     pp "dog"
-    genePDF pdfPath
-    A.cd wapp
-    curr <- A.getPwd
-    A.pp curr
+--    genePDF pdfPath
+--    A.cd wapp
+--    curr <- A.getPwd
+--    A.pp curr
     putStrLn $ "http://localhost:8000/"
     pp "http starting"
     run 8000 (app conn1 conn2 ref)

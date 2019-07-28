@@ -1,14 +1,12 @@
 {-# LANGUAGE QuasiQuotes       #-}
 module Main where
 
-import WaiLib
 import PortableLines 
 import Text.RawString.QQ
 
 import Data.Typeable (typeOf)
 import Network.Wai
 import Network.HTTP.Types
-import Network.Wai.Handler.Warp (run)
 import Control.Monad
 import Data.Char
 import Data.Maybe
@@ -90,7 +88,7 @@ main = do
     home <- getEnv "HOME"
     conn1 <- open $ home </> "myfile/bitbucket/testfile/test.db"
     conn2 <- open $ home </> "myfile/bitbucket/testfile/userinput.db"
-    pplist <- readSnippet snippetPath
+    pplist <- readSnippet (home </> snippetP) 
     ref <- newIORef M.empty 
     snippetMap pplist ref
     pp "dog"

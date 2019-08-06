@@ -85,28 +85,26 @@ import GHC.Generics
 import qualified Data.Aeson as DA
 
 
+dbname = "webappdb"
+configFile = "./config.txt"
+
 lookupJust s m = fromJust $ M.lookup s m
 
 main :: IO ()
 main = do
     home <- getEnv "HOME"
-    configMap <- readConfig "./config.txt"
-    osv <- getEnv "OSTYPE"
-    let os = if | containStr "darwin" osv  -> "darwin"
-                | containStr "freebsd" osv -> "freebsd"
-                | otherwise                -> error "unknown"
-    let testdb = lookupJust "testdb" $ lookupJust os configMap
-    let userinputdb = lookupJust "userinputdb" $ lookupJust os configMap
+    configMap <- readConfig configFile 
+    os <- getOS
+    let userinputdb = lookupJust dbname $ lookupJust os configMap
     let host = lookupJust "host" $ lookupJust os configMap
+    let snippet = lookupJust "snippetpath" $ lookupJust os configMap
 
-    conn1 <- open $ home </> testdb
-    conn2 <- open $ home </> userinputdb 
-    pplist <- readSnippet (home </> snippetP) 
+    conn1 <- open $ home </> userinputdb 
+    pplist <- readSnippet (home </> snippet) 
     ref <- newIORef M.empty 
     snippetMap pplist ref
     pp "dog"
     putStrLn host 
     pp "http starting"
-    run 8000 (app conn1 conn2 ref)
+    run 8000 (app conn1 ref)
     close conn1
-    close conn2

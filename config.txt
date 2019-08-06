@@ -1,9 +1,11 @@
 os = darwin
 testdb = myfile/bitbucket/testfile/test.db
-userinputdb = myfile/bitbucket/testfile/userinput.db
+webappdb = myfile/bitbucket/testfile/haskellwebapp2.db
 host = http://locahost 
+snippetpath = myfile/bitbucket/snippets/snippet.hs
 
 os = freebsd 
 testdb = myfile/bitbucket/testfile/test.db
-userinputdb = myfile/bitbucket/testfile/userinput.db
+webappdb = myfile/bitbucket/testfile/haskellwebapp2.db
 host = http://uwspace.com
+snippetpath = myfile/bitbucket/snippets/snippet.hs

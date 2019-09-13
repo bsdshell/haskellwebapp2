@@ -1,0 +1,343 @@
+
+==================== FINAL INTERFACE ====================
+2019-09-07 22:35:28.244548 UTC
+
+interface main:Main 8065
+  interface hash: 2f51f31aeea93af51d3d32f1c30b126e
+  ABI hash: e7736be5a5747a2881dc76d767fd88f8
+  export-list hash: 8a63b73c0d4fc863b80afb4549182251
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1c2552835de227c9016391237b9dd2b8
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.configFile
+  Main.dbname
+  Main.lookupJust
+  Main.main
+module dependencies: AronHtml AronModule GenePDFHtmlLib
+                     PortableLines WaiLib
+package dependencies: Only-0.1 SHA-1.6.4.4 aeson-1.4.2.0
+                      ansi-terminal-0.8.2 ansi-wl-pprint-0.6.8.2 appar-0.1.8
+                      array-0.5.3.0 asn1-encoding-0.9.5 asn1-parse-0.9.4 asn1-types-0.3.3
+                      async-2.2.2 attoparsec-0.13.2.2 auto-update-0.1.5 base-4.12.0.0
+                      base-compat-0.10.5 base-orphans-0.8.1 base-prelude-1.3
+                      base64-bytestring-1.0.0.2 basement-0.0.10 bifunctors-5.5.4
+                      binary-0.8.6.0 blaze-builder-0.4.1.0 blaze-textual-0.2.1.0
+                      bsb-http-chunked-0.0.0.4 byteorder-1.0.4 bytestring-0.10.8.2
+                      case-insensitive-1.2.0.11 cereal-0.5.8.1 clock-0.7.2 colour-2.3.5
+                      comonad-5.0.5 conduit-1.3.1.1 connection-0.2.8 containers-0.6.0.1
+                      cookie-0.4.4 cryptonite-0.25 data-default-0.7.1.1
+                      data-default-class-0.1.2.0 data-default-instances-containers-0.0.1
+                      data-default-instances-dlist-0.0.1
+                      data-default-instances-old-locale-0.0.1 deepseq-1.4.4.0
+                      direct-sqlite-2.3.24 directory-1.3.3.0 distributive-0.6
+                      dlist-0.8.0.6 email-validate-2.3.2.11 entropy-0.4.1.4
+                      exceptions-0.10.2 filepath-1.4.2.1 foldl-1.4.5 ghc-boot-th-8.6.5
+                      ghc-prim-0.5.3 hashable-1.2.7.0 hostname-1.0 hourglass-0.2.12
+                      http-accept-0.2 http-client-0.5.14 http-client-tls-0.3.5.3
+                      http-conduit-2.3.7.1 http-date-0.0.8 http-types-0.12.3 http2-1.6.5
+                      integer-gmp-1.0.2.0 integer-logarithms-1.0.3 iproute-1.7.7
+                      managed-1.0.6 memory-0.14.18 mtl-2.2.2 mwc-random-0.14.0.0
+                      network-2.8.0.1 network-byte-order-0.0.0.0 network-uri-2.6.1.0
+                      old-locale-1.0.0.7 optional-args-1.0.2
+                      optparse-applicative-0.14.3.0 parsec-3.1.13.0 pem-0.2.4
+                      pretty-1.1.3.6 pretty-simple-2.2.0.1 primitive-0.6.4.0
+                      process-1.6.5.0 profunctors-5.3 psqueues-0.2.7.2 random-1.1
+                      raw-strings-qq-1.1 regex-1.0.2.0 regex-base-0.93.2
+                      regex-compat-0.95.1 regex-pcre-builtin-0.94.4.8.8.35
+                      regex-posix-0.95.2 regex-tdfa-1.2.3.2 regex-tdfa-text-1.0.0.3
+                      resourcet-1.2.2 safe-0.3.17 scientific-0.3.6.2 semigroupoids-5.3.2
+                      simple-sendfile-0.2.28 socks-0.5.6 split-0.2.3.3
+                      sqlite-simple-0.4.16.0 stm-2.5.0.0 streaming-commons-0.2.1.1
+                      system-fileio-0.3.16.4 system-filepath-0.4.14 tagged-0.8.6
+                      template-haskell-2.14.0.0 temporary-1.3 text-1.2.3.1 time-1.8.0.2
+                      time-locale-compat-0.1.1.5 time-manager-0.0.0 tls-1.4.1
+                      transformers-0.5.6.2 turtle-1.5.14 unix-2.7.2.2 unix-compat-0.5.1
+                      unliftio-core-0.1.2.0 unordered-containers-0.2.10.0
+                      utf8-string-1.0.1.1 uuid-types-1.0.3 vault-0.3.1.2 vector-0.12.0.3
+                      vector-builder-0.3.7.2 wai-3.2.2.1 wai-extra-3.0.26.1
+                      wai-session-0.3.3 wai-util-0.8 wai-websockets-3.0.1.2 warp-3.2.28
+                      websockets-0.12.5.3 word8-0.1.3 x509-1.7.5 x509-store-1.6.7
+                      x509-system-1.6.6 x509-validation-1.6.11 zlib-0.6.2
+orphans: regex-1.0.2.0:Text.RE.TDFA.String
+         regex-tdfa-text-1.0.0.3:Text.Regex.TDFA.Text
+         regex-tdfa-text-1.0.0.3:Text.Regex.TDFA.Text.Lazy
+         regex-pcre-builtin-0.94.4.8.8.35:Text.Regex.PCRE.String
+         regex-pcre-builtin-0.94.4.8.8.35:Text.Regex.PCRE.Sequence
+         regex-pcre-builtin-0.94.4.8.8.35:Text.Regex.PCRE.ByteString.Lazy
+         regex-pcre-builtin-0.94.4.8.8.35:Text.Regex.PCRE.ByteString
+         data-default-instances-containers-0.0.1:Data.Default.Instances.Containers
+         data-default-instances-dlist-0.0.1:Data.Default.Instances.DList
+         data-default-instances-old-locale-0.0.1:Data.Default.Instances.OldLocale
+         main:AronModule http-client-0.5.14:Network.HTTP.Client.Request
+         basement-0.0.10:Basement.UArray.Base basement-0.0.10:Basement.Block
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.ByteString
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.ByteString.Lazy
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.Sequence
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.String
+         regex-posix-0.95.2:Text.Regex.Posix.String
+         regex-posix-0.95.2:Text.Regex.Posix.Sequence
+         regex-posix-0.95.2:Text.Regex.Posix.ByteString.Lazy
+         regex-posix-0.95.2:Text.Regex.Posix.ByteString
+         regex-base-0.93.2:Text.Regex.Base.Context colour-2.3.5:Data.Colour
+         system-filepath-0.4.14:Filesystem.Path.CurrentOS
+         system-filepath-0.4.14:Filesystem.Path
+         stm-2.5.0.0:Control.Monad.STM network-2.8.0.1:Network.Socket
+         attoparsec-0.13.2.2:Data.Attoparsec.Text.Internal
+         attoparsec-0.13.2.2:Data.Attoparsec.ByteString.Char8
+         vector-0.12.0.3:Data.Vector.Unboxed
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         hashable-1.2.7.0:Data.Hashable.Generic text-1.2.3.1:Data.Text.Lazy
+         text-1.2.3.1:Data.Text binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show
+         vector-0.12.0.3:Data.Vector.Fusion.Bundle
+         transformers-0.5.6.2:Control.Monad.Trans.Error
+         base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: Only-0.1:Data.Tuple.Only
+                         aeson-1.4.2.0:Data.Aeson.Types.Internal
+                         attoparsec-0.13.2.2:Data.Attoparsec.Internal.Types
+                         base-4.12.0.0:Control.Applicative base-4.12.0.0:Data.Complex
+                         base-4.12.0.0:Data.Functor.Compose base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         basement-0.0.10:Basement.Block.Base
+                         basement-0.0.10:Basement.Bounded basement-0.0.10:Basement.Monad
+                         basement-0.0.10:Basement.MutableBuilder
+                         basement-0.0.10:Basement.Nat basement-0.0.10:Basement.NonEmpty
+                         basement-0.0.10:Basement.Numerical.Subtractive
+                         basement-0.0.10:Basement.PrimType basement-0.0.10:Basement.String
+                         basement-0.0.10:Basement.String.Encoding.ASCII7
+                         basement-0.0.10:Basement.String.Encoding.ISO_8859_1
+                         basement-0.0.10:Basement.String.Encoding.UTF16
+                         basement-0.0.10:Basement.String.Encoding.UTF32
+                         basement-0.0.10:Basement.Types.OffsetSize
+                         basement-0.0.10:Basement.UArray.Base
+                         basement-0.0.10:Basement.UTF8.Base
+                         bifunctors-5.5.4:Data.Bifunctor.Biff
+                         bifunctors-5.5.4:Data.Bifunctor.Clown
+                         bifunctors-5.5.4:Data.Bifunctor.Flip
+                         bifunctors-5.5.4:Data.Bifunctor.Join
+                         bifunctors-5.5.4:Data.Bifunctor.Joker
+                         bifunctors-5.5.4:Data.Bifunctor.Product
+                         bifunctors-5.5.4:Data.Bifunctor.Sum
+                         bifunctors-5.5.4:Data.Bifunctor.Tannen
+                         bifunctors-5.5.4:Data.Bifunctor.Wrapped clock-0.7.2:System.Clock
+                         conduit-1.3.1.1:Data.Conduit.Internal.Conduit
+                         conduit-1.3.1.1:Data.Conduit.Internal.Pipe
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         cryptonite-0.25:Crypto.ECC cryptonite-0.25:Crypto.Error.Types
+                         cryptonite-0.25:Crypto.Hash.Blake2
+                         cryptonite-0.25:Crypto.Hash.Blake2b
+                         cryptonite-0.25:Crypto.Hash.Blake2bp
+                         cryptonite-0.25:Crypto.Hash.Blake2s
+                         cryptonite-0.25:Crypto.Hash.Blake2sp
+                         cryptonite-0.25:Crypto.Hash.Keccak cryptonite-0.25:Crypto.Hash.MD2
+                         cryptonite-0.25:Crypto.Hash.MD4 cryptonite-0.25:Crypto.Hash.MD5
+                         cryptonite-0.25:Crypto.Hash.RIPEMD160
+                         cryptonite-0.25:Crypto.Hash.SHA1 cryptonite-0.25:Crypto.Hash.SHA224
+                         cryptonite-0.25:Crypto.Hash.SHA256 cryptonite-0.25:Crypto.Hash.SHA3
+                         cryptonite-0.25:Crypto.Hash.SHA384
+                         cryptonite-0.25:Crypto.Hash.SHA512
+                         cryptonite-0.25:Crypto.Hash.SHA512t
+                         cryptonite-0.25:Crypto.Hash.SHAKE
+                         cryptonite-0.25:Crypto.Hash.Skein256
+                         cryptonite-0.25:Crypto.Hash.Skein512
+                         cryptonite-0.25:Crypto.Hash.Tiger
+                         cryptonite-0.25:Crypto.Hash.Whirlpool dlist-0.8.0.6:Data.DList
+                         email-validate-2.3.2.11:Text.Email.Parser
+                         ghc-boot-th-8.6.5:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.6.5:GHC.LanguageExtensions.Type
+                         http-client-0.5.14:Network.HTTP.Client iproute-1.7.7:Data.IP.Addr
+                         iproute-1.7.7:Data.IP.Range main:AronModule main:WaiLib
+                         mwc-random-0.14.0.0:System.Random.MWC
+                         network-uri-2.6.1.0:Network.URI
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.Color
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.Expr
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.ExprToOutput
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.Output
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.OutputPrinter
+                         primitive-0.6.4.0:Control.Monad.Primitive
+                         primitive-0.6.4.0:Data.Primitive.Array
+                         primitive-0.6.4.0:Data.Primitive.ByteArray
+                         primitive-0.6.4.0:Data.Primitive.PrimArray
+                         primitive-0.6.4.0:Data.Primitive.SmallArray
+                         primitive-0.6.4.0:Data.Primitive.UnliftedArray
+                         regex-1.0.2.0:Text.RE.ZeInternals.NamedCaptures
+                         resourcet-1.2.2:Control.Monad.Trans.Resource.Internal
+                         tagged-0.8.6:Data.Tagged
+                         template-haskell-2.14.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+                         unordered-containers-0.2.10.0:Data.HashMap.Base
+                         unordered-containers-0.2.10.0:Data.HashSet.Base
+                         uuid-types-1.0.3:Data.UUID.Types.Internal
+                         uuid-types-1.0.3:Data.UUID.Types.Internal.Builder
+                         vector-0.12.0.3:Data.Vector vector-0.12.0.3:Data.Vector.Primitive
+                         vector-0.12.0.3:Data.Vector.Storable
+                         vector-0.12.0.3:Data.Vector.Unboxed
+                         vector-0.12.0.3:Data.Vector.Unboxed.Base
+                         zlib-0.6.2:Codec.Compression.Zlib.Stream
+import  -/  aeson-1.4.2.0:Data.Aeson b5cdb0ed16d68edde67e300a00d12cf4
+import  -/  base-4.12.0.0:Control.Concurrent 945d3c1c41ed03e6117e3861cad65d9f
+import  -/  base-4.12.0.0:Control.Exception 041da5b6267cf6b639ff5716d5b299a9
+import  -/  base-4.12.0.0:Control.Monad 07eaec7fd256019b318d048d00f45b1c
+import  -/  base-4.12.0.0:Data.Char 74f67fe9150a102afa18766e840f6832
+import  -/  base-4.12.0.0:Data.IORef e8e1ce7d64831ebb3853a1cd9fb4e228
+import  -/  base-4.12.0.0:Data.Int e78f203d621836c59d5015a8a0e4eaea
+import  -/  base-4.12.0.0:Data.List 17d0c71c557e42abe196f130788fd997
+import  -/  base-4.12.0.0:Data.Maybe 9b76a39e833465c3c5b3c078b431417f
+import  -/  base-4.12.0.0:Data.Typeable 1095be85dd9009a6503a3981a259490e
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:GHC.Generics 2b3b2e72be66983021f8ad0c2edcf290
+import  -/  base-4.12.0.0:GHC.IORef c4811a8ca9fa1f2f983a2e196af9a59c
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  base-4.12.0.0:System.Environment c54e0d0308e729fdace6bc37aa74bb52
+import  -/  base-4.12.0.0:System.Exit 3c945ec7c596067c067092c41083c3d0
+import  -/  base-4.12.0.0:System.IO c961e5ee6731c0683a6e879272c9e9f6
+import  -/  base-4.12.0.0:Text.Read 87f80fc2538a174aea915dd98f74fc0a
+import  -/  blaze-builder-0.4.1.0:Blaze.ByteString.Builder.Char.Utf8 19799b676bcc75b98dd19ad567ca3f0c
+import  -/  bytestring-0.10.8.2:Data.ByteString fc40bec3e4fb10b918937406130fe77a
+import  -/  bytestring-0.10.8.2:Data.ByteString.Builder 88c5948a344210b244983e0b91bd248f
+import  -/  bytestring-0.10.8.2:Data.ByteString.Char8 40491ceac5d0f84d2a7f4a84fd2dd3ab
+import  -/  bytestring-0.10.8.2:Data.ByteString.Internal ff13c732dcda19b677c2f5e999517616
+import  -/  bytestring-0.10.8.2:Data.ByteString.Lazy 2f1c3e7310d730fefed76cfb6092806e
+import  -/  bytestring-0.10.8.2:Data.ByteString.Lazy.Char8 ee271bbed336425979c30600663f1b4d
+import  -/  bytestring-0.10.8.2:Data.ByteString.Lazy.Internal 8ceea8f415ed041d41a5a276316e69bb
+import  -/  directory-1.3.3.0:System.Directory 49a915596c61b7c4c6db58cd4e1272c2
+import  -/  filepath-1.4.2.1:System.FilePath.Posix 807571ae31e154c61d0c6bb61ff8b097
+import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
+import  -/  http-types-0.12.3:Network.HTTP.Types ae7bddc047df1615a9cdd5fa89b54bb8
+import  -/  http-types-0.12.3:Network.HTTP.Types.Status 7aaa683563aa01670e5a20ebf1b35176
+import  -/  AronModule 01d8902e7f9c01a77ac76f926d25bc58
+  exports: 0a3bc963a01206f2c729d4f8f07cf5cb
+  getOS 5f1efcd28320080ed2ed1c74ef60c43e
+  pp 0624ebd817d7990de8acc0f1d67dfd0c
+  readConfig 3b9225a816d93fc97ab1aaac8d528170
+  readSnippet aa4a3ff4599f79ad23acafd9eebc746f
+import  -/  PortableLines 81145eda9780e31226fd26ca486abd3b
+  exports: efcdc07915efdcebad9917398ca8912d
+import  -/  WaiLib 118f60a92eac1e22a6c5e99dc338736c
+  exports: 4c0de1dff3d8c19b09686fff4fbf70da
+  app da842632e64c60dd2752b17dfc0b5a25
+  snippetMap 7bee4ce9387daea564e5c3674c391b77
+import  -/  network-uri-2.6.1.0:Network.URI e656589f65d328be039eeb2dd172ae84
+import  -/  process-1.6.5.0:System.Process 2e810cee2a417b14ed03c6fbb00362a9
+import  -/  raw-strings-qq-1.1:Text.RawString.QQ c67191eb1e65b067a4153ab1b4095832
+import  -/  regex-1.0.2.0:Text.RE.TDFA.String d3a8fdcc8106867fc7bf9b86a6df24a7
+import  -/  regex-base-0.93.2:Text.Regex.Base 38db9417236ed3a9eb5d5959c0551869
+import  -/  regex-base-0.93.2:Text.Regex.Base.RegexLike fa2c0de5c64e014d2ef6fd2421527991
+import  -/  regex-compat-0.95.1:Text.Regex 7217c00d13a781e2337d1a1f0f474b2e
+import  -/  regex-posix-0.95.2:Text.Regex.Posix c4d3a6df4cf5fd30c7c141af2e1ceba1
+import  -/  safe-0.3.17:Safe 436789855584374f8b9a2b8b149b8684
+import  -/  sqlite-simple-0.4.16.0:Database.SQLite.Simple 8c9f01b0cc2b5d2b952c69ef0bc381f3
+import  -/  sqlite-simple-0.4.16.0:Database.SQLite.Simple.FromField 42d3c5a0ef589466fa9b32eb37acbf28
+import  -/  sqlite-simple-0.4.16.0:Database.SQLite.Simple.FromRow 8e431012c71556a6c84ed6c934b2767a
+import  -/  sqlite-simple-0.4.16.0:Database.SQLite.Simple.Internal b030e0bcff75a292a156d7f34ff99280
+import  -/  sqlite-simple-0.4.16.0:Database.SQLite.Simple.Ok f873171543b74d5f73bc7911327084e3
+import  -/  sqlite-simple-0.4.16.0:Database.SQLite.Simple.ToField 50c525126c7c5c519d2a008645d824ba
+import  -/  text-1.2.3.1:Data.Text 681b9c3df5b4e4b4e23ef5f840f0b692
+import  -/  text-1.2.3.1:Data.Text.Lazy 5dfd4775189d1cf6b5f168bbf44e9081
+import  -/  time-1.8.0.2:Data.Time f6ff4096de7c69ad22c2a67f4dd509e4
+import  -/  time-1.8.0.2:Data.Time.Clock.POSIX 9cecc2051debab576bd5d468a9a020cc
+import  -/  turtle-1.5.14:Turtle 2811dc8e158b58e6c134dbc664b1d4e4
+import  -/  unix-2.7.2.2:System.Posix.Files 8b4394d70ac72397a0a2e65b696ae5fc
+import  -/  unix-2.7.2.2:System.Posix.Unistd df669442b24f9247b1a8d9f5004b6b19
+import  -/  unordered-containers-0.2.10.0:Data.HashMap.Base b666983525a9fb01e24fb8a55df5d8dd
+import  -/  unordered-containers-0.2.10.0:Data.HashMap.Strict 14aa6b14c186f36ceb9dd8a7757e3d8e
+import  -/  utf8-string-1.0.1.1:Data.ByteString.UTF8 695d13a27a7b1ff88bf5105edcca8ef2
+import  -/  wai-3.2.2.1:Network.Wai f9c521323e1dc79f8230447aa7028a17
+import  -/  wai-extra-3.0.26.1:Network.Wai.Parse 729cef28afd7fe4084fe8f0bf77f01b1
+import  -/  wai-session-0.3.3:Network.Wai.Session 515a98187b5f1e81eb4600b5d4107f27
+import  -/  wai-util-0.8:Network.Wai.Util f7c6ff9182dd17df15520e05289ea449
+import  -/  wai-websockets-3.0.1.2:Network.Wai.Handler.WebSockets af96d4bd35acf6a36727ac4c563d49a7
+import  -/  warp-3.2.28:Network.Wai.Handler.Warp ae2fc77f19802ee6df02346eeb220fe7
+import  -/  warp-3.2.28:Network.Wai.Handler.Warp.Run 0322f4433ac5371b68358e614e445802
+import  -/  websockets-0.12.5.3:Network.WebSockets e97241a664976f1d629f3802ac48361a
+be86c9d078d3acbf19ba91fe74a24273
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule3 Main.$trModule1) -}
+b09d86f2c49dd5176b544d8d13ddb6c5
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule2) -}
+e5875966b74dad2d29772660b8a75e33
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Main"#) -}
+23b03bd7d075a00f5ad1ee10e6add7b8
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule4) -}
+d026be77cb9ced20e35a61514e0458aa
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+423f794e0e6cea28a59dcc15f1eff8dd
+  configFile :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.configFile1) -}
+2978436685b90ab4e8ea3277b2394564
+  configFile1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("./config.txt"#) -}
+664f101c27abdc1e998281876215539c
+  dbname :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.dbname1) -}
+e75c505ae7a447796ccd69f039702b30
+  dbname1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("webappdb"#) -}
+09b4f32dc07b982099b94be18ddb7fa5
+  lookupJust ::
+    (GHC.Classes.Eq k, Data.Hashable.Class.Hashable k) =>
+    k -> Data.HashMap.Base.HashMap k a -> a
+  {- Arity: 4,
+     Strictness: <L,U(C(C1(U)),A)><S(LC(S(S))),1*U(A,1*C1(U(U)))><S,U><S,1*U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ k
+                   @ a
+                   ($dEq :: GHC.Classes.Eq k)
+                   ($dHashable :: Data.Hashable.Class.Hashable k)
+                   (s :: k)
+                   (m :: Data.HashMap.Base.HashMap k a) ->
+                 case Data.HashMap.Base.lookup# @ k @ a $dEq $dHashable s m of ds {
+                   (#_|#) ds1 -> Data.Maybe.fromJust1 @ a (#|_#) a1 -> a1 }) -}
+b4f9ae97a091b232a88173a93240314d
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+529073e95d7e97cca9b9c5c633464b51
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U> -}
+99daeed6096e4af3040fe9786d83ebc9
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+trusted: none
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

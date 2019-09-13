@@ -1,0 +1,2980 @@
+
+==================== FINAL INTERFACE ====================
+2019-09-08 01:09:35.045437 UTC
+
+interface main:GenePDFHtmlLib 8065
+  interface hash: 492b217d7083b3a6f43e9967faae4cba
+  ABI hash: f484f4afd03660b6211471039d6dde60
+  export-list hash: 980732851be205105697ae9605592ec9
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: da424903d1b477516c337c1798cf40cd
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  GenePDFHtmlLib._PDFTABLE
+  GenePDFHtmlLib.ahrefT
+  GenePDFHtmlLib.checkTable
+  GenePDFHtmlLib.createNewTable
+  GenePDFHtmlLib.dbpath
+  GenePDFHtmlLib.dropTable
+  GenePDFHtmlLib.hempty
+  GenePDFHtmlLib.insertPDFToTable
+  GenePDFHtmlLib.insertTexToTable
+  GenePDFHtmlLib.pdfFile
+  GenePDFHtmlLib.pdfMain
+  GenePDFHtmlLib.queryDBToHtml
+  GenePDFHtmlLib.st
+  GenePDFHtmlLib.styleT
+  GenePDFHtmlLib.tableA
+  GenePDFHtmlLib.tableAA
+  GenePDFHtmlLib.tableACT
+  GenePDFHtmlLib.tableTT
+  GenePDFHtmlLib.tdTT
+  GenePDFHtmlLib.td_
+  GenePDFHtmlLib.titleDesc
+  GenePDFHtmlLib.toS
+  GenePDFHtmlLib.toT
+  GenePDFHtmlLib.trCT
+  GenePDFHtmlLib.LHead{GenePDFHtmlLib.LHead desc xtitle}
+  GenePDFHtmlLib.PDFInfo{GenePDFHtmlLib.PDFInfo path pdesc pdfId title}
+  GenePDFHtmlLib.SqliteMaster{GenePDFHtmlLib.SqliteMaster x_name x_rootpage x_sql x_tbl_name x_type}
+module dependencies: AronHtml AronModule
+package dependencies: Only-0.1 ansi-terminal-0.8.2 array-0.5.3.0
+                      asn1-encoding-0.9.5 asn1-parse-0.9.4 asn1-types-0.3.3 async-2.2.2
+                      attoparsec-0.13.2.2 base-4.12.0.0 basement-0.0.10 binary-0.8.6.0
+                      blaze-builder-0.4.1.0 blaze-textual-0.2.1.0 bytestring-0.10.8.2
+                      case-insensitive-1.2.0.11 cereal-0.5.8.1 colour-2.3.5
+                      conduit-1.3.1.1 connection-0.2.8 containers-0.6.0.1 cookie-0.4.4
+                      cryptonite-0.25 data-default-0.7.1.1 data-default-class-0.1.2.0
+                      data-default-instances-containers-0.0.1
+                      data-default-instances-dlist-0.0.1
+                      data-default-instances-old-locale-0.0.1 deepseq-1.4.4.0
+                      direct-sqlite-2.3.24 directory-1.3.3.0 dlist-0.8.0.6
+                      exceptions-0.10.2 filepath-1.4.2.1 ghc-boot-th-8.6.5 ghc-prim-0.5.3
+                      hashable-1.2.7.0 hourglass-0.2.12 http-client-0.5.14
+                      http-client-tls-0.3.5.3 http-conduit-2.3.7.1 http-types-0.12.3
+                      integer-gmp-1.0.2.0 integer-logarithms-1.0.3 memory-0.14.18
+                      mtl-2.2.2 network-2.8.0.1 network-uri-2.6.1.0 old-locale-1.0.0.7
+                      parsec-3.1.13.0 pem-0.2.4 pretty-1.1.3.6 pretty-simple-2.2.0.1
+                      primitive-0.6.4.0 process-1.6.5.0 random-1.1 raw-strings-qq-1.1
+                      regex-base-0.93.2 regex-compat-0.95.1 regex-posix-0.95.2
+                      regex-tdfa-1.2.3.2 resourcet-1.2.2 scientific-0.3.6.2 socks-0.5.6
+                      split-0.2.3.3 sqlite-simple-0.4.16.0 stm-2.5.0.0
+                      streaming-commons-0.2.1.1 template-haskell-2.14.0.0 text-1.2.3.1
+                      time-1.8.0.2 tls-1.4.1 transformers-0.5.6.2 unix-2.7.2.2
+                      unliftio-core-0.1.2.0 unordered-containers-0.2.10.0
+                      utf8-string-1.0.1.1 vector-0.12.0.3 x509-1.7.5 x509-store-1.6.7
+                      x509-system-1.6.6 x509-validation-1.6.11 zlib-0.6.2
+orphans: data-default-instances-containers-0.0.1:Data.Default.Instances.Containers
+         data-default-instances-dlist-0.0.1:Data.Default.Instances.DList
+         data-default-instances-old-locale-0.0.1:Data.Default.Instances.OldLocale
+         attoparsec-0.13.2.2:Data.Attoparsec.Text.Internal main:AronModule
+         http-client-0.5.14:Network.HTTP.Client.Request
+         basement-0.0.10:Basement.UArray.Base basement-0.0.10:Basement.Block
+         network-2.8.0.1:Network.Socket stm-2.5.0.0:Control.Monad.STM
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian colour-2.3.5:Data.Colour
+         vector-0.12.0.3:Data.Vector.Fusion.Bundle
+         hashable-1.2.7.0:Data.Hashable.Generic
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.ByteString
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.ByteString.Lazy
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.Sequence
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.String
+         transformers-0.5.6.2:Control.Monad.Trans.Error
+         regex-posix-0.95.2:Text.Regex.Posix.String
+         regex-posix-0.95.2:Text.Regex.Posix.Sequence
+         regex-posix-0.95.2:Text.Regex.Posix.ByteString.Lazy
+         regex-posix-0.95.2:Text.Regex.Posix.ByteString
+         regex-base-0.93.2:Text.Regex.Base.Context
+         text-1.2.3.1:Data.Text.Lazy text-1.2.3.1:Data.Text
+         binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show base-4.12.0.0:GHC.Float
+         base-4.12.0.0:GHC.Base
+family instance modules: Only-0.1:Data.Tuple.Only
+                         attoparsec-0.13.2.2:Data.Attoparsec.Internal.Types
+                         base-4.12.0.0:Control.Applicative base-4.12.0.0:Data.Complex
+                         base-4.12.0.0:Data.Functor.Compose base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         basement-0.0.10:Basement.Block.Base
+                         basement-0.0.10:Basement.Bounded basement-0.0.10:Basement.Monad
+                         basement-0.0.10:Basement.MutableBuilder
+                         basement-0.0.10:Basement.Nat basement-0.0.10:Basement.NonEmpty
+                         basement-0.0.10:Basement.Numerical.Subtractive
+                         basement-0.0.10:Basement.PrimType basement-0.0.10:Basement.String
+                         basement-0.0.10:Basement.String.Encoding.ASCII7
+                         basement-0.0.10:Basement.String.Encoding.ISO_8859_1
+                         basement-0.0.10:Basement.String.Encoding.UTF16
+                         basement-0.0.10:Basement.String.Encoding.UTF32
+                         basement-0.0.10:Basement.Types.OffsetSize
+                         basement-0.0.10:Basement.UArray.Base
+                         basement-0.0.10:Basement.UTF8.Base
+                         conduit-1.3.1.1:Data.Conduit.Internal.Conduit
+                         conduit-1.3.1.1:Data.Conduit.Internal.Pipe
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         cryptonite-0.25:Crypto.ECC cryptonite-0.25:Crypto.Error.Types
+                         cryptonite-0.25:Crypto.Hash.Blake2
+                         cryptonite-0.25:Crypto.Hash.Blake2b
+                         cryptonite-0.25:Crypto.Hash.Blake2bp
+                         cryptonite-0.25:Crypto.Hash.Blake2s
+                         cryptonite-0.25:Crypto.Hash.Blake2sp
+                         cryptonite-0.25:Crypto.Hash.Keccak cryptonite-0.25:Crypto.Hash.MD2
+                         cryptonite-0.25:Crypto.Hash.MD4 cryptonite-0.25:Crypto.Hash.MD5
+                         cryptonite-0.25:Crypto.Hash.RIPEMD160
+                         cryptonite-0.25:Crypto.Hash.SHA1 cryptonite-0.25:Crypto.Hash.SHA224
+                         cryptonite-0.25:Crypto.Hash.SHA256 cryptonite-0.25:Crypto.Hash.SHA3
+                         cryptonite-0.25:Crypto.Hash.SHA384
+                         cryptonite-0.25:Crypto.Hash.SHA512
+                         cryptonite-0.25:Crypto.Hash.SHA512t
+                         cryptonite-0.25:Crypto.Hash.SHAKE
+                         cryptonite-0.25:Crypto.Hash.Skein256
+                         cryptonite-0.25:Crypto.Hash.Skein512
+                         cryptonite-0.25:Crypto.Hash.Tiger
+                         cryptonite-0.25:Crypto.Hash.Whirlpool dlist-0.8.0.6:Data.DList
+                         ghc-boot-th-8.6.5:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.6.5:GHC.LanguageExtensions.Type
+                         http-client-0.5.14:Network.HTTP.Client main:AronModule
+                         network-uri-2.6.1.0:Network.URI
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.Color
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.Expr
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.ExprToOutput
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.Output
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.OutputPrinter
+                         primitive-0.6.4.0:Control.Monad.Primitive
+                         primitive-0.6.4.0:Data.Primitive.Array
+                         resourcet-1.2.2:Control.Monad.Trans.Resource.Internal
+                         template-haskell-2.14.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+                         unordered-containers-0.2.10.0:Data.HashMap.Base
+                         unordered-containers-0.2.10.0:Data.HashSet.Base
+                         vector-0.12.0.3:Data.Vector
+                         zlib-0.6.2:Codec.Compression.Zlib.Stream
+import  -/  base-4.12.0.0:Control.Concurrent 945d3c1c41ed03e6117e3861cad65d9f
+import  -/  base-4.12.0.0:Control.Monad 07eaec7fd256019b318d048d00f45b1c
+import  -/  base-4.12.0.0:Data.Char 74f67fe9150a102afa18766e840f6832
+import  -/  base-4.12.0.0:Data.Foldable efb37371da929e7bc88d896298d2d979
+import  -/  base-4.12.0.0:Data.Functor 069b2025a03e32fd228e74a86a58a075
+import  -/  base-4.12.0.0:Data.IORef e8e1ce7d64831ebb3853a1cd9fb4e228
+import  -/  base-4.12.0.0:Data.Int e78f203d621836c59d5015a8a0e4eaea
+import  -/  base-4.12.0.0:Data.List 17d0c71c557e42abe196f130788fd997
+import  -/  base-4.12.0.0:Data.Traversable d2c09bff1e4f0c871306c3ff8aa4dc36
+import  -/  base-4.12.0.0:Data.Tuple c719fc29608fe81c10bee9a1bf1e05ff
+import  -/  base-4.12.0.0:Data.Typeable 1095be85dd9009a6503a3981a259490e
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:GHC.Int 75a738083d98da9ebef0ff75df759462
+import  -/  base-4.12.0.0:GHC.List 4014a3c8a3b7c31c8325f6bcf1feea4a
+import  -/  base-4.12.0.0:GHC.Read 0604f4258fedea7e033ea68c6d7b40f2
+import  -/  base-4.12.0.0:GHC.Show 838a5d039379d82d9626aae53dfce276
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  base-4.12.0.0:System.Environment c54e0d0308e729fdace6bc37aa74bb52
+import  -/  base-4.12.0.0:System.Exit 3c945ec7c596067c067092c41083c3d0
+import  -/  base-4.12.0.0:System.IO c961e5ee6731c0683a6e879272c9e9f6
+import  -/  base-4.12.0.0:Text.ParserCombinators.ReadPrec 9773f55573a0fca144b6966b06590c4e
+import  -/  base-4.12.0.0:Text.Read 87f80fc2538a174aea915dd98f74fc0a
+import  -/  base-4.12.0.0:Text.Read.Lex cc2610206b1ce0c49789637e16412aa1
+import  -/  bytestring-0.10.8.2:Data.ByteString fc40bec3e4fb10b918937406130fe77a
+import  -/  bytestring-0.10.8.2:Data.ByteString.Internal ff13c732dcda19b677c2f5e999517616
+import  -/  data-default-0.7.1.1:Data.Default 191b18fca81b25ad93237826766e6826
+import  -/  data-default-class-0.1.2.0:Data.Default.Class 371bcf6e798e02ee6b54bbb6964034d0
+import  -/  directory-1.3.3.0:System.Directory 49a915596c61b7c4c6db58cd4e1272c2
+import  -/  filepath-1.4.2.1:System.FilePath.Posix 807571ae31e154c61d0c6bb61ff8b097
+import  -/  ghc-prim-0.5.3:GHC.Classes 0f6fd7d7db53fc48f6e1f01803cc6c9d
+import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
+import  -/  integer-gmp-1.0.2.0:GHC.Integer.Type 6d87087aea24143d2650f78480d954a3
+import  -/  AronHtml c34d56194af947f96d475e916734bc02
+  exports: fb4a0af57b3b0a97762018ed07144e15
+import  -/  AronModule 01d8902e7f9c01a77ac76f926d25bc58
+  exports: 0a3bc963a01206f2c729d4f8f07cf5cb
+  baseNameT bad1fa014a1f03d6b85ad7d5925bbf49
+  containStr 38220b02c4ef17d114bf1057a04c482f
+  getPwd c2efc2a4305438210128527acbdbe404
+  len 551b37e0ae9c916ad59cdb40c7ece76d
+  lsRegexFull 5ec4753bbbe297cf299e14619646de5a
+  partList b94f67f2008f188888043892db95b888
+  readFileLatin1ToList ca2d7993218415fbe7a2e027c97ae449
+  splitStrChar cd934d88c10c2cf075add1f56d127bae
+  strToStrictByteString a2160908f1fc7d0a83fbb3999c812b22
+  strToStrictText 08ca6d6096162eab3c0aa67091ce171f
+  strictTextToStr f0e9f32223c10490702fe7f0c87254ff
+  strictTextToStrictByteString 230ffaa3ce6c553b575bb88446fdf6ae
+  takeFileNameT eaf917b62d17243d7de86f9eb7e8b1cc
+  trim 3d2d8a406d2f771c7c8f87e12b29390e
+  trimT 87e487b858764b01cb07c1b278ef6c86
+  unique b60ce8ae287b7949bd7149e6dc75f1e5
+  writeFileBS 31c6dcaac1ff661b20d054cb14730ac0
+import  -/  process-1.6.5.0:System.Process 2e810cee2a417b14ed03c6fbb00362a9
+import  -/  raw-strings-qq-1.1:Text.RawString.QQ c67191eb1e65b067a4153ab1b4095832
+import  -/  regex-base-0.93.2:Text.Regex.Base 38db9417236ed3a9eb5d5959c0551869
+import  -/  regex-base-0.93.2:Text.Regex.Base.RegexLike fa2c0de5c64e014d2ef6fd2421527991
+import  -/  regex-compat-0.95.1:Text.Regex 7217c00d13a781e2337d1a1f0f474b2e
+import  -/  regex-posix-0.95.2:Text.Regex.Posix c4d3a6df4cf5fd30c7c141af2e1ceba1
+import  -/  regex-tdfa-1.2.3.2:Text.Regex.TDFA 1f5520f04edc87777baa08ec77ad505b
+import  -/  split-0.2.3.3:Data.List.Split 3518b4851dc357bd81ca9eb7a13694f0
+import  -/  sqlite-simple-0.4.16.0:Database.SQLite.Simple 8c9f01b0cc2b5d2b952c69ef0bc381f3
+import  -/  sqlite-simple-0.4.16.0:Database.SQLite.Simple.FromField 42d3c5a0ef589466fa9b32eb37acbf28
+import  -/  sqlite-simple-0.4.16.0:Database.SQLite.Simple.FromRow 8e431012c71556a6c84ed6c934b2767a
+import  -/  sqlite-simple-0.4.16.0:Database.SQLite.Simple.Internal b030e0bcff75a292a156d7f34ff99280
+import  -/  sqlite-simple-0.4.16.0:Database.SQLite.Simple.Ok f873171543b74d5f73bc7911327084e3
+import  -/  sqlite-simple-0.4.16.0:Database.SQLite.Simple.ToField 50c525126c7c5c519d2a008645d824ba
+import  -/  sqlite-simple-0.4.16.0:Database.SQLite.Simple.ToRow 2883f01feffbda519c4275caf14dd7ea
+import  -/  sqlite-simple-0.4.16.0:Database.SQLite.Simple.Types 96e9e9cb39017d2906a74f2bacd29097
+import  -/  text-1.2.3.1:Data.Text 681b9c3df5b4e4b4e23ef5f840f0b692
+import  -/  text-1.2.3.1:Data.Text.Internal 537e168590e8068f673f691833f78483
+import  -/  time-1.8.0.2:Data.Time f6ff4096de7c69ad22c2a67f4dd509e4
+import  -/  time-1.8.0.2:Data.Time.Clock.POSIX 9cecc2051debab576bd5d468a9a020cc
+import  -/  unix-2.7.2.2:System.Posix.Files 8b4394d70ac72397a0a2e65b696ae5fc
+import  -/  unix-2.7.2.2:System.Posix.Unistd df669442b24f9247b1a8d9f5004b6b19
+742a2c9e89df38d97fac5ffa9b1f0bdd
+  $fDefaultLHead :: Data.Default.Class.Default GenePDFHtmlLib.LHead
+  DFunId
+  {- Strictness: m, Inline: (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                GenePDFHtmlLib.hempty
+                  `cast`
+                (Sym (Data.Default.Class.N:Default[0] <GenePDFHtmlLib.LHead>_N)) -}
+742a2c9e89df38d97fac5ffa9b1f0bdd
+  $fEqLHead :: GHC.Classes.Eq GenePDFHtmlLib.LHead
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ GenePDFHtmlLib.LHead
+                  GenePDFHtmlLib.$fEqLHead_$c==
+                  GenePDFHtmlLib.$fEqLHead_$c/= -}
+742a2c9e89df38d97fac5ffa9b1f0bdd
+  $fEqLHead_$c/= ::
+    GenePDFHtmlLib.LHead -> GenePDFHtmlLib.LHead -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: GenePDFHtmlLib.LHead) (y :: GenePDFHtmlLib.LHead) ->
+                 case x of wild { GenePDFHtmlLib.LHead a1 a2 ->
+                 case y of wild1 { GenePDFHtmlLib.LHead b1 b2 ->
+                 case GHC.Base.eqString a1 b1 of wild2 {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case GHC.Base.eqString a2 b2 of wild3 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True -> GHC.Types.False } } } }) -}
+742a2c9e89df38d97fac5ffa9b1f0bdd
+  $fEqLHead_$c== ::
+    GenePDFHtmlLib.LHead -> GenePDFHtmlLib.LHead -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>, Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GenePDFHtmlLib.LHead) (w1 :: GenePDFHtmlLib.LHead) ->
+                 case w of ww { GenePDFHtmlLib.LHead ww1 ww2 ->
+                 case w1 of ww3 { GenePDFHtmlLib.LHead ww4 ww5 ->
+                 GenePDFHtmlLib.$w$c== ww1 ww2 ww4 ww5 } }) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fEqPDFInfo :: GHC.Classes.Eq GenePDFHtmlLib.PDFInfo
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ GenePDFHtmlLib.PDFInfo
+                  GenePDFHtmlLib.$fEqPDFInfo_$c==
+                  GenePDFHtmlLib.$fEqPDFInfo_$c/= -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fEqPDFInfo_$c/= ::
+    GenePDFHtmlLib.PDFInfo -> GenePDFHtmlLib.PDFInfo -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)LLL),1*U(1*U(U),1*U(U,U,U),1*U(U,U,U),1*U(U,U,U))><S(S(S)LLL),1*U(1*U(U),1*U(U,U,U),1*U(U,U,U),1*U(U,U,U))>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: GenePDFHtmlLib.PDFInfo) (y :: GenePDFHtmlLib.PDFInfo) ->
+                 case GenePDFHtmlLib.$fEqPDFInfo_$c== x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fEqPDFInfo_$c== ::
+    GenePDFHtmlLib.PDFInfo -> GenePDFHtmlLib.PDFInfo -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)LLL),1*U(1*U(U),1*U(U,U,U),1*U(U,U,U),1*U(U,U,U))><S(S(S)LLL),1*U(1*U(U),1*U(U,U,U),1*U(U,U,U),1*U(U,U,U))>,
+     Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GenePDFHtmlLib.PDFInfo) (w1 :: GenePDFHtmlLib.PDFInfo) ->
+                 case w of ww { GenePDFHtmlLib.PDFInfo ww1 ww2 ww3 ww4 ->
+                 case ww1 of ww5 { GHC.Int.I64# ww6 ->
+                 case w1 of ww7 { GenePDFHtmlLib.PDFInfo ww8 ww9 ww10 ww11 ->
+                 case ww8 of ww12 { GHC.Int.I64# ww13 ->
+                 GenePDFHtmlLib.$w$c==1
+                   ww6
+                   ww2
+                   ww3
+                   ww4
+                   ww13
+                   ww9
+                   ww10
+                   ww11 } } } }) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fEqSqliteMaster :: GHC.Classes.Eq GenePDFHtmlLib.SqliteMaster
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ GenePDFHtmlLib.SqliteMaster
+                  GenePDFHtmlLib.$fEqSqliteMaster_$c==
+                  GenePDFHtmlLib.$fEqSqliteMaster_$c/= -}
+84a51e293624c38c7cffddab2944b7b8
+  $fEqSqliteMaster_$c/= ::
+    GenePDFHtmlLib.SqliteMaster
+    -> GenePDFHtmlLib.SqliteMaster -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(LLS)LLLL),1*U(1*U(U,U,U),1*U(U,U,U),1*U(U,U,U),1*U,1*U(U,U,U))><S(S(LLS)LLLL),1*U(1*U(U,U,U),1*U(U,U,U),1*U(U,U,U),1*U,1*U(U,U,U))>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: GenePDFHtmlLib.SqliteMaster)
+                   (y :: GenePDFHtmlLib.SqliteMaster) ->
+                 case GenePDFHtmlLib.$fEqSqliteMaster_$c== x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fEqSqliteMaster_$c== ::
+    GenePDFHtmlLib.SqliteMaster
+    -> GenePDFHtmlLib.SqliteMaster -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(LLS)LLLL),1*U(1*U(U,U,U),1*U(U,U,U),1*U(U,U,U),1*U,1*U(U,U,U))><S(S(LLS)LLLL),1*U(1*U(U,U,U),1*U(U,U,U),1*U(U,U,U),1*U,1*U(U,U,U))>,
+     Unfolding: (\ (ds6 :: GenePDFHtmlLib.SqliteMaster)
+                   (ds7 :: GenePDFHtmlLib.SqliteMaster) ->
+                 case ds6 of wild { GenePDFHtmlLib.SqliteMaster a1 a2 a3 a4 a5 ->
+                 case ds7 of wild1 { GenePDFHtmlLib.SqliteMaster b1 b2 b3 b4 b5 ->
+                 case a1 of wild2 { Data.Text.Internal.Text dt dt1 dt2 ->
+                 case b1 of wild3 { Data.Text.Internal.Text dt3 dt4 dt5 ->
+                 case GHC.Prim.==# dt2 dt5 of lwild {
+                   DEFAULT -> GHC.Types.False
+                   1#
+                   -> case {__pkg_ccall text-1.2.3.1 GHC.Prim.ByteArray#
+                                                     -> GHC.Prim.Word#
+                                                     -> GHC.Prim.ByteArray#
+                                                     -> GHC.Prim.Word#
+                                                     -> GHC.Prim.Word#
+                                                     -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                           GHC.Prim.Int# #)}
+                             dt
+                             (GHC.Prim.int2Word# dt1)
+                             dt3
+                             (GHC.Prim.int2Word# dt4)
+                             (GHC.Prim.int2Word# dt2)
+                             GHC.Prim.realWorld# of wild5 { (#,#) ds8 ds9 ->
+                      case GHC.Prim.narrow32Int# ds9 of wild4 {
+                        DEFAULT -> GHC.Types.False
+                        0#
+                        -> case a2 of wild6 { Data.Text.Internal.Text dt7 dt8 dt9 ->
+                           case b2 of wild7 { Data.Text.Internal.Text dt10 dt11 dt12 ->
+                           case GHC.Prim.==# dt9 dt12 of lwild1 {
+                             DEFAULT -> GHC.Types.False
+                             1#
+                             -> case {__pkg_ccall text-1.2.3.1 GHC.Prim.ByteArray#
+                                                               -> GHC.Prim.Word#
+                                                               -> GHC.Prim.ByteArray#
+                                                               -> GHC.Prim.Word#
+                                                               -> GHC.Prim.Word#
+                                                               -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                               -> (# GHC.Prim.State#
+                                                                       GHC.Prim.RealWorld,
+                                                                     GHC.Prim.Int# #)}
+                                       dt7
+                                       (GHC.Prim.int2Word# dt8)
+                                       dt10
+                                       (GHC.Prim.int2Word# dt11)
+                                       (GHC.Prim.int2Word# dt9)
+                                       GHC.Prim.realWorld# of wild8 { (#,#) ds10 ds11 ->
+                                case GHC.Prim.narrow32Int# ds11 of wild9 {
+                                  DEFAULT -> GHC.Types.False
+                                  0#
+                                  -> case a3 of wild10 { Data.Text.Internal.Text dt13 dt14 dt15 ->
+                                     case b3 of wild11 { Data.Text.Internal.Text dt16 dt17 dt18 ->
+                                     case GHC.Prim.==# dt15 dt18 of lwild2 {
+                                       DEFAULT -> GHC.Types.False
+                                       1#
+                                       -> case {__pkg_ccall text-1.2.3.1 GHC.Prim.ByteArray#
+                                                                         -> GHC.Prim.Word#
+                                                                         -> GHC.Prim.ByteArray#
+                                                                         -> GHC.Prim.Word#
+                                                                         -> GHC.Prim.Word#
+                                                                         -> GHC.Prim.State#
+                                                                              GHC.Prim.RealWorld
+                                                                         -> (# GHC.Prim.State#
+                                                                                 GHC.Prim.RealWorld,
+                                                                               GHC.Prim.Int# #)}
+                                                 dt13
+                                                 (GHC.Prim.int2Word# dt14)
+                                                 dt16
+                                                 (GHC.Prim.int2Word# dt17)
+                                                 (GHC.Prim.int2Word# dt15)
+                                                 GHC.Prim.realWorld# of wild12 { (#,#) ds12 ds13 ->
+                                          case GHC.Prim.narrow32Int# ds13 of wild13 {
+                                            DEFAULT -> GHC.Types.False
+                                            0#
+                                            -> case GHC.Integer.Type.eqInteger# a4 b4 of wild14 {
+                                                 DEFAULT -> GHC.Types.False
+                                                 1#
+                                                 -> Data.Text.$fEqText_$c==
+                                                      a5
+                                                      b5 } } } } } } } } } } } } } } } } } }) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fFromRowPDFInfo ::
+    Database.SQLite.Simple.FromRow.FromRow GenePDFHtmlLib.PDFInfo
+  DFunId
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S(S(S)L),1*U(1*U(U),1*U)>,
+     Inline: (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                GenePDFHtmlLib.$fFromRowPDFInfo1
+                  `cast`
+                ((<Database.SQLite.Simple.Internal.RowParseRO>_R
+                  ->_R Sym (Control.Monad.Trans.State.Strict.N:StateT[0]
+                                <(GHC.Types.Int, [Database.SQLite3.SQLData])>_N
+                                <Database.SQLite.Simple.Ok.Ok>_R
+                                <GenePDFHtmlLib.PDFInfo>_N)) ; (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                                                         <Database.SQLite.Simple.Internal.RowParseRO>_R
+                                                                         <Control.Monad.Trans.State.Strict.StateT
+                                                                            (GHC.Types.Int,
+                                                                             [Database.SQLite3.SQLData])
+                                                                            Database.SQLite.Simple.Ok.Ok>_R
+                                                                         <GenePDFHtmlLib.PDFInfo>_N) ; (Sym (Database.SQLite.Simple.Internal.N:RowParser[0]) ; Sym (Database.SQLite.Simple.FromRow.N:FromRow[0])) <GenePDFHtmlLib.PDFInfo>_N)) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fFromRowPDFInfo1 ::
+    Database.SQLite.Simple.Internal.RowParseRO
+    -> (GHC.Types.Int, [Database.SQLite3.SQLData])
+    -> Database.SQLite.Simple.Ok.Ok
+         (GenePDFHtmlLib.PDFInfo,
+          (GHC.Types.Int, [Database.SQLite3.SQLData]))
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S(S(S)L),1*U(1*U(U),1*U)>,
+     Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Database.SQLite.Simple.Internal.RowParseRO)
+                   (w1 :: (GHC.Types.Int, [Database.SQLite3.SQLData])) ->
+                 case w `cast`
+                      (Database.SQLite.Simple.Internal.N:RowParseRO[0]) of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { (,) ww3 ww4 ->
+                 case ww3 of ww5 { GHC.Types.I# ww6 ->
+                 GenePDFHtmlLib.$w$cfromRow ww1 ww6 ww4 } } }) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fFromRowSqliteMaster ::
+    Database.SQLite.Simple.FromRow.FromRow GenePDFHtmlLib.SqliteMaster
+  DFunId
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S(S(S)L),1*U(1*U(U),1*U)>,
+     Inline: (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                GenePDFHtmlLib.$fFromRowSqliteMaster1
+                  `cast`
+                ((<Database.SQLite.Simple.Internal.RowParseRO>_R
+                  ->_R Sym (Control.Monad.Trans.State.Strict.N:StateT[0]
+                                <(GHC.Types.Int, [Database.SQLite3.SQLData])>_N
+                                <Database.SQLite.Simple.Ok.Ok>_R
+                                <GenePDFHtmlLib.SqliteMaster>_N)) ; (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                                                              <Database.SQLite.Simple.Internal.RowParseRO>_R
+                                                                              <Control.Monad.Trans.State.Strict.StateT
+                                                                                 (GHC.Types.Int,
+                                                                                  [Database.SQLite3.SQLData])
+                                                                                 Database.SQLite.Simple.Ok.Ok>_R
+                                                                              <GenePDFHtmlLib.SqliteMaster>_N) ; (Sym (Database.SQLite.Simple.Internal.N:RowParser[0]) ; Sym (Database.SQLite.Simple.FromRow.N:FromRow[0])) <GenePDFHtmlLib.SqliteMaster>_N)) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fFromRowSqliteMaster1 ::
+    Database.SQLite.Simple.Internal.RowParseRO
+    -> (GHC.Types.Int, [Database.SQLite3.SQLData])
+    -> Database.SQLite.Simple.Ok.Ok
+         (GenePDFHtmlLib.SqliteMaster,
+          (GHC.Types.Int, [Database.SQLite3.SQLData]))
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S(S(S)L),1*U(1*U(U),1*U)>,
+     Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Database.SQLite.Simple.Internal.RowParseRO)
+                   (w1 :: (GHC.Types.Int, [Database.SQLite3.SQLData])) ->
+                 case w `cast`
+                      (Database.SQLite.Simple.Internal.N:RowParseRO[0]) of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { (,) ww3 ww4 ->
+                 case ww3 of ww5 { GHC.Types.I# ww6 ->
+                 GenePDFHtmlLib.$w$cfromRow1 ww1 ww6 ww4 } } }) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fReadPDFInfo :: GHC.Read.Read GenePDFHtmlLib.PDFInfo
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ GenePDFHtmlLib.PDFInfo
+                  GenePDFHtmlLib.$fReadPDFInfo_$creadsPrec
+                  GenePDFHtmlLib.$fReadPDFInfo_$creadList
+                  GenePDFHtmlLib.$fReadPDFInfo1
+                    `cast`
+                  ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                    ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                  <GenePDFHtmlLib.PDFInfo>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                                          <GenePDFHtmlLib.PDFInfo>_R))
+                  GenePDFHtmlLib.$fReadPDFInfo_$creadListPrec -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fReadPDFInfo1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (GenePDFHtmlLib.PDFInfo -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2,
+     Unfolding: (GHC.Read.$fRead()6
+                   @ GenePDFHtmlLib.PDFInfo
+                   GenePDFHtmlLib.$fReadPDFInfo2
+                     `cast`
+                   ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                     ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                   <GenePDFHtmlLib.PDFInfo>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                                           <GenePDFHtmlLib.PDFInfo>_R))) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fReadPDFInfo2 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (GenePDFHtmlLib.PDFInfo -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S(S),1*U(U)><L,C(U)>, Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (w1 :: GenePDFHtmlLib.PDFInfo
+                          -> Text.ParserCombinators.ReadP.P b) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 GenePDFHtmlLib.$w$creadPrec ww1 @ b w1 }) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fReadPDFInfo3 ::
+    Text.ParserCombinators.ReadP.P [GenePDFHtmlLib.PDFInfo]
+  {- Unfolding: ((GenePDFHtmlLib.$fReadPDFInfo_$creadListPrec
+                    `cast`
+                  (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                       <[GenePDFHtmlLib.PDFInfo]>_R)
+                    GHC.Read.$fRead()8)
+                   `cast`
+                 (Text.ParserCombinators.ReadP.N:ReadP[0]
+                      <[GenePDFHtmlLib.PDFInfo]>_R)
+                   @ [GenePDFHtmlLib.PDFInfo]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                      @ [GenePDFHtmlLib.PDFInfo])) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fReadPDFInfo_$creadList ::
+    Text.ParserCombinators.ReadP.ReadS [GenePDFHtmlLib.PDFInfo]
+  {- Arity: 1,
+     Unfolding: (Text.ParserCombinators.ReadP.run
+                   @ [GenePDFHtmlLib.PDFInfo]
+                   GenePDFHtmlLib.$fReadPDFInfo3) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fReadPDFInfo_$creadListPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec [GenePDFHtmlLib.PDFInfo]
+  {- Unfolding: (GHC.Read.list
+                   @ GenePDFHtmlLib.PDFInfo
+                   GenePDFHtmlLib.$fReadPDFInfo1
+                     `cast`
+                   ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                     ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                   <GenePDFHtmlLib.PDFInfo>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                                           <GenePDFHtmlLib.PDFInfo>_R))) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fReadPDFInfo_$creadsPrec ::
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS GenePDFHtmlLib.PDFInfo
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (n1 :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ GenePDFHtmlLib.PDFInfo
+                   (GHC.Read.$fRead()6
+                      @ GenePDFHtmlLib.PDFInfo
+                      GenePDFHtmlLib.$fReadPDFInfo2
+                        `cast`
+                      ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                      <GenePDFHtmlLib.PDFInfo>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                                              <GenePDFHtmlLib.PDFInfo>_R))
+                      n1
+                      @ GenePDFHtmlLib.PDFInfo
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ GenePDFHtmlLib.PDFInfo))) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fReadSqliteMaster :: GHC.Read.Read GenePDFHtmlLib.SqliteMaster
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ GenePDFHtmlLib.SqliteMaster
+                  GenePDFHtmlLib.$fReadSqliteMaster_$creadsPrec
+                  GenePDFHtmlLib.$fReadSqliteMaster_$creadList
+                  GenePDFHtmlLib.$fReadSqliteMaster1
+                    `cast`
+                  ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                    ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                  <GenePDFHtmlLib.SqliteMaster>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                                               <GenePDFHtmlLib.SqliteMaster>_R))
+                  GenePDFHtmlLib.$fReadSqliteMaster_$creadListPrec -}
+84a51e293624c38c7cffddab2944b7b8
+  $fReadSqliteMaster1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (GenePDFHtmlLib.SqliteMaster -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2,
+     Unfolding: (GHC.Read.$fRead()6
+                   @ GenePDFHtmlLib.SqliteMaster
+                   GenePDFHtmlLib.$fReadSqliteMaster2
+                     `cast`
+                   ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                     ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                   <GenePDFHtmlLib.SqliteMaster>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                                                <GenePDFHtmlLib.SqliteMaster>_R))) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fReadSqliteMaster2 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (GenePDFHtmlLib.SqliteMaster -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S(S),1*U(U)><L,C(U)>, Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (w1 :: GenePDFHtmlLib.SqliteMaster
+                          -> Text.ParserCombinators.ReadP.P b) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 GenePDFHtmlLib.$w$creadPrec1 ww1 @ b w1 }) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fReadSqliteMaster3 ::
+    Text.ParserCombinators.ReadP.P [GenePDFHtmlLib.SqliteMaster]
+  {- Unfolding: ((GenePDFHtmlLib.$fReadSqliteMaster_$creadListPrec
+                    `cast`
+                  (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                       <[GenePDFHtmlLib.SqliteMaster]>_R)
+                    GHC.Read.$fRead()8)
+                   `cast`
+                 (Text.ParserCombinators.ReadP.N:ReadP[0]
+                      <[GenePDFHtmlLib.SqliteMaster]>_R)
+                   @ [GenePDFHtmlLib.SqliteMaster]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                      @ [GenePDFHtmlLib.SqliteMaster])) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fReadSqliteMaster_$creadList ::
+    Text.ParserCombinators.ReadP.ReadS [GenePDFHtmlLib.SqliteMaster]
+  {- Arity: 1,
+     Unfolding: (Text.ParserCombinators.ReadP.run
+                   @ [GenePDFHtmlLib.SqliteMaster]
+                   GenePDFHtmlLib.$fReadSqliteMaster3) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fReadSqliteMaster_$creadListPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec
+      [GenePDFHtmlLib.SqliteMaster]
+  {- Unfolding: (GHC.Read.list
+                   @ GenePDFHtmlLib.SqliteMaster
+                   GenePDFHtmlLib.$fReadSqliteMaster1
+                     `cast`
+                   ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                     ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                   <GenePDFHtmlLib.SqliteMaster>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                                                <GenePDFHtmlLib.SqliteMaster>_R))) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fReadSqliteMaster_$creadsPrec ::
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS GenePDFHtmlLib.SqliteMaster
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (n1 :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ GenePDFHtmlLib.SqliteMaster
+                   (GHC.Read.$fRead()6
+                      @ GenePDFHtmlLib.SqliteMaster
+                      GenePDFHtmlLib.$fReadSqliteMaster2
+                        `cast`
+                      ((<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                      <GenePDFHtmlLib.SqliteMaster>_R)) ; Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                                                                   <GenePDFHtmlLib.SqliteMaster>_R))
+                      n1
+                      @ GenePDFHtmlLib.SqliteMaster
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ GenePDFHtmlLib.SqliteMaster))) -}
+742a2c9e89df38d97fac5ffa9b1f0bdd
+  $fShowLHead :: GHC.Show.Show GenePDFHtmlLib.LHead
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ GenePDFHtmlLib.LHead
+                  GenePDFHtmlLib.$fShowLHead_$cshowsPrec
+                  GenePDFHtmlLib.$fShowLHead_$cshow
+                  GenePDFHtmlLib.$fShowLHead_$cshowList -}
+742a2c9e89df38d97fac5ffa9b1f0bdd
+  $fShowLHead1 :: GenePDFHtmlLib.LHead -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(1*U,1*U)><L,U>,
+     Unfolding: (\ (w :: GenePDFHtmlLib.LHead)
+                   (w1 :: GHC.Base.String) ->
+                 case w of ww { GenePDFHtmlLib.LHead ww1 ww2 ->
+                 GenePDFHtmlLib.$w$cshowsPrec 0# ww1 ww2 w1 }) -}
+9976c712fc9bcee6bdbacecc0407017c
+  $fShowLHead2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("}"#) -}
+11505084d6e89f350378a62c96594e7e
+  $fShowLHead3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("desc = "#) -}
+c33991a47d2c5addf5c2a7275310e021
+  $fShowLHead4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("xtitle = "#) -}
+4cad01c8c3fb726d22d9b0fda79432e7
+  $fShowLHead5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("LHead {"#) -}
+5b108e85432ac8efb0628dc8c7e318ec
+  $fShowLHead6 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)3
+                   GenePDFHtmlLib.$fShowLHead7) -}
+3296929300f0704942473180a27428c5
+  $fShowLHead7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   GenePDFHtmlLib.$fShowLHead2
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+742a2c9e89df38d97fac5ffa9b1f0bdd
+  $fShowLHead_$cshow :: GenePDFHtmlLib.LHead -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GenePDFHtmlLib.LHead) ->
+                 case w of ww { GenePDFHtmlLib.LHead ww1 ww2 ->
+                 GenePDFHtmlLib.$w$cshow ww1 ww2 }) -}
+742a2c9e89df38d97fac5ffa9b1f0bdd
+  $fShowLHead_$cshowList :: [GenePDFHtmlLib.LHead] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [GenePDFHtmlLib.LHead]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ GenePDFHtmlLib.LHead
+                   GenePDFHtmlLib.$fShowLHead1
+                   ls
+                   s) -}
+742a2c9e89df38d97fac5ffa9b1f0bdd
+  $fShowLHead_$cshowsPrec ::
+    GHC.Types.Int -> GenePDFHtmlLib.LHead -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: GenePDFHtmlLib.LHead)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { GenePDFHtmlLib.LHead ww3 ww4 ->
+                 GenePDFHtmlLib.$w$cshowsPrec ww1 ww3 ww4 w2 } }) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fShowPDFInfo :: GHC.Show.Show GenePDFHtmlLib.PDFInfo
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ GenePDFHtmlLib.PDFInfo
+                  GenePDFHtmlLib.$fShowPDFInfo_$cshowsPrec
+                  GenePDFHtmlLib.$fShowPDFInfo_$cshow
+                  GenePDFHtmlLib.$fShowPDFInfo_$cshowList -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fShowPDFInfo1 :: GenePDFHtmlLib.PDFInfo -> GHC.Show.ShowS
+  {- Arity: 2,
+     Strictness: <S,1*U(1*U(U),1*U(U,U,U),1*U(U,U,U),1*U(U,U,U))><L,U>,
+     Unfolding: (\ (w :: GenePDFHtmlLib.PDFInfo)
+                   (w1 :: GHC.Base.String) ->
+                 case w of ww { GenePDFHtmlLib.PDFInfo ww1 ww2 ww3 ww4 ->
+                 GenePDFHtmlLib.$w$cshowsPrec1 0# ww1 ww2 ww3 ww4 w1 }) -}
+0f3f07012d25ccfb8c5ca96d897de4bc
+  $fShowPDFInfo2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   GenePDFHtmlLib.$fShowPDFInfo3) -}
+36072018f94df5d6b09d2fc67aed5dd8
+  $fShowPDFInfo3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("PDFInfo {"#) -}
+91f8d8b3a18c4e1607e3ab7be55da411
+  $fShowPDFInfo4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("path = "#) -}
+25170f088693bcf1e16467d26e1902e6
+  $fShowPDFInfo5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("pdesc = "#) -}
+d7b3470d8d9e641d3a16e9cd7471ba73
+  $fShowPDFInfo6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("title = "#) -}
+df98c69b726ffb35a81e16efecb26eed
+  $fShowPDFInfo7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("pdfId = "#) -}
+0a752bb216c7b7598578b18746307513
+  $fShowPDFInfo8 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fShowPDFInfo_$cshow :: GenePDFHtmlLib.PDFInfo -> GHC.Base.String
+  {- Arity: 1,
+     Strictness: <S,1*U(1*U(U),1*U(U,U,U),1*U(U,U,U),1*U(U,U,U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: GenePDFHtmlLib.PDFInfo) ->
+                 GenePDFHtmlLib.$fShowPDFInfo_$cshowsPrec
+                   GenePDFHtmlLib.$fShowPDFInfo8
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fShowPDFInfo_$cshowList ::
+    [GenePDFHtmlLib.PDFInfo] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [GenePDFHtmlLib.PDFInfo]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ GenePDFHtmlLib.PDFInfo
+                   GenePDFHtmlLib.$fShowPDFInfo1
+                   ls
+                   s) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fShowPDFInfo_$cshowsPrec ::
+    GHC.Types.Int -> GenePDFHtmlLib.PDFInfo -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(1*U(U),1*U(U,U,U),1*U(U,U,U),1*U(U,U,U))><L,U>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: GenePDFHtmlLib.PDFInfo)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { GenePDFHtmlLib.PDFInfo ww3 ww4 ww5 ww6 ->
+                 GenePDFHtmlLib.$w$cshowsPrec1 ww1 ww3 ww4 ww5 ww6 w2 } }) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fShowSqliteMaster :: GHC.Show.Show GenePDFHtmlLib.SqliteMaster
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ GenePDFHtmlLib.SqliteMaster
+                  GenePDFHtmlLib.$fShowSqliteMaster_$cshowsPrec
+                  GenePDFHtmlLib.$fShowSqliteMaster_$cshow
+                  GenePDFHtmlLib.$fShowSqliteMaster_$cshowList -}
+84a51e293624c38c7cffddab2944b7b8
+  $fShowSqliteMaster1 ::
+    GenePDFHtmlLib.SqliteMaster -> GHC.Show.ShowS
+  {- Arity: 2,
+     Strictness: <S,1*U(1*U(U,U,U),1*U(U,U,U),1*U(U,U,U),U,1*U(U,U,U))><L,U>,
+     Unfolding: (\ (w :: GenePDFHtmlLib.SqliteMaster)
+                   (w1 :: GHC.Base.String) ->
+                 case w of ww { GenePDFHtmlLib.SqliteMaster ww1 ww2 ww3 ww4 ww5 ->
+                 GenePDFHtmlLib.$w$cshowsPrec2 0# ww1 ww2 ww3 ww4 ww5 w1 }) -}
+4c1456b5b0972d44b91af3f416eaa9bc
+  $fShowSqliteMaster2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("x_sql = "#) -}
+fcb619b02e0c9e242ceef6c7578618e9
+  $fShowSqliteMaster3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("x_rootpage = "#) -}
+134d8c0e3e534af0236303cd93c48b49
+  $fShowSqliteMaster4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("x_tbl_name = "#) -}
+8e130a42d639920cb9b84241d29602f1
+  $fShowSqliteMaster5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("x_name = "#) -}
+71f7b584aed622b620d90edb5aa0f232
+  $fShowSqliteMaster6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("x_type = "#) -}
+f3a7cb351c8e611fd931f2fce87ccb3a
+  $fShowSqliteMaster7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("SqliteMaster {"#) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fShowSqliteMaster_$cshow ::
+    GenePDFHtmlLib.SqliteMaster -> GHC.Base.String
+  {- Arity: 1,
+     Strictness: <S,1*U(1*U(U,U,U),1*U(U,U,U),1*U(U,U,U),U,1*U(U,U,U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: GenePDFHtmlLib.SqliteMaster) ->
+                 GenePDFHtmlLib.$fShowSqliteMaster_$cshowsPrec
+                   GenePDFHtmlLib.$fShowPDFInfo8
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fShowSqliteMaster_$cshowList ::
+    [GenePDFHtmlLib.SqliteMaster] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [GenePDFHtmlLib.SqliteMaster]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ GenePDFHtmlLib.SqliteMaster
+                   GenePDFHtmlLib.$fShowSqliteMaster1
+                   ls
+                   s) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fShowSqliteMaster_$cshowsPrec ::
+    GHC.Types.Int -> GenePDFHtmlLib.SqliteMaster -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(1*U(U,U,U),1*U(U,U,U),1*U(U,U,U),U,1*U(U,U,U))><L,U>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: GenePDFHtmlLib.SqliteMaster)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { GenePDFHtmlLib.SqliteMaster ww3 ww4 ww5 ww6 ww7 ->
+                 GenePDFHtmlLib.$w$cshowsPrec2 ww1 ww3 ww4 ww5 ww6 ww7 w2 } }) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fToRowPDFInfo ::
+    Database.SQLite.Simple.ToRow.ToRow GenePDFHtmlLib.PDFInfo
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(A,U,U,U)>m2,
+     Inline: (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                GenePDFHtmlLib.$fToRowPDFInfo_$ctoRow
+                  `cast`
+                (Sym (Database.SQLite.Simple.ToRow.N:ToRow[0]
+                          <GenePDFHtmlLib.PDFInfo>_N)) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $fToRowPDFInfo_$ctoRow ::
+    GenePDFHtmlLib.PDFInfo -> [Database.SQLite3.SQLData]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(A,U,U,U)>m2,
+     Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GenePDFHtmlLib.PDFInfo) ->
+                 case w of ww { GenePDFHtmlLib.PDFInfo ww1 ww2 ww3 ww4 ->
+                 GHC.Types.:
+                   @ Database.SQLite3.SQLData
+                   (Database.SQLite3.$WSQLText ww2)
+                   (GHC.Types.:
+                      @ Database.SQLite3.SQLData
+                      (Database.SQLite3.$WSQLText ww3)
+                      (GHC.Types.:
+                         @ Database.SQLite3.SQLData
+                         (Database.SQLite3.$WSQLText ww4)
+                         (GHC.Types.[] @ Database.SQLite3.SQLData))) }) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fToRowSqliteMaster ::
+    Database.SQLite.Simple.ToRow.ToRow GenePDFHtmlLib.SqliteMaster
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U,1*U,U)>m2,
+     Inline: (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                GenePDFHtmlLib.$fToRowSqliteMaster_$ctoRow
+                  `cast`
+                (Sym (Database.SQLite.Simple.ToRow.N:ToRow[0]
+                          <GenePDFHtmlLib.SqliteMaster>_N)) -}
+84a51e293624c38c7cffddab2944b7b8
+  $fToRowSqliteMaster_$ctoRow ::
+    GenePDFHtmlLib.SqliteMaster -> [Database.SQLite3.SQLData]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U,1*U,U)>m2,
+     Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GenePDFHtmlLib.SqliteMaster) ->
+                 case w of ww { GenePDFHtmlLib.SqliteMaster ww1 ww2 ww3 ww4 ww5 ->
+                 GHC.Types.:
+                   @ Database.SQLite3.SQLData
+                   (Database.SQLite3.$WSQLText ww1)
+                   (GHC.Types.:
+                      @ Database.SQLite3.SQLData
+                      (Database.SQLite3.$WSQLText ww2)
+                      (GHC.Types.:
+                         @ Database.SQLite3.SQLData
+                         (Database.SQLite3.$WSQLText ww3)
+                         (GHC.Types.:
+                            @ Database.SQLite3.SQLData
+                            (case GHC.Integer.Type.integerToInt ww4 of wild { DEFAULT ->
+                             Database.SQLite3.SQLInteger wild })
+                            (GHC.Types.:
+                               @ Database.SQLite3.SQLData
+                               (Database.SQLite3.$WSQLText ww5)
+                               (GHC.Types.[] @ Database.SQLite3.SQLData))))) }) -}
+742a2c9e89df38d97fac5ffa9b1f0bdd
+  $sel:desc:LHead :: GenePDFHtmlLib.LHead -> GHC.Base.String
+  RecSel Left GenePDFHtmlLib.LHead
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds6 :: GenePDFHtmlLib.LHead) ->
+                 case ds6 of wild { GenePDFHtmlLib.LHead ds7 ds8 -> ds8 }) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $sel:path:PDFInfo ::
+    GenePDFHtmlLib.PDFInfo -> Data.Text.Internal.Text
+  RecSel Left GenePDFHtmlLib.PDFInfo
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLS),1*U(A,A,A,1*U(U,U,U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds6 :: GenePDFHtmlLib.PDFInfo) ->
+                 case ds6 of wild { GenePDFHtmlLib.PDFInfo ds7 ds8 ds9 ds10 ->
+                 ds10 }) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $sel:pdesc:PDFInfo ::
+    GenePDFHtmlLib.PDFInfo -> Data.Text.Internal.Text
+  RecSel Left GenePDFHtmlLib.PDFInfo
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLSL),1*U(A,A,1*U(U,U,U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds6 :: GenePDFHtmlLib.PDFInfo) ->
+                 case ds6 of wild { GenePDFHtmlLib.PDFInfo ds7 ds8 ds9 ds10 ->
+                 ds9 }) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $sel:pdfId:PDFInfo :: GenePDFHtmlLib.PDFInfo -> GHC.Int.Int64
+  RecSel Left GenePDFHtmlLib.PDFInfo
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLL),1*U(1*U(U),A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds6 :: GenePDFHtmlLib.PDFInfo) ->
+                 case ds6 of wild { GenePDFHtmlLib.PDFInfo ds7 ds8 ds9 ds10 ->
+                 ds7 }) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $sel:title:PDFInfo ::
+    GenePDFHtmlLib.PDFInfo -> Data.Text.Internal.Text
+  RecSel Left GenePDFHtmlLib.PDFInfo
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLL),1*U(A,1*U(U,U,U),A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds6 :: GenePDFHtmlLib.PDFInfo) ->
+                 case ds6 of wild { GenePDFHtmlLib.PDFInfo ds7 ds8 ds9 ds10 ->
+                 ds8 }) -}
+84a51e293624c38c7cffddab2944b7b8
+  $sel:x_name:SqliteMaster ::
+    GenePDFHtmlLib.SqliteMaster -> Data.Text.Internal.Text
+  RecSel Left GenePDFHtmlLib.SqliteMaster
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLLL),1*U(A,1*U(U,U,U),A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds6 :: GenePDFHtmlLib.SqliteMaster) ->
+                 case ds6 of wild { GenePDFHtmlLib.SqliteMaster ds7 ds8 ds9 ds10 ds11 ->
+                 ds8 }) -}
+84a51e293624c38c7cffddab2944b7b8
+  $sel:x_rootpage:SqliteMaster ::
+    GenePDFHtmlLib.SqliteMaster -> GHC.Integer.Type.Integer
+  RecSel Left GenePDFHtmlLib.SqliteMaster
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLSL),1*U(A,A,A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds6 :: GenePDFHtmlLib.SqliteMaster) ->
+                 case ds6 of wild { GenePDFHtmlLib.SqliteMaster ds7 ds8 ds9 ds10 ds11 ->
+                 ds10 }) -}
+84a51e293624c38c7cffddab2944b7b8
+  $sel:x_sql:SqliteMaster ::
+    GenePDFHtmlLib.SqliteMaster -> Data.Text.Internal.Text
+  RecSel Left GenePDFHtmlLib.SqliteMaster
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLS),1*U(A,A,A,A,1*U(U,U,U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds6 :: GenePDFHtmlLib.SqliteMaster) ->
+                 case ds6 of wild { GenePDFHtmlLib.SqliteMaster ds7 ds8 ds9 ds10 ds11 ->
+                 ds11 }) -}
+84a51e293624c38c7cffddab2944b7b8
+  $sel:x_tbl_name:SqliteMaster ::
+    GenePDFHtmlLib.SqliteMaster -> Data.Text.Internal.Text
+  RecSel Left GenePDFHtmlLib.SqliteMaster
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLSLL),1*U(A,A,1*U(U,U,U),A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds6 :: GenePDFHtmlLib.SqliteMaster) ->
+                 case ds6 of wild { GenePDFHtmlLib.SqliteMaster ds7 ds8 ds9 ds10 ds11 ->
+                 ds9 }) -}
+84a51e293624c38c7cffddab2944b7b8
+  $sel:x_type:SqliteMaster ::
+    GenePDFHtmlLib.SqliteMaster -> Data.Text.Internal.Text
+  RecSel Left GenePDFHtmlLib.SqliteMaster
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U(U,U,U),A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds6 :: GenePDFHtmlLib.SqliteMaster) ->
+                 case ds6 of wild { GenePDFHtmlLib.SqliteMaster ds7 ds8 ds9 ds10 ds11 ->
+                 ds7 }) -}
+742a2c9e89df38d97fac5ffa9b1f0bdd
+  $sel:xtitle:LHead :: GenePDFHtmlLib.LHead -> GHC.Base.String
+  RecSel Left GenePDFHtmlLib.LHead
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds6 :: GenePDFHtmlLib.LHead) ->
+                 case ds6 of wild { GenePDFHtmlLib.LHead ds7 ds8 -> ds7 }) -}
+103b5bab7bc135e4eff5ced9aeaf2d92
+  $tc'LHead :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7367859270615117471##
+                   14478199020348762257##
+                   GenePDFHtmlLib.$trModule
+                   GenePDFHtmlLib.$tc'LHead2
+                   0#
+                   GenePDFHtmlLib.$tc'LHead1) -}
+f734a569bbc04028abce4d08cc052431
+  $tc'LHead1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+1f0e27070a4ace21989ec94997335203
+  $tc'LHead2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS GenePDFHtmlLib.$tc'LHead3) -}
+9ac32babe9eef15fb2151b75689d85d5
+  $tc'LHead3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'LHead"#) -}
+f43a54c114e220b0559c7d395b4fd087
+  $tc'PDFInfo :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10931838419625705121##
+                   4910142669755157879##
+                   GenePDFHtmlLib.$trModule
+                   GenePDFHtmlLib.$tc'PDFInfo2
+                   0#
+                   GenePDFHtmlLib.$tc'PDFInfo1) -}
+71fc86cdd25ba3660a2eafca273199a0
+  $tc'PDFInfo1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+2f0100f6888c0586ebe34f77e3a38f24
+  $tc'PDFInfo2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS GenePDFHtmlLib.$tc'PDFInfo3) -}
+63cd42c8093ff54fae161ea16bfdb6dd
+  $tc'PDFInfo3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'PDFInfo"#) -}
+0b097a9a21770aab7d85c58beef4291d
+  $tc'SqliteMaster :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5893793578745890235##
+                   17993747898711210889##
+                   GenePDFHtmlLib.$trModule
+                   GenePDFHtmlLib.$tc'SqliteMaster2
+                   0#
+                   GenePDFHtmlLib.$tc'SqliteMaster1) -}
+9207fa7ebd90c4904e958c8c6b8de196
+  $tc'SqliteMaster1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+1c71f486bf89a4f0f4df0c60135587dd
+  $tc'SqliteMaster2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS GenePDFHtmlLib.$tc'SqliteMaster3) -}
+5c38167b126a230c23de91c6e449da0c
+  $tc'SqliteMaster3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'SqliteMaster"#) -}
+8431bf3ce0333140eca07deac9da282f
+  $tcLHead :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8858114609757505529##
+                   5799993372527873507##
+                   GenePDFHtmlLib.$trModule
+                   GenePDFHtmlLib.$tcLHead1
+                   0#
+                   GHC.Types.krep$*) -}
+beb165cbc6a0f1db4c0cd829a387ecbb
+  $tcLHead1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS GenePDFHtmlLib.$tcLHead2) -}
+6dd009f8dc009e92d5fbbb45c320764d
+  $tcLHead2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("LHead"#) -}
+16cd15ad94e4817258dc9cec05d958e5
+  $tcPDFInfo :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6346809225267854906##
+                   13420538728175626364##
+                   GenePDFHtmlLib.$trModule
+                   GenePDFHtmlLib.$tcPDFInfo1
+                   0#
+                   GHC.Types.krep$*) -}
+23a4553ab6a613e1e2ed72faabb629b7
+  $tcPDFInfo1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS GenePDFHtmlLib.$tcPDFInfo2) -}
+29c2135ee426b268c8fb78d79fcf6da5
+  $tcPDFInfo2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("PDFInfo"#) -}
+df26d13c24dcb91b6aabfb958ea4677a
+  $tcSqliteMaster :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3324198319685820293##
+                   16148742486505516716##
+                   GenePDFHtmlLib.$trModule
+                   GenePDFHtmlLib.$tcSqliteMaster1
+                   0#
+                   GHC.Types.krep$*) -}
+f2fe3c8d392afa416790da0c098f4204
+  $tcSqliteMaster1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS GenePDFHtmlLib.$tcSqliteMaster2) -}
+3651b1fa6476ef451d36339a5dfb0ac7
+  $tcSqliteMaster2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("SqliteMaster"#) -}
+e7c714f3a6d10340e58748dfa97381ce
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   GenePDFHtmlLib.$trModule3
+                   GenePDFHtmlLib.$trModule1) -}
+4919c0e458184493247b7331021aa43d
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS GenePDFHtmlLib.$trModule2) -}
+e35736c2f1dc226ee89fc72d6159e0ce
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("GenePDFHtmlLib"#) -}
+3eb9b7453c2445d4bf33974f3037ede6
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS GenePDFHtmlLib.$trModule4) -}
+8ddde2d1b06320e673e87a6f76c9ea4e
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+6b3c936483cf06005d37a3f1386b3f8a
+  $w$c== ::
+    GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><S,1*U><L,1*U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: GHC.Base.String) ->
+                 case GHC.Base.eqString ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Base.eqString ww1 ww3 }) -}
+d2d41062a3c7f1ebb2b259b1f8232661
+  $w$c==1 ::
+    GHC.Prim.Int#
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> GHC.Prim.Int#
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> GHC.Types.Bool
+  {- Arity: 8, HasNoCafRefs,
+     Strictness: <S,U><L,1*U(U,U,U)><L,1*U(U,U,U)><L,1*U(U,U,U)><S,U><L,1*U(U,U,U)><L,1*U(U,U,U)><L,1*U(U,U,U)>,
+     Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: Data.Text.Internal.Text)
+                   (ww2 :: Data.Text.Internal.Text)
+                   (ww3 :: Data.Text.Internal.Text)
+                   (ww4 :: GHC.Prim.Int#)
+                   (ww5 :: Data.Text.Internal.Text)
+                   (ww6 :: Data.Text.Internal.Text)
+                   (ww7 :: Data.Text.Internal.Text) ->
+                 case GHC.Prim.==# ww ww4 of lwild {
+                   DEFAULT -> GHC.Types.False
+                   1#
+                   -> case ww1 of wild { Data.Text.Internal.Text dt dt1 dt2 ->
+                      case ww5 of wild1 { Data.Text.Internal.Text dt3 dt4 dt5 ->
+                      case GHC.Prim.==# dt2 dt5 of lwild1 {
+                        DEFAULT -> GHC.Types.False
+                        1#
+                        -> case {__pkg_ccall text-1.2.3.1 GHC.Prim.ByteArray#
+                                                          -> GHC.Prim.Word#
+                                                          -> GHC.Prim.ByteArray#
+                                                          -> GHC.Prim.Word#
+                                                          -> GHC.Prim.Word#
+                                                          -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                          -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                                GHC.Prim.Int# #)}
+                                  dt
+                                  (GHC.Prim.int2Word# dt1)
+                                  dt3
+                                  (GHC.Prim.int2Word# dt4)
+                                  (GHC.Prim.int2Word# dt2)
+                                  GHC.Prim.realWorld# of wild5 { (#,#) ds6 ds7 ->
+                           case GHC.Prim.narrow32Int# ds7 of wild2 {
+                             DEFAULT -> GHC.Types.False
+                             0#
+                             -> case ww2 of wild3 { Data.Text.Internal.Text dt7 dt8 dt9 ->
+                                case ww6 of wild4 { Data.Text.Internal.Text dt10 dt11 dt12 ->
+                                case GHC.Prim.==# dt9 dt12 of lwild2 {
+                                  DEFAULT -> GHC.Types.False
+                                  1#
+                                  -> case {__pkg_ccall text-1.2.3.1 GHC.Prim.ByteArray#
+                                                                    -> GHC.Prim.Word#
+                                                                    -> GHC.Prim.ByteArray#
+                                                                    -> GHC.Prim.Word#
+                                                                    -> GHC.Prim.Word#
+                                                                    -> GHC.Prim.State#
+                                                                         GHC.Prim.RealWorld
+                                                                    -> (# GHC.Prim.State#
+                                                                            GHC.Prim.RealWorld,
+                                                                          GHC.Prim.Int# #)}
+                                            dt7
+                                            (GHC.Prim.int2Word# dt8)
+                                            dt10
+                                            (GHC.Prim.int2Word# dt11)
+                                            (GHC.Prim.int2Word# dt9)
+                                            GHC.Prim.realWorld# of wild6 { (#,#) ds8 ds9 ->
+                                     case GHC.Prim.narrow32Int# ds9 of wild7 {
+                                       DEFAULT -> GHC.Types.False
+                                       0#
+                                       -> Data.Text.$fEqText_$c== ww3 ww7 } } } } } } } } } } }) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $w$cfromRow ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> [Database.SQLite3.SQLData]
+    -> Database.SQLite.Simple.Ok.Ok
+         (GenePDFHtmlLib.PDFInfo,
+          (GHC.Types.Int, [Database.SQLite3.SQLData]))
+  {- Arity: 3, Strictness: <S,U><S,U><L,1*U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: [Database.SQLite3.SQLData]) ->
+                 case GHC.Prim.>=# ww1 ww of lwild {
+                   DEFAULT
+                   -> case ww2 of wild {
+                        []
+                        -> case GHC.List.badHead
+                           ret_ty (Database.SQLite.Simple.Ok.Ok
+                                     (GenePDFHtmlLib.PDFInfo,
+                                      (GHC.Types.Int, [Database.SQLite3.SQLData])))
+                           of {}
+                        : x ds6
+                        -> case Database.SQLite.Simple.FromField.$w$stakeInt3 x of wild1 {
+                             Database.SQLite.Simple.Ok.Errors es
+                             -> Database.SQLite.Simple.Ok.Errors
+                                  @ (GenePDFHtmlLib.PDFInfo,
+                                     (GHC.Types.Int, [Database.SQLite3.SQLData]))
+                                  es
+                             Database.SQLite.Simple.Ok.Ok a1
+                             -> let {
+                                  s' :: GHC.Prim.Int# = GHC.Prim.+# ww1 1#
+                                } in
+                                case GHC.Prim.>=# s' ww of lwild1 {
+                                  DEFAULT
+                                  -> case ds6 of wild2 {
+                                       []
+                                       -> case GHC.List.badHead
+                                          ret_ty (Database.SQLite.Simple.Ok.Ok
+                                                    (GenePDFHtmlLib.PDFInfo,
+                                                     (GHC.Types.Int, [Database.SQLite3.SQLData])))
+                                          of {}
+                                       : x1 ds7
+                                       -> case Database.SQLite.Simple.FromField.$w$cfromField9
+                                                 x1 of wild3 {
+                                            Database.SQLite.Simple.Ok.Errors es
+                                            -> Database.SQLite.Simple.Ok.Errors
+                                                 @ (GenePDFHtmlLib.PDFInfo,
+                                                    (GHC.Types.Int, [Database.SQLite3.SQLData]))
+                                                 es
+                                            Database.SQLite.Simple.Ok.Ok a2
+                                            -> let {
+                                                 s'' :: GHC.Prim.Int# = GHC.Prim.+# s' 1#
+                                               } in
+                                               case GHC.Prim.>=# s'' ww of lwild2 {
+                                                 DEFAULT
+                                                 -> case ds7 of wild4 {
+                                                      []
+                                                      -> case GHC.List.badHead
+                                                         ret_ty (Database.SQLite.Simple.Ok.Ok
+                                                                   (GenePDFHtmlLib.PDFInfo,
+                                                                    (GHC.Types.Int,
+                                                                     [Database.SQLite3.SQLData])))
+                                                         of {}
+                                                      : x2 ds8
+                                                      -> case Database.SQLite.Simple.FromField.$w$cfromField9
+                                                                x2 of wild5 {
+                                                           Database.SQLite.Simple.Ok.Errors es
+                                                           -> Database.SQLite.Simple.Ok.Errors
+                                                                @ (GenePDFHtmlLib.PDFInfo,
+                                                                   (GHC.Types.Int,
+                                                                    [Database.SQLite3.SQLData]))
+                                                                es
+                                                           Database.SQLite.Simple.Ok.Ok a3
+                                                           -> let {
+                                                                s''1 :: GHC.Prim.Int#
+                                                                = GHC.Prim.+# s'' 1#
+                                                              } in
+                                                              case GHC.Prim.>=# s''1 ww of lwild3 {
+                                                                DEFAULT
+                                                                -> case ds8 of wild6 {
+                                                                     []
+                                                                     -> case GHC.List.badHead
+                                                                        ret_ty (Database.SQLite.Simple.Ok.Ok
+                                                                                  (GenePDFHtmlLib.PDFInfo,
+                                                                                   (GHC.Types.Int,
+                                                                                    [Database.SQLite3.SQLData])))
+                                                                        of {}
+                                                                     : x3 ds9
+                                                                     -> case Database.SQLite.Simple.FromField.$w$cfromField9
+                                                                               x3 of wild7 {
+                                                                          Database.SQLite.Simple.Ok.Errors es
+                                                                          -> Database.SQLite.Simple.Ok.Errors
+                                                                               @ (GenePDFHtmlLib.PDFInfo,
+                                                                                  (GHC.Types.Int,
+                                                                                   [Database.SQLite3.SQLData]))
+                                                                               es
+                                                                          Database.SQLite.Simple.Ok.Ok a4
+                                                                          -> Database.SQLite.Simple.Ok.Ok
+                                                                               @ (GenePDFHtmlLib.PDFInfo,
+                                                                                  (GHC.Types.Int,
+                                                                                   [Database.SQLite3.SQLData]))
+                                                                               (GenePDFHtmlLib.PDFInfo
+                                                                                  a1
+                                                                                  a2
+                                                                                  a3
+                                                                                  a4,
+                                                                                (GHC.Types.I#
+                                                                                   (GHC.Prim.+#
+                                                                                      s''1
+                                                                                      1#),
+                                                                                 ds9)) } }
+                                                                1#
+                                                                -> Database.SQLite.Simple.Ok.Errors
+                                                                     @ (GenePDFHtmlLib.PDFInfo,
+                                                                        (GHC.Types.Int,
+                                                                         [Database.SQLite3.SQLData]))
+                                                                     (GHC.Types.:
+                                                                        @ GHC.Exception.Type.SomeException
+                                                                        (GHC.Exception.Type.SomeException
+                                                                           @ Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                                                           Database.SQLite.Simple.Internal.$fExceptionColumnOutOfBounds
+                                                                           (Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                                                              (GHC.Prim.+#
+                                                                                 s''1
+                                                                                 1#)))
+                                                                        (GHC.Types.[]
+                                                                           @ GHC.Exception.Type.SomeException)) } } }
+                                                 1#
+                                                 -> Database.SQLite.Simple.Ok.Errors
+                                                      @ (GenePDFHtmlLib.PDFInfo,
+                                                         (GHC.Types.Int,
+                                                          [Database.SQLite3.SQLData]))
+                                                      (GHC.Types.:
+                                                         @ GHC.Exception.Type.SomeException
+                                                         (GHC.Exception.Type.SomeException
+                                                            @ Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                                            Database.SQLite.Simple.Internal.$fExceptionColumnOutOfBounds
+                                                            (Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                                               (GHC.Prim.+# s'' 1#)))
+                                                         (GHC.Types.[]
+                                                            @ GHC.Exception.Type.SomeException)) } } }
+                                  1#
+                                  -> Database.SQLite.Simple.Ok.Errors
+                                       @ (GenePDFHtmlLib.PDFInfo,
+                                          (GHC.Types.Int, [Database.SQLite3.SQLData]))
+                                       (GHC.Types.:
+                                          @ GHC.Exception.Type.SomeException
+                                          (GHC.Exception.Type.SomeException
+                                             @ Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                             Database.SQLite.Simple.Internal.$fExceptionColumnOutOfBounds
+                                             (Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                                (GHC.Prim.+# s' 1#)))
+                                          (GHC.Types.[] @ GHC.Exception.Type.SomeException)) } } }
+                   1#
+                   -> Database.SQLite.Simple.Ok.Errors
+                        @ (GenePDFHtmlLib.PDFInfo,
+                           (GHC.Types.Int, [Database.SQLite3.SQLData]))
+                        (GHC.Types.:
+                           @ GHC.Exception.Type.SomeException
+                           (GHC.Exception.Type.SomeException
+                              @ Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                              Database.SQLite.Simple.Internal.$fExceptionColumnOutOfBounds
+                              (Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                 (GHC.Prim.+# ww1 1#)))
+                           (GHC.Types.[] @ GHC.Exception.Type.SomeException)) }) -}
+84a51e293624c38c7cffddab2944b7b8
+  $w$cfromRow1 ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> [Database.SQLite3.SQLData]
+    -> Database.SQLite.Simple.Ok.Ok
+         (GenePDFHtmlLib.SqliteMaster,
+          (GHC.Types.Int, [Database.SQLite3.SQLData]))
+  {- Arity: 3, Strictness: <S,U><S,U><L,1*U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: [Database.SQLite3.SQLData]) ->
+                 case GHC.Prim.>=# ww1 ww of lwild {
+                   DEFAULT
+                   -> case ww2 of wild {
+                        []
+                        -> case GHC.List.badHead
+                           ret_ty (Database.SQLite.Simple.Ok.Ok
+                                     (GenePDFHtmlLib.SqliteMaster,
+                                      (GHC.Types.Int, [Database.SQLite3.SQLData])))
+                           of {}
+                        : x ds6
+                        -> case Database.SQLite.Simple.FromField.$w$cfromField9
+                                  x of wild1 {
+                             Database.SQLite.Simple.Ok.Errors es
+                             -> Database.SQLite.Simple.Ok.Errors
+                                  @ (GenePDFHtmlLib.SqliteMaster,
+                                     (GHC.Types.Int, [Database.SQLite3.SQLData]))
+                                  es
+                             Database.SQLite.Simple.Ok.Ok a1
+                             -> let {
+                                  s' :: GHC.Prim.Int# = GHC.Prim.+# ww1 1#
+                                } in
+                                case GHC.Prim.>=# s' ww of lwild1 {
+                                  DEFAULT
+                                  -> case ds6 of wild2 {
+                                       []
+                                       -> case GHC.List.badHead
+                                          ret_ty (Database.SQLite.Simple.Ok.Ok
+                                                    (GenePDFHtmlLib.SqliteMaster,
+                                                     (GHC.Types.Int, [Database.SQLite3.SQLData])))
+                                          of {}
+                                       : x1 ds7
+                                       -> case Database.SQLite.Simple.FromField.$w$cfromField9
+                                                 x1 of wild3 {
+                                            Database.SQLite.Simple.Ok.Errors es
+                                            -> Database.SQLite.Simple.Ok.Errors
+                                                 @ (GenePDFHtmlLib.SqliteMaster,
+                                                    (GHC.Types.Int, [Database.SQLite3.SQLData]))
+                                                 es
+                                            Database.SQLite.Simple.Ok.Ok a2
+                                            -> let {
+                                                 s'' :: GHC.Prim.Int# = GHC.Prim.+# s' 1#
+                                               } in
+                                               case GHC.Prim.>=# s'' ww of lwild2 {
+                                                 DEFAULT
+                                                 -> case ds7 of wild4 {
+                                                      []
+                                                      -> case GHC.List.badHead
+                                                         ret_ty (Database.SQLite.Simple.Ok.Ok
+                                                                   (GenePDFHtmlLib.SqliteMaster,
+                                                                    (GHC.Types.Int,
+                                                                     [Database.SQLite3.SQLData])))
+                                                         of {}
+                                                      : x2 ds8
+                                                      -> case Database.SQLite.Simple.FromField.$w$cfromField9
+                                                                x2 of wild5 {
+                                                           Database.SQLite.Simple.Ok.Errors es
+                                                           -> Database.SQLite.Simple.Ok.Errors
+                                                                @ (GenePDFHtmlLib.SqliteMaster,
+                                                                   (GHC.Types.Int,
+                                                                    [Database.SQLite3.SQLData]))
+                                                                es
+                                                           Database.SQLite.Simple.Ok.Ok a3
+                                                           -> let {
+                                                                s''1 :: GHC.Prim.Int#
+                                                                = GHC.Prim.+# s'' 1#
+                                                              } in
+                                                              case GHC.Prim.>=# s''1 ww of lwild3 {
+                                                                DEFAULT
+                                                                -> case ds8 of wild6 {
+                                                                     []
+                                                                     -> case GHC.List.badHead
+                                                                        ret_ty (Database.SQLite.Simple.Ok.Ok
+                                                                                  (GenePDFHtmlLib.SqliteMaster,
+                                                                                   (GHC.Types.Int,
+                                                                                    [Database.SQLite3.SQLData])))
+                                                                        of {}
+                                                                     : x3 ds9
+                                                                     -> case Database.SQLite.Simple.FromField.$w$stakeInt5
+                                                                               x3 of wild7 {
+                                                                          Database.SQLite.Simple.Ok.Errors es
+                                                                          -> Database.SQLite.Simple.Ok.Errors
+                                                                               @ (GenePDFHtmlLib.SqliteMaster,
+                                                                                  (GHC.Types.Int,
+                                                                                   [Database.SQLite3.SQLData]))
+                                                                               es
+                                                                          Database.SQLite.Simple.Ok.Ok a4
+                                                                          -> let {
+                                                                               s''2 :: GHC.Prim.Int#
+                                                                               = GHC.Prim.+# s''1 1#
+                                                                             } in
+                                                                             case GHC.Prim.>=#
+                                                                                    s''2
+                                                                                    ww of lwild4 {
+                                                                               DEFAULT
+                                                                               -> case ds9 of wild8 {
+                                                                                    []
+                                                                                    -> case GHC.List.badHead
+                                                                                       ret_ty (Database.SQLite.Simple.Ok.Ok
+                                                                                                 (GenePDFHtmlLib.SqliteMaster,
+                                                                                                  (GHC.Types.Int,
+                                                                                                   [Database.SQLite3.SQLData])))
+                                                                                       of {}
+                                                                                    : x4 ds10
+                                                                                    -> case Database.SQLite.Simple.FromField.$w$cfromField9
+                                                                                              x4 of wild9 {
+                                                                                         Database.SQLite.Simple.Ok.Errors es
+                                                                                         -> Database.SQLite.Simple.Ok.Errors
+                                                                                              @ (GenePDFHtmlLib.SqliteMaster,
+                                                                                                 (GHC.Types.Int,
+                                                                                                  [Database.SQLite3.SQLData]))
+                                                                                              es
+                                                                                         Database.SQLite.Simple.Ok.Ok a5
+                                                                                         -> Database.SQLite.Simple.Ok.Ok
+                                                                                              @ (GenePDFHtmlLib.SqliteMaster,
+                                                                                                 (GHC.Types.Int,
+                                                                                                  [Database.SQLite3.SQLData]))
+                                                                                              (GenePDFHtmlLib.SqliteMaster
+                                                                                                 a1
+                                                                                                 a2
+                                                                                                 a3
+                                                                                                 a4
+                                                                                                 a5,
+                                                                                               (GHC.Types.I#
+                                                                                                  (GHC.Prim.+#
+                                                                                                     s''2
+                                                                                                     1#),
+                                                                                                ds10)) } }
+                                                                               1#
+                                                                               -> Database.SQLite.Simple.Ok.Errors
+                                                                                    @ (GenePDFHtmlLib.SqliteMaster,
+                                                                                       (GHC.Types.Int,
+                                                                                        [Database.SQLite3.SQLData]))
+                                                                                    (GHC.Types.:
+                                                                                       @ GHC.Exception.Type.SomeException
+                                                                                       (GHC.Exception.Type.SomeException
+                                                                                          @ Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                                                                          Database.SQLite.Simple.Internal.$fExceptionColumnOutOfBounds
+                                                                                          (Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                                                                             (GHC.Prim.+#
+                                                                                                s''2
+                                                                                                1#)))
+                                                                                       (GHC.Types.[]
+                                                                                          @ GHC.Exception.Type.SomeException)) } } }
+                                                                1#
+                                                                -> Database.SQLite.Simple.Ok.Errors
+                                                                     @ (GenePDFHtmlLib.SqliteMaster,
+                                                                        (GHC.Types.Int,
+                                                                         [Database.SQLite3.SQLData]))
+                                                                     (GHC.Types.:
+                                                                        @ GHC.Exception.Type.SomeException
+                                                                        (GHC.Exception.Type.SomeException
+                                                                           @ Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                                                           Database.SQLite.Simple.Internal.$fExceptionColumnOutOfBounds
+                                                                           (Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                                                              (GHC.Prim.+#
+                                                                                 s''1
+                                                                                 1#)))
+                                                                        (GHC.Types.[]
+                                                                           @ GHC.Exception.Type.SomeException)) } } }
+                                                 1#
+                                                 -> Database.SQLite.Simple.Ok.Errors
+                                                      @ (GenePDFHtmlLib.SqliteMaster,
+                                                         (GHC.Types.Int,
+                                                          [Database.SQLite3.SQLData]))
+                                                      (GHC.Types.:
+                                                         @ GHC.Exception.Type.SomeException
+                                                         (GHC.Exception.Type.SomeException
+                                                            @ Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                                            Database.SQLite.Simple.Internal.$fExceptionColumnOutOfBounds
+                                                            (Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                                               (GHC.Prim.+# s'' 1#)))
+                                                         (GHC.Types.[]
+                                                            @ GHC.Exception.Type.SomeException)) } } }
+                                  1#
+                                  -> Database.SQLite.Simple.Ok.Errors
+                                       @ (GenePDFHtmlLib.SqliteMaster,
+                                          (GHC.Types.Int, [Database.SQLite3.SQLData]))
+                                       (GHC.Types.:
+                                          @ GHC.Exception.Type.SomeException
+                                          (GHC.Exception.Type.SomeException
+                                             @ Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                             Database.SQLite.Simple.Internal.$fExceptionColumnOutOfBounds
+                                             (Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                                (GHC.Prim.+# s' 1#)))
+                                          (GHC.Types.[] @ GHC.Exception.Type.SomeException)) } } }
+                   1#
+                   -> Database.SQLite.Simple.Ok.Errors
+                        @ (GenePDFHtmlLib.SqliteMaster,
+                           (GHC.Types.Int, [Database.SQLite3.SQLData]))
+                        (GHC.Types.:
+                           @ GHC.Exception.Type.SomeException
+                           (GHC.Exception.Type.SomeException
+                              @ Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                              Database.SQLite.Simple.Internal.$fExceptionColumnOutOfBounds
+                              (Database.SQLite.Simple.Internal.ColumnOutOfBounds
+                                 (GHC.Prim.+# ww1 1#)))
+                           (GHC.Types.[] @ GHC.Exception.Type.SomeException)) }) -}
+01851a097ee42c341244a1e4ac0f9a38
+  $w$creadPrec ::
+    GHC.Prim.Int#
+    -> forall b.
+       (GenePDFHtmlLib.PDFInfo -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S,U><L,C(U)>, Inline: [2] -}
+84a51e293624c38c7cffddab2944b7b8
+  $w$creadPrec1 ::
+    GHC.Prim.Int#
+    -> forall b.
+       (GenePDFHtmlLib.SqliteMaster -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S,U><L,C(U)>, Inline: [2] -}
+45685befa7cc6c72817d9acaea998774
+  $w$cshow :: GHC.Base.String -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Base.String) (ww1 :: GHC.Base.String) ->
+                 GHC.CString.unpackAppendCString#
+                   GenePDFHtmlLib.$fShowLHead5
+                   (GHC.CString.unpackAppendCString#
+                      GenePDFHtmlLib.$fShowLHead4
+                      (GHC.Types.:
+                         @ GHC.Types.Char
+                         GHC.Show.$fShow(,)3
+                         (GHC.Show.showLitString
+                            ww
+                            (GHC.Types.:
+                               @ GHC.Types.Char
+                               GHC.Show.$fShow(,)3
+                               (GHC.Base.++
+                                  @ GHC.Types.Char
+                                  GHC.Show.showCommaSpace1
+                                  (GHC.CString.unpackAppendCString#
+                                     GenePDFHtmlLib.$fShowLHead3
+                                     (GHC.Types.:
+                                        @ GHC.Types.Char
+                                        GHC.Show.$fShow(,)3
+                                        (GHC.Show.showLitString
+                                           ww1
+                                           GenePDFHtmlLib.$fShowLHead6))))))))) -}
+d2145b5ff0377b15469cd9e3fc5aa963
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <S,U><L,1*U><L,1*U><L,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.CString.unpackAppendCString#
+                       GenePDFHtmlLib.$fShowLHead5
+                       (GHC.CString.unpackAppendCString#
+                          GenePDFHtmlLib.$fShowLHead4
+                          (GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)3
+                             (GHC.Show.showLitString
+                                ww1
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.$fShow(,)3
+                                   (GHC.Base.++
+                                      @ GHC.Types.Char
+                                      GHC.Show.showCommaSpace1
+                                      (GHC.CString.unpackAppendCString#
+                                         GenePDFHtmlLib.$fShowLHead3
+                                         (GHC.Types.:
+                                            @ GHC.Types.Char
+                                            GHC.Show.$fShow(,)3
+                                            (GHC.Show.showLitString
+                                               ww2
+                                               (GHC.Types.:
+                                                  @ GHC.Types.Char
+                                                  GHC.Show.$fShow(,)3
+                                                  (GHC.CString.unpackAppendCString#
+                                                     GenePDFHtmlLib.$fShowLHead2
+                                                     x))))))))))
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT -> p w
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w)) }) -}
+d56247ffe2c6e232c3488a691f4eb938
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> GHC.Int.Int64
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 6,
+     Strictness: <S,U><L,1*U(U)><L,1*U(U,U,U)><L,1*U(U,U,U)><L,1*U(U,U,U)><L,U>,
+     Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Int.Int64)
+                   (ww2 :: Data.Text.Internal.Text)
+                   (ww3 :: Data.Text.Internal.Text)
+                   (ww4 :: Data.Text.Internal.Text)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.CString.unpackAppendCString#
+                       GenePDFHtmlLib.$fShowPDFInfo7
+                       (case ww1 of wild { GHC.Int.I64# x# ->
+                        case GHC.Show.$wshowSignedInt
+                               0#
+                               x#
+                               (GHC.Base.++
+                                  @ GHC.Types.Char
+                                  GHC.Show.showCommaSpace1
+                                  (GHC.CString.unpackAppendCString#
+                                     GenePDFHtmlLib.$fShowPDFInfo6
+                                     (case Data.Text.Show.$w$cshowsPrec
+                                             ww2
+                                             (GHC.Base.++
+                                                @ GHC.Types.Char
+                                                GHC.Show.showCommaSpace1
+                                                (GHC.CString.unpackAppendCString#
+                                                   GenePDFHtmlLib.$fShowPDFInfo5
+                                                   (case Data.Text.Show.$w$cshowsPrec
+                                                           ww3
+                                                           (GHC.Base.++
+                                                              @ GHC.Types.Char
+                                                              GHC.Show.showCommaSpace1
+                                                              (GHC.CString.unpackAppendCString#
+                                                                 GenePDFHtmlLib.$fShowPDFInfo4
+                                                                 (case Data.Text.Show.$w$cshowsPrec
+                                                                         ww4
+                                                                         (GHC.CString.unpackAppendCString#
+                                                                            GenePDFHtmlLib.$fShowLHead2
+                                                                            x) of ww5 { (#,#) ww6 ww7 ->
+                                                                  GHC.Types.:
+                                                                    @ GHC.Types.Char
+                                                                    ww6
+                                                                    ww7 }))) of ww5 { (#,#) ww6 ww7 ->
+                                                    GHC.Types.:
+                                                      @ GHC.Types.Char
+                                                      ww6
+                                                      ww7 }))) of ww5 { (#,#) ww6 ww7 ->
+                                      GHC.Types.:
+                                        @ GHC.Types.Char
+                                        ww6
+                                        ww7 }))) of ww5 { (#,#) ww6 ww7 ->
+                        GHC.Types.: @ GHC.Types.Char ww6 ww7 } })
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> GHC.Base.++ @ GHC.Types.Char GenePDFHtmlLib.$fShowPDFInfo2 (g w)
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           GenePDFHtmlLib.$fShowPDFInfo2
+                           (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w))) }) -}
+543aedd3b866ffd798fe4f5c625aa2e2
+  $w$cshowsPrec2 ::
+    GHC.Prim.Int#
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> GHC.Integer.Type.Integer
+    -> Data.Text.Internal.Text
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 7,
+     Strictness: <S,U><L,1*U(U,U,U)><L,1*U(U,U,U)><L,1*U(U,U,U)><L,U><L,1*U(U,U,U)><L,U>,
+     Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: Data.Text.Internal.Text)
+                   (ww2 :: Data.Text.Internal.Text)
+                   (ww3 :: Data.Text.Internal.Text)
+                   (ww4 :: GHC.Integer.Type.Integer)
+                   (ww5 :: Data.Text.Internal.Text)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     GHC.CString.unpackAppendCString#
+                       GenePDFHtmlLib.$fShowSqliteMaster7
+                       (GHC.CString.unpackAppendCString#
+                          GenePDFHtmlLib.$fShowSqliteMaster6
+                          (case Data.Text.Show.$w$cshowsPrec
+                                  ww1
+                                  (GHC.Base.++
+                                     @ GHC.Types.Char
+                                     GHC.Show.showCommaSpace1
+                                     (GHC.CString.unpackAppendCString#
+                                        GenePDFHtmlLib.$fShowSqliteMaster5
+                                        (case Data.Text.Show.$w$cshowsPrec
+                                                ww2
+                                                (GHC.Base.++
+                                                   @ GHC.Types.Char
+                                                   GHC.Show.showCommaSpace1
+                                                   (GHC.CString.unpackAppendCString#
+                                                      GenePDFHtmlLib.$fShowSqliteMaster4
+                                                      (case Data.Text.Show.$w$cshowsPrec
+                                                              ww3
+                                                              (GHC.Base.++
+                                                                 @ GHC.Types.Char
+                                                                 GHC.Show.showCommaSpace1
+                                                                 (GHC.CString.unpackAppendCString#
+                                                                    GenePDFHtmlLib.$fShowSqliteMaster3
+                                                                    (case GHC.Show.$w$cshowsPrec4
+                                                                            0#
+                                                                            ww4
+                                                                            (GHC.Base.++
+                                                                               @ GHC.Types.Char
+                                                                               GHC.Show.showCommaSpace1
+                                                                               (GHC.CString.unpackAppendCString#
+                                                                                  GenePDFHtmlLib.$fShowSqliteMaster2
+                                                                                  (case Data.Text.Show.$w$cshowsPrec
+                                                                                          ww5
+                                                                                          (GHC.CString.unpackAppendCString#
+                                                                                             GenePDFHtmlLib.$fShowLHead2
+                                                                                             x) of ww6 { (#,#) ww7 ww8 ->
+                                                                                   GHC.Types.:
+                                                                                     @ GHC.Types.Char
+                                                                                     ww7
+                                                                                     ww8 }))) of ww6 { (#,#) ww7 ww8 ->
+                                                                     GHC.Types.:
+                                                                       @ GHC.Types.Char
+                                                                       ww7
+                                                                       ww8 }))) of ww6 { (#,#) ww7 ww8 ->
+                                                       GHC.Types.:
+                                                         @ GHC.Types.Char
+                                                         ww7
+                                                         ww8 }))) of ww6 { (#,#) ww7 ww8 ->
+                                         GHC.Types.:
+                                           @ GHC.Types.Char
+                                           ww7
+                                           ww8 }))) of ww6 { (#,#) ww7 ww8 ->
+                           GHC.Types.: @ GHC.Types.Char ww7 ww8 }))
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT -> p w
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w)) }) -}
+a48e938e7b9c96acc0218cb45f2d7544
+  $wahrefT ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Text.Internal.Text
+  {- Arity: 6, Strictness: <L,U><S,U><S,U><L,U><S,U><S,U>,
+     Inline: [2] -}
+5d68bff89b7ed43b69007f6fd458a1ec
+  $wcheckTable ::
+    Database.SQLite.Simple.Internal.Connection
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U><S,U><S,U><L,U>,
+     Inline: [2] -}
+fd7e88dbbbba249cec4888c2921d6a69
+  $wcreateNewTable ::
+    Database.SQLite.Simple.Internal.Connection
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U><S,U><S,U><L,U>,
+     Inline: [2] -}
+ac9ca9ffb8b49820657a8e5998626f34
+  $wdropTable ::
+    Database.SQLite.Simple.Internal.Connection
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U><S,U><S,U><L,U>,
+     Inline: [2] -}
+e3cf7aafa0874967312c5ec089171e78
+  $wouter ::
+    GHC.Prim.MutableByteArray# GHC.Prim.RealWorld
+    -> GHC.Prim.Int#
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <L,U><S,U><S,1*U><S,U><S,U>,
+     Inline: [2] -}
+c6d83613c4ee62a8a4be6baaf7904e6c
+  $wpdfMain ::
+    Database.SQLite.Simple.Internal.Connection
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.ByteString.Internal.ByteString #)
+  {- Arity: 2, Strictness: <L,U(U)><S,U>, Inline: [2],
+     Unfolding: (\ (w :: Database.SQLite.Simple.Internal.Connection)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case (GHC.Magic.noinline
+                         @ (GHC.Types.IO GHC.IO.Encoding.Types.TextEncoding)
+                         GHC.IO.Encoding.getForeignEncoding)
+                        `cast`
+                      (GHC.Types.N:IO[0] <GHC.IO.Encoding.Types.TextEncoding>_R)
+                        w1 of ds6 { (#,#) ipv ipv1 ->
+                 case GHC.Foreign.charIsRepresentable3
+                        @ (GHC.Maybe.Maybe GHC.Base.String)
+                        ipv1
+                        GenePDFHtmlLib.pdfMain_name
+                        System.Environment.getEnv3
+                          `cast`
+                        (<Foreign.C.String.CString>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <GHC.Maybe.Maybe GHC.Base.String>_R))
+                        ipv of ds7 { (#,#) ipv2 ipv3 ->
+                 case ipv3 of wild {
+                   GHC.Maybe.Nothing
+                   -> case System.Environment.getEnv2 GenePDFHtmlLib.pdfMain_name ipv2
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                Data.ByteString.Internal.ByteString #)
+                      of {}
+                   GHC.Maybe.Just x
+                   -> let {
+                        texFilePath :: GHC.IO.FilePath
+                        = System.FilePath.Posix.combine x GenePDFHtmlLib.pdfMain10
+                      } in
+                      case AronModule.lsFullRegex1
+                             texFilePath
+                             GenePDFHtmlLib.pdfMain8
+                             ipv2 of ds8 { (#,#) ipv4 ipv5 ->
+                      case AronModule.lsFullRegex1
+                             texFilePath
+                             GenePDFHtmlLib.pdfMain6
+                             ipv4 of ds9 { (#,#) ipv6 ipv7 ->
+                      case AronModule.lsFullRegex1
+                             GenePDFHtmlLib.pdfMain4
+                             GenePDFHtmlLib.pdfMain6
+                             ipv6 of ds10 { (#,#) ipv8 ipv9 ->
+                      case GenePDFHtmlLib._PDFTABLE1 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                      case GenePDFHtmlLib.$wcheckTable
+                             w
+                             ww1
+                             ww2
+                             ww3
+                             ipv8 of ds11 { (#,#) ipv10 ipv11 ->
+                      case GenePDFHtmlLib.$wcreateNewTable
+                             w
+                             ww1
+                             ww2
+                             ww3
+                             ipv10 of ds12 { (#,#) ipv12 ipv13 ->
+                      case GenePDFHtmlLib.insertTexToTable1
+                             w
+                             (Data.Set.Internal.$fDataSet_go
+                                @ GHC.Base.String
+                                (GHC.Types.[] @ GHC.Base.String)
+                                (AronModule.$sfromList ipv5))
+                             ipv12 of ds13 { (#,#) ipv14 ipv15 ->
+                      case GenePDFHtmlLib.insertPDFToTable1
+                             w
+                             (Data.Set.Internal.$fDataSet_go
+                                @ GHC.Base.String
+                                (GHC.Types.[] @ GHC.Base.String)
+                                (AronModule.$sfromList (GHC.Base.++ @ [GHC.Types.Char] ipv7 ipv9)))
+                             ipv14 of ds14 { (#,#) ipv16 ipv17 ->
+                      GenePDFHtmlLib.$wqueryDBToHtml
+                        w
+                        ww1
+                        ww2
+                        ww3
+                        GenePDFHtmlLib.pdfMain2
+                        ipv16 } } } } } } } } } } }) -}
+21eec00468325c91bf8456e0edb7e4aa
+  $wqueryDBToHtml ::
+    Database.SQLite.Simple.Internal.Connection
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.ByteString.Internal.ByteString #)
+  {- Arity: 6, Strictness: <L,U(U)><L,U><S,U><S,U><L,U><L,U>,
+     Inline: [2] -}
+50bbe6c3a9bf5c27a14073b8ad279e5b
+  $wtableACT ::
+    (a -> a -> a) -> Data.String.IsString a => a -> a -> a
+  {- Arity: 4, Strictness: <C(C(S)),C(C1(U))><L,C(U)><L,U><L,U>,
+     Inline: [2],
+     Unfolding: (\ @ a
+                   (ww :: a -> a -> a)
+                   (w :: Data.String.IsString a)
+                   (w1 :: a)
+                   (w2 :: a) ->
+                 ww
+                   (GenePDFHtmlLib.$wtableTT @ a ww w w1)
+                   (ww
+                      w2
+                      (w `cast` (Data.String.N:IsString[0] <a>_N)
+                         GenePDFHtmlLib.tableACT1))) -}
+e6cd22e30583583ba444094c8bbc2ed3
+  $wtableTT :: (a -> a -> a) -> Data.String.IsString a => a -> a
+  {- Arity: 3, Strictness: <C(C(S)),C(C1(U))><L,C(U)><L,U>,
+     Inline: [2],
+     Unfolding: (\ @ a
+                   (ww :: a -> a -> a)
+                   (w :: Data.String.IsString a)
+                   (w1 :: a) ->
+                 ww
+                   (w `cast` (Data.String.N:IsString[0] <a>_N)
+                      GenePDFHtmlLib.tableACT5)
+                   (ww
+                      w1
+                      (w `cast` (Data.String.N:IsString[0] <a>_N)
+                         GenePDFHtmlLib.tableACT3))) -}
+7b3f9469f16c7537c1175d4c47713c3f
+  $wtdTT ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Text.Internal.Text
+  {- Arity: 6, Strictness: <L,U><S,U><S,U><L,U><S,U><S,U>,
+     Inline: [2] -}
+04ebd46113dc06695443d1af33166b44
+  $wtd_ :: (a -> a -> a) -> Data.String.IsString a => a -> a -> a
+  {- Arity: 4, Strictness: <C(C(S)),C(C1(U))><L,C(U)><L,U><L,U>,
+     Inline: [2],
+     Unfolding: (\ @ a
+                   (ww :: a -> a -> a)
+                   (w :: Data.String.IsString a)
+                   (w1 :: a)
+                   (w2 :: a) ->
+                 ww
+                   (w `cast` (Data.String.N:IsString[0] <a>_N) GenePDFHtmlLib.td_5)
+                   (ww
+                      w1
+                      (ww
+                         (w `cast` (Data.String.N:IsString[0] <a>_N) GenePDFHtmlLib.td_3)
+                         (ww
+                            w2
+                            (w `cast` (Data.String.N:IsString[0] <a>_N)
+                               GenePDFHtmlLib.td_1))))) -}
+ec91c42fa7f2de5d9ed000cb77715795
+  $wtitleDesc ::
+    [GHC.Base.String] -> (# GHC.Base.String, GHC.Base.String #)
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [2],
+     Unfolding: (\ (w :: [GHC.Base.String]) ->
+                 case w of wild {
+                   []
+                   -> (# GHC.Types.[] @ GHC.Types.Char,
+                         GHC.Types.[] @ GHC.Types.Char #)
+                   : ipv ipv1
+                   -> let {
+                        ls :: [[GHC.Base.String]]
+                        = GHC.Base.map
+                            @ [GHC.Types.Char]
+                            @ [GHC.Base.String]
+                            GenePDFHtmlLib.insertTexToTable8
+                            wild
+                      } in
+                      (# case GenePDFHtmlLib.insertTexToTable5 of ww { Text.Regex.Posix.Wrap.Regex ww1 ww2 ww3 ->
+                         case ls of wild1 {
+                           [] -> case GHC.List.badHead ret_ty GHC.Base.String of {}
+                           : x ds6
+                           -> case x of wild2 {
+                                [] -> case GHC.List.badHead ret_ty GHC.Base.String of {}
+                                : x1 ds7
+                                -> case Text.Regex.Posix.String.$w$cmatchTest ww1 ww3 x1 of wild3 {
+                                     GHC.Types.False -> GenePDFHtmlLib.insertTexToTable4
+                                     GHC.Types.True
+                                     -> GenePDFHtmlLib.insertTexToTable_go2
+                                          wild2
+                                          (GHC.List.lastError @ GHC.Base.String) } } } },
+                         case GenePDFHtmlLib.insertTexToTable2 of ww { Text.Regex.Posix.Wrap.Regex ww1 ww2 ww3 ->
+                         let {
+                           exit2 :: [GHC.Base.String] -> GHC.Base.String
+                             <join 1> {- Arity: 1, Strictness: <S,1*U> -}
+                           = \ (eta :: [GHC.Base.String])[OneShot] ->
+                             case eta of wild1 {
+                               [] -> case GHC.List.badHead ret_ty GHC.Base.String of {}
+                               : x ds6
+                               -> case Text.Regex.Posix.String.$w$cmatchTest ww1 ww3 x of wild2 {
+                                    GHC.Types.False -> GenePDFHtmlLib.insertTexToTable4
+                                    GHC.Types.True
+                                    -> GenePDFHtmlLib.insertTexToTable_go1
+                                         ls
+                                         (GHC.List.lastError @ [GHC.Base.String]) } }
+                         } in
+                         letrec {
+                           go :: [[GHC.Base.String]] -> [GHC.Base.String] -> GHC.Base.String
+                             <join 2> {- Arity: 2, Strictness: <S,1*U><L,1*U> -}
+                           = \ (ds6 :: [[GHC.Base.String]]) (eta :: [GHC.Base.String]) ->
+                             case ds6 of wild1 { [] -> exit2 eta : y ys -> go ys y }
+                         } in
+                         go ls (GHC.List.lastError @ [GHC.Base.String]) } #) }) -}
+8961d52d0eabe2181252cec52363d505
+  $wtrCT :: (a -> a -> a) -> Data.String.IsString a => a -> a
+  {- Arity: 3, Strictness: <C(C(S)),C(C1(U))><L,C(U)><L,U>,
+     Inline: [2],
+     Unfolding: (\ @ a
+                   (ww :: a -> a -> a)
+                   (w :: Data.String.IsString a)
+                   (w1 :: a) ->
+                 ww
+                   (w `cast` (Data.String.N:IsString[0] <a>_N) GenePDFHtmlLib.trCT3)
+                   (ww
+                      w1
+                      (w `cast` (Data.String.N:IsString[0] <a>_N)
+                         GenePDFHtmlLib.trCT1))) -}
+742a2c9e89df38d97fac5ffa9b1f0bdd
+  data LHead
+    = LHead {xtitle :: GHC.Base.String, desc :: GHC.Base.String}
+01851a097ee42c341244a1e4ac0f9a38
+  data PDFInfo
+    = PDFInfo {pdfId :: GHC.Int.Int64,
+               title :: Data.Text.Internal.Text,
+               pdesc :: Data.Text.Internal.Text,
+               path :: Data.Text.Internal.Text}
+84a51e293624c38c7cffddab2944b7b8
+  data SqliteMaster
+    = SqliteMaster {x_type :: Data.Text.Internal.Text,
+                    x_name :: Data.Text.Internal.Text,
+                    x_tbl_name :: Data.Text.Internal.Text,
+                    x_rootpage :: GHC.Integer.Type.Integer,
+                    x_sql :: Data.Text.Internal.Text}
+fc0fb53489e2de3188fcaf299a0b964b
+  _PDFTABLE :: Database.SQLite.Simple.Types.Query
+  {- Unfolding: InlineRule (0, True, True)
+                GenePDFHtmlLib._PDFTABLE1
+                  `cast`
+                (Nth:3
+                     (<GHC.Base.String>_R
+                      ->_R Sym (Database.SQLite.Simple.Types.N:Query[0]))) -}
+b7291323685745e44b2e44e9a24e8882
+  _PDFTABLE1 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   GenePDFHtmlLib._PDFTABLE2) -}
+97407b9c393897739e677bbf25ade80c
+  _PDFTABLE2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("pdftable"#) -}
+cd579779f6fb007d8c423df65b18668d
+  ahrefT ::
+    Data.Text.Internal.Text
+    -> Data.Text.Internal.Text -> Data.Text.Internal.Text
+  {- Arity: 2, Strictness: <S(SSS),1*U(U,U,U)><S(SSS),1*U(U,U,U)>,
+     Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Data.Text.Internal.Text)
+                   (w1 :: Data.Text.Internal.Text) ->
+                 case w of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 case w1 of ww4 { Data.Text.Internal.Text ww5 ww6 ww7 ->
+                 GenePDFHtmlLib.$wahrefT ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
+1816db35d0aa1688dc99065440947cdd
+  checkTable ::
+    Database.SQLite.Simple.Internal.Connection
+    -> Database.SQLite.Simple.Types.Query
+    -> GHC.Types.IO GHC.Types.Bool
+  {- Arity: 3, Strictness: <L,U(U)><S(SSS),1*U(U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                GenePDFHtmlLib.checkTable1
+                  `cast`
+                (<Database.SQLite.Simple.Internal.Connection>_R
+                 ->_R <Database.SQLite.Simple.Types.Query>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
+921b4ebd3d201b5f3040843d03cc855d
+  checkTable1 ::
+    Database.SQLite.Simple.Internal.Connection
+    -> Database.SQLite.Simple.Types.Query
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
+  {- Arity: 3, Strictness: <L,U(U)><S(SSS),1*U(U,U,U)><S,U>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Database.SQLite.Simple.Internal.Connection)
+                   (w1 :: Database.SQLite.Simple.Types.Query)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w1
+                        `cast`
+                      (Database.SQLite.Simple.Types.N:Query[0]) of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 GenePDFHtmlLib.$wcheckTable w ww1 ww2 ww3 w2 }) -}
+5856e2f1a1e11eca3ec196f009da2ce5
+  createNewTable ::
+    Database.SQLite.Simple.Internal.Connection
+    -> Database.SQLite.Simple.Types.Query -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,U(U)><S(SSS),1*U(U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                GenePDFHtmlLib.createNewTable1
+                  `cast`
+                (<Database.SQLite.Simple.Internal.Connection>_R
+                 ->_R <Database.SQLite.Simple.Types.Query>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+57df94968dfc02a5f4ed7aebdbf0bd31
+  createNewTable1 ::
+    Database.SQLite.Simple.Internal.Connection
+    -> Database.SQLite.Simple.Types.Query
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,U(U)><S(SSS),1*U(U,U,U)><S,U>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Database.SQLite.Simple.Internal.Connection)
+                   (w1 :: Database.SQLite.Simple.Types.Query)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w1
+                        `cast`
+                      (Database.SQLite.Simple.Types.N:Query[0]) of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 GenePDFHtmlLib.$wcreateNewTable w ww1 ww2 ww3 w2 }) -}
+85c71e33cd7af52e70ceda37f42ce46f
+  dbpath :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   GenePDFHtmlLib.dbpath1) -}
+8595e2fd4ed10ccaac6cbc8552c675e7
+  dbpath1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("myfile/bitbucket/database/sqlite3_pdfhtml.db"#) -}
+a5ceaf4230032517269913a21a4554ab
+  dropTable ::
+    Database.SQLite.Simple.Internal.Connection
+    -> Database.SQLite.Simple.Types.Query -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,U(U)><S(SSS),1*U(U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                GenePDFHtmlLib.dropTable1
+                  `cast`
+                (<Database.SQLite.Simple.Internal.Connection>_R
+                 ->_R <Database.SQLite.Simple.Types.Query>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+04b5907eedf2fd433ce6a966493596ea
+  dropTable1 ::
+    Database.SQLite.Simple.Internal.Connection
+    -> Database.SQLite.Simple.Types.Query
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,U(U)><S(SSS),1*U(U,U,U)><S,U>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Database.SQLite.Simple.Internal.Connection)
+                   (w1 :: Database.SQLite.Simple.Types.Query)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w1
+                        `cast`
+                      (Database.SQLite.Simple.Types.N:Query[0]) of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 GenePDFHtmlLib.$wdropTable w ww1 ww2 ww3 w2 }) -}
+742a2c9e89df38d97fac5ffa9b1f0bdd
+  hempty :: GenePDFHtmlLib.LHead
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GenePDFHtmlLib.LHead
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+ca1fb2ed011a68afac4ec11152e83347
+  insertPDFToTable ::
+    Database.SQLite.Simple.Internal.Connection
+    -> [GHC.Base.String] -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,U(U)><S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                GenePDFHtmlLib.insertPDFToTable1
+                  `cast`
+                (<Database.SQLite.Simple.Internal.Connection>_R
+                 ->_R <[GHC.Base.String]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+f5d3f01658b4c0fde40c82bb2e934b73
+  insertPDFToTable1 ::
+    Database.SQLite.Simple.Internal.Connection
+    -> [GHC.Base.String]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,U(U)><S,1*U><S,U>,
+     Unfolding: (\ (conn :: Database.SQLite.Simple.Internal.Connection)
+                   (allPDFfile :: [GHC.Base.String])
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 letrec {
+                   go :: [GHC.Base.String]
+                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                         -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     <join 2> {- Arity: 2, Strictness: <S,1*U><S,U> -}
+                   = \ (ds6 :: [GHC.Base.String])
+                       (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                     case ds6 of wild {
+                       []
+                       -> (GHC.IO.Handle.Text.hPutStr'
+                             GHC.IO.Handle.FD.stdout
+                             GenePDFHtmlLib.insertPDFToTable4
+                             GHC.Types.True)
+                            `cast`
+                          (GHC.Types.N:IO[0] <()>_R)
+                            eta1
+                       : y ys
+                       -> case GenePDFHtmlLib.insertPDFToTable3 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                          case Database.SQLite.Simple.$wwithStatement
+                                 @ ()
+                                 conn
+                                 ww1
+                                 ww2
+                                 ww3
+                                 (\ (stmt :: Database.SQLite.Simple.Statement)[OneShot]
+                                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                  case stmt
+                                         `cast`
+                                       (Database.SQLite.Simple.N:Statement[0] ; Database.SQLite3.Direct.N:Statement[0]) of ww4 { GHC.Ptr.Ptr ww5 ->
+                                  case Database.SQLite.Simple.$w$sbind
+                                         ww5
+                                         (GHC.Types.:
+                                            @ Database.SQLite3.SQLData
+                                            GenePDFHtmlLib.insertPDFToTable2
+                                            (GHC.Types.:
+                                               @ Database.SQLite3.SQLData
+                                               GenePDFHtmlLib.insertPDFToTable2
+                                               (GHC.Types.:
+                                                  @ Database.SQLite3.SQLData
+                                                  (case GHC.Magic.runRW#
+                                                          @ ('GHC.Types.TupleRep
+                                                               '[ 'GHC.Types.TupleRep '[],
+                                                                  'GHC.Types.LiftedRep])
+                                                          @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                               Data.Text.Internal.Text #)
+                                                          (\ (s1 :: GHC.Prim.State#
+                                                                      GHC.Prim.RealWorld)[OneShot] ->
+                                                           case GHC.Prim.newByteArray#
+                                                                  @ GHC.Prim.RealWorld
+                                                                  10#
+                                                                  s1 of ds7 { (#,#) ipv ipv1 ->
+                                                           GenePDFHtmlLib.$wouter
+                                                             ipv1
+                                                             4#
+                                                             y
+                                                             0#
+                                                             ipv }) of ds7 { (#,#) ipv ipv1 ->
+                                                   case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                                                   Database.SQLite3.SQLText dt } })
+                                                  (GHC.Types.[] @ Database.SQLite3.SQLData))))
+                                         s of ds7 { (#,#) ipv ipv1 ->
+                                  case Database.SQLite3.$wstep ww5 ipv of ds8 { (#,#) ipv2 ipv3 ->
+                                  (# ipv2, GHC.Tuple.() #) } } })
+                                   `cast`
+                                 (<Database.SQLite.Simple.Statement>_R
+                                  ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                                 eta1 of ds7 { (#,#) ipv ipv1 ->
+                          go ys ipv } } }
+                 } in
+                 go allPDFfile eta) -}
+0af28b5d1933a4b20ab506e6b75d658c
+  insertPDFToTable2 :: Database.SQLite3.SQLData
+  {- Unfolding: (case Data.Text.Internal.empty_ of dt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
+                 Database.SQLite3.SQLText dt }) -}
+e706ccf82a4ff433a496259e348a15c7
+  insertPDFToTable3 :: Data.Text.Internal.Text
+2806c06d4ae4fe18958ceb761512e7e8
+  insertPDFToTable4 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)3
+                   GenePDFHtmlLib.insertPDFToTable5) -}
+c437fe03dfd3705a89ee6a3768eb95ef
+  insertPDFToTable5 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.showLitString
+                   (GHC.CString.unpackCString# GenePDFHtmlLib.insertPDFToTable6)
+                   GHC.Show.$fShow[]1) -}
+b28d16524fa2b3a2d4186ecbc37fc059
+  insertPDFToTable6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("done"#) -}
+2fb3983bb34b3cac285c5145eb292353
+  insertTexToTable ::
+    Database.SQLite.Simple.Internal.Connection
+    -> [GHC.Base.String] -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,U(U)><S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                GenePDFHtmlLib.insertTexToTable1
+                  `cast`
+                (<Database.SQLite.Simple.Internal.Connection>_R
+                 ->_R <[GHC.Base.String]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+e29a59061fd221ee80b1dfe7a081ad90
+  insertTexToTable1 ::
+    Database.SQLite.Simple.Internal.Connection
+    -> [GHC.Base.String]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,U(U)><S,1*U><S,U>,
+     Unfolding: (\ (conn :: Database.SQLite.Simple.Internal.Connection)
+                   (allTexFile :: [GHC.Base.String])
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GenePDFHtmlLib.insertTexToTable14
+                        allTexFile
+                        eta of ds6 { (#,#) ipv ipv1 ->
+                 letrec {
+                   go :: [([GHC.Base.String], GHC.IO.FilePath)]
+                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                         -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     <join 2> {- Arity: 2, Strictness: <S,1*U><S,U> -}
+                   = \ (ds7 :: [([GHC.Base.String], GHC.IO.FilePath)])
+                       (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                     case ds7 of wild {
+                       []
+                       -> (GHC.IO.Handle.Text.hPutStr'
+                             GHC.IO.Handle.FD.stdout
+                             GenePDFHtmlLib.insertTexToTable11
+                             GHC.Types.True)
+                            `cast`
+                          (GHC.Types.N:IO[0] <()>_R)
+                            eta1
+                       : y ys
+                       -> case y of wild1 { (,) x ds8 ->
+                          case GenePDFHtmlLib.$wtitleDesc x of ww { (#,#) ww1 ww2 ->
+                          let {
+                            $j :: (# GHC.Prim.State# GHC.Prim.RealWorld, () #) <join 0>
+                            = case GenePDFHtmlLib.insertPDFToTable3 of ww3 { Data.Text.Internal.Text ww4 ww5 ww6 ->
+                              case Database.SQLite.Simple.$wwithStatement
+                                     @ ()
+                                     conn
+                                     ww4
+                                     ww5
+                                     ww6
+                                     (\ (stmt :: Database.SQLite.Simple.Statement)[OneShot]
+                                        (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                      case stmt
+                                             `cast`
+                                           (Database.SQLite.Simple.N:Statement[0] ; Database.SQLite3.Direct.N:Statement[0]) of ww7 { GHC.Ptr.Ptr ww8 ->
+                                      case Database.SQLite.Simple.$w$sbind
+                                             ww8
+                                             (GHC.Types.:
+                                                @ Database.SQLite3.SQLData
+                                                (case x of wild2 {
+                                                   []
+                                                   -> case GHC.List.badHead
+                                                      ret_ty Database.SQLite3.SQLData
+                                                      of {}
+                                                   : x1 ds9
+                                                   -> case GHC.Magic.runRW#
+                                                             @ ('GHC.Types.TupleRep
+                                                                  '[ 'GHC.Types.TupleRep '[],
+                                                                     'GHC.Types.LiftedRep])
+                                                             @ (# GHC.Prim.State#
+                                                                    GHC.Prim.RealWorld,
+                                                                  Data.Text.Internal.Text #)
+                                                             (\ (s1 :: GHC.Prim.State#
+                                                                         GHC.Prim.RealWorld)[OneShot] ->
+                                                              case GHC.Prim.newByteArray#
+                                                                     @ GHC.Prim.RealWorld
+                                                                     10#
+                                                                     s1 of ds10 { (#,#) ipv2 ipv3 ->
+                                                              GenePDFHtmlLib.$wouter
+                                                                ipv3
+                                                                4#
+                                                                x1
+                                                                0#
+                                                                ipv2 }) of ds10 { (#,#) ipv2 ipv3 ->
+                                                      case ipv3 of dt { Data.Text.Internal.Text ipv4 ipv5 ipv6 ->
+                                                      Database.SQLite3.SQLText dt } } })
+                                                (GHC.Types.:
+                                                   @ Database.SQLite3.SQLData
+                                                   (GenePDFHtmlLib.insertTexToTable_go
+                                                      x
+                                                      (GHC.List.lastError @ GHC.Base.String))
+                                                   (GHC.Types.:
+                                                      @ Database.SQLite3.SQLData
+                                                      (case GHC.Magic.runRW#
+                                                              @ ('GHC.Types.TupleRep
+                                                                   '[ 'GHC.Types.TupleRep '[],
+                                                                      'GHC.Types.LiftedRep])
+                                                              @ (# GHC.Prim.State#
+                                                                     GHC.Prim.RealWorld,
+                                                                   Data.Text.Internal.Text #)
+                                                              (\ (s1 :: GHC.Prim.State#
+                                                                          GHC.Prim.RealWorld)[OneShot] ->
+                                                               case GHC.Prim.newByteArray#
+                                                                      @ GHC.Prim.RealWorld
+                                                                      10#
+                                                                      s1 of ds9 { (#,#) ipv2 ipv3 ->
+                                                               GenePDFHtmlLib.$wouter
+                                                                 ipv3
+                                                                 4#
+                                                                 ds8
+                                                                 0#
+                                                                 ipv2 }) of ds9 { (#,#) ipv2 ipv3 ->
+                                                       case ipv3 of dt { Data.Text.Internal.Text ipv4 ipv5 ipv6 ->
+                                                       Database.SQLite3.SQLText dt } })
+                                                      (GHC.Types.[] @ Database.SQLite3.SQLData))))
+                                             s of ds9 { (#,#) ipv2 ipv3 ->
+                                      case Database.SQLite3.$wstep
+                                             ww8
+                                             ipv2 of ds10 { (#,#) ipv4 ipv5 ->
+                                      (# ipv4, GHC.Tuple.() #) } } })
+                                       `cast`
+                                     (<Database.SQLite.Simple.Statement>_R
+                                      ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                                     eta1 of ds9 { (#,#) ipv2 ipv3 ->
+                              go ys ipv2 } }
+                          } in
+                          case GHC.Base.eqString
+                                 ww1
+                                 (GHC.Types.[] @ GHC.Types.Char) of wild2 {
+                            GHC.Types.False -> $j
+                            GHC.Types.True
+                            -> case GHC.Base.eqString
+                                      ww2
+                                      (GHC.Types.[] @ GHC.Types.Char) of wild3 {
+                                 GHC.Types.False -> $j GHC.Types.True -> go ys eta1 } } } } }
+                 } in
+                 go ipv1 ipv }) -}
+4062f9366158e797c3aaed47a482c356
+  insertTexToTable10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("[:]"#) -}
+24fbdddb029ec0a5161cc72ce89c1827
+  insertTexToTable11 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)3
+                   GenePDFHtmlLib.insertTexToTable12) -}
+4b954286a5fa2f461251b3b4fdf8a34d
+  insertTexToTable12 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.showLitString
+                   (GHC.CString.unpackCString# GenePDFHtmlLib.insertTexToTable13)
+                   GHC.Show.$fShow[]1) -}
+c38cbfe9d6cf99776f65e04a8f9264dc
+  insertTexToTable13 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("add tex done."#) -}
+3a88a377381c5b43a689f6a049737d19
+  insertTexToTable14 ::
+    [GHC.IO.FilePath]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          [([GHC.Base.String], GHC.IO.FilePath)] #)
+  {- Arity: 2, Strictness: <S,1*U><S,U> -}
+b4f30fbd353243707c6e70b6851b4ad7
+  insertTexToTable2 :: Text.Regex.Posix.Wrap.Regex
+  {- Unfolding: (Text.Regex.Posix.String.$fRegexMakerRegexCompOptionExecOption[]_$cmakeRegexOpts
+                   Text.Regex.mkRegex1
+                     `cast`
+                   (Sym (Foreign.C.Types.N:CInt[0]) ; Sym (Text.Regex.Posix.Wrap.N:CompOption[0]))
+                   Text.Regex.Posix.Wrap.$fRegexOptionsRegexCompOptionExecOption2
+                     `cast`
+                   (Sym (Foreign.C.Types.N:CInt[0]) ; Sym (Text.Regex.Posix.Wrap.N:ExecOption[0]))
+                   (GHC.CString.unpackCString# GenePDFHtmlLib.insertTexToTable3)) -}
+96dca10f8d3cce32e30c4c879cdcdfa6
+  insertTexToTable3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("desc"#) -}
+1fa818ec4d5b9c9329d2d41db86d927e
+  insertTexToTable4 :: GHC.Base.String
+  {- Unfolding: (AronModule.trim (GHC.Types.[] @ GHC.Types.Char)) -}
+9cc9d4e909798e7523fc3fa44bd630b8
+  insertTexToTable5 :: Text.Regex.Posix.Wrap.Regex
+  {- Unfolding: (Text.Regex.Posix.String.$fRegexMakerRegexCompOptionExecOption[]_$cmakeRegexOpts
+                   Text.Regex.mkRegex1
+                     `cast`
+                   (Sym (Foreign.C.Types.N:CInt[0]) ; Sym (Text.Regex.Posix.Wrap.N:CompOption[0]))
+                   Text.Regex.Posix.Wrap.$fRegexOptionsRegexCompOptionExecOption2
+                     `cast`
+                   (Sym (Foreign.C.Types.N:CInt[0]) ; Sym (Text.Regex.Posix.Wrap.N:ExecOption[0]))
+                   GenePDFHtmlLib.insertTexToTable6) -}
+192c29ecd70258b3ceaa95d946d3ec01
+  insertTexToTable6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   GenePDFHtmlLib.insertTexToTable7) -}
+835b30b5e0ce8f5dba9ec75d1a3fe5cf
+  insertTexToTable7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("title"#) -}
+1181f1bfd681c9ab1ba727c611f9dec1
+  insertTexToTable8 :: GHC.Base.String -> [GHC.Base.String]
+  {- Arity: 1,
+     Unfolding: (AronModule.splitStrChar
+                   GenePDFHtmlLib.insertTexToTable9) -}
+a673414c2b373e483f038f5b74972489
+  insertTexToTable9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   GenePDFHtmlLib.insertTexToTable10) -}
+6e555eae555379c3483aa67a7926bf4e
+  insertTexToTable_go ::
+    [GHC.Base.String] -> GHC.Base.String -> Database.SQLite3.SQLData
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>m3 -}
+861f915da15633214221983088b98c76
+  insertTexToTable_go1 ::
+    [[GHC.Base.String]] -> [GHC.Base.String] -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U> -}
+335b192afb49824984a3cea5df2b0012
+  insertTexToTable_go2 ::
+    [GHC.Base.String] -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U> -}
+c35f0ee4a76bfcdc40fa13dbb892232b
+  pdfFile :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   GenePDFHtmlLib.pdfFile1) -}
+b884eb0519c9f971c4965cc306122865
+  pdfFile1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("/Library/WebServer/Documents/zsurface/pdf"#) -}
+72cb9ee05089be0bcdba4568d9913e48
+  pdfMain ::
+    Database.SQLite.Simple.Internal.Connection
+    -> GHC.Base.String
+    -> GHC.Types.IO Data.ByteString.Internal.ByteString
+  {- Arity: 3, Strictness: <L,U(U)><L,A><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                GenePDFHtmlLib.pdfMain1
+                  `cast`
+                (<Database.SQLite.Simple.Internal.Connection>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Data.ByteString.Internal.ByteString>_R)) -}
+0f363b245f78c1ad611ead4f56edc52a
+  pdfMain1 ::
+    Database.SQLite.Simple.Internal.Connection
+    -> GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.ByteString.Internal.ByteString #)
+  {- Arity: 3, Strictness: <L,U(U)><L,A><S,U>, Inline: [2],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: Database.SQLite.Simple.Internal.Connection)
+                   (w1 :: GHC.Base.String)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 GenePDFHtmlLib.$wpdfMain w w2) -}
+b8eef20ba3d1e6af44bb26859c3f941a
+  pdfMain10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   GenePDFHtmlLib.pdfMain11) -}
+06ed35b9ea9e24b0e9803ffb506afe28
+  pdfMain11 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("myfile/bitbucket/math"#) -}
+9a5cc0b870eb4bda25054b79ef6badcb
+  pdfMain12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("HOME"#) -}
+d92582a9038a9e5f147d8364d146e147
+  pdfMain2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   GenePDFHtmlLib.pdfMain3) -}
+67e6b3deb36c30b170729f30abe3aeea
+  pdfMain3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("pdf/"#) -}
+04fe29a23e7efda50cabfd14385c8f82
+  pdfMain4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   GenePDFHtmlLib.pdfMain5) -}
+f2aaf226f4276c34990172df41851fa4
+  pdfMain5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("./pdf"#) -}
+f05bdd82c683384bb6f5f846ed01aaa4
+  pdfMain6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   GenePDFHtmlLib.pdfMain7) -}
+b13114b30ab46d6ef5ab7c4fb4fe68b2
+  pdfMain7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("\\.pdf$"#) -}
+5af573d80a79e43e53bddda92fbf8ef5
+  pdfMain8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   GenePDFHtmlLib.pdfMain9) -}
+bc6f0b53553595d54291b91317024c94
+  pdfMain9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("\\.tex$"#) -}
+96e4fba750b4fc7fdb345cdda61be259
+  pdfMain_name :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString#
+                   GenePDFHtmlLib.pdfMain12) -}
+46a3c26890f75ceb5c7157b1e9e29e7c
+  queryDBToHtml ::
+    Database.SQLite.Simple.Internal.Connection
+    -> Database.SQLite.Simple.Types.Query
+    -> GHC.Base.String
+    -> GHC.Types.IO Data.ByteString.Internal.ByteString
+  {- Arity: 4, Strictness: <L,U(U)><S(SSS),1*U(U,U,U)><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                GenePDFHtmlLib.queryDBToHtml1
+                  `cast`
+                (<Database.SQLite.Simple.Internal.Connection>_R
+                 ->_R <Database.SQLite.Simple.Types.Query>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Data.ByteString.Internal.ByteString>_R)) -}
+f990ee525c96946593a8c3d80c1ddaa8
+  queryDBToHtml1 ::
+    Database.SQLite.Simple.Internal.Connection
+    -> Database.SQLite.Simple.Types.Query
+    -> GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.ByteString.Internal.ByteString #)
+  {- Arity: 4, Strictness: <L,U(U)><S(SSS),1*U(U,U,U)><L,U><S,U>,
+     Inline: [2],
+     Unfolding: InlineRule (4, True, False)
+                (\ (w :: Database.SQLite.Simple.Internal.Connection)
+                   (w1 :: Database.SQLite.Simple.Types.Query)
+                   (w2 :: GHC.Base.String)
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w1
+                        `cast`
+                      (Database.SQLite.Simple.Types.N:Query[0]) of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 GenePDFHtmlLib.$wqueryDBToHtml w ww1 ww2 ww3 w2 w3 }) -}
+7367cf1f0348daa034adcb154874d19c
+  st :: [Data.Text.Internal.Text]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.Text.Internal.Text
+                   GenePDFHtmlLib.st4
+                   GenePDFHtmlLib.st1) -}
+4233ea01da78d8ac0dc48352989b8353
+  st1 :: [Data.Text.Internal.Text]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.Text.Internal.Text
+                   GenePDFHtmlLib.st2
+                   (GHC.Types.[] @ Data.Text.Internal.Text)) -}
+02ced772ed7f0349ca67839304a43c85
+  st2 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# GenePDFHtmlLib.st3) -}
+8ee667b2565acba00c38dd9741a3dc87
+  st3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("background:#DDDDDD;"#) -}
+e6fed042c1af9e1f8807f281d10ca83a
+  st4 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# GenePDFHtmlLib.st5) -}
+74f48b392a8ba80f7e59cd7d635605d9
+  st5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("font-size:18px;"#) -}
+fce052c8b7ca4647f978c6ad297aaf85
+  styleT :: [Data.Text.Internal.Text] -> Data.Text.Internal.Text
+  {- Arity: 1, Strictness: <S,1*U> -}
+d15b20167b6e415027ba2d388131b28f
+  tableA :: [[[Data.Text.Internal.Text]]] -> Data.Text.Internal.Text
+  {- Arity: 1, Strictness: <S,1*U> -}
+f043db9d829bf720183a43d73910f5c2
+  tableAA ::
+    [[[Data.Text.Internal.Text]]]
+    -> [Data.Text.Internal.Text] -> Data.Text.Internal.Text
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+c5506d7e9ce5bebbb84a422670590a38
+  tableACT ::
+    (GHC.Base.Semigroup a, Data.String.IsString a) => a -> a -> a
+  {- Arity: 4,
+     Strictness: <S(C(C(S))LL),1*U(C(C1(U)),A,A)><L,C(U)><L,U><L,U>,
+     Inline: [2],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   (w :: GHC.Base.Semigroup a)
+                   (w1 :: Data.String.IsString a)
+                   (w2 :: a)
+                   (w3 :: a) ->
+                 case w of ww { GHC.Base.C:Semigroup ww1 ww2 ww3 ->
+                 GenePDFHtmlLib.$wtableACT @ a ww1 w1 w2 w3 }) -}
+9141bfb465ec3bc13ee2e54695cff128
+  tableACT1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   GenePDFHtmlLib.tableACT2) -}
+b1c59d6a7ddb325afe1ad571dbfc0cb9
+  tableACT2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("</table>"#) -}
+7a467282fcb83b144dc4cf64484163e3
+  tableACT3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   GenePDFHtmlLib.tableACT4) -}
+f384b16ea0cf826c96eb7fab4738a163
+  tableACT4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (">"#) -}
+7180e942b291bf966f163f0524cebd43
+  tableACT5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   GenePDFHtmlLib.tableACT6) -}
+478b16a12f80099d0f65c8b5094e0451
+  tableACT6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<table "#) -}
+2849acab4e23a6a8f4181d326dfd9bcf
+  tableTT :: (GHC.Base.Semigroup a, Data.String.IsString a) => a -> a
+  {- Arity: 3,
+     Strictness: <S(C(C(S))LL),1*U(C(C1(U)),A,A)><L,C(U)><L,U>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Base.Semigroup a)
+                   (w1 :: Data.String.IsString a)
+                   (w2 :: a) ->
+                 case w of ww { GHC.Base.C:Semigroup ww1 ww2 ww3 ->
+                 GenePDFHtmlLib.$wtableTT @ a ww1 w1 w2 }) -}
+29d11303ff3a402062e116660b5d2f2b
+  tdTT ::
+    Data.Text.Internal.Text
+    -> Data.Text.Internal.Text -> Data.Text.Internal.Text
+  {- Arity: 2, Strictness: <S(SSS),1*U(U,U,U)><S(SSS),1*U(U,U,U)>,
+     Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Data.Text.Internal.Text)
+                   (w1 :: Data.Text.Internal.Text) ->
+                 case w of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 case w1 of ww4 { Data.Text.Internal.Text ww5 ww6 ww7 ->
+                 GenePDFHtmlLib.$wtdTT ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
+a71a0f471293ccd789647c3211144dc9
+  td_ ::
+    (GHC.Base.Semigroup a, Data.String.IsString a) => a -> a -> a
+  {- Arity: 4,
+     Strictness: <S(C(C(S))LL),1*U(C(C1(U)),A,A)><L,C(U)><L,U><L,U>,
+     Inline: [2],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   (w :: GHC.Base.Semigroup a)
+                   (w1 :: Data.String.IsString a)
+                   (w2 :: a)
+                   (w3 :: a) ->
+                 case w of ww { GHC.Base.C:Semigroup ww1 ww2 ww3 ->
+                 GenePDFHtmlLib.$wtd_ @ a ww1 w1 w2 w3 }) -}
+6d656517002fbf74106f65f4be4f7f08
+  td_1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# GenePDFHtmlLib.td_2) -}
+e1f4038268be022307d52e8910894366
+  td_2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("</a></td> "#) -}
+4b12859d1d9059337684f0bfead21919
+  td_3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# GenePDFHtmlLib.td_4) -}
+842c1e7b91044a253ee0a912dd578e60
+  td_4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("\">"#) -}
+ed12147948586fd933fc5c2d9c36146f
+  td_5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# GenePDFHtmlLib.td_6) -}
+6bb96f2dc7c6a30027110956aadbcf18
+  td_6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<td id=\"notme\"><a href=\""#) -}
+fdebebe9dab042628e7d360c19511292
+  titleDesc :: [GHC.Base.String] -> GenePDFHtmlLib.LHead
+  {- Arity: 1, Strictness: <S,1*U>m, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: [GHC.Base.String]) ->
+                 case GenePDFHtmlLib.$wtitleDesc w of ww { (#,#) ww1 ww2 ->
+                 GenePDFHtmlLib.LHead ww1 ww2 }) -}
+7a1172cb9ed167c29b31a8c795a71669
+  toS :: Data.Text.Internal.Text -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSS),1*U(U,U,U)>,
+     Unfolding: InlineRule (0, True, True) Data.Text.Show.unpack -}
+02d7e665e6837cbe3f6496ec6c7e1c18
+  toT :: GHC.Base.String -> Data.Text.Internal.Text
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True) Data.Text.pack -}
+cb0a426ef7cf462c732449fa5477d5fd
+  trCT :: (GHC.Base.Semigroup a, Data.String.IsString a) => a -> a
+  {- Arity: 3,
+     Strictness: <S(C(C(S))LL),1*U(C(C1(U)),A,A)><L,C(U)><L,U>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Base.Semigroup a)
+                   (w1 :: Data.String.IsString a)
+                   (w2 :: a) ->
+                 case w of ww { GHC.Base.C:Semigroup ww1 ww2 ww3 ->
+                 GenePDFHtmlLib.$wtrCT @ a ww1 w1 w2 }) -}
+213967c5d9668ed61cdaa96a8171d8e8
+  trCT1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# GenePDFHtmlLib.trCT2) -}
+ba8898b67d34e63450f19921353e84f4
+  trCT2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("</tr>"#) -}
+ae6d72ad6fef868091bc7d30fa4b3153
+  trCT3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# GenePDFHtmlLib.trCT4) -}
+f960a4baa8118ecc57b98452c888b77c
+  trCT4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<tr>"#) -}
+instance Data.Default.Class.Default [GenePDFHtmlLib.LHead]
+  = GenePDFHtmlLib.$fDefaultLHead
+instance GHC.Classes.Eq [GenePDFHtmlLib.LHead]
+  = GenePDFHtmlLib.$fEqLHead
+instance GHC.Classes.Eq [GenePDFHtmlLib.PDFInfo]
+  = GenePDFHtmlLib.$fEqPDFInfo
+instance GHC.Classes.Eq [GenePDFHtmlLib.SqliteMaster]
+  = GenePDFHtmlLib.$fEqSqliteMaster
+instance Database.SQLite.Simple.FromRow.FromRow [GenePDFHtmlLib.PDFInfo]
+  = GenePDFHtmlLib.$fFromRowPDFInfo
+instance Database.SQLite.Simple.FromRow.FromRow [GenePDFHtmlLib.SqliteMaster]
+  = GenePDFHtmlLib.$fFromRowSqliteMaster
+instance GHC.Read.Read [GenePDFHtmlLib.PDFInfo]
+  = GenePDFHtmlLib.$fReadPDFInfo
+instance GHC.Read.Read [GenePDFHtmlLib.SqliteMaster]
+  = GenePDFHtmlLib.$fReadSqliteMaster
+instance GHC.Show.Show [GenePDFHtmlLib.LHead]
+  = GenePDFHtmlLib.$fShowLHead
+instance GHC.Show.Show [GenePDFHtmlLib.PDFInfo]
+  = GenePDFHtmlLib.$fShowPDFInfo
+instance GHC.Show.Show [GenePDFHtmlLib.SqliteMaster]
+  = GenePDFHtmlLib.$fShowSqliteMaster
+instance Database.SQLite.Simple.ToRow.ToRow [GenePDFHtmlLib.PDFInfo]
+  = GenePDFHtmlLib.$fToRowPDFInfo
+instance Database.SQLite.Simple.ToRow.ToRow [GenePDFHtmlLib.SqliteMaster]
+  = GenePDFHtmlLib.$fToRowSqliteMaster
+trusted: none
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

@@ -106,5 +106,6 @@ main = do
     pp "dog"
     putStrLn host 
     pp "http starting"
+    pp "test it"
     run 8000 (app conn1 ref)
     close conn1

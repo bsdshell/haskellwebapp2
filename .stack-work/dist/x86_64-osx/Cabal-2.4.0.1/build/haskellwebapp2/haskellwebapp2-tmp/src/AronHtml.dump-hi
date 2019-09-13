@@ -1,0 +1,615 @@
+
+==================== FINAL INTERFACE ====================
+2019-09-07 22:34:58.298891 UTC
+
+interface main:AronHtml 8065
+  interface hash: 0d952b67600791044ec44261c6f6e9bb
+  ABI hash: c34d56194af947f96d475e916734bc02
+  export-list hash: fb4a0af57b3b0a97762018ed07144e15
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: c68c4f1113fca5efce729246077ea5ac
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  AronHtml.ahref_
+  AronHtml.align_
+  AronHtml.class_
+  AronHtml.divC
+  AronHtml.divT
+  AronHtml.id_
+  AronHtml.onclick_
+  AronHtml.preT
+  AronHtml.style_
+  AronHtml.table
+  AronHtml.table1
+  AronHtml.tableAC
+  AronHtml.tableC
+  AronHtml.tableT
+  AronHtml.td1
+  AronHtml.tdAC
+  AronHtml.tdC
+  AronHtml.tdT
+  AronHtml.tr1
+  AronHtml.trC
+  AronHtml.tr_
+module dependencies:
+package dependencies: ansi-terminal-0.8.2 array-0.5.3.0
+                      base-4.12.0.0 binary-0.8.6.0 bytestring-0.10.8.2 colour-2.3.5
+                      containers-0.6.0.1 deepseq-1.4.4.0 directory-1.3.3.0
+                      filepath-1.4.2.1 ghc-boot-th-8.6.5 ghc-prim-0.5.3 hashable-1.2.7.0
+                      integer-gmp-1.0.2.0 mtl-2.2.2 parsec-3.1.13.0 pretty-1.1.3.6
+                      pretty-simple-2.2.0.1 primitive-0.6.4.0 process-1.6.5.0 random-1.1
+                      raw-strings-qq-1.1 regex-base-0.93.2 regex-compat-0.95.1
+                      regex-posix-0.95.2 regex-tdfa-1.2.3.2 split-0.2.3.3
+                      template-haskell-2.14.0.0 text-1.2.3.1 time-1.8.0.2
+                      transformers-0.5.6.2 unix-2.7.2.2 unordered-containers-0.2.10.0
+                      utf8-string-1.0.1.1 vector-0.12.0.3
+orphans: time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian colour-2.3.5:Data.Colour
+         vector-0.12.0.3:Data.Vector.Fusion.Bundle
+         hashable-1.2.7.0:Data.Hashable.Generic
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.ByteString
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.ByteString.Lazy
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.Sequence
+         regex-tdfa-1.2.3.2:Text.Regex.TDFA.String
+         transformers-0.5.6.2:Control.Monad.Trans.Error
+         regex-posix-0.95.2:Text.Regex.Posix.String
+         regex-posix-0.95.2:Text.Regex.Posix.Sequence
+         regex-posix-0.95.2:Text.Regex.Posix.ByteString.Lazy
+         regex-posix-0.95.2:Text.Regex.Posix.ByteString
+         regex-base-0.93.2:Text.Regex.Base.Context
+         text-1.2.3.1:Data.Text.Lazy text-1.2.3.1:Data.Text
+         binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show base-4.12.0.0:GHC.Float
+         base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         ghc-boot-th-8.6.5:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.6.5:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.Color
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.Expr
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.ExprToOutput
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.Output
+                         pretty-simple-2.2.0.1:Text.Pretty.Simple.Internal.OutputPrinter
+                         primitive-0.6.4.0:Control.Monad.Primitive
+                         primitive-0.6.4.0:Data.Primitive.Array
+                         template-haskell-2.14.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+                         unordered-containers-0.2.10.0:Data.HashMap.Base
+                         unordered-containers-0.2.10.0:Data.HashSet.Base
+                         vector-0.12.0.3:Data.Vector
+import  -/  array-0.5.3.0:Data.Array 92f4b3399a96adb44649ce9a9d6cd419
+import  -/  base-4.12.0.0:Control.Concurrent 945d3c1c41ed03e6117e3861cad65d9f
+import  -/  base-4.12.0.0:Control.Monad 07eaec7fd256019b318d048d00f45b1c
+import  -/  base-4.12.0.0:Data.Char 74f67fe9150a102afa18766e840f6832
+import  -/  base-4.12.0.0:Data.Foldable efb37371da929e7bc88d896298d2d979
+import  -/  base-4.12.0.0:Data.List 17d0c71c557e42abe196f130788fd997
+import  -/  base-4.12.0.0:Data.Maybe 9b76a39e833465c3c5b3c078b431417f
+import  -/  base-4.12.0.0:Data.Ratio ca7795f81c201f83d6159a8388bb75b9
+import  -/  base-4.12.0.0:Debug.Trace 60f75ad789dcddb29321db1cb21ccd4c
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  base-4.12.0.0:System.Environment c54e0d0308e729fdace6bc37aa74bb52
+import  -/  base-4.12.0.0:System.Exit 3c945ec7c596067c067092c41083c3d0
+import  -/  base-4.12.0.0:System.IO c961e5ee6731c0683a6e879272c9e9f6
+import  -/  base-4.12.0.0:Text.Printf d9e1f32eb8aa55bafa1cf4360210b275
+import  -/  base-4.12.0.0:Text.Read 87f80fc2538a174aea915dd98f74fc0a
+import  -/  bytestring-0.10.8.2:Data.ByteString fc40bec3e4fb10b918937406130fe77a
+import  -/  bytestring-0.10.8.2:Data.ByteString.Char8 40491ceac5d0f84d2a7f4a84fd2dd3ab
+import  -/  bytestring-0.10.8.2:Data.ByteString.Lazy 2f1c3e7310d730fefed76cfb6092806e
+import  -/  bytestring-0.10.8.2:Data.ByteString.Lazy.Char8 ee271bbed336425979c30600663f1b4d
+import  -/  containers-0.6.0.1:Data.Set afd5ab7eac5658da18a4fffc2d1b683c
+import  -/  directory-1.3.3.0:System.Directory 49a915596c61b7c4c6db58cd4e1272c2
+import  -/  filepath-1.4.2.1:System.FilePath.Posix 807571ae31e154c61d0c6bb61ff8b097
+import  -/  pretty-simple-2.2.0.1:Text.Pretty.Simple 707b2bc6f116ea6d674407fd8950002a
+import  -/  process-1.6.5.0:System.Process 2e810cee2a417b14ed03c6fbb00362a9
+import  -/  random-1.1:System.Random 92935f2739d08d3c469b92fe5ac17118
+import  -/  raw-strings-qq-1.1:Text.RawString.QQ c67191eb1e65b067a4153ab1b4095832
+import  -/  regex-base-0.93.2:Text.Regex.Base 38db9417236ed3a9eb5d5959c0551869
+import  -/  regex-base-0.93.2:Text.Regex.Base.RegexLike fa2c0de5c64e014d2ef6fd2421527991
+import  -/  regex-compat-0.95.1:Text.Regex 7217c00d13a781e2337d1a1f0f474b2e
+import  -/  regex-posix-0.95.2:Text.Regex.Posix c4d3a6df4cf5fd30c7c141af2e1ceba1
+import  -/  regex-tdfa-1.2.3.2:Text.Regex.TDFA 1f5520f04edc87777baa08ec77ad505b
+import  -/  split-0.2.3.3:Data.List.Split 3518b4851dc357bd81ca9eb7a13694f0
+import  -/  text-1.2.3.1:Data.Text 681b9c3df5b4e4b4e23ef5f840f0b692
+import  -/  text-1.2.3.1:Data.Text.Encoding 90a09b7eff84aa60662c467f3d3a3a73
+import  -/  text-1.2.3.1:Data.Text.Lazy 5dfd4775189d1cf6b5f168bbf44e9081
+import  -/  text-1.2.3.1:Data.Text.Lazy.Encoding 54d8a57ac2b9488e6671150dcf5d5643
+import  -/  time-1.8.0.2:Data.Time f6ff4096de7c69ad22c2a67f4dd509e4
+import  -/  time-1.8.0.2:Data.Time.Clock.POSIX 9cecc2051debab576bd5d468a9a020cc
+import  -/  unix-2.7.2.2:System.Posix.Files 8b4394d70ac72397a0a2e65b696ae5fc
+import  -/  unix-2.7.2.2:System.Posix.Unistd df669442b24f9247b1a8d9f5004b6b19
+import  -/  unordered-containers-0.2.10.0:Data.HashMap.Strict 14aa6b14c186f36ceb9dd8a7757e3d8e
+import  -/  utf8-string-1.0.1.1:Data.ByteString.Lazy.UTF8 f5b0a832db1bd1f54d51a8a6303c888b
+import  -/  utf8-string-1.0.1.1:Data.ByteString.UTF8 695d13a27a7b1ff88bf5105edcca8ef2
+import  -/  vector-0.12.0.3:Data.Vector c0c0d9d6b460ae754b065c5a1411482b
+d33768b5e077ddc291b768cdec91ae1d
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   AronHtml.$trModule3
+                   AronHtml.$trModule1) -}
+fcae2e560d15b87b448d51cdb2f925b6
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS AronHtml.$trModule2) -}
+7cd879a4ab11693ef325d312929ce4a8
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("AronHtml"#) -}
+b2e6b0e1066fd76a01fb8e097d5e95c2
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS AronHtml.$trModule4) -}
+688bf938b555d0dbb353dc12cd8d001f
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+0cf0e3a54df18fea31e60a9879c0ef36
+  ahref_ :: [GHC.Types.Char] -> [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>,
+     Unfolding: (\ (link :: [GHC.Types.Char])
+                   (desc :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.ahref_4
+                   (GHC.Base.++
+                      @ GHC.Types.Char
+                      link
+                      (GHC.CString.unpackAppendCString#
+                         AronHtml.ahref_3
+                         (GHC.Base.++ @ GHC.Types.Char desc AronHtml.ahref_1)))) -}
+421b1900bdf3558d9d7eeaef9f9c4dd3
+  ahref_1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# AronHtml.ahref_2) -}
+496258374c70e5fdb3a62391ef794831
+  ahref_2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("</a>"#) -}
+5d8addf2c5b273a6038637f37fa76d3d
+  ahref_3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'>"#) -}
+e159d510a9d7ff720a536146971f846c
+  ahref_4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" <a href='"#) -}
+c692af9dd61a9cde18957ed1ca37add4
+  align_ :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.align_2
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.align_1 c n)
+                         s))) -}
+b030893aa0b515865f222e0e9b2befa0
+  align_1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("' "#) -}
+f7c89b4b0d88aeeda686f671c1d95a5f
+  align_2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" align='"#) -}
+dcd78352125a4b715e7b8bf89f3408b7
+  class_ :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.class_1
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.align_1 c n)
+                         s))) -}
+17c3de5725533fcb01b566e07138ab5f
+  class_1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" class='"#) -}
+d187254159438b4e161c368d6c542441
+  divC :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.divC2
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.divC1 c n)
+                         s))) -}
+9622890633d7c79094531985b2b7e2b8
+  divC1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("</div>"#) -}
+38ef06cb08e5da4c47c5a726ffebd95f
+  divC2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<div>"#) -}
+1bbd1dfe83ab1bdeed890a5a786d02ea
+  divT :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.divT2
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.divT1 c n)
+                         s))) -}
+de15d141e9cf4c7f9843be3f3374e8fd
+  divT1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" >"#) -}
+69b3a83e9ae51936a2975cb80ab6a865
+  divT2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<div "#) -}
+d69b03687f2921729762ef3aca67666d
+  id_ :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.id_1
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.align_1 c n)
+                         s))) -}
+69dc355dfb4a4f69639075d11af70bf3
+  id_1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" id='"#) -}
+dddd0be9bc22b3d520c6ad9465f006b4
+  onclick_ :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.onclick_2
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.onclick_1 c n)
+                         s))) -}
+cd72915e1f5d29ca1a1905ff7b5ed44a
+  onclick_1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'"#) -}
+61d43f084417ddc80fe8ec2290c75b94
+  onclick_2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" ondblclick='"#) -}
+2d1bf80d519c36f3bcaa902a8df524bf
+  preT :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.preT1
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.divT1 c n)
+                         s))) -}
+e42b530ab01a695d49d33998ea02df55
+  preT1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<pre "#) -}
+737402adf2beda0d7eb0fc1e921c09e3
+  style_ ::
+    Data.Foldable.Foldable t => t [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 2,
+     Strictness: <L,1*U(A,A,1*C1(C1(C1(U))),A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U>,
+     Unfolding: (\ @ t :: * -> *
+                   ($dFoldable :: Data.Foldable.Foldable t)
+                   (cs :: t [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.style_1
+                   (Data.Foldable.foldr
+                      @ t
+                      $dFoldable
+                      @ [GHC.Types.Char]
+                      @ [GHC.Types.Char]
+                      (GHC.Base.++ @ GHC.Types.Char)
+                      AronHtml.style_2
+                      cs)) -}
+081b4ddf470e049d6f1c571dbf180cc0
+  style_1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" style='"#) -}
+98963203740e093b59c123ebdf31ec3f
+  style_2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# AronHtml.align_1) -}
+5bb69d537007a3f8331dd79a422e399f
+  table :: [[GHC.Base.String]] -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (cs :: [[GHC.Base.String]]) ->
+                 AronHtml.tableAC AronHtml.table2 (AronHtml.table_go cs)) -}
+6e63614b7f64a5820de8f17fc572ff99
+  table1 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.table4
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.tableAC2 c n)
+                         s))) -}
+df17c28f2fea5a2f6aba4ed8b4f4b38c
+  table2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# AronHtml.table3) -}
+e4149b82afa0fd5524241f193b0ad5f5
+  table3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: (" style='font-size:20px;background:#DDDDDD;' "#) -}
+d7706675e282323cac184a8e4c750e34
+  table4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<table>"#) -}
+e534d30d526d98db9ff6c54a8db39c96
+  tableAC :: [GHC.Types.Char] -> [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>,
+     Unfolding: (\ (a :: [GHC.Types.Char]) (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.tableAC3
+                   (GHC.Base.++
+                      @ GHC.Types.Char
+                      a
+                      (GHC.CString.unpackAppendCString#
+                         AronHtml.divT1
+                         (GHC.Base.++ @ GHC.Types.Char s AronHtml.tableAC1)))) -}
+dd70bab4e9c474a5c2a8a60947050fa6
+  tableAC1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# AronHtml.tableAC2) -}
+5bc9f5744cf6274979ccc4596671599e
+  tableAC2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("</table>"#) -}
+9188f167ce9052ea53197f12253828fa
+  tableAC3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<table "#) -}
+a40a6f8fcf0a240f3861236a909e779d
+  tableC :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.table4
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.tableAC2 c n)
+                         s))) -}
+21671c783c2d6b90e079e3fb16ff96aa
+  tableT :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.tableAC3
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.divT1 c n)
+                         s))) -}
+69b1935164063f70dc55083411d60fcc
+  table_go :: [[[GHC.Types.Char]]] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U> -}
+fb660d85afc75a91e5dd612e825d48aa
+  td1 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.td3
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.td2 c n)
+                         s))) -}
+626f9daf647287696f829b28898aef1b
+  td2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("</td>"#) -}
+dec15df86982e50b8c7b1d4c18c37e6c
+  td3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<td>"#) -}
+6a734338c26c36eb3e9523de7c5fecd0
+  tdAC :: [GHC.Types.Char] -> [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>,
+     Unfolding: (\ (a :: [GHC.Types.Char]) (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.tdAC3
+                   (GHC.Base.++
+                      @ GHC.Types.Char
+                      a
+                      (GHC.CString.unpackAppendCString#
+                         AronHtml.tdAC2
+                         (GHC.Base.++ @ GHC.Types.Char s AronHtml.tdAC1)))) -}
+84b5b5dc9adea2732a276e8141458644
+  tdAC1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# AronHtml.td3) -}
+2a98054fd64cee0891090c033f0df103
+  tdAC2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (">"#) -}
+6e14c36aae72ae7376560a232814a88f
+  tdAC3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<td "#) -}
+de2548e9c031b54a30c822a59bc2889e
+  tdC :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.td3
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.td2 c n)
+                         s))) -}
+ca2fa4b055a65cf82d425ecf81ae84f1
+  tdT :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.tdAC3
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.tdAC2 c n)
+                         s))) -}
+8edf46763afac2749e6598e05f2e56a2
+  tr1 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.tr3
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.tr2 c n)
+                         s))) -}
+0a0d026035b0a1618b301aac3a74e97a
+  tr2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("</tr>"#) -}
+783e8f5be7d2bdd70de3ebffa0d00e16
+  tr3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<tr>"#) -}
+adb87363297c294f086f165aa4e65520
+  trC :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.tr3
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.tr2 c n)
+                         s))) -}
+d010d9fcbd36d3b20af2ed971bdb9b77
+  tr_ :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: [GHC.Types.Char]) ->
+                 GHC.CString.unpackAppendCString#
+                   AronHtml.tr3
+                   (GHC.Base.build
+                      @ GHC.Types.Char
+                      (\ @ b
+                         (c :: GHC.Types.Char -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b
+                         c
+                         (GHC.CString.unpackFoldrCString# @ b AronHtml.tr2 c n)
+                         s))) -}
+trusted: none
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

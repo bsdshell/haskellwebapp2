@@ -1211,12 +1211,21 @@ queryLibJava cmd = responseStream
                 query_redis = "/Users/cat/myfile/symbin/redis_query.hs "
                 preKey = "Aron."
 
+{-| 
+    Get user input: cmd = "s java regex"
+    1. remove spaces from cmd
+    2. insert cmd to table: userinput if userinput exists, otherwise create table: userinput
+        1. sorted all cmd and create Html form with all cmd
+        2. create Html output from cmd query. 
+-} 
 responseSnippet::Connection -> String -> IORef HMap-> Response
 responseSnippet conn cmd ref = responseStream
               status200
               [("Content-Type", "text/html")] $ \write flush -> do
               let sCmd = (trimBoth cmd)
 
+              -- store user input commands in a table: userinput
+              -- if table does not exist, create one, otherwise insert data to table: userinput
               logCurrCmd [sCmd]
               execute_ conn sql_create_table 
               execute conn sql_insert (UserInput 0 (toText cmd))

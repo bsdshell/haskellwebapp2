@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2019-09-08 01:09:35.045437 UTC
+2019-09-30 22:58:07.07377 UTC
 
 interface main:GenePDFHtmlLib 8065
-  interface hash: 492b217d7083b3a6f43e9967faae4cba
-  ABI hash: f484f4afd03660b6211471039d6dde60
+  interface hash: 1c21d0d2250a20edd0309b97ea3e297a
+  ABI hash: ea37d0f0f670eb25c7178a6fa76a278e
   export-list hash: 980732851be205105697ae9605592ec9
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: da424903d1b477516c337c1798cf40cd
@@ -1978,7 +1978,7 @@ e3cf7aafa0874967312c5ec089171e78
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U><S,U><S,1*U><S,U><S,U>,
      Inline: [2] -}
-c6d83613c4ee62a8a4be6baaf7904e6c
+8e759d74868e0055e0eb18ead7520ce0
   $wpdfMain ::
     Database.SQLite.Simple.Internal.Connection
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -2026,39 +2026,45 @@ c6d83613c4ee62a8a4be6baaf7904e6c
                              GenePDFHtmlLib.pdfMain6
                              ipv6 of ds10 { (#,#) ipv8 ipv9 ->
                       case GenePDFHtmlLib._PDFTABLE1 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
-                      case GenePDFHtmlLib.$wcheckTable
+                      case GenePDFHtmlLib.$wdropTable
                              w
                              ww1
                              ww2
                              ww3
                              ipv8 of ds11 { (#,#) ipv10 ipv11 ->
-                      case GenePDFHtmlLib.$wcreateNewTable
+                      case GenePDFHtmlLib.$wcheckTable
                              w
                              ww1
                              ww2
                              ww3
                              ipv10 of ds12 { (#,#) ipv12 ipv13 ->
+                      case GenePDFHtmlLib.$wcreateNewTable
+                             w
+                             ww1
+                             ww2
+                             ww3
+                             ipv12 of ds13 { (#,#) ipv14 ipv15 ->
                       case GenePDFHtmlLib.insertTexToTable1
                              w
                              (Data.Set.Internal.$fDataSet_go
                                 @ GHC.Base.String
                                 (GHC.Types.[] @ GHC.Base.String)
                                 (AronModule.$sfromList ipv5))
-                             ipv12 of ds13 { (#,#) ipv14 ipv15 ->
+                             ipv14 of ds14 { (#,#) ipv16 ipv17 ->
                       case GenePDFHtmlLib.insertPDFToTable1
                              w
                              (Data.Set.Internal.$fDataSet_go
                                 @ GHC.Base.String
                                 (GHC.Types.[] @ GHC.Base.String)
                                 (AronModule.$sfromList (GHC.Base.++ @ [GHC.Types.Char] ipv7 ipv9)))
-                             ipv14 of ds14 { (#,#) ipv16 ipv17 ->
+                             ipv16 of ds15 { (#,#) ipv18 ipv19 ->
                       GenePDFHtmlLib.$wqueryDBToHtml
                         w
                         ww1
                         ww2
                         ww3
                         GenePDFHtmlLib.pdfMain2
-                        ipv16 } } } } } } } } } } }) -}
+                        ipv18 } } } } } } } } } } } }) -}
 21eec00468325c91bf8456e0edb7e4aa
   $wqueryDBToHtml ::
     Database.SQLite.Simple.Internal.Connection
@@ -2676,7 +2682,7 @@ b884eb0519c9f971c4965cc306122865
   pdfFile1 :: GHC.Prim.Addr#
   {- HasNoCafRefs,
      Unfolding: ("/Library/WebServer/Documents/zsurface/pdf"#) -}
-72cb9ee05089be0bcdba4568d9913e48
+1c78c806f0c2360ad12898f5b254a237
   pdfMain ::
     Database.SQLite.Simple.Internal.Connection
     -> GHC.Base.String
@@ -2689,7 +2695,7 @@ b884eb0519c9f971c4965cc306122865
                  ->_R <GHC.Base.String>_R
                  ->_R Sym (GHC.Types.N:IO[0]
                                <Data.ByteString.Internal.ByteString>_R)) -}
-0f363b245f78c1ad611ead4f56edc52a
+429a15717a2ec40718611f13d577a705
   pdfMain1 ::
     Database.SQLite.Simple.Internal.Connection
     -> GHC.Base.String

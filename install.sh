@@ -43,14 +43,14 @@ function help(){
     printc 196 "help message"
 }
 
-source $HOME/myfile/bitbucket/script/color.sh  
+source "$HOME/myfile/bitbucket/script/color.sh"  
 
 getpwd
 
 
 # getName -> $ff/mybin/getName  is Haskell code
 mybin=$HOME/myfile/mybin
-fname=$(getName $PWD)
+fname=$(getName "$PWD")
 dir=${fname}Bin
 bindir=$mybin/$dir
 
@@ -60,14 +60,17 @@ printc 200 "[bindir=$bindir]"
 
 echo "install in => install"
 echo "install un => uninstall"
+
+
 if [[ "$1" == "in" ]]; then
-    mkdir $bindir 
+    mkdir "$bindir"
     stack install --local-bin-path $bindir 
     cp ./config.txt $bindir 
     ls -lah $bindir
 
     cd $sym
     rm $sym/$fname
+
 
     ln -s $bindir/$fname $fname 
     ls -lah $mybin

@@ -296,12 +296,19 @@ insertPDFToTable conn allPDFfile = do
                        ) allPDFfile 
         print "done" 
 
+{-|
+   === Query PDF files from table:[_PDFfile = pdffile] and create html page => send page to client
 
-
+   1. Connection - db connection
+   2. Query      - table name
+   3. String     - absolute path location to pdf files 
+   4. return     - Html page in BS.Bytestring
+-}
 queryDBToHtml::Connection -> Query -> String -> IO BS.ByteString
 queryDBToHtml conn tableName dir = do
         pdfQuery <- query_ conn ([r| SELECT id, title, pdesc, path from |] <> tableName) :: IO [PDFInfo]
-        let plist = partList 4 pdfQuery -- [[PDFInfo]]
+        -- numCol = 3, number of column one page
+        let plist = partList numCol pdfQuery where numCol = 3  -- [[PDFInfo]]
         let pdfLL = map (\r -> map(\c -> let t = if (TS.length $ trimT $ title c) == 0 then toT $ "no title" else trimT $ title c
                                              d = if (TS.length $ trimT $ pdesc c) == 0 then baseNameT $ path c else pdesc c
                                              p = (toST dir) <> takeFileNameT (path c) 
@@ -329,7 +336,7 @@ pdfMain conn p = do
         downPDFFile <- lsRegexFull pdfFilePath "\\.pdf$"
         let utexFile = unique allTexFile
         let updfFile = unique (allPDFFile ++ downPDFFile)
-        -- dropTable conn _PDFTABLE 
+        dropTable conn _PDFTABLE 
         foundTab <- checkTable conn _PDFTABLE 
         createNewTable conn _PDFTABLE 
         insertTexToTable conn utexFile 

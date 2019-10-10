@@ -61,7 +61,6 @@ printc 200 "[bindir=$bindir]"
 echo "install in => install"
 echo "install un => uninstall"
 
-
 if [[ "$1" == "in" ]]; then
     mkdir "$bindir"
     stack install --local-bin-path $bindir 
@@ -70,7 +69,6 @@ if [[ "$1" == "in" ]]; then
 
     cd $sym
     rm $sym/$fname
-
 
     ln -s $bindir/$fname $fname 
     ls -lah $mybin

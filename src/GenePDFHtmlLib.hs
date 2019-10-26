@@ -336,7 +336,7 @@ pdfMain conn p = do
         downPDFFile <- lsRegexFull pdfFilePath "\\.pdf$"
         let utexFile = unique allTexFile
         let updfFile = unique (allPDFFile ++ downPDFFile)
-        dropTable conn _PDFTABLE 
+        -- dropTable conn _PDFTABLE 
         foundTab <- checkTable conn _PDFTABLE 
         createNewTable conn _PDFTABLE 
         insertTexToTable conn utexFile 

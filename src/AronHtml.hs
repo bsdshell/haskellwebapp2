@@ -90,6 +90,7 @@ table1 s = "<table>" <> s <> "</table>"
 -- table1 $ tr1 $ concat $ map(td1) ["dog", "cat"]
 -- table1 $ tr1 $ concat $ map(\x -> td1 x <> "<br>") ["dog", "cat"]
 
+
 ahref_ link desc = [r| <a href='|] <> link <> [r|'>|] <> desc <> [r|</a>|]
 
 table::[[String]] -> String

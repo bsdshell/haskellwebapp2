@@ -462,15 +462,15 @@
   (major1) == 0 && (major2) == 1 && (minor) <= 3)
 #endif /* MIN_VERSION_word8 */
 
-/* tool alex-3.1.3 */
+/* tool alex-3.2.4 */
 #ifndef TOOL_VERSION_alex
-#define TOOL_VERSION_alex "3.1.3"
+#define TOOL_VERSION_alex "3.2.4"
 #endif /* TOOL_VERSION_alex */
 #ifndef MIN_TOOL_VERSION_alex
 #define MIN_TOOL_VERSION_alex(major1,major2,minor) (\
   (major1) <  3 || \
-  (major1) == 3 && (major2) <  1 || \
-  (major1) == 3 && (major2) == 1 && (minor) <= 3)
+  (major1) == 3 && (major2) <  2 || \
+  (major1) == 3 && (major2) == 2 && (minor) <= 4)
 #endif /* MIN_TOOL_VERSION_alex */
 
 /* tool cpphs-1.19.3 */
@@ -528,15 +528,15 @@
   (major1) == 2 && (major2) == 22 && (minor) <= 0)
 #endif /* MIN_TOOL_VERSION_haddock */
 
-/* tool happy-1.19.4 */
+/* tool happy-1.19.9 */
 #ifndef TOOL_VERSION_happy
-#define TOOL_VERSION_happy "1.19.4"
+#define TOOL_VERSION_happy "1.19.9"
 #endif /* TOOL_VERSION_happy */
 #ifndef MIN_TOOL_VERSION_happy
 #define MIN_TOOL_VERSION_happy(major1,major2,minor) (\
   (major1) <  1 || \
   (major1) == 1 && (major2) <  19 || \
-  (major1) == 1 && (major2) == 19 && (minor) <= 4)
+  (major1) == 1 && (major2) == 19 && (minor) <= 9)
 #endif /* MIN_TOOL_VERSION_happy */
 
 /* tool hpc-0.67 */
@@ -572,15 +572,15 @@
   (major1) == 1 && (major2) == 24 && (minor) <= 0)
 #endif /* MIN_TOOL_VERSION_hscolour */
 
-/* tool pkg-config-0.29.1 */
+/* tool pkg-config-0.29.2 */
 #ifndef TOOL_VERSION_pkg_config
-#define TOOL_VERSION_pkg_config "0.29.1"
+#define TOOL_VERSION_pkg_config "0.29.2"
 #endif /* TOOL_VERSION_pkg_config */
 #ifndef MIN_TOOL_VERSION_pkg_config
 #define MIN_TOOL_VERSION_pkg_config(major1,major2,minor) (\
   (major1) <  0 || \
   (major1) == 0 && (major2) <  29 || \
-  (major1) == 0 && (major2) == 29 && (minor) <= 1)
+  (major1) == 0 && (major2) == 29 && (minor) <= 2)
 #endif /* MIN_TOOL_VERSION_pkg_config */
 
 /* tool runghc-8.6.5 */
@@ -595,7 +595,7 @@
 #endif /* MIN_TOOL_VERSION_runghc */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-CX0Dv4gsGLA2Lo5UwUtLDE-haskellwebapp2"
+#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-9f3ZmCm6jlaFSwbn17Lcoa-haskellwebapp2"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

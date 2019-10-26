@@ -47,6 +47,7 @@ packages:
 # http://hackage.haskell.org/package/http-accept-0.2/docs/Network-HTTP-Accept.html 
 extra-deps:
 - wai-util-0.8
+# - wai-util-0.7
 - http-accept-0.2 
 
 # flags: {}

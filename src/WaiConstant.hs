@@ -66,4 +66,4 @@ import Text.RawString.QQ          -- QuasiQuotes needs for Text.RawString.QQ
 port = 8080 :: Int 
 host = "http://localhost"
 
-hostURL = "http://localhost:8080"
+hostURL = "http://localhost:" ++ (show port)

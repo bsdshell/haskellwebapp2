@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/Users/cat/myfile/bitbucket/haskellwebapp2/.stack-work/install/x86_64-osx/aedf13f238a04ec38eaea700275a5944789a6b76075efd85d470a4bda30235de/8.6.5/bin"
-libdir     = "/Users/cat/myfile/bitbucket/haskellwebapp2/.stack-work/install/x86_64-osx/aedf13f238a04ec38eaea700275a5944789a6b76075efd85d470a4bda30235de/8.6.5/lib/x86_64-osx-ghc-8.6.5/haskellwebapp2-0.1.0.0-9f3ZmCm6jlaFSwbn17Lcoa-haskellwebapp2"
+libdir     = "/Users/cat/myfile/bitbucket/haskellwebapp2/.stack-work/install/x86_64-osx/aedf13f238a04ec38eaea700275a5944789a6b76075efd85d470a4bda30235de/8.6.5/lib/x86_64-osx-ghc-8.6.5/haskellwebapp2-0.1.0.0-GcYNsFtprEHFGp8zpKFRZD-haskellwebapp2"
 dynlibdir  = "/Users/cat/myfile/bitbucket/haskellwebapp2/.stack-work/install/x86_64-osx/aedf13f238a04ec38eaea700275a5944789a6b76075efd85d470a4bda30235de/8.6.5/lib/x86_64-osx-ghc-8.6.5"
 datadir    = "/Users/cat/myfile/bitbucket/haskellwebapp2/.stack-work/install/x86_64-osx/aedf13f238a04ec38eaea700275a5944789a6b76075efd85d470a4bda30235de/8.6.5/share/x86_64-osx-ghc-8.6.5/haskellwebapp2-0.1.0.0"
 libexecdir = "/Users/cat/myfile/bitbucket/haskellwebapp2/.stack-work/install/x86_64-osx/aedf13f238a04ec38eaea700275a5944789a6b76075efd85d470a4bda30235de/8.6.5/libexec/x86_64-osx-ghc-8.6.5/haskellwebapp2-0.1.0.0"

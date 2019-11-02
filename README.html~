@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+</head>
+
+<body>
+
+<h1>This is Haskell Web Server Application</h1>
+
+<h2>The app dependents on many libraries</h2>
+
+<ul>
+<li>Wai - low level Web service API</li>
+<li>AESON - Serialize and deserialize Json data</li>
+<li>Redis - Key and Value data store. NoSql</li>
+<li>Sqlite3 - file-based Relational Data Engine, it is similar to MySql but less functionarities.</li>
+<li>more</li>
+</ul>
+
+<h1>What the app can do?</h1>
+
+<ul>
+<li>Submit data to Server, and store data in database or local file.</li>
+<li>Use websocket to send Json</li>
+<li>Use Redis to query data from Redis server</li>
+</ul>
+
+</body>
+</html>

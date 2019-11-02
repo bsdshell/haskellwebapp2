@@ -91,7 +91,10 @@ import qualified Network.Wai.Handler.WebSockets as WS
 import qualified Network.WebSockets             as WS
 
 -- {-# LANGUAGE QuasiQuotes       #-}
-import Text.RawString.QQ         -- Need QuasiQuotes too 
+import Text.RawString.QQ (r)         -- Need QuasiQuotes too 
+
+-- http://hackage.haskell.org/package/neat-interpolation-0.3.2.4/docs/NeatInterpolation.html
+import qualified NeatInterpolation as NI -- variable interpolation
 
 -- remove it since there is issue to build in stack
 -- copy the source code and create a module called PortableLines
@@ -108,7 +111,12 @@ import           Database.SQLite.Simple.Ok
 import GHC.Generics
 import qualified Data.Aeson as DA
 
+
+toStr = strictTextToStr
+
+
 toBS = strToStrictByteString
+toText = strToStrictText
 pdfdir = "pdf"
 
 data Block = Block{bblock::[DL.Text]} deriving (Generic, Show)
@@ -385,6 +393,11 @@ transform =
             keyName.
             (htmlLess.htmlGreater)
 
+
+
+blockId::Integer -> String
+blockId n = "t" ++ (show n)
+
 {-| 
     === Hide all the data in TextArea
     @
@@ -399,8 +412,8 @@ transform =
     <textarea autofocus="true" onfocus="textAreaAdjust(this);"></textarea>
     @
 -} 
-hiddenForm::Integer -> String -> String  
-hiddenForm n s = [r|  
+hiddenForm2::Integer -> String -> String  
+hiddenForm2 n s = [r|  
        <form action="/update" name="Update" class="hf" id=|] <> cid "f" n <> 
        [r| method="POST"><textarea name="header" rows="20" class="hide"> |] <> (head $ lines s) <> 
        [r| </textarea><textarea name="myblock" spellcheck="false" autofocus="true" onfocus="textAreaAdjust(this);" id= |] <> "t" ++ (sw n) <> 
@@ -412,7 +425,58 @@ hiddenForm n s = [r|
             </div> </form> |]
       where
         sw = show
-        cid s n = show $ s ++ show n
+        -- cid s n = show $ s ++ show n
+        cid s n = s ++ show n
+
+hiddenForm::Integer -> String -> String  
+hiddenForm n s = toStr [NI.text| 
+<form action="/update" name="Update" class="hf" id='f${nn}' method="POST"><textarea name="header" rows="20" class="hide">${he} 
+                |] 
+           where
+              ts = toText s
+              nn = toText $ show nn
+              he = toText $ head $ lines s
+
+hiddenForm3::Integer -> String -> String  
+hiddenForm3 n s = toStr [NI.text| 
+<form action="/update" name="Update" class="hf" id='f${nn}' method="POST"><textarea name="header" rows="20" class="hide">${he} 
+    </textarea><textarea name="myblock" spellcheck="false" autofocus="true" onfocus="textAreaAdjust(this);" id='t${nn}' class="hide">${ts}</textarea><div class="butcen">
+    <input type="submit" name="update" value="update" id='b${nn}'  class="submitButton"> 
+    <input type="submit" name="add"    value="add"    id='a${nn}'  class="submitButton"> 
+    <input type="submit" name="delete" value="delete" id='d${nn}'  class="submitButton"> 
+    </div></form>
+                |] 
+           where
+              ts = toText s
+              nn = toText $ show nn
+              he = toText $ head $ lines s
+
+hiddenForm4::Integer -> TS.Text -> TS.Text 
+hiddenForm4 n s = [NI.text| 
+<form action="/update" name="Update" class="hf" id='f${nn}' method="POST"><textarea name="header" rows="20" class="hide">${he} 
+    </textarea><textarea name="myblock" spellcheck="false" autofocus="true" onfocus="textAreaAdjust(this);" id='t${nn}' class="hide">${s}</textarea><div class="butcen">
+    <input type="submit" name="update" value="update" id='b${nn}'  class="submitButton"> 
+    <input type="submit" name="add"    value="add"    id='a${nn}'  class="submitButton"> 
+    <input type="submit" name="delete" value="delete" id='d${nn}'  class="submitButton"> 
+    </div></form>
+                |] 
+           where
+              nn = toText $ show nn
+              he = head $ TS.lines s
+                
+--       method="POST"><textarea name="header" rows="20" class="hide"> |] <> (head $ lines s) <> 
+--       [NI.text| </textarea><textarea name="myblock" spellcheck="false" autofocus="true" onfocus="textAreaAdjust(this);" id= |] <> "t" ++ (sw n) <> 
+--             class="hide">  ${s} 
+--             </textarea><div class="butcen">
+--            <input type="submit" name="update" value="update" id="b${nn}"  class="submitButton"> 
+--            <input type="submit" name="add" value="add" id="a${nn}"  class="submitButton"> 
+--            <input type="submit" name="delete" value="delete" id="d${nn}"  class="submitButton"> 
+--            </div> </form> |]
+--      where
+--        nn = toText $ show n
+--        sw = show
+        -- cid s n = show $ s ++ show n
+        -- cid s n = (toText s) ++ (toText $ show n)
 
 -- In Java
 -- Function f = x -> x + 1
@@ -446,9 +510,12 @@ foldListList stylish allBlock = L.foldr(\x y -> x + br + y) []
                $ L.foldr(\x y -> x + y) [] zhtml    -- f s => [[String]]
                where
                 code = zip (stylish allBlock) allBlock -- code => stylish code
+                -- n    => [1..] 
+                -- code => [(x, b)]
                 zhtml = zipWith(\n (x, b) ->[hiddenForm n (unlines b)] +
                                  [preT $ (onclick_ $ fun "showandhide" (ts n)) + (class_ $ "co" +| n) + (id_ $ "c" +| n)] +
-                                 [div_ ac] + x + [cdiv] + [cpre]) [1..] code -- n is Block id
+                                 -- [div_ ac] + x + [cdiv] + [cpre] + [toStr $ inputNum $ toText $ show n]) [1..] code
+                                 [div_ ac] + x + [cdiv] + [cpre] + [input]) [1..] code
                 br          =  "<br>"
                 brr         =  ["<br>"]
                 cdiv        =  "</div>"
@@ -461,6 +528,15 @@ foldListList stylish allBlock = L.foldr(\x y -> x + br + y) []
                 (+)         =  (++)
                 (+|) s n    =  s + (ts n)
                 fun s arg   =  s + "(" + arg + ")"
+                input       = [r|<div class="butcen"><button type="button" onClick="clip(document.getElementById('t1'));" name="cp" value="cp" ></div>|] 
+                inputNum n  = [NI.text|<div class="butcen"><button type="button" onClick="clip(document.getElementById('t${n}'));" name="cp" value="cp" ></div>|] 
+
+
+
+-- myfun  var  = [text|dog_cat_${var}_pig|] 
+
+myfun name = [NI.text|this_could_be_'${name}'_long_identifier|]
+fun4 name = toStr [NI.text|${name}|]
 
 foldListListTxt::[[String]]->String
 foldListListTxt allBlock = L.foldr(\x y -> x ++ "\n" ++ y) []  
@@ -764,6 +840,13 @@ htmlBody s  = [r|
                 font-weight:bold;
                 display:none;
             }
+            .copyButton{
+                color: red;
+                font-size:22pt;
+                font-family: monospace;
+                font-weight:bold;
+                display:inline-flex;
+            }
 
             .butcen{
                 display: inline-flex;
@@ -784,13 +867,29 @@ htmlBody s  = [r|
             </style>
             <script>
 
+            var clip = function(el) {
+                'use strict';
+              var range = document.createRange();
+              range.selectNodeContents(el);
+              var sel = window.getSelection();
+              sel.removeAllRanges();
+              sel.addRange(range);
+              try{
+                  alert(sel);
+                  var succ = document.execCommand('copy');
+                  alert(succ)
+              }catch(err){
+                  alert('Please press Ctrl/Cmd+C to copy');
+              }
+            };
+            
             function textAreaAdjust(o) {
                 o.style.height = "1px";
                 o.style.height = (25+o.scrollHeight)+"px";
             }
 
-            function showandhide(id) {
 
+            function showandhide(id) {
                  var formobj=document.getElementById('f' + id);
                  if(formobj.className == 'hf'){  //check if classname is hide 
                     formobj.style.display = 'block';
@@ -1089,8 +1188,6 @@ responseCmd conn cmd = responseStream
               flush
         where
             topN = " | head -200"
-            toText = strToStrictText
-            toStr = strictTextToStr
             s2t = strictByteStringToStrictText
             isOk si = (toStr si) == ""
 
@@ -1116,8 +1213,6 @@ responseXCmd cmd = responseStream
               flush
         where
             topN = ""
-            toText = strToStrictText
-            toStr = strictTextToStr
 
 responseJavaHtml::String -> Response
 responseJavaHtml cmd = responseStream 
@@ -1265,8 +1360,6 @@ responseSnippetHtml conn cmd ref = responseStream
               -- write $ byteString $ toBS $ htmlBody $ (htmlForm listCmd) ∘ (htmlPre shellRet)
               flush
               where 
-                toText = strToStrictText
-                toStr = strictTextToStr
                 sql_create_table = "CREATE TABLE IF NOT EXISTS userinput (id INTEGER PRIMARY KEY AUTOINCREMENT, xcmd TEXT)"
                 sql_insert = "INSERT INTO userinput (xcmd) VALUES (?)" 
                 sql_select = "SELECT id, xcmd FROM userinput"
@@ -1340,7 +1433,7 @@ receiveCode req response = do
         let cmd = if | lang == "cpp" -> "g++ -o out /tmp/code.cpp && ./out"
                      | lang == "haskell" -> "runh2 /tmp/code.hs && /tmp/code"
                      | otherwise -> ""
-        (e2, so, si2) <- runSh $ strToStrictText (cmd)
+        (e2, so, si2) <- runSh $ toText (cmd)
         if e2 /= ExitSuccess then let rcode = ReplyCode{rcmd="", rerror = si2, stdout=si2} 
                                       replyJson = toStrictBS $ DA.encode $ rcode 
                                   in response $ responseNothingBS replyJson 
@@ -1371,7 +1464,7 @@ receiveCode2 req response = do
                      | lang == "haskell" -> "runh2 ./code.hs && /tmp/code"                       
                      | otherwise -> ""                                                              
         sout <- A.run cmd                                              
-        let rcode = ReplyCode{rcmd="", rerror = "", stdout= (strToStrictText $ head sout)}          
+        let rcode = ReplyCode{rcmd="", rerror = "", stdout= (toText $ head sout)}          
             replyJson = toStrictBS $ DA.encode $ rcode                    
         response $ responseNothingBS replyJson                         
 
@@ -1456,7 +1549,7 @@ updateMap ref req response = do
                           -- write listblock and modified to newSnippet 
                           LA.writeFile newSnippet $ sToL $ BS.concat [listBlock, BS.cons (BI.c2w '\n') $ BS.cons (BI.c2w '\n') $ (toStrictBS . s2b) modifiedCode]
                           -- it does not work here, got some "Terminated 15 error", not sure why 
-                          (e2, so, si2) <- runSh $ strToStrictText ("mv " ++ newSnippet ++ " " ++ (home </> snippetP))
+                          (e2, so, si2) <- runSh $ toText ("mv " ++ newSnippet ++ " " ++ (home </> snippetP))
                           if e2 /= ExitSuccess then error (strictTextToStr si2) 
                             else do
                             pplist <- readSnippet (home </> snippetP) 

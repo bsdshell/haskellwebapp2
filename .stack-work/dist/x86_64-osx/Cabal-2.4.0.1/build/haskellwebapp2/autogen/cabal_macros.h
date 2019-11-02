@@ -143,6 +143,17 @@
   (major1) == 0 && (major2) == 12 && (minor) <= 3)
 #endif /* MIN_VERSION_http_types */
 
+/* package neat-interpolation-0.3.2.4 */
+#ifndef VERSION_neat_interpolation
+#define VERSION_neat_interpolation "0.3.2.4"
+#endif /* VERSION_neat_interpolation */
+#ifndef MIN_VERSION_neat_interpolation
+#define MIN_VERSION_neat_interpolation(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  3 || \
+  (major1) == 0 && (major2) == 3 && (minor) <= 2)
+#endif /* MIN_VERSION_neat_interpolation */
+
 /* package network-uri-2.6.1.0 */
 #ifndef VERSION_network_uri
 #define VERSION_network_uri "2.6.1.0"
@@ -595,7 +606,7 @@
 #endif /* MIN_TOOL_VERSION_runghc */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-9f3ZmCm6jlaFSwbn17Lcoa-haskellwebapp2"
+#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-GcYNsFtprEHFGp8zpKFRZD-haskellwebapp2"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

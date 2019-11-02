@@ -1,7 +1,7 @@
 /Users/cat/myfile/bitbucket/haskellwebapp2/haskellwebapp2.cabal:
-  hash: 598459dbee99cf3d0256c2d7c8a5adbf2433db52e4a1809de78968ef7d2e4fd1
-  size: 1975
-  modtime: 1570930579
+  hash: 8d614334fbe2cec8937c9916b9deb5917abc8356f917f7f7a94d3988c91efe31
+  size: 2019
+  modtime: 1572546870
 /Users/cat/myfile/bitbucket/haskellwebapp2/src/AronHtml.hs:
   hash: faff052150c8f699bda066831410cac5b013c77b6267bc21816fe71b6d70b5c5
   size: 3417
@@ -27,10 +27,10 @@
   size: 119720
   modtime: 1567895682
 /Users/cat/myfile/bitbucket/haskellwebapp2/src/WaiLib.hs:
-  hash: ff2eb5ee3e92d51f30b012a3188e59482a167da84be2eb2f1f70310b28a21830
-  size: 74581
-  modtime: 1571857998
+  hash: d70559eb45c5dd7989ece67fe1ace9d07b32981433c7c5c2cc34ca576b5e5275
+  size: 78806
+  modtime: 1572589596
 /Users/cat/myfile/bitbucket/haskellwebapp2/src/WaiConstant.hs:
-  hash: 09cfc6fefe312e392fa0aa7c046680d5e90028594b1012b4ad8438106738f1f9
-  size: 2230
-  modtime: 1570930777
+  hash: 84a35483c1c4d94812e57f4b771f8003ef11b2b9b9ee4d9df847eda0c43f6349
+  size: 2241
+  modtime: 1572561542

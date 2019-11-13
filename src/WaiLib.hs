@@ -515,7 +515,8 @@ foldListList stylish allBlock = L.foldr(\x y -> x + br + y) []
                 zhtml = zipWith(\n (x, b) ->[hiddenForm2 n (unlines b)] +
                                  [preT $ (onclick_ $ fun "showandhide" (ts n)) + (class_ $ "co" +| n) + (id_ $ "c" +| n)] +
                                  -- [div_ ac] + x + [cdiv] + [cpre] + [toStr $ inputNum $ toText $ show n]) [1..] code
-                                 [div_ ac] + x + [cdiv] + [cpre] + [input]) [1..] code
+                                 -- [div_ ac] + x + [cdiv] + [cpre] + [input]) [1..] code
+                                 [div_ ac] + x + [cdiv] + [cpre] + [toStr $ inputNum $ toText $ show n]) [1..] code
                 br          =  "<br>"
                 brr         =  ["<br>"]
                 cdiv        =  "</div>"
@@ -528,8 +529,8 @@ foldListList stylish allBlock = L.foldr(\x y -> x + br + y) []
                 (+)         =  (++)
                 (+|) s n    =  s + (ts n)
                 fun s arg   =  s + "(" + arg + ")"
-                input       = [r|<div class="butcen"><button type="button" onClick="clip(document.getElementById('t1'));" name="cp" value="cp" ></div>|] 
-                inputNum n  = [NI.text|<div class="butcen"><button type="button" onClick="clip(document.getElementById('t${n}'));" name="cp" value="cp" ></div>|] 
+                input       = [r|<div class="butcen"><button type="button" onClick="clip(document.getElementById('c1'));" name="cp" value="cp" ></div>|] 
+                inputNum n  = [NI.text|<div class="butcen"><button type="button" onClick="clip(document.getElementById('c${n}'));" name="cp" value="cp" ></div>|] 
 
 
 
@@ -1346,10 +1347,10 @@ responseSnippetHtml conn cmd ref = responseStream
               execute conn sql_insert (UserInput 0 (toText cmd))
               cmdsql <- query_ conn sql_select ::IO [UserInput]
               let cmdList = let ls = map (xcmd) cmdsql::[Text] in map toStr ls::[String]
-              pa cmdList 
+              -- pa cmdList 
 
               let sortList = groupCountFilter cmdList 
-              pa sortList 
+              -- pa sortList 
               writeToFileAppend cmdLog [sCmd] 
               listCmd <- readCmd cmdLog SnippetT 
               -- write $ byteString $ toBS $ replyHtml (spanBlock hmap (Just (toBS (drop 2 sCmd)) )) listCmd 

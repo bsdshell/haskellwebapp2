@@ -10,3 +10,8 @@
 * Submit data to Server, and store data in database or local file.
 * Use websocket to send Json
 * Use Redis to query data from Redis server
+
+# Remove Neat interpolation code from code because it is very slow. (12-11-2019)
+* Keep the Raw String QQ
+# Fix javascript copy block code to clipboard with id in TextArea which is not working, use id in pre instread (Wed Nov 13 14:52:12 2019)
+* Not sure why id inside the textarea is not working.

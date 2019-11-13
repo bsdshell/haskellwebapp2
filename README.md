@@ -15,3 +15,4 @@
 * Keep the Raw String QQ
 # Fix javascript copy block code to clipboard with id in TextArea which is not working, use id in pre instread (Wed Nov 13 14:52:12 2019)
 * Not sure why id inside the textarea is not working.
+* [commit here](https://bitbucket.org/zsurface/haskellwebapp2/commits/5bea84536cdafec8bbe9188339c02b94611cf5ee#Lsrc/WaiLib.hsT533)

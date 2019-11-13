@@ -529,8 +529,8 @@ foldListList stylish allBlock = L.foldr(\x y -> x + br + y) []
                 (+)         =  (++)
                 (+|) s n    =  s + (ts n)
                 fun s arg   =  s + "(" + arg + ")"
-                input       = [r|<div class="butcen"><button type="button" onClick="clip(document.getElementById('c1'));" name="cp" value="cp" ></div>|] 
-                inputNum n  = [NI.text|<div class="butcen"><button type="button" onClick="clip(document.getElementById('c${n}'));" name="cp" value="cp" ></div>|] 
+                input       = [r|<div class="butcen"><input type="button" onClick="clip(document.getElementById('c1'));" name="cp" value="copy" ></div>|] 
+                inputNum n  = [NI.text|<div class="butcen"><input type="button" onClick="clip(document.getElementById('c${n}'));" name="cp" value="copy" ></div>|] 
 
 
 
@@ -876,11 +876,11 @@ htmlBody s  = [r|
               sel.removeAllRanges();
               sel.addRange(range);
               try{
-                  alert(sel);
+                  //alert(sel);
                   var succ = document.execCommand('copy');
-                  alert(succ)
+                  // alert(succ)
               }catch(err){
-                  alert('Please press Ctrl/Cmd+C to copy');
+                  // alert('Please press Ctrl/Cmd+C to copy');
               }
             };
             

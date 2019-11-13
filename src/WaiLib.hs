@@ -512,7 +512,7 @@ foldListList stylish allBlock = L.foldr(\x y -> x + br + y) []
                 code = zip (stylish allBlock) allBlock -- code => stylish code
                 -- n    => [1..] 
                 -- code => [(x, b)]
-                zhtml = zipWith(\n (x, b) ->[hiddenForm n (unlines b)] +
+                zhtml = zipWith(\n (x, b) ->[hiddenForm2 n (unlines b)] +
                                  [preT $ (onclick_ $ fun "showandhide" (ts n)) + (class_ $ "co" +| n) + (id_ $ "c" +| n)] +
                                  -- [div_ ac] + x + [cdiv] + [cpre] + [toStr $ inputNum $ toText $ show n]) [1..] code
                                  [div_ ac] + x + [cdiv] + [cpre] + [input]) [1..] code

@@ -47,5 +47,7 @@ hweb="$HOME/myfile/bitbucket/haskell_webapp"
 hcmd="/usr/local/bin/ghc -i$HOME/myfile/bitbucket/haskelllib $1 -o "$(basename $1)
 ghcProfile="/usr/local/bin/ghc -i$HOME/myfile/bitbucket/haskelllib -prof -fprof-auto -rtsopts $1" 
 
-stack build
+# stack build
+# http://docs.haskellstack.org/en/stable/GUIDE/#flags-and-ghc-options 
+stack build --ghc-options=-O2 haskellwebapp2 
 stack exec haskellwebapp2

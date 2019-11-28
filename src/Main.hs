@@ -87,6 +87,8 @@ import GHC.Generics
 import qualified Data.Aeson as DA
 
 
+-- NOTE: the project does not use the shared Haskell lib in $b/haskelllib
+-- FIX it ASAP
 dbname = "webappdb"
 configFile = "./config.txt"
 

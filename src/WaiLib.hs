@@ -9,7 +9,7 @@
 module WaiLib where
 
 {-| 
-    The Module contains all the functios for __wai.hs__
+    The Module contains all the functions for __haskellwebapp2__
 
     * Use Aeson to serialize record to Json
     * Record: Person
@@ -45,9 +45,6 @@ import Text.RE.TDFA.String
 import Network.Wai.Parse
 import Blaze.ByteString.Builder.Char.Utf8 (fromString)
 import Data.ByteString.Builder (byteString, Builder)
-
-
-
 
 import qualified Text.Email.Validate as EM 
 import qualified Data.Word8 as DW
@@ -201,6 +198,8 @@ data Person =
 
 {-| 
     === create UserInput table in Sqlite
+    * login database
+    * sqite3 /Users/cat/myfile/bitbucket/testfile/userinput.db
     * cmdId = pid
     * xcmd = input command, e.g. "c ls"
 -} 
@@ -376,6 +375,7 @@ sbChar s = (map . map)(\x -> styleChar l r a b x) s
             b = ']' 
 
 -- compose all Regex subRegex
+-- transform = id
 transform = 
             cssHead.
             spChar.
@@ -515,8 +515,8 @@ foldListList stylish allBlock = L.foldr(\x y -> x + br + y) []
                 zhtml = zipWith(\n (x, b) ->[hiddenForm2 n (unlines b)] +
                                  [preT $ (onclick_ $ fun "showandhide" (ts n)) + (class_ $ "co" +| n) + (id_ $ "c" +| n)] +
                                  -- [div_ ac] + x + [cdiv] + [cpre] + [toStr $ inputNum $ toText $ show n]) [1..] code
-                                 -- [div_ ac] + x + [cdiv] + [cpre] + [input]) [1..] code
-                                 [div_ ac] + x + [cdiv] + [cpre] + [toStr $ inputNum $ toText $ show n]) [1..] code
+                                 [div_ ac] + x + [cdiv] + [cpre] + [input1 n]) [1..] code
+                                 -- [div_ ac] + x + [cdiv] + [cpre] + [toStr $ inputNum $ toText $ show n]) [1..] code
                 br          =  "<br>"
                 brr         =  ["<br>"]
                 cdiv        =  "</div>"
@@ -529,7 +529,8 @@ foldListList stylish allBlock = L.foldr(\x y -> x + br + y) []
                 (+)         =  (++)
                 (+|) s n    =  s + (ts n)
                 fun s arg   =  s + "(" + arg + ")"
-                input       = [r|<div class="butcen"><input type="button" onClick="clip(document.getElementById('c1'));" name="cp" value="copy" ></div>|] 
+                input       = [r|<div class="butcen"><input type="button" onClick="clip(document.getElementById('c1'));" name="cp" value="copy" ></div>|]
+                input1 n    = [r|<div class="butcen"><input type="button" onClick="clip(document.getElementById('|] <> "c" <> (show n) <> [r|'));" name="cp" value="copy" ></div>|]
                 inputNum n  = [NI.text|<div class="butcen"><input type="button" onClick="clip(document.getElementById('c${n}'));" name="cp" value="copy" ></div>|] 
 
 
@@ -868,22 +869,83 @@ htmlBody s  = [r|
             </style>
             <script>
 
+            function copyStringToClipboard (str) {
+               // Create new element
+               var el = document.createElement('textarea');
+               // Set value (string to be copied)
+               el.value = "my strnig";
+               // Set non-editable to avoid focus and move outside of view
+               el.setAttribute('readonly', '');
+               el.style = {position: 'absolute', left: '-9999px'};
+               document.body.appendChild(el);
+               // Select text inside element
+               el.select();
+               alert(el.toString());
+               // Copy text to clipboard
+               document.execCommand('copy');
+               // Remove temporary element
+               document.body.removeChild(el);
+            }
+
+            function copyToClipboard(elementId) {
+
+              // Create an auxiliary hidden input
+              var aux = document.createElement("input");
+
+              // Get the text from the element passed into the input
+              aux.setAttribute("value", "my nice string");
+
+              // Append the aux input to the body
+              document.body.appendChild(aux);
+
+              // Highlight the content
+              aux.select();
+
+              // Execute the copy command
+              document.execCommand("copy");
+
+              // Remove the input from the body
+              document.body.removeChild(aux);
+
+            }
+
+
             var clip = function(el) {
-                'use strict';
+              'use strict';
               var range = document.createRange();
               range.selectNodeContents(el);
               var sel = window.getSelection();
               sel.removeAllRanges();
               sel.addRange(range);
-              try{
-                  //alert(sel);
-                  var succ = document.execCommand('copy');
-                  // alert(succ)
-              }catch(err){
-                  // alert('Please press Ctrl/Cmd+C to copy');
-              }
+              alert(sel.toString());
+              var array = sel.toString().trim().split('\n');
+              array.splice(0, 1);
+              var str = array.join("\r\n");
+              alert(str);
+
+              sel.removeAllRanges();
+
+              var aux = document.createElement("input");
+
+              // Get the text from the element passed into the input
+              aux.setAttribute('value', str);
+              // aux.setAttribute('style', 'white-space: pre;');
+
+              // Append the aux input to the body
+
+              document.body.appendChild(aux);
+
+              // Highlight the content
+              aux.select();
+
+              // Execute the copy command
+              document.execCommand("copy");
+
+              // Remove the input from the body
+              document.body.removeChild(aux);
+              
             };
-            
+
             function textAreaAdjust(o) {
                 o.style.height = "1px";
                 o.style.height = (25+o.scrollHeight)+"px";
@@ -1352,7 +1414,7 @@ responseSnippetHtml conn cmd ref = responseStream
               let sortList = groupCountFilter cmdList 
               -- pa sortList 
               writeToFileAppend cmdLog [sCmd] 
-              listCmd <- readCmd cmdLog SnippetT 
+              -- listCmd <- readCmd cmdLog SnippetT 
               -- write $ byteString $ toBS $ replyHtml (spanBlock hmap (Just (toBS (drop 2 sCmd)) )) listCmd 
               hmap <- readIORef ref
               -- write $ byteString $ toBS $ htmlBody  $ (htmlForm listCmd) ++ (spanBlockX transform hmap (Just (toBS (drop 2 sCmd)) ))

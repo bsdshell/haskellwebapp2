@@ -378,23 +378,23 @@ sbChar s = (map . map)(\x -> styleChar l r a b x) s
             b = ']' 
 
 -- compose all Regex subRegex
--- transform = id
-transform = 
-             cssHead.
-             spChar.
-             bracketChar.
-             sbChar.
-             specialName.
-             javaClassName.
-             javaFunClass.
-             javaKeyWords.
-             javaCmdKeyWords.
-             mysqlKeyWords.
+transform = id
+-- transform = 
+--             cssHead.
+--             spChar.
+--             bracketChar.
+--             sbChar.
+--             specialName.
+--             javaClassName.
+--             javaFunClass.
+--             javaKeyWords.
+--             javaCmdKeyWords.
+--             mysqlKeyWords.
 
-             keyURL.
-             keyDash.
-             keyName.
-             (htmlLess.htmlGreater)
+--             keyURL.
+--             keyDash.
+--             keyName.
+--             (htmlLess.htmlGreater)
 
 
 
@@ -507,14 +507,18 @@ hiddenForm4 n s = [NI.text|
 -- ([[String]] -> [[String]]) 
 -- stylish allBlock
 --
--- Mon Dec  2 12:55:08 2019 
--- Fixex issue inside 'stylish allBlock', apply <br> to stylish allBlock instead of zhtml
+
+concatStr' x y  = concatStr y x 
 foldListList::([[String]]->[[String]])->[[String]]->String
-foldListList stylish allBlock = L.foldr(+)[] $ map (concatStr' []) zhtml 
+foldListList stylish allBlock = L.foldr(+)[] $ map (concatStr' "") zhtml 
+-- foldListList stylish allBlock = drop (len br)  $ dropEnd (len br) $ L.foldr(\x y -> x + br + y) []   
+               -- $ map(concatStr' br) zhtml    -- f s => [[String]]
+               -- $ [["line 1", "line 2"]]
                where
-                -- flip does not?
-                concatStr' x y  = concatStr y x 
-                code = zip ((map . map)(\x -> x + br) $ stylish allBlock) allBlock -- code => stylish code
+                allBlock' = (map . map)(\x -> x + br) allBlock
+                -- allBlock' = [["dog1", "dog2"]]
+                code = zip (stylish allBlock') allBlock' -- code => stylish code
+                xhtml = [["xml 1", "xml 2"], ["xml 3", "xml 4"]]
                 -- n    => [1..] 
                 -- code => [(x, b)]
                 -- zhtml = [[String]]
@@ -522,6 +526,7 @@ foldListList stylish allBlock = L.foldr(+)[] $ map (concatStr' []) zhtml
                                  [preT $ (onclick_ $ fun "showandhide" (ts n)) + (class_ $ "co" +| n) + (id_ $ "c" +| n)] +
                                  [div_ ac] + x + [cdiv] + [cpre] + [input1 n]) [1..] code
                 br          =  "<br>"
+                -- brr         =  ["<br>"]
                 cdiv        =  "</div>"
                 cpre        =  "</pre>"
                 ao          =  "<"
@@ -790,7 +795,7 @@ htmlBody s  = [r|
             <style>
 
             body {
-             background-color: #afaaaafa;
+             background-color: #040404fa;
              margin: 0 auto;
              max-width: 1200px;
              border: 1pt solid #695b43;

@@ -806,7 +806,7 @@ htmlBody s  = [r|
             .hf{
                 display:none;
             }
-
+            
             pre {
                 display: block;
                 font-family: monospace;
@@ -815,7 +815,7 @@ htmlBody s  = [r|
                 margin-top: 1px;
                 margin-right: 1px;
                 margin-bottom: 1px;
-                margin-left: 1px;
+                margin-left: 4px;
                 background: #fdfbea69;
                 border-style: solid;
                 border-width: thin;
@@ -1063,13 +1063,13 @@ anyRoute conn ref req =
                            var | len var > 1 -> case take 2 s of
                                                      var | var == "x " -> responseXCmd s         -- forget what it is for.
                                                          | var == "c " -> responseCmd conn s     -- Shell commands
-                                                         | var == "j " -> responseJavaHtml s     -- Java AronLib.java with Html, css.
-                                                         | var == "h " -> responseHaskellHtml s  -- Haskell AronModule.hs with Html, css.
+                                                         | var == "j " -> responseJavaHtml s     -- Java AronLib.java with Html, CSS.
+                                                         | var == "h " -> responseHaskellHtml s  -- Haskell AronModule.hs with Html, CSS.
                                                          | var == "k " -> queryLibHaskell s    -- Haskell AronModule.hs
                                                          | var == "i " -> queryLibJava s       -- Java $b/javalib/AronLib.java
                                                          | var == "p " -> queryLibJavaPackage "Print." s -- Java $b/javalib/Print.java
-                                                         | var == "n " -> responseSnippetTxt s ref  -- Snippet with NO Html, css.
-                                                         | otherwise   -> responseSnippetHtml conn s ref  -- Snippet with Html, css.
+                                                         | var == "n " -> responseSnippetTxt s ref  -- Snippet with NO Html, CSS.
+                                                         | otherwise   -> responseSnippetHtml conn s ref  -- Snippet with Html, CSS.
                                | otherwise   -> responseNothing ""
             _      -> responseNothing ""
         where 
@@ -1396,7 +1396,7 @@ queryLibJavaPackage preKey cmd = responseStream
                 -- preKey = "Aron."
 
 {-| 
-    Get user input: cmd = "s java regex"
+    === Get user input: cmd = "s java regex"
     1. remove spaces from cmd
     2. insert cmd to table: userinput if userinput exists, otherwise create table: userinput
         1. sorted all cmd and create Html form with all cmd
@@ -1443,11 +1443,15 @@ responseSnippetTxt cmd ref = responseStream
               [("Content-Type", "text/html")] $ \write flush -> do
               let sCmd = (trimBoth cmd)
               putStrLn cmd
+              -- store command to log file
               writeToFileAppend cmdLog [sCmd] 
+              -- get the HMap from IO reference
               hmap <- readIORef ref 
-              write $ byteString $ toBS $ spanBlockXX hmap (Just (toBS (drop 2 sCmd)) )
+              -- drop 2 sCmd : "n java" => "java"
+              -- key = "java" => use the key in hmap 
+              -- response the byteString to client
+              write $ byteString $ toBS $ spanBlockXX hmap (Just (toBS (drop 2 sCmd)))
               flush
-
 
 -- lazy ByteString
 trimBothLBS::IN.ByteString -> IN.ByteString

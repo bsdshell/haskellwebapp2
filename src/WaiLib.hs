@@ -329,25 +329,27 @@ javaClassName s = (map . map)(\x -> x *=~/ [ed|${adr}(\<interface\>|\<abstract\>
 -- add more ClassName here
 javaFunClass::[[String]]->[[String]]
 javaFunClass s = (map . map)(\x -> x *=~/ 
-    [ed|${adr}(\<Vector\>|\<List\>|\<Set\>|\<HashSet\>|\<HashMap\>|\<ArrayList\>|\<Integer\>|\<String\>):?///<span style="color:#218e2b;">${adr}</span>|]) s
+    [ed|${adr}(\< Vector \>|\< List \>|\< Set \>|\< HashSet \>|\< HashMap \>|\< ArrayList \>|\< Integer \>|\< String \>):?///<span style="color:#218e2b;">${adr}</span>|]) s
     -- it is too slow [ed|${adr}(\<[A-Z][a-z_0-9]*\>):?///<span style="color:#218e2b;">${adr}</span>|]) s
 -------------------------------------------------------------------------------- 
 javaKeyWords::[[String]]->[[String]]
 javaKeyWords s = (map . map)(\x -> x *=~/ 
-    [ed|${adr}(\<abstract\>|\<assert\>|\<boolean\>|\<break\>|\<byte\>|\<case\>|\<catch\>|\<char\>|\<class\>|\<const\>|\<continue\>|\<default\>|\<do\>|\<double\>|\<else\>|\<enum\>|\<extends\>|\<final\>|\<finally\>|\<float\>|\<for\>|\<goto\>|\<if\>|\<implements\>|\<import\>|\<instanceof\>|\<int\>|\<interface\>|\<long\>|\<native\>|\<new\>|\<package\>|\<private\>|\<protected\>|\<public\>|\<return\>|\<short\>|\<static\>|\<strictfp\>|\<super\>|\<switch\>|\<synchronized\>|\<this\>|\<throw\>|\<throws\>|\<transient\>|\<try\>|\<void\>|\<volatile\>|\<while\>):?///<span style="color:#f50a93;">${adr}</span>|]) s
+    [ed|${adr}(\< abstract \>|\< assert \>|\< boolean \>|\< break \>|\< byte \>|\< case \>|\< catch \>|\< char \>|\< class \>|\< const \>|\< continue \>|\< default \>|\< do \>|\< double \>|\< else \>|\< enum \>|\< extends \>|\< final \>|\< finally \>|\< float \>|\< for \>|\< goto \>|\< if \>|\< implements \>|\< import \>|\< instanceof \>|\< int \>|\< interface \>|\< long \>|\< native \>|\< new \>|\< package \>|\< private \>|\< protected \>|\< public \>|\< return \>|\< short \>|\< static \>|\< strictfp \>|\< super \>|\< switch \>|\< synchronized \>|\< this \>|\< throw \>|\< throws \>|\< transient \>|\< try \>|\< void \>|\< volatile \>|\< while \>):?///<span style="color:#f50a93;">${adr}</span>|]) s
 
 -------------------------------------------------------------------------------- 
 javaCmdKeyWords::[[String]]->[[String]]
 javaCmdKeyWords s = (map . map)(\x -> x *=~/ 
-    [ed|${adr}(\<java\>|\<javac\>|\<javadoc\>|\<jar\>):?///<span style="color:#35A993;">${adr}</span>|]) s
+    [ed|${adr}(\< java \>|\< javac \>|\< javadoc \>|\< jar \>):?///<span style="color:#35A993;">${adr}</span>|]) s
 
 -------------------------------------------------------------------------------- 
 
 mysqlKeyWords::[[String]]->[[String]]
 mysqlKeyWords s = (map . map)(\x -> x *=~/ 
-    [ed|${adr}(\<insert\>|\<create\>|\<from\>|\<select\>|\<table\>|\<into\>):?///<span style="color:#FF69B4;">${adr}</span>|]) s
+    [ed|${adr}(\< insert \>|\< create \>|\< from \>|\< select \>|\< table \>|\< into \>):?///<span style="color:#FF69B4;">${adr}</span>|]) s
 -------------------------------------------------------------------------------- 
 
+-- [[:graph:]] - ASCII char excluding space
+-- match URL
 keyURL::[[String]]->[[String]]
 keyURL s = (map . map)(\x -> (subRegex r x) "<a href=\"\\1\">\\1</a>")  s
         where
@@ -1588,8 +1590,8 @@ updateMap ref req response = do
                       -- read snippet and update the new block
                       home <- getEnv "HOME"
                       pplist <- readSnippet (home </> snippetP) 
-                      let block = lines $ b2s code
-                      LA.writeFile "/tmp/b1.x" (sToL code)
+                      -- let block = lines $ b2s code
+                      -- LA.writeFile "/tmp/b1.x" (sToL code)
                       case lookup "header" params of 
                        Just headCode -> do 
                           -- headCode: the first line of code block.
@@ -1604,23 +1606,29 @@ updateMap ref req response = do
                           let isDeleted = isJust $ lookup "delete" params
 
                           writeToFileAppend "/tmp/db.x" ["isUpdated=" ++ (show isUpdated), 
-                                                         "isAdded=" ++   (show isAdded), 
+                                                         "isAdded="   ++ (show isAdded), 
                                                          "isDeleted=" ++ (show isDeleted)]
+                          -- filter out "updated" and "delete", do nothing if "add"
                           let cb = map (\x -> BU.fromString <$> snd x) $ filter(\(_, b) ->
-                                     if | isAdded -> True    
-                                        | isUpdated -> trimBothLBS (s2b $ head b) /= trimBothLBS (sToL headCode)
-                                        | isDeleted -> trimBothLBS (s2b $ head b) /= trimBothLBS (sToL headCode)
-                                        | otherwise -> trimBothLBS (s2b $ head b) /= trimBothLBS (sToL headCode)) pplist -- [[ByteString]]
+                                    if | isAdded   -> True    
+                                       | isUpdated -> isMatchedHeader b headCode
+                                       | isDeleted -> isMatchedHeader b headCode
+                                       | otherwise -> isMatchedHeader b headCode
+                                         ) pplist -- [([String], [String])]
+                                    where isMatchedHeader b h = trimBothLBS (s2b $ head b) /= trimBothLBS (sToL h)
+                                         
                           pp $ typeOf cb -- [[ByteString]]
-                          LA.writeFile "/tmp/h1.x" $ sToL headCode
+                          -- LA.writeFile "/tmp/h1.x" $ sToL headCode
                           -- modifiedCode is the modified block from client
+                          -- plines
+                          -- http://localhost/htmlhaskelldoc/PortableLines.html
                           let modifiedCode = if isDeleted then "" else
-                                unlines $ map(\x -> if len (trimBoth x) > 0 then trimEnd x else x) $ plines $ b2s code
+                                unlines $ map(\x -> if len (trim x) > 0 then trimEnd x else x) $ let ln = plines $ b2s code in (trim $ head ln) : tail ln
                           let newSnippet =  home </> "myfile/bitbucket/snippets/snippet_new.hs"
                           let mvSnippet  =  home </> "myfile/bitbucket/snippets/snippet_mv.hs"
                           -- listBlock is all the blocks excluding a modified block
                           let listBlock = BS.concat $ map(\x -> BS.cons (BI.c2w '\n') $ BS.concat $ map (BS.cons (BI.c2w '\n')) x) cb 
-                          -- write listblock and modified to newSnippet 
+                          -- combine and write listblock and modified to newSnippet 
                           LA.writeFile newSnippet $ sToL $ BS.concat [listBlock, BS.cons (BI.c2w '\n') $ BS.cons (BI.c2w '\n') $ (toStrictBS . s2b) modifiedCode]
                           -- it does not work here, got some "Terminated 15 error", not sure why 
                           (e2, so, si2) <- runSh $ toText ("mv " ++ newSnippet ++ " " ++ (home </> snippetP))

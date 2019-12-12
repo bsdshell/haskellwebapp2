@@ -66,6 +66,9 @@ if [[ "$1" == "in" ]]; then
     stack install --local-bin-path $bindir 
     cp ./config.txt $bindir 
     ls -lah $bindir
+    cp *.html $bindir
+    cd $bindir
+    ln -s /Library/WebServer/Documents/xfido/pdf pdf
 
     cd $sym
     rm $sym/$fname

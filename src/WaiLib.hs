@@ -534,8 +534,7 @@ foldListList stylish allBlock = L.foldr(+)[] $ map (concatStr' []) zhtml
                 (+)         =  (++)
                 (+|) s n    =  s + (ts n)
                 fun s arg   =  s + "(" + arg + ")"
-                input       = [r|<div class="butcen"><input type="button" onClick="clip(document.getElementById('c1'));" name="cp" value="copy" ></div>|]
-                input1 n    = [r|<div class="butcen"><input type="button" onClick="clip(document.getElementById('|] <> "c" <> (show n) <> [r|'));" name="cp" value="copy" ></div>|]
+                input1 n    = [r|<div class="butcen"><input type="button" class="butcopy" onClick="clip(document.getElementById('|] <> "c" <> (show n) <> [r|'));" name="cp" value="copy" ></div>|]
                 inputNum n  = [NI.text|<div class="butcen"><input type="button" onClick="clip(document.getElementById('c${n}'));" name="cp" value="copy" ></div>|] 
 
 
@@ -611,8 +610,10 @@ app conn1 ref request respond = case pathInfo request of
       ("wordcount_reply":_) -> respond wordcountReply
       ("matrix":_)          -> respond matrixReply
       ("compiler":_)        -> receiveCode request respond
-      ("editcode":_)        -> respond $ responseHtml "compileCode.html"
-      ("aronlib.js":_)      -> respond $ responseJavascript "aronlib.js"
+      ("editcode":_)        -> respond $ responseHtml "compileCode.html"      -- haskellwebapp2/compileCode.html
+      ("aronlib.js":_)      -> respond $ responseJavascript "src/aronlib.js"  -- haskellwebapp2/src/aronlib.js
+      ("myscript.js":_)     -> respond $ responseJavascript "src/myscript.js" -- haskellwebapp2/src/myscript.js
+      ("mystyle.css":_)     -> respond $ responseMyStyle "src/mystyle.css"        -- haskellwebapp2/src/mystyle.css
       _                     -> respond $ responseHelp
 
 plainIndex::Response
@@ -788,237 +789,19 @@ htmlBody s  = [r|
             <HEAD>   
             <meta charset="utf-8">
             <TITLE>Search Code Snippet</TITLE> 
-            <LINK rel="stylesheet" type="text/css" href="/style.css"> 
-            <style>
-
-            body {
-             background-color: #afaaaafa;
-             margin: 0 auto;
-             max-width: 1200px;
-             border: 1pt solid #695b43;
-             padding: 4px;
-            }    
-
-            .colorclick{
-                background-color:#f1e6e6;
-            }
-            .form{
-                margin-block-end:1px;
-            }
-            .hf{
-                display:none;
-            }
-            
-            pre {
-                display: block;
-                font-family: monospace;
-                font-size: 14pt;
-                white-space: pre;
-                margin-top: 1px;
-                margin-right: 1px;
-                margin-bottom: 1px;
-                margin-left: 4px;
-                background: #fdfbea69;
-                border-style: solid;
-                border-width: thin;
-            }
-
-            textarea {
-                border:1px solid #999999;
-                font-size: 13pt;
-                width:100%;
-                height:150px;
-                margin:1px 0;
-                padding:3px;
-                display:none;
-                font-family: monospace;
-                transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-                outline: 0;
-                box-shadow: none;
-                border-radius: 0;
-                box-sizing: content-box;
-                background: #e8e4db;
-                padding: 1px 0;
-                resize: yes;
-            }
-            .submitButton{
-                color: red;
-                font-size:22pt;
-                font-family: monospace;
-                font-weight:bold;
-                display:none;
-            }
-            .copyButton{
-                color: red;
-                font-size:22pt;
-                font-family: monospace;
-                font-weight:bold;
-                display:inline-flex;
-            }
-
-            .butcen{
-                display: inline-flex;
-                float:right;
-            }
-
-            .butshow{
-                /* display: inline-flex; */
-                /* text-align: center; */
-                font-size: 14pt;
-                margin: 2px 2px;
-                cursor: pointer;
-                background-color: #ffffff;
-                color: #000000;
-                border: 1px solid #212921; 
-
-            }
-            </style>
-            <script>
-
-            function copyStringToClipboard (str) {
-               // Create new element
-               var el = document.createElement('textarea');
-               // Set value (string to be copied)
-               el.value = "my strnig";
-               // Set non-editable to avoid focus and move outside of view
-               el.setAttribute('readonly', '');
-               el.style = {position: 'absolute', left: '-9999px'};
-               document.body.appendChild(el);
-               // Select text inside element
-               el.select();
-               alert(el.toString());
-               // Copy text to clipboard
-               document.execCommand('copy');
-               // Remove temporary element
-               document.body.removeChild(el);
-            }
-
-            function copyToClipboard(elementId) {
-
-              // Create an auxiliary hidden input
-              var aux = document.createElement("input");
-
-              // Get the text from the element passed into the input
-              aux.setAttribute("value", "my nice string");
-
-              // Append the aux input to the body
-              document.body.appendChild(aux);
-
-              // Highlight the content
-              aux.select();
-
-              // Execute the copy command
-              document.execCommand("copy");
-
-              // Remove the input from the body
-              document.body.removeChild(aux);
-
-            }
-
-
-            var clip = function(el) {
-              'use strict';
-              var range = document.createRange();
-              range.selectNodeContents(el);
-              var sel = window.getSelection();
-              sel.removeAllRanges();
-              sel.addRange(range);
-              alert(sel.toString());
-              var array = sel.toString().trim().split('\n');
-              array.splice(0, 1);
-              var str = array.join("\r\n");
-              alert(str);
-
-              sel.removeAllRanges();
-
-              // 'input' only one line
-              // 'textarea' should be used?, does not work so far
-              var aux = document.createElement("input");
-
-              // Get the text from the element passed into the input
-              aux.setAttribute('value', str);
-              // aux.setAttribute('style', 'white-space: pre;');
-
-              // Append the aux input to the body
-
-              document.body.appendChild(aux);
-
-              // Highlight the content
-              aux.select();
-
-              // Execute the copy command
-              document.execCommand("copy");
-
-              // Remove the input from the body
-              document.body.removeChild(aux);
-              
-            };
-
-            function textAreaAdjust(o) {
-                o.style.height = "1px";
-                o.style.height = (25+o.scrollHeight)+"px";
-            }
-
-
-            function showandhide(id) {
-                 var formobj=document.getElementById('f' + id);
-                 if(formobj.className == 'hf'){  //check if classname is hide 
-                    formobj.style.display = 'block';
-                    formobj.className ='hfshow';
-                 }else if(formobj.className == 'hfshow'){
-                    formobj.style.display = 'none';
-                    formobj.className ='hf';
-                 }
-
-                 var selectedobj=document.getElementById('t' + id);
-                 if(selectedobj.className == 'hide'){  //check if classname is hide 
-                    selectedobj.style.display = 'block';
-                    selectedobj.className ='show';
-                 }else if(selectedobj.className == 'show'){
-                    selectedobj.style.display = 'none';
-                    selectedobj.className ='hide';
-                 }
-
-                 var butobj=document.getElementById('b' + id);
-                 if(butobj.className == 'submitButton'){  //check if classname is hide 
-                    butobj.style.display = 'inline-flex';
-                    butobj.className ='butshow';
-                 }else if(butobj.className == 'butshow'){
-                    butobj.style.display = 'none';
-                    butobj.className ='submitButton';
-                 }
-
-                 var butobj=document.getElementById('a' + id);
-                 if(butobj.className == 'submitButton'){  //check if classname is hide 
-                    butobj.style.display = 'inline-flex';
-                    butobj.className ='butshow';
-                 }else if(butobj.className == 'butshow'){
-                    butobj.style.display = 'none';
-                    butobj.className ='submitButton';
-                 }
-
-                 var butobj=document.getElementById('d' + id);
-                 if(butobj.className == 'submitButton'){  //check if classname is hide 
-                    butobj.style.display = 'inline-flex';
-                    butobj.className ='butshow';
-                 }else if(butobj.className == 'butshow'){
-                    butobj.style.display = 'none';
-                    butobj.className ='submitButton';
-                 }
-
-                 var butobj=document.getElementById('c' + id);
-                 var cname = 'co' + id;
-                 if(butobj.className == cname){  
-                    butobj.className = 'colorclick';
-                 }else if(butobj.className == 'colorclick'){
-                    butobj.className = cname; 
-                 }
-
-            }
-            </script>
-
+            <LINK rel="stylesheet" type="text/css" href="mystyle.css"> 
+            <script src="myscript.js"></script>
             </HEAD>
             <BODY> |] <> s <> [r| </BODY></HTML> |]
+
+html_::String -> String
+html_ s = [r|<HTML>|] <> s <> [r| </HTML>|]
+
+body_::String -> String
+body_ s = [r|<BODY>|]<> s <> [r|</BODY>|]
+                  
+head_::String -> String
+head_ s = [r|<HEAD>|]<> s <> [r|</HEAD>|]
 
 
 replyHtml::String->String->String
@@ -1026,8 +809,12 @@ replyHtml s listCmd = [r|
             <HTML>   
             <HEAD>   
             <meta charset="utf-8">
-            <TITLE>Search Code Snippet</TITLE> 
+            <TITLE>Search Code Snippet</TITLE>
+            <LINK rel="stylesheet" type="text/css" href="mystyle.css"> 
+            <script src="myscript.js"></script>
+            <!--
             <LINK rel="stylesheet" type="text/css" href="/style.css"> 
+            -->
             </HEAD>
             <BODY> 
 
@@ -1552,12 +1339,23 @@ responseEditor = responseFile
     "compileCode.html"
     Nothing
 
+{-|
+   === response javacript file function
+-} 
 responseJavascript::FilePath -> Response
 responseJavascript fname = responseFile
   status200
   [(hContentType, "text/javascript")]
   fname
   Nothing
+
+responseMyStyle::FilePath -> Response
+responseMyStyle fname = responseFile
+  status200
+  [(hContentType, "text/css")]
+  fname
+  Nothing
+
 
 responseHtml::FilePath -> Response
 responseHtml fname = responseFile

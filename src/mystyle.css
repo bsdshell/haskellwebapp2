@@ -1,0 +1,92 @@
+body {
+ background-color: #afaaaafa;
+ margin: 0 auto;
+ max-width: 1200px;
+ border: 1pt solid #695b43;
+ padding: 4px;
+}    
+
+.colorclick{
+    background-color:#f1e6e6;
+}
+.form{
+    margin-block-end:1px;
+}
+.hf{
+    display:none;
+}
+
+pre {
+    display: block;
+    font-family: monospace;
+    font-size: 14pt;
+    white-space: pre;
+    margin-top: 1px;
+    /* margin-right: 1px; */
+    margin-bottom: 1px;
+    /* margin-left: 4px; */
+    background: #c1bfab69;
+    border-style: outset;
+    border-width: thin;
+}
+
+textarea {
+    border:1px solid #999999;
+    font-size: 13pt;
+    width:100%;
+    height:150px;
+    margin:1px 0;
+    padding:3px;
+    display:none;
+    font-family: monospace;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    outline: 0;
+    box-shadow: none;
+    border-radius: 0;
+    box-sizing: content-box;
+    background: #e8e4db;
+    padding: 1px 0;
+    resize: yes;
+}
+.submitButton{
+    color: red;
+    font-size:22pt;
+    font-family: monospace;
+    font-weight:bold;
+    display:none;
+}
+.copyButton{
+    color: red;
+    font-size:22pt;
+    font-family: monospace;
+    font-weight:bold;
+    display:inline-flex;
+}
+
+.butcen{
+    display: inline-flex;
+    float:right;
+}
+
+.butshow{
+    /* display: inline-flex; */
+    /* text-align: center; */
+    font-size: 14pt;
+    margin: 2px 2px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #212921; 
+
+}
+
+.butcopy{
+    /* display: inline-flex; */
+    /* text-align: center; */
+    font-size: 10pt;
+    margin: 2px 2px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #212921; 
+}

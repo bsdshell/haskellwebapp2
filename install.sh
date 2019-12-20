@@ -67,6 +67,7 @@ if [[ "$1" == "in" ]]; then
     cp ./config.txt $bindir 
     ls -lah $bindir
     cp *.html $bindir
+    cp -rf src $bindir
     cd $bindir
     ln -s /Library/WebServer/Documents/xfido/pdf pdf
 

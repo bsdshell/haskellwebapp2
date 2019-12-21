@@ -109,6 +109,7 @@ import GHC.Generics
 import qualified Data.Aeson as DA
 
 
+eleIdCodeBlock="t"
 
 toStr = strictTextToStr
 
@@ -406,8 +407,8 @@ blockId n = "t" ++ (show n)
 {-| 
     === Hide all the data in TextArea
     @
-    <form action="sendConfirmation.php" name="confirmationForm" method="post">
-    <textarea id="confirmationText" class="text" cols="86" rows ="20" name="confirmationText"></textarea>
+    <form action="serverFun.hs" name="someName" method="POST">
+    <textarea id="ttId" class="text" cols="86" rows ="20" name="textName"></textarea>
 
     <input type="submit" value="Email" class="submitButton">
     </form>
@@ -420,7 +421,7 @@ blockId n = "t" ++ (show n)
 hiddenForm2::Integer -> String -> String  
 hiddenForm2 n s = [r|<form action="/update" name="Update" class="hf" id=|] <> cid "f" n <> 
     [r| method="POST"><textarea name="header" rows="20" class="hide"> |] <> (head $ lines s) <> 
-    [r| </textarea><textarea name="myblock" spellcheck="false" autofocus="true" onfocus="textAreaAdjust(this);" id= |] <> "t" ++ (sw n) <> 
+    [r| </textarea><textarea name="myblock" spellcheck="false" autofocus="true" onfocus="textAreaAdjust(this);" id= |] <> eleIdCodeBlock <> (sw n) <> 
     [r| class="hide"> |] <> s <> 
     [r| </textarea><div class="butcen">
         <input type="submit" name="update" value="update" id= |] <> cid "b" n <> [r| class="submitButton"> 
@@ -432,6 +433,7 @@ hiddenForm2 n s = [r|<form action="/update" name="Update" class="hf" id=|] <> ci
     -- cid s n = show $ s ++ show n
     cid s n = s ++ show n
 
+-- NOT USE
 hiddenForm::Integer -> String -> String  
 hiddenForm n s = toStr [NI.text| 
 <form action="/update" name="Update" class="hf" id='f${nn}' method="POST"><textarea name="header" rows="20" class="hide">${he} 
@@ -440,7 +442,7 @@ hiddenForm n s = toStr [NI.text|
               ts = toText s
               nn = toText $ show nn
               he = toText $ head $ lines s
-
+-- NOT USE
 hiddenForm3::Integer -> String -> String  
 hiddenForm3 n s = toStr [NI.text| 
 <form action="/update" name="Update" class="hf" id='f${nn}' method="POST"><textarea name="header" rows="20" class="hide">${he} 
@@ -534,7 +536,8 @@ foldListList stylish allBlock = L.foldr(+)[] $ map (concatStr' []) zhtml
                 (+)         =  (++)
                 (+|) s n    =  s + (ts n)
                 fun s arg   =  s + "(" + arg + ")"
-                input1 n    = [r|<div class="butcen"><input type="button" class="butcopy" onClick="clip(document.getElementById('|] <> "c" <> (show n) <> [r|'));" name="cp" value="copy" ></div>|]
+                -- input1 n    = [r|<div class="butcen"><input type="button" class="butcopy" onClick="clip(document.getElementById('|] <> "c" <> (show n) <> [r|'));" name="cp" value="copy" ></div>|]
+                input1 n    = [r|<div class="butcen"><input type="button" class="butcopy" onClick="copyToClipboardFromTextArea('|] <> eleIdCodeBlock <> (show n) <> [r|');" name="cp" value="copy" ></div>|]
                 inputNum n  = [NI.text|<div class="butcen"><input type="button" onClick="clip(document.getElementById('c${n}'));" name="cp" value="copy" ></div>|] 
 
 
@@ -611,8 +614,11 @@ app conn1 ref request respond = case pathInfo request of
       ("matrix":_)          -> respond matrixReply
       ("compiler":_)        -> receiveCode request respond
       ("editcode":_)        -> respond $ responseHtml "compileCode.html"      -- haskellwebapp2/compileCode.html
-      ("aronlib.js":_)      -> respond $ responseJavascript "src/aronlib.js"  -- haskellwebapp2/src/aronlib.js
-      ("myscript.js":_)     -> respond $ responseJavascript "src/myscript.js" -- haskellwebapp2/src/myscript.js
+
+      -- move aronlib.js to $b/jslib, it does not work
+      -- add symlink src/aronlib.js => /Users/cat/myfile/bitbucket/jslib/aronlib.js
+      ("aronlib.js":_)      -> respond $ responseJavascript "src/aronlib.js"  
+      -- ("myscript.js":_)     -> respond $ responseJavascript "src/myscript.js" -- haskellwebapp2/src/myscript.js
       ("mystyle.css":_)     -> respond $ responseMyStyle "src/mystyle.css"        -- haskellwebapp2/src/mystyle.css
       _                     -> respond $ responseHelp
 
@@ -769,7 +775,10 @@ spanBlockXX hmap mKey = foldListListTxt $ case (M.lookup (S8.unpack $ fromJust m
 
 (∘) = (++)
 
-htmlForm::String -> String
+{-| 
+    === user input autocomplete
+-} 
+htmlForm::String -> String  -- USE IT NOW
 htmlForm s = [r| 
              <div style="text-align:center;"> 
              <form action="/snippet" method="get" target=""> 
@@ -790,7 +799,7 @@ htmlBody s  = [r|
             <meta charset="utf-8">
             <TITLE>Search Code Snippet</TITLE> 
             <LINK rel="stylesheet" type="text/css" href="mystyle.css"> 
-            <script src="myscript.js"></script>
+            <script src="aronlib.js"></script>
             </HEAD>
             <BODY> |] <> s <> [r| </BODY></HTML> |]
 
@@ -811,7 +820,7 @@ replyHtml s listCmd = [r|
             <meta charset="utf-8">
             <TITLE>Search Code Snippet</TITLE>
             <LINK rel="stylesheet" type="text/css" href="mystyle.css"> 
-            <script src="myscript.js"></script>
+            <script src="aronlib.js"></script>
             <!--
             <LINK rel="stylesheet" type="text/css" href="/style.css"> 
             -->

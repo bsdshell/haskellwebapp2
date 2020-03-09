@@ -27,7 +27,7 @@ input[type=button], input[type=submit], input[type=reset] {
 </div>
 
 <div style="background-color:green;">
-<input id="mname" name="cmd" value="genematrix"></input>
+<input id="mname" name="cmd"  value="genematrix"></input>
 <input id="mncol" name="ncol" value="2"></input>
 <input id="mnrow" name="nrow" value="4"></input>
 </div>
@@ -38,9 +38,16 @@ input[type=button], input[type=submit], input[type=reset] {
 
 <script>
 
+// Test http://localhost:8080/matrix
+// Send genematrix to WaiLib.hs
+// WaiLib.hs call geneRectMat::Application
+// geneRectMat::Application genrate matrix and serialize it
+// Send back to client side
+// json['matrix'] contains Javascript array  
+// geenTable() create Html Matrix from json['matrix']
 function submitFunc() {
     // Sending and receiving data in JSON format using POST method
-    //
+    // See geneRectMat::Application in WaiLib.hs 
     let xhr = new XMLHttpRequest();
     let url = "http://localhost:8080/json";
     xhr.open("POST", url, true);
@@ -48,12 +55,30 @@ function submitFunc() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             let json = JSON.parse(xhr.responseText);
-            // console.log(json.matrix);
+
+	    // console.log(json.matrix);
+	    // 'matrix' will be in 'myDiv'
             var results = document.getElementById("myDiv");//myDiv is the div id
 
+	    // Json object 'matrix' from WaiLib.hs geneRectMat::Application
             results.innerHTML = geneTable(json['matrix']); 
         }
     };
+
+    /*
+      <div style="background-color:green;">
+      <input id="mname" name="cmd" value="genematrix"></input>
+      <input id="mncol" name="ncol" value="2"></input>
+      <input id="mnrow" name="nrow" value="4"></input>
+      </div>
+
+     Json object obj:
+     '{
+         "cmd" : "mycmd",
+         "ncol" : 2, 
+         "nrow" : 3 
+      }'
+    */
     var obj = new Object();
     obj.cmd = document.getElementById('mname').value;
     console.log(obj.cmd);

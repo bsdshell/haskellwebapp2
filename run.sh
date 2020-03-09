@@ -42,7 +42,6 @@ getpwd
 MySymbin="$HOME/myfile/symbin"
 MyBin="$HOME/myfile/mybin"
 HaskellLib="$HOME/myfile/bitbucket/haskelllib"
-hweb="$HOME/myfile/bitbucket/haskell_webapp"
 
 hcmd="/usr/local/bin/ghc -i$HOME/myfile/bitbucket/haskelllib $1 -o "$(basename $1)
 ghcProfile="/usr/local/bin/ghc -i$HOME/myfile/bitbucket/haskelllib -prof -fprof-auto -rtsopts $1" 

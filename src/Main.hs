@@ -106,9 +106,15 @@ main = do
 
     conn1 <- open $ home </> userinputdb 
     pplist <- readSnippet (home </> snippet) 
+    createCodeBlockTable conn1
     ref <- newIORef M.empty 
-    snippetMap pplist ref
-    pp "dog"
+    newList <- readDatabaseCodeBlock2 conn1 
+    -- snippetMap pplist ref
+    snippetMap newList ref
+    hmap <- readIORef ref
+    fw "main.hs newLit beg"
+    pre hmap 
+    fw "main.hs newList end"
     putStrLn host 
     pp "http starting"
     pp "test it"

@@ -46,6 +46,10 @@ HaskellLib="$HOME/myfile/bitbucket/haskelllib"
 hcmd="/usr/local/bin/ghc -i$HOME/myfile/bitbucket/haskelllib $1 -o "$(basename $1)
 ghcProfile="/usr/local/bin/ghc -i$HOME/myfile/bitbucket/haskelllib -prof -fprof-auto -rtsopts $1" 
 
+
+printc 200 "kill haskellwebapp2"
+ps aux | grep haskellwebapp2 | awk '{print $2}' | line 'x -> kill -9 x'
+sleep 2
 # stack build
 # http://docs.haskellstack.org/en/stable/GUIDE/#flags-and-ghc-options 
 stack build --ghc-options=-O2 haskellwebapp2 

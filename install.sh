@@ -63,20 +63,21 @@ echo "install un => uninstall"
 
 if [[ "$1" == "in" ]]; then
     mkdir "$bindir"
-    stack install --local-bin-path $bindir 
-    cp ./config.txt $bindir 
-    ls -lah $bindir
-    cp *.html $bindir
-    cp -rf src $bindir
-    cd $bindir
-    ln -s /Library/WebServer/Documents/xfido/pdf pdf
-
-    cd $sym
-    rm $sym/$fname
-
-    ln -s $bindir/$fname $fname 
-    ls -lah $mybin
-    ls -lah $sym | grep $fname
+    cp -rf * $bindir
+#    stack install --local-bin-path $bindir 
+#    cp ./config.txt $bindir 
+#    ls -lah $bindir
+#    cp *.html $bindir
+#    cp -rfP src $bindir
+#    cd $bindir
+#    ln -s /Library/WebServer/Documents/xfido/pdf pdf
+#
+#    cd $sym
+#    rm $sym/$fname
+#
+#    ln -s $bindir/$fname $fname 
+#    ls -lah $mybin
+#    ls -lah $sym | grep $fname
 elif [[ "$1" == "un" ]]; then
     rm -rf $bindir
     cd $sym

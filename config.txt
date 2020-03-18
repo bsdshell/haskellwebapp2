@@ -2,12 +2,16 @@ os = darwin
 testdb = myfile/bitbucket/testfile/test.db
 webappdb = myfile/bitbucket/testfile/haskellwebapp2.db
 host = http://locahost 
-snippetpath = myfile/bitbucket/snippets/snippet.hs
+-- snippetpath = myfile/bitbucket/snippets/snippet.hs
+snippetpath = myfile/bitbucket/snippets/snippet_test.hs
 port = 8000
 
 os = freebsd 
 testdb = myfile/bitbucket/testfile/test.db
 webappdb = myfile/bitbucket/testfile/haskellwebapp2.db
 host = http://uwspace.com
-snippetpath = myfile/bitbucket/snippets/snippet.hs
-port = 8000
+
+-- snippetpath = myfile/bitbucket/snippets/snippet.hs
+-- snippetP in src/WaiLib.hs
+-- snippetpath = myfile/bitbucket/snippets/snippet_test.hs
+-- port = 8000

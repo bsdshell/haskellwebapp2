@@ -94,6 +94,7 @@ configFile = "./config.txt"
 
 lookupJust s m = fromJust $ M.lookup s m
 
+
 main :: IO ()
 main = do
     home <- getEnv "HOME"
@@ -103,17 +104,23 @@ main = do
     let host = lookupJust "host" $ lookupJust os configMap
     let snippet = lookupJust "snippetpath" $ lookupJust os configMap
     let port = lookupJust "port" $ lookupJust os configMap
+    let useSnippet = lookupJust "readSnippetFile" $ lookupJust os configMap
 
-    conn1 <- open $ home </> userinputdb 
+    conn <- open $ home </> userinputdb 
+    createCodeBlockTable conn
     pplist <- readSnippet (home </> snippet) 
-    createCodeBlockTable conn1
+
+    -- See src/config.txt 
+    -- Whether to read snippt.hs file to database or not
+    when (useSnippet == "True") $ readSnippetToDatabase (home </> snippet) conn
+
     ref <- newIORef M.empty 
-    newList <- readDatabaseCodeBlock2 conn1 
+    newList <- readDatabaseCodeBlock2 conn 
     -- snippetMap pplist ref
     snippetMap newList ref
     hmap <- readIORef ref
     fw "main.hs newLit beg"
-    pre hmap 
+    -- pre hmap 
     fw "main.hs newList end"
     putStrLn host 
     pp "http starting"
@@ -121,5 +128,5 @@ main = do
     pp WC.hostURL 
     pp WC.host 
     pp WC.port 
-    run WC.port (app conn1 ref)
-    close conn1
+    run WC.port (app conn ref)
+    close conn

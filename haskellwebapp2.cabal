@@ -59,5 +59,6 @@ executable haskellwebapp2
                        word8,
                        email-validate,
                        data-default,
-                       neat-interpolation
+                       neat-interpolation,
+                       hedis
 

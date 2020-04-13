@@ -63,7 +63,11 @@ echo "install un => uninstall"
 
 if [[ "$1" == "in" ]]; then
     mkdir "$bindir"
-    cp -rf * $bindir
+
+    cp -av * $bindir   
+#    cp -av  copy symbolink too
+#
+#    cp -rf * $bindir
 #    stack install --local-bin-path $bindir 
 #    cp ./config.txt $bindir 
 #    ls -lah $bindir

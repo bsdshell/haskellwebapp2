@@ -24,10 +24,12 @@ pre {
     margin-top: 1px;
     /* margin-right: 1px; */
     margin-bottom: 1px;
-    /* margin-left: 4px; */
+    /*! margin-left: 4px; */
     /* background: #c1bfab69;*/
     border-style: outset;
     border-width: thin;
+    color: #52a45f;
+    /*! background: blanchedalmond; */
 }
 
 textarea {

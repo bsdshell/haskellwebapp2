@@ -1,17 +1,20 @@
-<div style="text-align:center;">
-<form action="/snippet" method="get" target=""> 
-<input type="text" style="font-size:18pt;height:50px;width:400px;" id="inputid" value="s van" onchange="testChange(this.value);" name="id" list="autocomplete">  
- <datalist id="autocomplete">replaceSearchForm</datalist><br>  
-</form> 
-</div> 
-<div>
-<input id='bgidcolor' type="color" onchange="submitUpdateBackground(this.value)" name="colorname"
-value="#e66465">
-<label for="body_background">Background</label>
-<svg width="20" height="20">
-  <rect width="20" height="20" style="fill:rgb(10,10,255);stroke-width:3;stroke:rgb(0,0,0)" />
-</svg>
-</div>
-<svg width="20" height="20">
-  <rect width="20" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-</svg>
+             <div style="text-align:center;">
+             <form action="/snippet" method="get" target="">
+             <input type="text" style="font-size:18pt;height:50px;width:400px;" id="inputid" value="s van" onchange="testChange(this.value);" name="id" list="autocomplete">
+                 <datalist id="autocomplete"> replaceSearchForm </datalist><br>
+             </form>
+             </div>
+             <div>
+                <input id='bgidcolor' type="color" onchange="submitUpdateBackground('background:' + this.value)" name="colorname"
+                value="#e66465" style='background:none; border:0'>
+                <label for="body_background">Background</label>
+                <input id='textcolorid' type="color" onchange="submitUpdateBackground('color:' + this.value)" name="textcolorname"
+                value="#e66465" style='background:none; border:0'>
+                <label for="text_color">TextColor</label>
+                <svg width="20" height="20">
+                  <rect width="20" height="20" style="fill:rgb(10,10,255);stroke-width:3;stroke:rgb(0,0,0)" />
+                </svg>
+                <svg width="20" height="20">
+                  <rect width="20" height="20" style="fill:rgb(0,99,55);stroke-width:3;stroke:rgb(0,4,2)" />
+                </svg>
+            </div>

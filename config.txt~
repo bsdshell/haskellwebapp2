@@ -1,7 +1,7 @@
 os = darwin
 testdb = myfile/bitbucket/testfile/test.db
 webappdb = myfile/bitbucket/testfile/haskellwebapp2.db
-host = http://localhost 
+host = http://locahost 
 snippetpath = myfile/bitbucket/snippets/snippet.hs
 port = 8000
 readSnippetFile = False 

@@ -52,5 +52,8 @@ ps aux | grep haskellwebapp2 | awk '{print $2}' | line 'x -> kill -9 x'
 sleep 2
 # stack build
 # http://docs.haskellstack.org/en/stable/GUIDE/#flags-and-ghc-options 
-stack build --ghc-options=-O2 haskellwebapp2 
+#
+# no optimization 
+# stack build --ghc-options=-O0 haskellwebapp2 
+stack build --ghc-options=-O2 haskellwebapp2
 stack exec haskellwebapp2

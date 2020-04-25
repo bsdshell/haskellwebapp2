@@ -87,16 +87,20 @@ import GHC.Generics
 import qualified Data.Aeson as DA
 
 -- from config.txt
-config = [
-          ("os",              "darwin"),
-          ("testdb",          "myfile/bitbucket/testfile/test.db"),
-          ("webappdb",        "myfile/bitbucket/testfile/haskellwebapp2.db"),
-          ("host",            "http://localhost"),
-          ("snippetpath",     "myfile/bitbucket/snippets/snippet.hs"),
-          ("port",            "8000"),
-          ("readSnippetFile", "False")
-         ]
-
+-- OS -> darwin
+--       darwin -> [("", ""), ("", "") ]
+--       
+config =[ [("os", "darwin")],
+            [
+              ("testdb",          "myfile/bitbucket/testfile/test.db"),
+              ("webappdb",        "myfile/bitbucket/testfile/haskellwebapp2.db"),
+              ("host",            "http://localhost"),
+              ("snippetpath",     "myfile/bitbucket/snippets/snippet.hs"),
+              ("port",            "8000"),
+              ("readSnippetFile", "False")
+            ]
+        ]
+-- [("a", "b") [("a", "b"), ("c", "d")]]
          
 
 -- NOTE: the project does not use the shared Haskell lib in $b/haskelllib

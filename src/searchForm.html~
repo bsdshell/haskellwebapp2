@@ -17,18 +17,6 @@
                 <svg width="20" height="20">
                   <rect width="20" height="20" style="fill:rgb(0,99,55);stroke-width:3;stroke:rgb(0,4,2)" />
                 </svg>
-		<script>
-		  document.addEventListener('readystatechange', event => { 
-		      // When HTML/DOM elements are ready:
-		      if (event.target.readyState === "interactive") {   //does same as:  ..addEventListener("DOMContentLoaded"..
-			  // alert("hi elements are ready");
-		      }
-
-		      // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
-		      if (event.target.readyState === "complete") {
-			  requestPreFromRedis();
-		      }
-		  });
-		</script>
-
+		<input id="myid" type="text"  value="v1">
+		<input type="button" value="clickme" onClick="requestPreFromRedis();">
             </div>

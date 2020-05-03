@@ -1,0 +1,67 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed Apr 29 01:48:01 2020
+;; Desktop file format version 208
+;; Emacs version 26.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (24233 16193 153601 0) (desktop . "208") "cat@cat.hitronhub.home" nil nil ((((minibuffer . t) (font-backend mac-ct) (fontsize . 0) (font . "-*-Courier New-normal-normal-normal-*-16-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#e1e1e0") (background-color . "#2d3743") (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (undecorated) (ns-appearance . unbound) (ns-transparent-titlebar . unbound) (z-group) (no-focus-on-map) (no-accept-focus) (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (fullscreen . maximized) (display-type . color) (background-mode . dark) (cursor-color . "#339999") (environment) (frameset--id . "66B7-5334-57D1-4204") (frameset--mini t . t) (height . 47) (width . 142) (modeline . t) (unsplittable) (left . 0) (top . 23) (icon-name) (visibility . t) (display . "cat.hitronhub.home") (explicit-name) (tool-bar-position . top)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 72) (min-pixel-width . 100) (min-pixel-height-ignore . 36) (min-pixel-width-ignore . 40) (min-pixel-height-safe . 18) (min-pixel-width-safe . 20)) leaf (pixel-width . 1436) (pixel-height . 833) (total-width . 143) (total-height . 46) (normal-height . 1.0) (normal-width . 1.0) (buffer "aronlib.js" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 11186) (start . 10034))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("copytoclipboard" "copyToCli" "diffcolortablex" "EEE" "diffcolortablex" "diffColo" "cssStyle" "diffCo" "style_" "diffColo" "diffcolortablex" "g" "diffcolortablex" "diffcolortable" "diffcolortablex" "diffcolortablex "))
+(setq regexp-search-ring '("div_" "style_" "style" "\\<alternateLineColor\\>" "\\<diffColorTableX\\>" "\\<diffColorTable\\>" "\\<diffColorTableX\\>"))
+(setq register-alist (list '(48 . "divX_::[(String, String)] -> String\n") (desktop-list* 101 (let ((mk (make-marker))) (add-hook 'desktop-delay-hook `(lambda nil (set-marker ,mk ,1 (get-buffer ,"WaiLib.hs")))) mk))))
+(setq file-name-history '("~/myfile/bitbucket/haskellwebapp2/src/" "~/myfile/bitbucket/haskellwebapp2/src/aronlib.js" "~/myfile/bitbucket/haskell/htmlGeneUI.hs" "~/myfile/bitbucket/haskellwebapp2/src/WaiLib.hs"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/Users/cat/myfile/bitbucket/haskellwebapp2/src/aronlib.js"
+  "aronlib.js"
+  'js-mode
+  '(abbrev-mode global-auto-revert-mode yas-minor-mode TeX-PDF-mode)
+  11186
+  '(13105 nil)
+  nil
+  nil
+  '((buffer-display-time 24233 16182 99372 0) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (12389 10502 13105 1))))
+
+(desktop-create-buffer 208
+  "/Users/cat/myfile/bitbucket/haskell/htmlGeneUI.hs"
+  "htmlGeneUI.hs"
+  'haskell-mode
+  '(abbrev-mode eldoc-mode global-auto-revert-mode yas-minor-mode TeX-PDF-mode)
+  2890
+  '(3142 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 24232 65186 44728 0) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (6453 4458 6739 4421 3140 2482 5072))))
+
+(desktop-create-buffer 208
+  "/Users/cat/myfile/bitbucket/haskellwebapp2/src/WaiLib.hs"
+  "WaiLib.hs"
+  'haskell-mode
+  '(abbrev-mode eldoc-mode global-auto-revert-mode yas-minor-mode TeX-PDF-mode)
+  39518
+  '(39382 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 24232 57167 46166 0) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines . t))
+  '((mark-ring (39382 38599 38556 38520 37990 37691 37495 36631 36509 35215 29966 29924 29911 29870 29715 23494))))
+
+(desktop-create-buffer 208
+  "/Library/WebServer/Documents/xfido/html/indexWhatIdidtoday.org"
+  "indexWhatIdidtoday.org"
+  'org-mode
+  '(abbrev-mode global-auto-revert-mode yas-minor-mode TeX-PDF-mode)
+  215649
+  '(215306 nil)
+  nil
+  nil
+  '((buffer-display-time 24232 35162 182777 0) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines . t))
+  '((mark-ring (215455 215088 215239))))
+

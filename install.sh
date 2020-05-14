@@ -76,12 +76,12 @@ if [[ "$1" == "in" ]]; then
 #    cd $bindir
 #    ln -s /Library/WebServer/Documents/xfido/pdf pdf
 #
-#    cd $sym
-#    rm $sym/$fname
+    cd $sym
+    rm $sym/haskellwebapp2.sh
 #
-#    ln -s $bindir/$fname $fname 
+    ln -s $scr/haskellwebapp2.sh haskellwebapp2.sh 
 #    ls -lah $mybin
-#    ls -lah $sym | grep $fname
+    ls -lah $sym | grep $fname
 elif [[ "$1" == "un" ]]; then
     rm -rf $bindir
     cd $sym

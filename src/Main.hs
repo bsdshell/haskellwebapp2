@@ -116,7 +116,9 @@ main = do
     home <- getEnv "HOME"
     configMap <- readConfig configFile 
     os <- getOS
+    pre os
     let userinputdb = lookupJust dbname $ lookupJust os configMap
+    pp userinputdb
     let host = lookupJust "host" $ lookupJust os configMap
     let snippet = lookupJust "snippetpath" $ lookupJust os configMap
     let port = lookupJust "port" $ lookupJust os configMap
@@ -132,6 +134,7 @@ main = do
 
     ref <- newIORef M.empty 
     newList <- readDatabaseCodeBlock2 conn 
+    pre newList
     -- snippetMap pplist ref
     snippetMap newList ref
     hmap <- readIORef ref

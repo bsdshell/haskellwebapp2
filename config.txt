@@ -1,6 +1,6 @@
 os = darwin
-testdb = myfile/bitbucket/testfile/test.db
-webappdb = myfile/bitbucket/testfile/haskellwebapp2.db
+testdb = myfile/bitbucket/database/test_sqlite3.db
+webappdb = myfile/bitbucket/database/haskellwebapp2_sqlite3.db
 host = http://localhost 
 snippetpath = myfile/bitbucket/snippets/snippet.hs
 port = 8000
@@ -9,8 +9,8 @@ readSnippetFile = False
 -- readSnippetFile = True 
 
 os = freebsd 
-testdb = myfile/bitbucket/testfile/test.db
-webappdb = myfile/bitbucket/testfile/haskellwebapp2.db
+testdb = myfile/bitbucket/database/test_sqlite3.db
+webappdb = myfile/bitbucket/database/haskellwebapp2_sqlite3.db
 host = http://uwspace.com
 
 -- snippetpath = myfile/bitbucket/snippets/snippet.hs

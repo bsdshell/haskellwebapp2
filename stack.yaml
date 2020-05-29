@@ -49,6 +49,7 @@ extra-deps:
 - wai-util-0.8
 # - wai-util-0.7
 - http-accept-0.2 
+- GLFW-0.5.2.5
 
 # flags: {}
 

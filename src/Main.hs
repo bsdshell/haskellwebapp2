@@ -35,6 +35,7 @@ import Blaze.ByteString.Builder.Char.Utf8 (fromString)
 import Data.ByteString.Builder (byteString, Builder)
 
 
+import Language.Haskell.Ghcid
 
 import qualified Data.Text.Lazy                 as DL 
 
@@ -102,14 +103,12 @@ config =[ [("os", "darwin")],
         ]
 -- [("a", "b") [("a", "b"), ("c", "d")]]
          
-
 -- NOTE: the project does not use the shared Haskell lib in $b/haskelllib
 -- FIX it ASAP
 dbname = "webappdb"
 configFile = "./config.txt"
 
 lookupJust s m = fromJust $ M.lookup s m
-
 
 main :: IO ()
 main = do
@@ -133,12 +132,19 @@ main = do
     when (useSnippet == "True") $ readSnippetToDatabase (home </> snippet) conn
 
     ref <- newIORef M.empty 
-    newList <- readDatabaseCodeBlock2 conn 
+    -- newList <- readDatabaseCodeBlock2 conn
+    newList <- readDatabaseCodeBlock3 conn 
     pre newList
     -- snippetMap pplist ref
-    snippetMap newList ref
+    -- snippetMap newList ref
+    listToPrefixMap newList ref
     hmap <- readIORef ref
-    fw "main.hs newLit beg"
+    fw "hmap"
+
+    let f::Stream -> String -> IO()
+        f a b = return ()
+
+    (g, _) <- startGhciProcess (shell "ghci_stack.sh") f
     -- pre hmap 
     fw "main.hs newList end"
     putStrLn host 
@@ -147,5 +153,6 @@ main = do
     pp WC.hostURL 
     pp WC.host 
     pp WC.port 
-    run WC.port (app conn ref)
+    -- run WC.port (app conn ref)
+    run WC.port (app2 g conn ref)
     close conn

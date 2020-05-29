@@ -1,0 +1,1738 @@
+
+./AronHtml.hs,410
+module AronHtml AronHtml7,8
+divT divT60,61
+divC divC61,62
+tableT tableT62,63
+tableC tableC63,64
+tableAC tableAC64,65
+tdT tdT65,66
+tdC tdC66,67
+tdAC tdAC67,68
+trC trC68,69
+tr_ tr_69,70
+class_ class_70,71
+ondblclick_ ondblclick_71,72
+mystyle_ mystyle_73,74
+align_ align_75,76
+id_ id_76,77
+td1 td178,79
+tr1 tr179,80
+table1 table182,83
+ahref_ ahref_89,90
+table:table91,92
+
+./AronHtml2.hs,593
+module AronHtml2 AronHtml22,3
+htmlBody:htmlBody31,32
+type HTMLAttr HTMLAttr46,47
+type GlobalAttr GlobalAttr47,48
+attrStyle:attrStyle48,49
+style_:style_53,54
+attrId:attrId59,60
+id_:id_62,63
+attrClass:attrClass65,66
+class_:class_68,69
+attr:attr71,72
+attrOndblclick:attrOndblclick75,76
+ondblclick_:ondblclick_78,79
+textAreaNew:textAreaNew87,88
+table:table93,94
+td:td99,100
+tr:tr105,106
+pre_:pre_111,112
+div_:div_117,118
+label_:label_123,124
+input_:input_129,130
+span_:span_135,136
+htmlbr htmlbr141,142
+createTag:createTag143,144
+ccat ccat151,152
+
+./AronHtml_tmp.hs,417
+module AronHtml AronHtml8,9
+preT preT65,66
+divT divT66,67
+divC divC67,68
+tableT tableT68,69
+tableC tableC69,70
+tableAC tableAC70,71
+tdT tdT71,72
+tdC tdC72,73
+tdAC tdAC73,74
+trC trC74,75
+tr_ tr_75,76
+class_ class_76,77
+onclick_ onclick_77,78
+style_ style_78,79
+align_ align_79,80
+id_ id_80,81
+td1 td182,83
+tr1 tr183,84
+table1 table186,87
+ahref_ ahref_93,94
+table:table95,96
+
+./AronModule.hs,18011
+module AronModule AronModule9,10
+instance Num Num a => Num [a]104,105
+    (+(+)105,106
+    (-(-)106,107
+    (*(*)107,108
+    abs abs108,109
+    signum signum109,110
+    fromInteger fromInteger110,111
+class Cnum Cnum115,116
+    _sqrt,_sin,_cos:_cos116,117
+    _sqrt,_sin,_sin116,117
+    _sqrt,_sqrt116,117
+instance Cnum Cnum Int117,118
+    _cos _cos118,119
+    _sin _sin119,120
+    _sqrt _sqrt120,121
+instance Cnum Cnum Float121,122
+    _cos _cos122,123
+    _sin _sin123,124
+    _sqrt _sqrt124,125
+instance Cnum Cnum Double125,126
+    _cos _cos126,127
+    _sin _sin127,128
+    _sqrt _sqrt128,129
+instance Cnum Cnum Integer129,130
+    _cos _cos130,131
+    _sin _sin131,132
+    _sqrt _sqrt132,133
+class Dnum Dnum141,142
+    type DivType DivType142,143
+    _div:_div143,144
+instance Dnum Dnum Integer Float145,146
+    type DivType DivType146,147
+    _div _div147,148
+instance Dnum Dnum Float Integer149,150
+    type DivType DivType150,151
+    _div _div151,152
+instance Dnum Dnum Int Float153,154
+    type DivType DivType154,155
+    _div _div155,156
+instance Dnum Dnum Float Int157,158
+    type DivType DivType158,159
+    _div _div159,160
+instance Dnum Dnum Double Int161,162
+    type DivType DivType162,163
+    _div _div163,164
+instance Dnum Dnum Double Integer165,166
+    type DivType DivType166,167
+    _div _div167,168
+instance Dnum Dnum Integer Double169,170
+    type DivType DivType170,171
+    _div _div171,172
+instance Dnum Dnum Integer Integer173,174
+    type DivType DivType174,175
+    _div _div175,176
+class Add Add177,178
+    type SumTy SumTy178,179
+    addd addd179,180
+instance Add Add Integer Double181,182
+    type SumTy SumTy182,183
+    addd addd183,184
+instance Add Add Double Integer185,186
+    type SumTy SumTy186,187
+    addd addd187,188
+instance Add Add Double Int189,190
+    type SumTy SumTy190,191
+    addd addd191,192
+instance Add Add Int Double193,194
+    type SumTy SumTy194,195
+    addd addd195,196
+instance (N(Num a) => Add a a197,198
+    type SumTy SumTy198,199
+    addd addd199,200
+data CodeBlock CodeBlock204,205
+    CodeBlockCodeBlock205,206
+    { codeBlockId codeBlockId206,207
+    , header header207,208
+    , codeblock codeblock208,209
+instance FromRow FromRow CodeBlock211,212
+  fromRow fromRow212,213
+instance ToRow ToRow CodeBlock216,217
+  toRow toRow217,218
+data SqliteMaster SqliteMaster220,221
+data SqliteMaster = SqliteMaster SqliteMaster220,221
+        x_type:x_type221,222
+        x_name:x_name222,223
+        x_tbl_name:x_tbl_name223,224
+        x_rootpage:x_rootpage224,225
+        x_sql:x_sql225,226
+instance FromRow FromRow SqliteMaster227,228
+  fromRow fromRow228,229
+instance ToRow ToRow SqliteMaster230,231
+  toRow toRow231,232
+type CSSPro CSSPro233,234
+div':div'236,237
+divInteger:divInteger240,241
+divII:divII270,271
+rf:rf277,278
+fi:fi280,281
+mat mat286,287
+matr matr292,293
+mat'=mat'298,299
+data Quaternion Quaternion306,307
+data Quaternion = Quaternion{a:Quaternion{a306,307
+data Quaternion = Quaternion{a::Float, b:b306,307
+data Quaternion = Quaternion{a::Float, b::Float, c:c306,307
+data Quaternion = Quaternion{a::Float, b::Float, c::Float, d:d306,307
+instance Num Num Quaternion308,309
+    (Q(Quaterniona1b1c1d1)309,310
+    (Q(Quaternionabcd)311,312
+    abs abs312,313
+    signum signum313,314
+    fromInteger fromInteger314,315
+eps:eps316,317
+data C C320,321
+data C = C{x:C{x320,321
+data C = C{x::Float, y:y320,321
+instance Num Num C322,323
+        (C(Cx1y1)323,324
+        fromInteger fromInteger326,327
+        signum signum327,328
+        abs abs328,329
+instance Eq Eq C330,331
+        (C(Cxy)331,332
+data RedisGroup RedisGroup335,336
+data RedisGroup = Haskell Haskell335,336
+data RedisGroup = Haskell | Java Java335,336
+data RedisGroup = Haskell | Java | SnippetSnippet335,336
+redisBound:redisBound337,338
+con:con342,343
+mag:mag345,346
+re:re348,349
+im:im351,352
+co:co354,355
+toPolar:toPolar360,361
+toCard:toCard368,369
+loge:loge387,388
+sqrtC:sqrtC401,402
+sqrtC':sqrtC'406,407
+radianToDegree:radianToDegree411,412
+degreeToRadian:degreeToRadian414,415
+tri:tri417,418
+data GPoint GPoint420,421
+data GPoint = GPoint GPoint420,421
+getX:getX421,422
+getY:getY424,425
+toUpperStr:toUpperStr427,428
+toLowerStr:toLowerStr438,439
+concatStr:concatStr448,449
+cat:cat457,458
+timeNowPico:timeNowPico465,466
+timeNowNano:timeNowNano471,472
+timeNowMicro:timeNowMicro477,478
+timeNowMilli:timeNowMilli483,484
+timeNowSecond:timeNowSecond489,490
+getTime:getTime502,503
+getLocalDate:getLocalDate516,517
+readDirMatchKey:readDirMatchKey526,527
+containStr:containStr556,557
+containAscii:containAscii562,563
+containNonAsciiList:containNonAsciiList574,575
+matchAny:matchAny590,591
+matchAnyRegex:matchAnyRegex605,606
+type SKey SKey610,611
+matchScore:matchScore619,620
+matchScoreList:matchScoreList634,635
+fileContainNonAscii:fileContainNonAscii642,643
+filterList:filterList675,676
+filterNonEmpty:filterNonEmpty683,684
+containPrefix:containPrefix695,696
+hasPrefix:hasPrefix703,704
+containSuffix:containSuffix713,714
+replaceList:replaceList722,723
+searchReplaceAny:searchReplaceAny748,749
+searchReplace:searchReplace799,800
+interleave:interleave843,844
+intersperseInner:intersperseInner856,857
+intersperseOuter:intersperseOuter868,869
+repeat':repeat'881,882
+repeatN:repeatN891,892
+replicateN:replicateN901,902
+replicate':replicate'908,909
+fillList:fillList927,928
+c2w_:c2w_940,941
+readFileBSList:readFileBSList947,948
+readFileBS:readFileBS956,957
+readFileSText:readFileSText964,965
+readFileSTextList:readFileSTextList972,973
+charToStrictByteString:charToStrictByteString981,982
+plines plines991,992
+breakNewline breakNewline999,1000
+replaceByteStringFile:replaceByteStringFile1022,1023
+readFileRepPat:readFileRepPat1039,1040
+toStrictBS toStrictBS1047,1048
+strictBSToString strictBSToString1055,1056
+emptySBS:emptySBS1060,1061
+toSBS:toSBS1066,1067
+toLBS:toLBS1085,1086
+toSText:toSText1106,1107
+toLText:toLText1129,1130
+toStr:toStr1154,1155
+catMaybe:catMaybe1178,1179
+removeSpace:removeSpace1190,1191
+isEmpty:isEmpty1194,1195
+escapeHtml:escapeHtml1206,1207
+escapeAmpersand:escapeAmpersand1220,1221
+escapePartial:escapePartial1240,1241
+escapeXML:escapeXML1255,1256
+removeIndex:removeIndex1277,1278
+removeRowCol:removeRowCol1304,1305
+principleSubmatrix:principleSubmatrix1332,1333
+dropEnd:dropEnd1340,1341
+takeEnd:takeEnd1351,1352
+takeBS:takeBS1362,1363
+dropBS:dropBS1371,1372
+splitBS:splitBS1379,1380
+trimWS:trimWS1389,1390
+trimAll:trimAll1396,1397
+trim:trim1404,1405
+trimT:trimT1418,1419
+trimBoth:trimBoth1424,1425
+trimLBS:trimLBS1432,1433
+trimStart:trimStart1445,1446
+trimEnd:trimEnd1454,1455
+splitListEmptyLine:splitListEmptyLine1459,1460
+splitList:splitList1462,1463
+t1 t11467,1468
+t2 t21468,1469
+t3 t31469,1470
+tuplify2:tuplify21472,1473
+tuplify3:tuplify31475,1476
+lengthcurve:lengthcurve1509,1510
+lengthcurveInter:lengthcurveInter1532,1533
+isBalanced2:isBalanced21550,1551
+findBalance:findBalance1570,1571
+isBalanced:isBalanced1592,1593
+strToLazyText:strToLazyText1606,1607
+lazyTextToStr:lazyTextToStr1609,1610
+strToStrictText:strToStrictText1615,1616
+strictTextToStr:strictTextToStr1623,1624
+lazyTextToLazyByteString:lazyTextToLazyByteString1631,1632
+lazyByteStringToLazyText:lazyByteStringToLazyText1634,1635
+strictTextToStrictByteString:strictTextToStrictByteString1640,1641
+strictByteStringToStrictText:strictByteStringToStrictText1646,1647
+strictByteStringToLazyByteString:strictByteStringToLazyByteString1650,1651
+lazyByteStringToStrictByteString:lazyByteStringToStrictByteString1656,1657
+strictTextToLazyText:strictTextToLazyText1659,1660
+lazyTextToStrictText:lazyTextToStrictText1665,1666
+strToStrictByteString:strToStrictByteString1673,1674
+strToLazyByteString:strToLazyByteString1689,1690
+ppad ppad1696,1697
+pf pf1724,1725
+p:p1729,1730
+pp:pp1732,1733
+pp2 pp21735,1736
+fl:fl1737,1738
+pw:pw1748,1749
+fpp:fpp1751,1752
+fw:fw1754,1755
+ff:ff1765,1766
+(<(<<<)1776,1777
+compileJava:compileJava1793,1794
+pm:pm1814,1815
+pls:pls1823,1824
+ps:ps1830,1831
+psTab:psTab1838,1839
+pa:pa1847,1848
+pre pre1860,1861
+paa:paa1865,1866
+partList:partList1882,1883
+partList2 partList21886,1887
+splitStrChar:splitStrChar1905,1906
+splitStrCharTrim:splitStrCharTrim1918,1919
+matchAllBS:matchAllBS1927,1928
+splitStr:splitStr1936,1937
+spanA:spanA1942,1943
+splitSPC:splitSPC1948,1949
+splitBlock:splitBlock1965,1966
+parseFileBlock:parseFileBlock1982,1983
+prefix:prefix1996,1997
+prefixSuffix:prefixSuffix1999,2000
+lengthK:lengthK2012,2013
+substr:substr2023,2024
+allSubstr:allSubstr2034,2035
+unique:unique2047,2048
+uniqueOrder:uniqueOrder2068,2069
+mergeListList:mergeListList2079,2080
+mergeList:mergeList2087,2088
+mergeListLen:mergeListLen2094,2095
+mergeSortList:mergeSortList2104,2105
+iterateList:iterateList2110,2111
+unwrap:unwrap2114,2115
+codeCapture:codeCapture2118,2119
+binarySearch:binarySearch2126,2127
+qqsort:qqsort2144,2145
+sort:sort2151,2152
+sqVec:sqVec2159,2160
+quickSort:quickSort2169,2170
+quickSort':quickSort'2183,2184
+quickSort1:quickSort12194,2195
+quickSortAny:quickSortAny2201,2202
+mergeSortC:mergeSortC2211,2212
+mergeSort:mergeSort2232,2233
+mergeSortM:mergeSortM2261,2262
+groupCount:groupCount2296,2297
+vimLink:vimLink2311,2312
+watchDir:watchDir2340,2341
+dirModified:dirModified2352,2353
+readSnippet:readSnippet2388,2389
+readSnippetStr:readSnippetStr2415,2416
+readSnippetToDatabase:readSnippetToDatabase2439,2440
+queryDatabaseToFile:queryDatabaseToFile2463,2464
+splitStrTuple:splitStrTuple2481,2482
+readConfig:readConfig2510,2511
+createConfigMap:createConfigMap2541,2542
+readFileRemote:readFileRemote2559,2560
+readFileRemoteToList:readFileRemoteToList2568,2569
+readFileLatin1ToList:readFileLatin1ToList2575,2576
+readFileLatin1:readFileLatin12582,2583
+readFile2d:readFile2d2604,2605
+readFileToInteger2d:readFileToInteger2d2620,2621
+orgList:orgList2645,2646
+orgTable:orgTable2654,2655
+writeToFile:writeToFile2668,2669
+writeFileBS:writeFileBS2680,2681
+writeFileListBS:writeFileListBS2691,2692
+writeFileList:writeFileList2704,2705
+wfs:wfs2710,2711
+wf:wf2713,2714
+writeToFileAppend:writeToFileAppend2721,2722
+nToFractMat:nToFractMat2734,2735
+toNum:toNum2740,2741
+nToNumMat nToNumMat2748,2749
+rToRatMat:rToRatMat2757,2758
+writeToFile2dMat:writeToFile2dMat2780,2781
+writeToFileMat:writeToFileMat2788,2789
+filtermap filtermap2803,2804
+putStrLnBS:putStrLnBS2811,2812
+putStrBS:putStrBS2814,2815
+bs:bs2843,2844
+fs:fs2883,2884
+listDot:listDot2900,2901
+listDots:listDots2905,2906
+scaleList:scaleList2909,2910
+listScale:listScale2913,2914
+listAdd:listAdd2918,2919
+listSub:listSub2923,2924
+listMul:listMul2928,2929
+listNeg:listNeg2938,2939
+dim:dim2947,2948
+zipWithArr:zipWithArr2958,2959
+zipWithArrToList:zipWithArrToList2978,2979
+det:det2990,2991
+multiMatInt:multiMatInt3003,3004
+multiMatDouble:multiMatDouble3009,3010
+multiMatR:multiMatR3017,3018
+multiMat:multiMat3040,3041
+matDiv:matDiv3051,3052
+multiRatMat:multiRatMat3055,3056
+sumRatList:sumRatList3058,3059
+addR:addR3063,3064
+ratToInt:ratToInt3079,3080
+normalR:normalR3088,3089
+reduceForm:reduceForm3100,3101
+reduce:reduce3108,3109
+stringToInt:stringToInt3142,3143
+strToInt strToInt3145,3146
+stringToInteger:stringToInteger3162,3163
+strToInteger strToInteger3165,3166
+stringToFloat:stringToFloat3184,3185
+strToF strToF3187,3188
+stringToListInt:stringToListInt3201,3202
+word:word3213,3214
+isWord:isWord3232,3233
+isZeroPos:isZeroPos3239,3240
+sentence:sentence3251,3252
+perm:perm3271,3272
+perm2:perm23336,3337
+rangeNum:rangeNum3349,3350
+perm3 perm33360,3361
+intToString:intToString3376,3377
+integerToInt:integerToInt3384,3385
+splitR:splitR3387,3388
+multR:multR3398,3399
+multRL:multRL3408,3409
+normR:normR3411,3412
+getVec:getVec3416,3417
+normList:normList3432,3433
+proj:proj3438,3439
+projn:projn3455,3456
+rMatrixUpperTri rMatrixUpperTri3481,3482
+rejection:rejection3503,3504
+qrDecompose':qrDecompose'3519,3520
+addRL:addRL3541,3542
+divR:divR3552,3553
+divR':divR'3558,3559
+invR:invR3564,3565
+subR:subR3575,3576
+negR:negR3578,3579
+negList:negList3581,3582
+subRL:subRL3584,3585
+eightQueen:eightQueen3606,3607
+sumLeft:sumLeft3638,3639
+sumRight:sumRight3650,3651
+rep2d rep2d3663,3664
+diag1:diag13670,3671
+uptri:uptri3675,3676
+leftDiagonal:leftDiagonal3693,3694
+rightDiagonal:rightDiagonal3718,3719
+reverseWord:reverseWord3729,3730
+rw rw3732,3733
+tran:tran3750,3751
+sortRow:sortRow3776,3777
+upperTri:upperTri3805,3806
+upperTri':upperTri'3855,3856
+divI:divI3928,3929
+inverse:inverse3949,3950
+odds:odds4029,4030
+evens:evens4033,4034
+isInver:isInver4044,4045
+isInvertible:isInvertible4077,4078
+ident:ident4085,4086
+ident':ident'4092,4093
+identS:identS4097,4098
+mlist:mlist4109,4110
+drawInt:drawInt4118,4119
+drawInteger:drawInteger4122,4123
+randomDouble:randomDouble4132,4133
+randomFloat:randomFloat4144,4145
+randomFrac:randomFrac4162,4163
+randomList:randomList4168,4169
+randomMatrix:randomMatrix4178,4179
+data Mat Mat4186,4187
+data Mat = Zero Zero4186,4187
+data Mat = Zero | IdId4186,4187
+geneMat1ToN:geneMat1ToN4195,4196
+geneMatMN:geneMatMN4205,4206
+geneMat:geneMat4210,4211
+help:help4216,4217
+cmd:cmd4237,4238
+compileHaskellToBin:compileHaskellToBin4309,4310
+strCompareIC:strCompareIC4323,4324
+baseName:baseName4343,4344
+baseNameT:baseNameT4350,4351
+takeFileNameT:takeFileNameT4356,4357
+gotoCurrDir:gotoCurrDir4365,4366
+dirWalk dirWalk4385,4386
+ls:ls4407,4408
+lsFile:lsFile4423,4424
+lsFileFull:lsFileFull4444,4445
+lsRegex:lsRegex4457,4458
+lsRegexFull:lsRegexFull4468,4469
+lsFullRegex:lsFullRegex4481,4482
+rm:rm4488,4489
+isDir:isDir4500,4501
+rmDir:rmDir4509,4510
+pwd:pwd4520,4521
+getPwd:getPwd4528,4529
+cd:cd4534,4535
+en:en4540,4541
+cc:cc4543,4544
+g:g4546,4547
+sleepSec:sleepSec4554,4555
+sleep:sleep4560,4561
+asplitPath:asplitPath4578,4579
+splitPathA:splitPathA4599,4600
+len:len4609,4610
+take':take'4612,4613
+takeIf:takeIf4625,4626
+dropIf:dropIf4641,4642
+takeN:takeN4647,4648
+drop':drop'4651,4652
+pathBase:pathBase4654,4655
+dropPath:dropPath4659,4660
+dropPathEnd:dropPathEnd4665,4666
+takePath:takePath4671,4672
+takePathEnd:takePathEnd4676,4677
+copyRename:copyRename4682,4683
+copyFileToDir:copyFileToDir4693,4694
+isFile:isFile4696,4697
+fExist:fExist4702,4703
+fe fe4708,4709
+createFile:createFile4711,4712
+listDirFilter:listDirFilter4720,4721
+copyDir:copyDir4727,4728
+mv:mv4746,4747
+rename rename4749,4750
+renameAllFile:renameAllFile4752,4753
+mvFiles mvFiles4758,4759
+mvFile mvFile4759,4760
+mkdir:mkdir4762,4763
+mkdirp:mkdirp4765,4766
+sfilter:sfilter4768,4769
+clear clear4772,4773
+sys:sys4816,4817
+typeChar:typeChar4824,4825
+typeListStr:typeListStr4827,4828
+typeByteString:typeByteString4830,4831
+typeString:typeString4833,4834
+linesBS:linesBS4836,4837
+linesSText:linesSText4844,4845
+isHex:isHex4858,4859
+isHexStr:isHexStr4866,4867
+isDigitStr:isDigitStr4874,4875
+isLetterStr:isLetterStr4882,4883
+runRawCmd:runRawCmd4894,4895
+run':run'4922,4923
+run:run4937,4938
+runSh runSh4975,4976
+df:df4993,4994
+tangent:tangent5023,5024
+tangentVec:tangentVec5029,5030
+prime prime5039,5040
+oneRoot:oneRoot5064,5065
+rootList:rootList5077,5078
+outer:outer5093,5094
+out:out5110,5111
+outerSum:outerSum5116,5117
+outerMod:outerMod5123,5124
+outerStr:outerStr5126,5127
+(â(â¦¶)5134,5135
+(â(â)5135,5136
+(â(â§)5137,5138
+(â(â)5138,5139
+vcol:vcol5141,5142
+vrow:vrow5144,5145
+zipWith2:zipWith25161,5162
+data XNode XNode5166,5167
+data XNode = XNode XNode5166,5167
+insertTries:insertTries5179,5180
+insertTriesList:insertTriesList5190,5191
+containsTries:containsTries5202,5203
+data Tree Tree5215,5216
+data Tree a = EmptyEmpty5215,5216
+            | Node Node5216,5217
+insertNode:insertNode5218,5219
+insertFromList:insertFromList5225,5226
+data LeafyTree LeafyTree5232,5233
+data LeafyTree a = Branch Branch5232,5233
+                   | Leaf Leaf5233,5234
+instance Foldable Foldable LeafyTree5263,5264
+    foldMap foldMap5264,5265
+inorder:inorder5270,5271
+maxlen:maxlen5277,5278
+head':head'5285,5286
+isBST:isBST5299,5300
+binsert:binsert5318,5319
+sym:sym5325,5326
+lca:lca5338,5339
+buildTree:buildTree5367,5368
+anagram:anagram5389,5390
+redisExtractAronModule:redisExtractAronModule5430,5431
+redisExtractJavaMethod:redisExtractJavaMethod5462,5463
+redisExtractJavaMethodWithPackage:redisExtractJavaMethodWithPackage5501,5502
+textArea:textArea5530,5531
+htmlTable:htmlTable5560,5561
+htmlTableRowCol:htmlTableRowCol5572,5573
+htmlTableRowColSText:htmlTableRowColSText5581,5582
+getOS:getOS5596,5597
+data ShellHistory ShellHistory5614,5615
+data ShellHistory = ShellHistoryShellHistory5614,5615
+  { shId shId5615,5616
+  , shcmd shcmd5616,5617
+instance FromRow FromRow ShellHistory5621,5622
+   fromRow fromRow5622,5623
+instance ToRow ToRow ShellHistory5625,5626
+   toRow toRow5626,5627
+insertShellHistory:insertShellHistory5658,5659
+queryShellHistory:queryShellHistory5682,5683
+appNotify:appNotify5696,5697
+redisGet:redisGet5718,5719
+redisGetConn:redisGetConn5722,5723
+redisSet:redisSet5739,5740
+redisSetConn:redisSetConn5742,5743
+redisSetConnSByteString:redisSetConnSByteString5752,5753
+redisConnectDefault:redisConnectDefault5762,5763
+checkCSSColorFormat:checkCSSColorFormat5772,5773
+cssToStr:cssToStr5778,5779
+concatStyle:concatStyle5784,5785
+
+./AronModule_tmp.hs,13207
+module AronModule AronModule7,8
+instance Num Num a => Num [a]83,84
+    (+(+)84,85
+    (-(-)85,86
+    (*(*)86,87
+    abs abs87,88
+    signum signum88,89
+    fromInteger fromInteger89,90
+class Cnum Cnum94,95
+    _sqrt,_sin,_cos:_cos95,96
+    _sqrt,_sin,_sin95,96
+    _sqrt,_sqrt95,96
+instance Cnum Cnum Int96,97
+    _cos _cos97,98
+    _sin _sin98,99
+    _sqrt _sqrt99,100
+instance Cnum Cnum Float100,101
+    _cos _cos101,102
+    _sin _sin102,103
+    _sqrt _sqrt103,104
+instance Cnum Cnum Double104,105
+    _cos _cos105,106
+    _sin _sin106,107
+    _sqrt _sqrt107,108
+instance Cnum Cnum Integer108,109
+    _cos _cos109,110
+    _sin _sin110,111
+    _sqrt _sqrt111,112
+class Dnum Dnum120,121
+    type DivType DivType121,122
+    _div:_div122,123
+instance Dnum Dnum Integer Float124,125
+    type DivType DivType125,126
+    _div _div126,127
+instance Dnum Dnum Float Integer128,129
+    type DivType DivType129,130
+    _div _div130,131
+instance Dnum Dnum Int Float132,133
+    type DivType DivType133,134
+    _div _div134,135
+instance Dnum Dnum Float Int136,137
+    type DivType DivType137,138
+    _div _div138,139
+instance Dnum Dnum Double Int140,141
+    type DivType DivType141,142
+    _div _div142,143
+instance Dnum Dnum Double Integer144,145
+    type DivType DivType145,146
+    _div _div146,147
+instance Dnum Dnum Integer Double148,149
+    type DivType DivType149,150
+    _div _div150,151
+instance Dnum Dnum Integer Integer152,153
+    type DivType DivType153,154
+    _div _div154,155
+class Add Add156,157
+    type SumTy SumTy157,158
+    addd addd158,159
+instance Add Add Integer Double160,161
+    type SumTy SumTy161,162
+    addd addd162,163
+instance Add Add Double Integer164,165
+    type SumTy SumTy165,166
+    addd addd166,167
+instance Add Add Double Int168,169
+    type SumTy SumTy169,170
+    addd addd170,171
+instance Add Add Int Double172,173
+    type SumTy SumTy173,174
+    addd addd174,175
+instance (N(Num a) => Add a a176,177
+    type SumTy SumTy177,178
+    addd addd178,179
+div':div'182,183
+divInteger:divInteger186,187
+divII:divII189,190
+rf:rf196,197
+fi:fi199,200
+mat mat206,207
+matr matr212,213
+mat'=mat'218,219
+data Quaternion Quaternion225,226
+data Quaternion = Quaternion{a:Quaternion{a225,226
+data Quaternion = Quaternion{a::Float, b:b225,226
+data Quaternion = Quaternion{a::Float, b::Float, c:c225,226
+data Quaternion = Quaternion{a::Float, b::Float, c::Float, d:d225,226
+instance Num Num Quaternion227,228
+    (Q(Quaterniona1b1c1d1)228,229
+    (Q(Quaternionabcd)230,231
+    abs abs231,232
+    signum signum232,233
+    fromInteger fromInteger233,234
+eps:eps235,236
+data C C239,240
+data C = C{x:C{x239,240
+data C = C{x::Float, y:y239,240
+instance Num Num C241,242
+        (C(Cx1y1)242,243
+        fromInteger fromInteger245,246
+        signum signum246,247
+        abs abs247,248
+instance Eq Eq C249,250
+        (C(Cxy)250,251
+con:con254,255
+mag:mag257,258
+re:re260,261
+im:im263,264
+co:co266,267
+toPolar:toPolar272,273
+toCard:toCard280,281
+loge:loge299,300
+sqrtC:sqrtC313,314
+sqrtC':sqrtC'318,319
+radianToDegree:radianToDegree323,324
+degreeToRadian:degreeToRadian326,327
+tri:tri329,330
+data GPoint GPoint332,333
+data GPoint = GPoint GPoint332,333
+getX:getX333,334
+getY:getY336,337
+toUpperStr:toUpperStr339,340
+toLowerStr:toLowerStr350,351
+concatStr:concatStr360,361
+cat:cat369,370
+timeNowPico:timeNowPico376,377
+timeNowNano:timeNowNano382,383
+timeNowMicro:timeNowMicro388,389
+timeNowMilli:timeNowMilli394,395
+timeNowSecond:timeNowSecond400,401
+getTime:getTime413,414
+getLocalDate:getLocalDate427,428
+containStr:containStr452,453
+containPrefix:containPrefix463,464
+containSuffix:containSuffix473,474
+replaceList:replaceList482,483
+searchReplace:searchReplace504,505
+interleave:interleave547,548
+intersperseInner:intersperseInner560,561
+intersperseOuter:intersperseOuter572,573
+repeat':repeat'585,586
+repeatN:repeatN595,596
+replicateN:replicateN605,606
+replicate':replicate'612,613
+fillList:fillList631,632
+c2w_:c2w_639,640
+charToStrictByteString:charToStrictByteString645,646
+toStrictBS toStrictBS654,655
+strictBSToString strictBSToString662,663
+catMaybe:catMaybe671,672
+removeSpace:removeSpace683,684
+isEmpty:isEmpty687,688
+escapeHtml:escapeHtml699,700
+escapeAmpersand:escapeAmpersand713,714
+escapePartial:escapePartial733,734
+escapeXML:escapeXML748,749
+removeIndex:removeIndex770,771
+removeRowCol:removeRowCol797,798
+principleSubmatrix:principleSubmatrix825,826
+dropEnd:dropEnd833,834
+takeEnd:takeEnd844,845
+takeBS:takeBS855,856
+dropBS:dropBS864,865
+splitBS:splitBS872,873
+trimWS:trimWS882,883
+trimAll:trimAll889,890
+trim:trim897,898
+trimT:trimT911,912
+trimBoth:trimBoth917,918
+trimStart:trimStart926,927
+trimEnd:trimEnd935,936
+splitListEmptyLine:splitListEmptyLine940,941
+splitList:splitList943,944
+t1 t1948,949
+t2 t2949,950
+t3 t3950,951
+tuplify2:tuplify2953,954
+tuplify3:tuplify3956,957
+isBalanced2:isBalanced2962,963
+findBalance:findBalance982,983
+isBalanced:isBalanced1004,1005
+strToLazyText:strToLazyText1018,1019
+lazyTextToStr:lazyTextToStr1021,1022
+strToStrictText:strToStrictText1027,1028
+strictTextToStr:strictTextToStr1035,1036
+lazyTextToLazyByteString:lazyTextToLazyByteString1043,1044
+lazyByteStringToLazyText:lazyByteStringToLazyText1046,1047
+strictTextToStrictByteString:strictTextToStrictByteString1049,1050
+strictByteStringToStrictText:strictByteStringToStrictText1055,1056
+strictByteStringToLazyByteString:strictByteStringToLazyByteString1059,1060
+lazyByteStringToStrictByteString:lazyByteStringToStrictByteString1065,1066
+strictTextToLazyText:strictTextToLazyText1068,1069
+lazyTextToStrictText:lazyTextToStrictText1074,1075
+strToStrictByteString:strToStrictByteString1082,1083
+strToLazyByteString:strToLazyByteString1098,1099
+ppad ppad1105,1106
+pf pf1133,1134
+p:p1138,1139
+pp:pp1141,1142
+pp2 pp21144,1145
+fl:fl1146,1147
+pw:pw1149,1150
+fpp:fpp1152,1153
+fw:fw1155,1156
+ff:ff1166,1167
+(<(<<<)1177,1178
+pm:pm1191,1192
+pls:pls1200,1201
+ps:ps1207,1208
+psTab:psTab1210,1211
+pa:pa1219,1220
+pre pre1222,1223
+paa:paa1227,1228
+partList:partList1244,1245
+partList2 partList21248,1249
+splitStrChar:splitStrChar1264,1265
+splitStr:splitStr1276,1277
+splitBlock:splitBlock1293,1294
+parseFileBlock:parseFileBlock1310,1311
+prefix:prefix1324,1325
+unique:unique1334,1335
+uniqueOrder:uniqueOrder1352,1353
+mergeListList:mergeListList1363,1364
+mergeList:mergeList1371,1372
+mergeListLen:mergeListLen1378,1379
+mergeSortList:mergeSortList1388,1389
+iterateList:iterateList1394,1395
+unwrap:unwrap1398,1399
+codeCapture:codeCapture1402,1403
+binarySearch:binarySearch1410,1411
+qqsort:qqsort1428,1429
+sort:sort1435,1436
+sqVec:sqVec1443,1444
+quickSort:quickSort1452,1453
+quickSort':quickSort'1463,1464
+quickSort1:quickSort11473,1474
+quickSortAny:quickSortAny1481,1482
+mergeSortC:mergeSortC1486,1487
+mergeSort:mergeSort1504,1505
+mergeSortM:mergeSortM1522,1523
+groupCount:groupCount1556,1557
+vimLink:vimLink1571,1572
+watchDir:watchDir1600,1601
+dirModified:dirModified1612,1613
+readSnippet:readSnippet1635,1636
+splitStrT:splitStrT1660,1661
+readConfig:readConfig1678,1679
+readFileRemote:readFileRemote1695,1696
+readFileRemoteToList:readFileRemoteToList1704,1705
+readFileLatin1ToList:readFileLatin1ToList1711,1712
+readFileLatin1:readFileLatin11718,1719
+orgList:orgList1743,1744
+orgTable:orgTable1752,1753
+writeToFile:writeToFile1766,1767
+writeFileBS:writeFileBS1778,1779
+writeFileListBS:writeFileListBS1789,1790
+writeFileList:writeFileList1802,1803
+wfs:wfs1808,1809
+wf:wf1811,1812
+writeToFileAppend:writeToFileAppend1814,1815
+nToFractMat:nToFractMat1827,1828
+nToNumMat nToNumMat1835,1836
+rToRatMat:rToRatMat1844,1845
+writeToFile2dMat:writeToFile2dMat1867,1868
+writeToFileMat:writeToFileMat1875,1876
+filtermap filtermap1890,1891
+putStrLnBS:putStrLnBS1898,1899
+putStrBS:putStrBS1901,1902
+bs:bs1930,1931
+fs:fs1970,1971
+listDot:listDot1987,1988
+listDots:listDots1992,1993
+scaleList:scaleList1996,1997
+listScale:listScale2000,2001
+listAdd:listAdd2005,2006
+listSub:listSub2010,2011
+listMul:listMul2015,2016
+listNeg:listNeg2025,2026
+dim:dim2034,2035
+det:det2046,2047
+multiMatInt:multiMatInt2059,2060
+multiMatDouble:multiMatDouble2063,2064
+multiMatR:multiMatR2070,2071
+multiMat:multiMat2091,2092
+matDiv:matDiv2102,2103
+multiRatMat:multiRatMat2106,2107
+sumRatList:sumRatList2109,2110
+addR:addR2114,2115
+ratToInt:ratToInt2130,2131
+normalR:normalR2139,2140
+reduceForm:reduceForm2151,2152
+reduce:reduce2159,2160
+stringToInt:stringToInt2174,2175
+word:word2186,2187
+isWord:isWord2205,2206
+sentence:sentence2217,2218
+perm:perm2237,2238
+perm2:perm22302,2303
+rangeNum:rangeNum2310,2311
+perm3 perm32321,2322
+intToString:intToString2337,2338
+splitR:splitR2340,2341
+multR:multR2351,2352
+multRL:multRL2361,2362
+normR:normR2364,2365
+getVec:getVec2369,2370
+normList:normList2385,2386
+proj:proj2391,2392
+projn:projn2408,2409
+rMatrixUpperTri rMatrixUpperTri2434,2435
+rejection:rejection2456,2457
+qrDecompose':qrDecompose'2472,2473
+addRL:addRL2494,2495
+divR:divR2505,2506
+divR':divR'2511,2512
+invR:invR2517,2518
+subR:subR2528,2529
+negR:negR2531,2532
+negList:negList2534,2535
+subRL:subRL2537,2538
+eightQueen:eightQueen2559,2560
+sumLeft:sumLeft2591,2592
+sumRight:sumRight2603,2604
+rep2d rep2d2616,2617
+diag1:diag12623,2624
+uptri:uptri2628,2629
+leftDiagonal:leftDiagonal2646,2647
+rightDiagonal:rightDiagonal2671,2672
+reverseWord:reverseWord2682,2683
+rw rw2685,2686
+tran:tran2703,2704
+sortRow:sortRow2729,2730
+upperTri:upperTri2758,2759
+upperTri':upperTri'2808,2809
+divI:divI2881,2882
+inverse:inverse2902,2903
+odds:odds2982,2983
+evens:evens2986,2987
+isInver:isInver2997,2998
+isInvertible:isInvertible3030,3031
+ident:ident3038,3039
+ident':ident'3045,3046
+identS:identS3050,3051
+mlist:mlist3059,3060
+drawInt:drawInt3069,3070
+drawInteger:drawInteger3073,3074
+randomDouble:randomDouble3083,3084
+randomFloat:randomFloat3095,3096
+randomFrac:randomFrac3113,3114
+randomList:randomList3119,3120
+randomMatrix:randomMatrix3129,3130
+data Mat Mat3137,3138
+data Mat = Zero Zero3137,3138
+data Mat = Zero | IdId3137,3138
+geneMat1ToN:geneMat1ToN3146,3147
+geneMatMN:geneMatMN3156,3157
+geneMat:geneMat3161,3162
+help:help3167,3168
+cmd:cmd3188,3189
+compileHaskellToBin:compileHaskellToBin3260,3261
+strCompareIC:strCompareIC3274,3275
+baseName:baseName3294,3295
+baseNameT:baseNameT3301,3302
+takeFileNameT:takeFileNameT3307,3308
+gotoCurrDir:gotoCurrDir3316,3317
+dirWalk dirWalk3336,3337
+ls:ls3355,3356
+lsFile:lsFile3364,3365
+lsFileFull:lsFileFull3373,3374
+lsRegex:lsRegex3386,3387
+lsRegexFull:lsRegexFull3397,3398
+lsFullRegex:lsFullRegex3410,3411
+rm:rm3417,3418
+isDir:isDir3429,3430
+rmDir:rmDir3438,3439
+pwd:pwd3446,3447
+getPwd:getPwd3452,3453
+cd:cd3458,3459
+en:en3464,3465
+cc:cc3467,3468
+g:g3470,3471
+sleepSec:sleepSec3478,3479
+sleep:sleep3484,3485
+asplitPath:asplitPath3502,3503
+splitPathA:splitPathA3523,3524
+len:len3532,3533
+take':take'3535,3536
+takeIf:takeIf3545,3546
+dropIf:dropIf3555,3556
+takeN:takeN3561,3562
+drop':drop'3565,3566
+pathBase:pathBase3568,3569
+copyRename:copyRename3575,3576
+copyFileToDir:copyFileToDir3586,3587
+isFile:isFile3589,3590
+fExist:fExist3592,3593
+fe fe3595,3596
+createFile:createFile3598,3599
+listDirFilter:listDirFilter3607,3608
+copyDir:copyDir3614,3615
+mv:mv3633,3634
+rename rename3636,3637
+renameAllFile:renameAllFile3639,3640
+mvFiles mvFiles3645,3646
+mvFile mvFile3646,3647
+mkdir:mkdir3649,3650
+mkdirp:mkdirp3652,3653
+sfilter:sfilter3655,3656
+clear clear3659,3660
+sys:sys3688,3689
+run':run'3694,3695
+run:run3711,3712
+df:df3747,3748
+tangent:tangent3777,3778
+tangentVec:tangentVec3783,3784
+prime prime3793,3794
+oneRoot:oneRoot3818,3819
+rootList:rootList3831,3832
+outer:outer3845,3846
+outerStr:outerStr3848,3849
+vcol:vcol3852,3853
+vrow:vrow3855,3856
+zipWith2:zipWith23872,3873
+data XNode XNode3877,3878
+data XNode = XNode XNode3877,3878
+insertTries:insertTries3890,3891
+insertTriesList:insertTriesList3901,3902
+containsTries:containsTries3913,3914
+data Tree Tree3926,3927
+data Tree a = EmptyEmpty3926,3927
+            | Node Node3927,3928
+insertNode:insertNode3929,3930
+insertFromList:insertFromList3936,3937
+inorder:inorder3946,3947
+maxlen:maxlen3953,3954
+head':head'3961,3962
+isBST:isBST3975,3976
+binsert:binsert3994,3995
+sym:sym4001,4002
+lca:lca4014,4015
+buildTree:buildTree4026,4027
+anagram:anagram4053,4054
+redisExtractAronModule:redisExtractAronModule4070,4071
+redisExtractJavaMethod:redisExtractJavaMethod4100,4101
+redisExtractJavaMethodWithPackage:redisExtractJavaMethodWithPackage4137,4138
+textArea:textArea4166,4167
+getOS:getOS4185,4186
+
+./GenePDFHtmlLib.hs,1141
+module GenePDFHtmlLib GenePDFHtmlLib5,6
+data LHead LHead92,93
+data LHead = LHead LHead92,93
+data LHead = LHead {xtitle:xtitle92,93
+data LHead = LHead {xtitle::String, desc:desc92,93
+instance Default Default LHead94,95
+   def def95,96
+data PDFInfo PDFInfo97,98
+data PDFInfo = PDFInfoPDFInfo97,98
+    { pdfId pdfId98,99
+    , title title99,100
+    , pdesc pdesc100,101
+    , path path101,102
+instance FromRow FromRow PDFInfo134,135
+  fromRow fromRow135,136
+instance ToRow ToRow PDFInfo137,138
+  toRow toRow138,139
+titleDesc:titleDesc159,160
+hempty hempty168,169
+_PDFTABLE _PDFTABLE169,170
+td_ td_172,173
+toT toT174,175
+toS toS175,176
+styleT styleT182,183
+ahrefT:ahrefT184,185
+tdTT:tdTT187,188
+trCT trCT190,191
+tableTT tableTT193,194
+tableACT tableACT194,195
+tableA:tableA196,197
+tableAA:tableAA209,210
+insertTexToTable:insertTexToTable231,232
+dropTableSqlite:dropTableSqlite252,253
+doesTableExistSqlite:doesTableExistSqlite276,277
+createNewTable:createNewTable289,290
+insertPDFToTable:insertPDFToTable298,299
+queryDBToHtml:queryDBToHtml319,320
+pdfMain:pdfMain352,353
+
+./GenePDFHtmlLib_tmp.hs,1578
+module GenePDFHtmlLib GenePDFHtmlLib5,6
+data LHead LHead93,94
+data LHead = LHead LHead93,94
+data LHead = LHead {xtitle:xtitle93,94
+data LHead = LHead {xtitle::String, desc:desc93,94
+instance Default Default LHead95,96
+   def def96,97
+data PDFInfo PDFInfo98,99
+data PDFInfo = PDFInfoPDFInfo98,99
+    { pdfId pdfId99,100
+    , title title100,101
+    , pdesc pdesc101,102
+    , path path102,103
+instance FromRow FromRow PDFInfo107,108
+  fromRow fromRow108,109
+instance ToRow ToRow PDFInfo110,111
+  toRow toRow111,112
+data SqliteMaster SqliteMaster113,114
+data SqliteMaster = SqliteMaster SqliteMaster113,114
+        x_type:x_type114,115
+        x_name:x_name115,116
+        x_tbl_name:x_tbl_name116,117
+        x_rootpage:x_rootpage117,118
+        x_sql:x_sql118,119
+instance FromRow FromRow SqliteMaster120,121
+  fromRow fromRow121,122
+instance ToRow ToRow SqliteMaster123,124
+  toRow toRow124,125
+pdfFile pdfFile132,133
+dbpath dbpath133,134
+titleDesc:titleDesc147,148
+hempty hempty156,157
+_PDFTABLE _PDFTABLE157,158
+td_ td_160,161
+toT toT162,163
+toS toS163,164
+styleT styleT170,171
+ahrefT:ahrefT172,173
+tdTT:tdTT175,176
+trCT trCT178,179
+tableTT tableTT181,182
+tableACT tableACT182,183
+tableA:tableA184,185
+st st196,197
+tableAA:tableAA197,198
+insertTexToTable:insertTexToTable220,221
+dropTable:dropTable241,242
+checkTable:checkTable264,265
+createNewTable:createNewTable276,277
+insertPDFToTable:insertPDFToTable285,286
+queryDBToHtml:queryDBToHtml306,307
+pdfMain:pdfMain327,328
+
+./HtmlForm.hs,61
+module HtmlForm HtmlForm10,11
+searchForm:searchForm27,28
+
+./Main.hs,147
+module Main Main3,4
+config config93,94
+dbname dbname108,109
+configFile configFile109,110
+lookupJust lookupJust111,112
+main main113,114
+
+./PortableLines.hs,91
+module PortableLinesPortableLines0,1
+plines plines8,9
+breakNewline breakNewline13,14
+
+./PortableLines_tmp.hs,91
+module PortableLinesPortableLines0,1
+plines plines8,9
+breakNewline breakNewline13,14
+
+./WaiConstant.hs,93
+module WaiConstant WaiConstant8,9
+port port65,66
+host host66,67
+hostURL hostURL68,69
+
+./WaiConstant_tmp.hs,93
+module WaiConstant WaiConstant8,9
+port port65,66
+host host66,67
+hostURL hostURL68,69
+
+./WaiLib.hs,11180
+module WaiLib WaiLib27,28
+query_redis query_redis147,148
+eleIdCodeBlock=eleIdCodeBlock148,149
+pdfdir pdfdir149,150
+data Block Block150,151
+data Block = Block{bblock:Block{bblock150,151
+data MBlock MBlock151,152
+data MBlock = MBlock{mblock:MBlock{mblock151,152
+data GeneMatrix GeneMatrix152,153
+data GeneMatrix = GeneMatrix{GeneMatrix{152,153
+                             cmd cmd153,154
+                             ncol ncol154,155
+                             nrow nrow155,156
+instance DA.FromJSON DA-FromJSON GeneMatrix158,159
+instance DA.ToJSON DA-ToJSON GeneMatrix159,160
+    toEncoding toEncoding160,161
+data Bgcolor Bgcolor163,164
+data Bgcolor = Bgcolor{ Bgcolor{163,164
+data Bgcolor = Bgcolor{ colorname colorname163,164
+instance DA.FromJSON DA-FromJSON Bgcolor164,165
+instance DA.ToJSON DA-ToJSON Bgcolor165,166
+    toEncoding toEncoding166,167
+data Textcolor Textcolor168,169
+data Textcolor = Textcolor{ Textcolor{168,169
+data Textcolor = Textcolor{ textcolor textcolor168,169
+instance DA.FromJSON DA-FromJSON Textcolor169,170
+instance DA.ToJSON DA-ToJSON Textcolor170,171
+    toEncoding toEncoding171,172
+data ReplyCode ReplyCode173,174
+data ReplyCode = ReplyCode{ReplyCode{173,174
+                            rcmd rcmd174,175
+                            rerror rerror175,176
+                            stdout stdout176,177
+data User User179,180
+data User = User User179,180
+data User = User   {uid:uid179,180
+data User = User   {uid::Int64, name:name179,180
+data User = User   {uid::Int64, name::TS.Text, email:email179,180
+data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password:password179,180
+data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password::TS.Text, task:task179,180
+data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password::TS.Text, task::TS.Text, money:money179,180
+data Image Image180,181
+data Image = Image Image180,181
+data Image = Image {iid:iid180,181
+data Image = Image {iid::Int64, imagename:imagename180,181
+data Image = Image {iid::Int64, imagename::TS.Text, uid:uid180,181
+instance FromRow FromRow User182,183
+  fromRow fromRow183,184
+instance FromRow FromRow Image185,186
+  fromRow fromRow186,187
+instance ToRow ToRow User188,189
+  toRow toRow189,190
+instance ToRow ToRow Image191,192
+  toRow toRow192,193
+instance DA.FromJSON DA-FromJSON ReplyCode195,196
+instance DA.ToJSON DA-ToJSON ReplyCode196,197
+    toEncoding toEncoding197,198
+data CompileCode CompileCode199,200
+data CompileCode = CompileCode{CompileCode{199,200
+                                compiler compiler200,201
+                                option option201,202
+                                code code202,203
+instance DA.FromJSON DA-FromJSON CompileCode205,206
+instance DA.ToJSON DA-ToJSON CompileCode206,207
+    toEncoding toEncoding207,208
+data MatInt MatInt211,212
+data MatInt = MatInt{name:MatInt{name211,212
+data MatInt = MatInt{name::TS.Text, matrix:matrix211,212
+instance DA.FromJSON DA-FromJSON MatInt212,213
+instance DA.ToJSON DA-ToJSON MatInt213,214
+    toEncoding toEncoding214,215
+data HTMLTable HTMLTable222,223
+data HTMLTable = HTMLTable{name:HTMLTable{name222,223
+data HTMLTable = HTMLTable{name::TS.Text, matrix:matrix222,223
+instance DA.FromJSON DA-FromJSON HTMLTable223,224
+instance DA.ToJSON DA-ToJSON HTMLTable224,225
+    toEncoding toEncoding225,226
+data PreColor PreColor227,228
+data PreColor = PreColor PreColor227,228
+data PreColor = PreColor {color:color227,228
+data PreColor = PreColor {color::TS.Text, background:background227,228
+instance DA.FromJSON DA-FromJSON PreColor228,229
+instance DA.ToJSON DA-ToJSON PreColor229,230
+    toEncoding toEncoding230,231
+data UpCodeBlock UpCodeBlock232,233
+data UpCodeBlock = UpCodeBlock{ok:UpCodeBlock{ok232,233
+instance DA.FromJSON DA-FromJSON UpCodeBlock233,234
+instance DA.ToJSON DA-ToJSON UpCodeBlock234,235
+    toEncoding toEncoding235,236
+data UpdateCodeBlock UpdateCodeBlock238,239
+data UpdateCodeBlock = UpdateCodeBlock{pid:UpdateCodeBlock{pid238,239
+data UpdateCodeBlock = UpdateCodeBlock{pid::Integer, newcode:newcode238,239
+instance DA.FromJSON DA-FromJSON UpdateCodeBlock239,240
+instance DA.ToJSON DA-ToJSON UpdateCodeBlock240,241
+    toEncoding toEncoding241,242
+instance DA.FromJSON DA-FromJSON Block243,244
+instance DA.ToJSON DA-ToJSON Block244,245
+    toEncoding toEncoding249,250
+instance DA.FromJSON DA-FromJSON MBlock252,253
+instance DA.ToJSON DA-ToJSON MBlock253,254
+    toEncoding toEncoding258,259
+data Person Person261,262
+  PersonPerson262,263
+    { personId personId263,264
+    , personName personName264,265
+    , personAge personAge265,266
+data UserInput UserInput294,295
+  UserInputUserInput295,296
+    { cmdId cmdId296,297
+    , xcmd xcmd297,298
+instance FromRow FromRow Person300,301
+  fromRow fromRow301,302
+instance FromRow FromRow UserInput303,304
+  fromRow fromRow304,305
+instance ToRow ToRow Person307,308
+  toRow toRow308,309
+instance ToRow ToRow UserInput311,312
+  toRow toRow312,313
+updir updir314,315
+styleChar:styleChar317,318
+href:href329,330
+changeSymbol:changeSymbol333,334
+listToByteStr:listToByteStr342,343
+cssStrong:cssStrong345,346
+cssHead:cssHead352,353
+htmlLess:htmlLess357,358
+htmlGreater:htmlGreater362,363
+keyWord:keyWord367,368
+keyWord1:keyWord1373,374
+keyDash:keyDash378,379
+keySymbol1:keySymbol1388,389
+keyName:keyName396,397
+specialName:specialName400,401
+javaClassName:javaClassName404,405
+javaFunClass:javaFunClass415,416
+javaKeyWords:javaKeyWords420,421
+javaCmdKeyWords:javaCmdKeyWords425,426
+mysqlKeyWords:mysqlKeyWords431,432
+keyURL:keyURL438,439
+spChar:spChar443,444
+bracketChar:bracketChar451,452
+sbChar:sbChar459,460
+transform transform469,470
+alternateLineColor2:alternateLineColor2519,520
+blockId:blockId531,532
+hiddenForm2:hiddenForm2567,568
+hiddenForm:hiddenForm588,589
+<form <form590,591
+hiddenForm3:hiddenForm3597,598
+<form <form599,600
+hiddenForm4:hiddenForm4611,612
+<form <form613,614
+foldListList:foldListList670,671
+foldListList2:foldListList2702,703
+myfun myfun741,742
+fun4 fun4742,743
+foldListListTxt:foldListListTxt744,745
+foldListListTxt2:foldListListTxt2748,749
+pdfname pdfname755,756
+img img756,757
+pdfPath pdfPath757,758
+docRoot docRoot758,759
+doc doc759,760
+cmdLog cmdLog760,761
+currCmdFile currCmdFile762,763
+logCurrCmd:logCurrCmd764,765
+readCurrCmd:readCurrCmd767,768
+type HMap2 HMap2771,772
+type HMap HMap773,774
+genePDF:genePDF775,776
+app:app794,795
+app2:app2844,845
+plainIndex:plainIndex897,898
+pdfFile:pdfFile904,905
+pdfSent:pdfSent912,913
+insertinfo:insertinfo921,922
+insertUser:insertUser928,929
+loginHtml:loginHtml935,936
+searchUI:searchUI942,943
+notFound notFound950,951
+notFoundStr:notFoundStr957,958
+snippetP snippetP964,965
+insertAll:insertAll974,975
+mapClear:mapClear978,979
+mapClear2:mapClear2982,983
+insertAppend:insertAppend999,1000
+insertAll2:insertAll21006,1007
+insertAppend2:insertAppend21010,1011
+listToPrefixMapOld:listToPrefixMapOld1024,1025
+listToPrefixMap:listToPrefixMap1072,1073
+spanBlock:spanBlock1123,1124
+spanBlockX:spanBlockX1135,1136
+spanBlockX1:spanBlockX11140,1141
+spanBlockFunc:spanBlockFunc1146,1147
+spanBlockXX:spanBlockXX1150,1151
+spanBlockXX2:spanBlockXX21155,1156
+(â(â)1159,1160
+searchForm:searchForm1174,1175
+htmlPre:htmlPre1205,1206
+htmlBodyH:htmlBodyH1216,1217
+replyHtml:replyHtml1232,1233
+anyRoute:anyRoute1255,1256
+anyRoute2:anyRoute21286,1287
+uploadPage:uploadPage1325,1326
+data SearchType SearchType1332,1333
+data SearchType = CmdT CmdT1332,1333
+data SearchType = CmdT | JavaT JavaT1332,1333
+data SearchType = CmdT | JavaT | HaskellT HaskellT1332,1333
+data SearchType = CmdT | JavaT | HaskellT | SnippetTSnippetT1332,1333
+readCmd:readCmd1334,1335
+groupCountFilter:groupCountFilter1357,1358
+optionHtml:optionHtml1362,1363
+responseNothing:responseNothing1374,1375
+responseNothingBS:responseNothingBS1380,1381
+responseNothingTest:responseNothingTest1386,1387
+replyTaskHtml:replyTaskHtml1393,1394
+listPageHtml:listPageHtml1411,1412
+listPage:listPage1430,1431
+responseTaskBS:responseTaskBS1439,1440
+responseCmd:responseCmd1465,1466
+responseXCmd:responseXCmd1503,1504
+responseJavaHtml:responseJavaHtml1526,1527
+responseGenePDFHtml:responseGenePDFHtml1546,1547
+responseHaskellHtml:responseHaskellHtml1555,1556
+queryRedisSnippet:queryRedisSnippet1573,1574
+ghcidRun:ghcidRun1596,1597
+queryLibHaskell:queryLibHaskell1626,1627
+queryLibJava:queryLibJava1670,1671
+queryLibJavaPackage:queryLibJavaPackage1689,1690
+responseSearch:responseSearch1709,1710
+responseSnippetHTML:responseSnippetHTML1745,1746
+responseSnippetHTML2:responseSnippetHTML21787,1788
+responseSnippetTxt:responseSnippetTxt1836,1837
+responseSnippetTxt2:responseSnippetTxt21855,1856
+geneRectMat:geneRectMat1888,1889
+geneHTMLTable:geneHTMLTable1920,1921
+getPreFromRedis:getPreFromRedis1960,1961
+updateCodeBlock:updateCodeBlock1983,1984
+insertCodeBlock:insertCodeBlock2013,2014
+deleteCodeBlock:deleteCodeBlock2043,2044
+updatePrefixMap:updatePrefixMap2074,2075
+splitWhenTwo:splitWhenTwo2083,2084
+getPreStyle:getPreStyle2087,2088
+updateBackground:updateBackground2135,2136
+updateTextColor:updateTextColor2178,2179
+receiveCode:receiveCode2208,2209
+receiveCode2:receiveCode22238,2239
+responseEditor:responseEditor2264,2265
+responseJavascript:responseJavascript2276,2277
+responseMyStyle:responseMyStyle2283,2284
+responseHtml:responseHtml2291,2292
+updateMap:updateMap2309,2310
+replyEditor replyEditor2470,2471
+responseHelp responseHelp2477,2478
+replyCssButton replyCssButton2484,2485
+wordcountReply wordcountReply2491,2492
+matrixReply matrixReply2498,2499
+sendHTMLTableCmd sendHTMLTableCmd2505,2506
+replyJS replyJS2512,2513
+insertDatabase:insertDatabase2535,2536
+readDatabaseCodeBlock2:readDatabaseCodeBlock22581,2582
+readDatabaseCodeBlock3:readDatabaseCodeBlock32616,2617
+readSnippet2:readSnippet22658,2659
+createCodeBlockTable:createCodeBlockTable2682,2683
+addCodeBlockTable:addCodeBlockTable2687,2688
+updateDatabaseCodeBlockTable:updateDatabaseCodeBlockTable2695,2696
+updateDatabaseNewCodeTable:updateDatabaseNewCodeTable2724,2725
+insertDatabaseNewCodeTable:insertDatabaseNewCodeTable2735,2736
+deleteDatabaseNewCodeTable:deleteDatabaseNewCodeTable2742,2743
+deleteDatabaseCodeBlockTable:deleteDatabaseCodeBlockTable2747,2748
+loginCheck:loginCheck2755,2756
+securityValidate:securityValidate2780,2781
+insertUserDB:insertUserDB2794,2795
+upload:upload2856,2857
+searchMap:searchMap2887,2888
+type ClientId ClientId2906,2907
+type Client Client2907,2908
+type State State2908,2909
+connectClient connectClient2911,2912
+withoutClient withoutClient2916,2917
+disconnectClient disconnectClient2919,2920
+nextId nextId2923,2924
+httpApp httpApp2927,2928
+listen listen2930,2931
+broadcast broadcast2934,2935
+wsApp wsApp2941,2942
+
+./WaiLib_tmp_move_to_hlib.hs,7769
+module WaiLib WaiLib8,9
+eleIdCodeBlock=eleIdCodeBlock111,112
+toStr toStr113,114
+toBS toBS116,117
+toText toText117,118
+pdfdir pdfdir118,119
+data Block Block120,121
+data Block = Block{bblock:Block{bblock120,121
+data MBlock MBlock121,122
+data MBlock = MBlock{mblock:MBlock{mblock121,122
+data GeneMatrix GeneMatrix122,123
+data GeneMatrix = GeneMatrix{GeneMatrix{122,123
+                             cmd cmd123,124
+                             ncol ncol124,125
+                             nrow nrow125,126
+instance DA.FromJSON DA-FromJSON GeneMatrix128,129
+instance DA.ToJSON DA-ToJSON GeneMatrix129,130
+    toEncoding toEncoding130,131
+data ReplyCode ReplyCode132,133
+data ReplyCode = ReplyCode{ReplyCode{132,133
+                            rcmd rcmd133,134
+                            rerror rerror134,135
+                            stdout stdout135,136
+data User User138,139
+data User = User User138,139
+data User = User   {uid:uid138,139
+data User = User   {uid::Int64, name:name138,139
+data User = User   {uid::Int64, name::TS.Text, email:email138,139
+data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password:password138,139
+data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password::TS.Text, task:task138,139
+data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password::TS.Text, task::TS.Text, money:money138,139
+data Image Image139,140
+data Image = Image Image139,140
+data Image = Image {iid:iid139,140
+data Image = Image {iid::Int64, imagename:imagename139,140
+data Image = Image {iid::Int64, imagename::TS.Text, uid:uid139,140
+instance FromRow FromRow User141,142
+  fromRow fromRow142,143
+instance FromRow FromRow Image144,145
+  fromRow fromRow145,146
+instance ToRow ToRow User147,148
+  toRow toRow148,149
+instance ToRow ToRow Image150,151
+  toRow toRow151,152
+instance DA.FromJSON DA-FromJSON ReplyCode154,155
+instance DA.ToJSON DA-ToJSON ReplyCode155,156
+    toEncoding toEncoding156,157
+data CompileCode CompileCode158,159
+data CompileCode = CompileCode{CompileCode{158,159
+                                compiler compiler159,160
+                                option option160,161
+                                code code161,162
+instance DA.FromJSON DA-FromJSON CompileCode164,165
+instance DA.ToJSON DA-ToJSON CompileCode165,166
+    toEncoding toEncoding166,167
+data MatInt MatInt170,171
+data MatInt = MatInt{name:MatInt{name170,171
+data MatInt = MatInt{name::TS.Text, matrix:matrix170,171
+instance DA.FromJSON DA-FromJSON MatInt171,172
+instance DA.ToJSON DA-ToJSON MatInt172,173
+    toEncoding toEncoding173,174
+instance DA.FromJSON DA-FromJSON Block175,176
+instance DA.ToJSON DA-ToJSON Block176,177
+    toEncoding toEncoding181,182
+instance DA.FromJSON DA-FromJSON MBlock184,185
+instance DA.ToJSON DA-ToJSON MBlock185,186
+    toEncoding toEncoding190,191
+data Person Person193,194
+  PersonPerson194,195
+    { personId personId195,196
+    , personName personName196,197
+    , personAge personAge197,198
+data UserInput UserInput208,209
+  UserInputUserInput209,210
+    { cmdId cmdId210,211
+    , xcmd xcmd211,212
+instance FromRow FromRow Person214,215
+  fromRow fromRow215,216
+instance FromRow FromRow UserInput217,218
+  fromRow fromRow218,219
+instance ToRow ToRow Person221,222
+  toRow toRow222,223
+instance ToRow ToRow UserInput225,226
+  toRow toRow226,227
+updir updir228,229
+runSh runSh230,231
+styleChar:styleChar233,234
+href:href244,245
+changeSymbol:changeSymbol248,249
+listToByteStr:listToByteStr257,258
+cssStrong:cssStrong260,261
+cssHead:cssHead267,268
+htmlLess:htmlLess272,273
+htmlGreater:htmlGreater277,278
+keyWord:keyWord282,283
+keyWord1:keyWord1288,289
+keyDash:keyDash293,294
+keySymbol1:keySymbol1303,304
+keyName:keyName311,312
+specialName:specialName315,316
+javaClassName:javaClassName319,320
+javaFunClass:javaFunClass330,331
+javaKeyWords:javaKeyWords335,336
+javaCmdKeyWords:javaCmdKeyWords340,341
+mysqlKeyWords:mysqlKeyWords346,347
+keyURL:keyURL353,354
+spChar:spChar358,359
+bracketChar:bracketChar366,367
+sbChar:sbChar374,375
+transform transform384,385
+blockId:blockId403,404
+hiddenForm2:hiddenForm2420,421
+hiddenForm:hiddenForm436,437
+<form <form438,439
+hiddenForm3:hiddenForm3445,446
+<form <form447,448
+hiddenForm4:hiddenForm4459,460
+<form <form461,462
+foldListList:foldListList515,516
+myfun myfun546,547
+fun4 fun4547,548
+foldListListTxt:foldListListTxt549,550
+pdfname pdfname558,559
+img img559,560
+pdfPath pdfPath560,561
+docRoot docRoot561,562
+doc doc562,563
+cmdLog cmdLog563,564
+currCmdFile currCmdFile565,566
+logCurrCmd:logCurrCmd567,568
+readCurrCmd:readCurrCmd570,571
+type HMap HMap573,574
+genePDF:genePDF575,576
+app:app592,593
+plainIndex:plainIndex630,631
+pdfFile:pdfFile637,638
+pdfSent:pdfSent645,646
+insertinfo:insertinfo654,655
+insertUser:insertUser661,662
+loginHtml:loginHtml668,669
+searchUI:searchUI675,676
+notFound notFound683,684
+notFoundStr:notFoundStr690,691
+snippetP snippetP698,699
+insertAll:insertAll703,704
+mapClear:mapClear707,708
+snippetMap:snippetMap718,719
+spanBlock:spanBlock763,764
+spanBlockX:spanBlockX770,771
+spanBlockXX:spanBlockXX776,777
+(â(â)781,782
+htmlForm:htmlForm786,787
+htmlPre:htmlPre795,796
+htmlBody:htmlBody800,801
+html_:html_811,812
+body_:body_814,815
+head_:head_817,818
+replyHtml:replyHtml821,822
+anyRoute:anyRoute851,852
+uploadPage:uploadPage886,887
+data SearchType SearchType893,894
+data SearchType = CmdT CmdT893,894
+data SearchType = CmdT | JavaT JavaT893,894
+data SearchType = CmdT | JavaT | HaskellT HaskellT893,894
+data SearchType = CmdT | JavaT | HaskellT | SnippetTSnippetT893,894
+readCmd:readCmd895,896
+groupCountFilter:groupCountFilter918,919
+optionHtml:optionHtml923,924
+responseNothing:responseNothing935,936
+responseNothingBS:responseNothingBS941,942
+responseNothingTest:responseNothingTest947,948
+replyTaskHtml:replyTaskHtml954,955
+listPageHtml:listPageHtml972,973
+listPage:listPage991,992
+responseTaskBS:responseTaskBS1000,1001
+responseCmd:responseCmd1026,1027
+responseXCmd:responseXCmd1066,1067
+responseJavaHtml:responseJavaHtml1089,1090
+responseGenePDFHtml:responseGenePDFHtml1109,1110
+responseHaskellHtml:responseHaskellHtml1118,1119
+queryLibHaskell:queryLibHaskell1144,1145
+queryLibJava:queryLibJava1165,1166
+queryLibJavaPackage:queryLibJavaPackage1182,1183
+responseSnippetHtml:responseSnippetHtml1208,1209
+responseSnippetTxt:responseSnippetTxt1243,1244
+trimBothLBS:trimBothLBS1260,1261
+geneRectMat:geneRectMat1267,1268
+receiveCode:receiveCode1293,1294
+receiveCode2:receiveCode21323,1324
+responseEditor:responseEditor1349,1350
+responseJavascript:responseJavascript1359,1360
+responseMyStyle:responseMyStyle1366,1367
+responseHtml:responseHtml1374,1375
+updateMap:updateMap1392,1393
+replyEditor replyEditor1477,1478
+responseHelp responseHelp1484,1485
+replyCssButton replyCssButton1491,1492
+wordcountReply wordcountReply1498,1499
+matrixReply matrixReply1505,1506
+replyJS replyJS1512,1513
+insertDatabase:insertDatabase1535,1536
+loginCheck:loginCheck1560,1561
+securityValidate:securityValidate1591,1592
+insertUserDB:insertUserDB1611,1612
+upload:upload1674,1675
+searchMap:searchMap1705,1706
+type ClientId ClientId1724,1725
+type Client Client1725,1726
+type State State1726,1727
+connectClient connectClient1728,1729
+withoutClient withoutClient1733,1734
+disconnectClient disconnectClient1736,1737
+nextId nextId1740,1741
+httpApp httpApp1744,1745
+listen listen1747,1748
+broadcast broadcast1751,1752
+wsApp wsApp1758,1759

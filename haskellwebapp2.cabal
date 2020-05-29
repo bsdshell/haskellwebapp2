@@ -60,5 +60,8 @@ executable haskellwebapp2
                        email-validate,
                        data-default,
                        neat-interpolation,
-                       hedis
+                       hedis,
+                       OpenGL,
+                       GLFW,
+                       ghcid
 

@@ -1,5 +1,5 @@
 body {
- background-color: #afaaaafa;
+ background-color: #000000;
  margin: 0 auto;
  max-width: 1200px;
  border: 1pt solid #695b43;
@@ -7,7 +7,7 @@ body {
 }    
 
 .colorclick{
-    background-color:#f1e6e6;
+    background-color:#1e1a1a;
 }
 .form{
     margin-block-end:1px;
@@ -46,7 +46,8 @@ textarea {
     box-shadow: none;
     border-radius: 0;
     box-sizing: content-box;
-    background: #e8e4db;
+/* background: #e8e4db; */
+    background: #78826d;
     padding: 1px 0;
     resize: yes;
 }

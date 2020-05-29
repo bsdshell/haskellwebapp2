@@ -5,7 +5,7 @@ webappdb = myfile/bitbucket/database/haskellwebapp2_sqlite3.db
 host = http://localhost 
 snippetpath = myfile/bitbucket/snippets/snippet.hs
 port = 8000
-readSnippetFile = False 
+readSnippetFile = False
 -- snippetpath = myfile/bitbucket/snippets/snippet_test.hs
 -- readSnippetFile = True 
 

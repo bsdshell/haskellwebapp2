@@ -1,31 +1,31 @@
 /Users/cat/myfile/bitbucket/stackproject/haskellwebapp2/src/Main.hs:
-  hash: d736bb9daf085102dfdc1c809b6573fe652d46ef6e768fb7c5b604caade2c949
-  size: 4461
-  modtime: 1589881512
+  hash: c18553492417e4fb3b7b8b8be6865b37db3c8dc4e876da397d4f988e302a8937
+  size: 4715
+  modtime: 1590634436
 /Users/cat/myfile/bitbucket/stackproject/haskellwebapp2/src/GenePDFHtmlLib.hs:
-  hash: 021f6f8ba2f944779b2a52f496f301ab6ee18600ea3b48f8ba7e633ec5faafc8
-  size: 12809
-  modtime: 1589151626
+  hash: cd641e1b5b49fb0e4fc523242416bd3e87dd51fa7b7e927ecbbd373002af7148
+  size: 12821
+  modtime: 1590563627
 /Users/cat/myfile/bitbucket/stackproject/haskellwebapp2/haskellwebapp2.cabal:
-  hash: 61558b556440bcce9a27fd42e5f7f13423acb7fbe2b93f88c10550b47d5a88ff
-  size: 2077
-  modtime: 1589183131
+  hash: b91cceda2266425a0d6c1a3e3cbc6a688f441c3039ee70f19fe7c46e009f154e
+  size: 2107
+  modtime: 1590632757
 /Users/cat/myfile/bitbucket/stackproject/haskellwebapp2/src/AronHtml.hs:
-  hash: 1df2131238ebf9cb94ce3126e04c7e9e9a8030943374bf0f8abf5e651d561d67
-  size: 3243
-  modtime: 1589485874
+  hash: 1158bbccc91db5c2299d0985ed95bc5f68da0866cd68def7b40c8de8a30b3f21
+  size: 3218
+  modtime: 1590621037
 /Users/cat/myfile/bitbucket/stackproject/haskellwebapp2/README.md:
   hash: 3405640f7e59c324510e0d646802cd51a5682ed8b0d85439ba60e5e9c8098a89
   size: 958
   modtime: 1589183131
 /Users/cat/myfile/bitbucket/stackproject/haskellwebapp2/src/WaiLib.hs:
-  hash: 3b05822e96e65b478a7590a732ccc362a1a468e7b8721d1e0a3e8dc4d7add3b9
-  size: 113247
-  modtime: 1590004071
+  hash: e0dfd2de488081338de5482992a75770894e4b8c102d0798e3b8a2c7a1518e5f
+  size: 130111
+  modtime: 1590706247
 /Users/cat/myfile/bitbucket/stackproject/haskellwebapp2/src/AronModule.hs:
-  hash: 350160a49901f9f83b30772fa49451947fe0761f24442619c8315451550b933d
-  size: 177333
-  modtime: 1589936642
+  hash: 1d16672e7aceadff436230843407692ef5a805768e83aa541ee9bee6673badf3
+  size: 177567
+  modtime: 1590609168
 /Users/cat/myfile/bitbucket/stackproject/haskellwebapp2/src/PortableLines.hs:
   hash: de75b60cc640352ee7aefdd6bb246b63af7780fcc3b5051b29cccdfec0fb0c43
   size: 1111
@@ -34,3 +34,7 @@
   hash: 84a35483c1c4d94812e57f4b771f8003ef11b2b9b9ee4d9df847eda0c43f6349
   size: 2241
   modtime: 1589151626
+/Users/cat/myfile/bitbucket/stackproject/haskellwebapp2/src/AronHtml2.hs:
+  hash: aaca6889dcd59717e5e1fc410dedce3194b877fc582fda179387bf755eca118d
+  size: 4263
+  modtime: 1590621002

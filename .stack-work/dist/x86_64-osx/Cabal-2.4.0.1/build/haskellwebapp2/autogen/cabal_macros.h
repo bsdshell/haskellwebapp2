@@ -11,6 +11,28 @@
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_haskellwebapp2 */
 
+/* package GLFW-0.5.2.5 */
+#ifndef VERSION_GLFW
+#define VERSION_GLFW "0.5.2.5"
+#endif /* VERSION_GLFW */
+#ifndef MIN_VERSION_GLFW
+#define MIN_VERSION_GLFW(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  5 || \
+  (major1) == 0 && (major2) == 5 && (minor) <= 2)
+#endif /* MIN_VERSION_GLFW */
+
+/* package OpenGL-3.0.3.0 */
+#ifndef VERSION_OpenGL
+#define VERSION_OpenGL "3.0.3.0"
+#endif /* VERSION_OpenGL */
+#ifndef MIN_VERSION_OpenGL
+#define MIN_VERSION_OpenGL(major1,major2,minor) (\
+  (major1) <  3 || \
+  (major1) == 3 && (major2) <  0 || \
+  (major1) == 3 && (major2) == 0 && (minor) <= 3)
+#endif /* MIN_VERSION_OpenGL */
+
 /* package aeson-1.4.2.0 */
 #ifndef VERSION_aeson
 #define VERSION_aeson "1.4.2.0"
@@ -120,6 +142,17 @@
   (major1) == 1 && (major2) <  4 || \
   (major1) == 1 && (major2) == 4 && (minor) <= 2)
 #endif /* MIN_VERSION_filepath */
+
+/* package ghcid-0.7.4 */
+#ifndef VERSION_ghcid
+#define VERSION_ghcid "0.7.4"
+#endif /* VERSION_ghcid */
+#ifndef MIN_VERSION_ghcid
+#define MIN_VERSION_ghcid(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  7 || \
+  (major1) == 0 && (major2) == 7 && (minor) <= 4)
+#endif /* MIN_VERSION_ghcid */
 
 /* package hedis-0.10.10 */
 #ifndef VERSION_hedis
@@ -573,7 +606,7 @@
 #endif /* MIN_TOOL_VERSION_runghc */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-7wnMB76tEPg2HSTm4DGwyf-haskellwebapp2"
+#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-HZuHrAsdzSQCfQJ8ltvNre-haskellwebapp2"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

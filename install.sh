@@ -64,7 +64,14 @@ echo "install un => uninstall"
 if [[ "$1" == "in" ]]; then
     mkdir "$bindir"
 
-    cp -av * $bindir   
+    # cp -av * $bindir   
+ 
+    # Thu 28 May 01:08:15 2020 
+    # KEY: rsync exclude directory
+    # ignore .git dir
+    cd $sp
+    rsync -av --exclude '.git' haskellwebapp2/ $bindir
+
 #    cp -av  copy symbolink too
 #
 #    cp -rf * $bindir

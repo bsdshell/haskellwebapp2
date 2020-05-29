@@ -18,6 +18,13 @@ packages:
       sha256: faed5502bca51dd31fdff8277c344278bad508f3e695b6b767530e648a7e00a7
   original:
     hackage: http-accept-0.2
+- completed:
+    hackage: GLFW-0.5.2.5@sha256:fa54e997076a6b415c43100830e9b6ab6827c8766aef80e66d598de9b2400b93,3312
+    pantry-tree:
+      size: 3188
+      sha256: 807b326716828a975ee2783c3911687f47ca4c4ff3b458c2578fa71dd884be8e
+  original:
+    hackage: GLFW-0.5.2.5
 snapshots:
 - completed:
     size: 500539

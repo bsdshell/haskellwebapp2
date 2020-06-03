@@ -144,7 +144,7 @@ main = do
     let f::Stream -> String -> IO()
         f a b = return ()
 
-    (g, _) <- startGhciProcess (shell "ghci_stack.sh") f
+    -- (g, _) <- startGhciProcess (shell "ghci_stack.sh") f
     -- pre hmap 
     fw "main.hs newList end"
     putStrLn host 
@@ -154,5 +154,5 @@ main = do
     pp WC.host 
     pp WC.port 
     -- run WC.port (app conn ref)
-    run WC.port (app2 g conn ref)
+    run WC.port (app2 undefined conn ref)
     close conn

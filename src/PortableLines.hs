@@ -1,1 +1,1 @@
-/Users/cat/myfile/bitbucket/haskelllib/PortableLines.hs
+../../haskelllib/PortableLines.hs

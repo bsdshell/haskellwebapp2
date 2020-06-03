@@ -1,1 +1,1 @@
-/Users/cat/myfile/bitbucket/haskelllib/AronGraphic.hs
+../../haskelllib/AronGraphic.hs

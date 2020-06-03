@@ -1,1 +1,1 @@
-/Users/cat/myfile/bitbucket/haskelllib/WaiConstant.hs
+../../haskelllib/WaiConstant.hs

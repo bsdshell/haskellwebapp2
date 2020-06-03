@@ -1,1 +1,1 @@
-/Users/cat/myfile/bitbucket/haskelllib/GenePDFHtmlLib.hs
+../../haskelllib/GenePDFHtmlLib.hs

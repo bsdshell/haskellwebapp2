@@ -61,3 +61,11 @@ getpwd
 git add .
 git commit -m 'hlib'
 git push origin master
+
+cd $b/jslib
+getpwd
+git add .
+git commit -m 'jslib'
+git push origin master
+
+

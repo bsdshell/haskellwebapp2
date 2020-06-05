@@ -39,7 +39,6 @@ function help(){
 }
 
 source $HOME/myfile/bitbucket/script/AronLib.sh  
-getpwd
 
 MySymbin="$HOME/myfile/symbin"
 MyBin="$HOME/myfile/mybin"
@@ -49,11 +48,15 @@ hweb="$HOME/myfile/bitbucket/haskell_webapp"
 hcmd="/usr/local/bin/ghc -i$HOME/myfile/bitbucket/haskelllib $1 -o "$(basename $1)
 ghcProfile="/usr/local/bin/ghc -i$HOME/myfile/bitbucket/haskelllib -prof -fprof-auto -rtsopts $1" 
 
+getpwd
+cd $PWD
 printc 200 'git add . && git commit -m "" && cd $b/hlib && git commit -m "hlib" && git push origin master'
 git add .
 git commit -m 'add'
-cd $b/hlib
 git push origin master
+
+cd $hlib
+getpwd
 
 git add .
 git commit -m 'hlib'

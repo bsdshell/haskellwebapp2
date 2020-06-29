@@ -1,0 +1,12 @@
+# Fdb version 3
+["pdflatex"] 1592167336 "/Users/cat/myfile/bitbucket/math/tensorproduct.tex" "tensorproduct.pdf" "tensorproduct" 1592167336
+  "/Users/cat/myfile/bitbucket/math/tensorproduct.tex" 1592167335 187 9e1dd60c51cab89547045343ad3ab531 ""
+  "/opt/local/etc/texmf/texmf.cnf" 1356257316 29842 6babcf7c3298e6041d07a408fc6a468e ""
+  "/opt/local/share/texmf-texlive-dist/tex/latex/base/article.cls" 1308083286 20571 b8bd218bf2e18b4f5817ee643cd9c515 ""
+  "/opt/local/share/texmf-texlive-dist/tex/latex/base/size10.clo" 1308083286 9042 248dfba326a1b8733d6bb8e0a3ac1e49 ""
+  "/opt/local/var/db/texmf/web2c/pdftex/pdflatex.fmt" 1356257832 1745693 13662d806b77094039b44e99a9f13cec ""
+  "aronlib.tex" 0 -1 0 ""
+  "tensorproduct.aux" 1592167233 8 a94a2480d3289e625eea47cd1b285758 ""
+  (generated)
+  "tensorproduct.log"
+  "tensorproduct.pdf"

@@ -1,4 +1,175 @@
 
+./AronGraphic.hs,5157
+module AronGraphic AronGraphic0,1
+lightDiffuse lightDiffuse26,27
+lightAmbient lightAmbient29,30
+lightPosition lightPosition32,33
+lightSpecular lightSpecular35,36
+data SegEndPt SegEndPt38,39
+data SegEndPt = No No38,39
+                | End End39,40
+                | Beg Beg40,41
+                | Both Both41,42
+                | Cen Cen42,43
+                | All All43,44
+data NormalDir NormalDir51,52
+data NormalDir = NCCW NCCW51,52
+data NormalDir = NCCW | NCW NCW51,52
+dist:dist65,66
+sqdist:sqdist80,81
+dot3ve:dot3ve84,85
+dot3vx:dot3vx88,89
+(+(+:)91,92
+(-(-:)94,95
+(â(â¥)97,98
+perpcw:perpcw100,101
+perpccw:perpccw103,104
+(*(*:)106,107
+(*(**:)109,110
+(*(*>:)112,113
+(>(>>:)115,116
+(.(.>)118,119
+(â(â)122,123
+(â(â)125,126
+(â(â)128,129
+(â(â)131,132
+(â(â)133,134
+v2x:v2x136,137
+x2v:x2v139,140
+red red154,155
+green green155,156
+blue blue156,157
+skew:skew175,176
+skew':skew'198,199
+(â(â)210,211
+isCoplanar:isCoplanar230,231
+cross:cross243,244
+normal3:normal3247,248
+normal3':normal3'256,257
+instance (N(Num a) => Num (Vertex3 a)263,264
+    (-(-)264,265
+    (+(+)265,266
+    negate negate266,267
+    abs abs267,268
+    signum signum268,269
+    (*(*)269,270
+    fromInteger fromInteger270,271
+instance (N(Num a) => Num (Vector3 a)273,274
+    (-(-)274,275
+    (+(+)275,276
+    negate negate276,277
+    abs abs277,278
+    signum signum278,279
+    (*(*)279,280
+    fromInteger fromInteger280,281
+vec:vec283,284
+ray:ray292,293
+perpenLine:perpenLine299,300
+curvePt:curvePt305,306
+drawCurve:drawCurve315,316
+drawSurface:drawSurface327,328
+drawSurfaceR:drawSurfaceR340,341
+plotPts:plotPts366,367
+tangentLine:tangentLine388,389
+interpolate':interpolate'396,397
+drawTangentLine:drawTangentLine411,412
+normalLine:normalLine427,428
+normalLineNew:normalLineNew438,439
+drawNormalLine:drawNormalLine450,451
+drawNormalLineNew:drawNormalLineNew457,458
+cen:cen466,467
+isPerpen:isPerpen470,471
+isColinear:isColinear489,490
+isInSegment:isInSegment563,564
+data PtSeg PtSeg571,572
+data PtSeg = OnEndPtOnEndPt571,572
+             | InSegInSeg572,573
+             | OutSeg OutSeg573,574
+ptOnSegment:ptOnSegment608,609
+drawPrimitive:drawPrimitive634,635
+drawPrimitive':drawPrimitive'662,663
+drawLines:drawLines668,669
+drawSegmentWithEndPt:drawSegmentWithEndPt686,687
+drawSegmentNoEndPt:drawSegmentNoEndPt694,695
+drawSegments:drawSegments707,708
+drawSegment:drawSegment718,719
+drawSegmentNoEnd:drawSegmentNoEnd731,732
+drawSegment':drawSegment'749,750
+drawSegmentArg:drawSegmentArg776,777
+drawSpherePt:drawSpherePt806,807
+drawPlane:drawPlane824,825
+circlePt:circlePt838,839
+circle':circle'851,852
+circleXY:circleXY860,861
+circleXZ:circleXZ869,870
+circleYZ:circleYZ878,879
+drawDot:drawDot886,887
+cartToPolar:cartToPolar902,903
+roty roty912,913
+rotz rotz918,919
+coordTip:coordTip924,925
+coordTipX:coordTipX931,932
+coordTipY:coordTipY938,939
+coordTipZ:coordTipZ945,946
+renderCoordinates:renderCoordinates957,958
+drawCircleVec:drawCircleVec983,984
+matVx matVx1008,1009
+matVe matVe1010,1011
+veMat veMat1012,1013
+drawRect:drawRect1015,1016
+drawQuads:drawQuads1022,1023
+drawCircle':drawCircle'1031,1032
+drawCircleXYZ:drawCircleXYZ1034,1035
+drawCircleXYZColor:drawCircleXYZColor1040,1041
+drawCircleColor:drawCircleColor1052,1053
+drawCircleColor':drawCircleColor'1062,1063
+conic:conic1069,1070
+det2:det21083,1084
+inverseR:inverseR1093,1094
+inv2:inv21202,1203
+data SegColinear SegColinear1210,1211
+data SegColinear = Colinear3 Colinear31210,1211
+                   | Colinear4 Colinear41211,1212
+                   | None None1212,1213
+fourPtColinear:fourPtColinear1224,1225
+intersectLine:intersectLine1289,1290
+intersectLine2:intersectLine21336,1337
+onePtOverlappedSeg:onePtOverlappedSeg1397,1398
+intersectLine':intersectLine'1408,1409
+pointToLine:pointToLine1440,1441
+intersectSeg:intersectSeg1478,1479
+intersectSegNoEndPt:intersectSegNoEndPt1499,1500
+intersectSegNoEndPt2:intersectSegNoEndPt21514,1515
+isIntersectedSeg:isIntersectedSeg1530,1531
+intersectLineR:intersectLineR1542,1543
+threePtDeterminant:threePtDeterminant1636,1637
+threePtCCW:threePtCCW1648,1649
+threePtCW:threePtCW1655,1656
+threePtCollinear:threePtCollinear1678,1679
+ptOnLeftLine:ptOnLeftLine1745,1746
+ptInsideTri:ptInsideTri1782,1783
+perpPlane:perpPlane1798,1799
+lineIntersectPlane:lineIntersectPlane1838,1839
+convexHull:convexHull1958,1959
+convexHull2:convexHull21994,1995
+convexHullAllSeg:convexHullAllSeg2040,2041
+ptInsidePolygon:ptInsidePolygon2059,2060
+containPt:containPt2069,2070
+projv:projv2077,2078
+nr:nr2091,2092
+uv:uv2098,2099
+rod rod2111,2112
+cosVex3:cosVex32141,2142
+nonCrossSegmentNoEndPt:nonCrossSegmentNoEndPt2190,2191
+rmAdjacentSeg:rmAdjacentSeg2228,2229
+affineTri:affineTri2244,2245
+drawSegmentFromTo:drawSegmentFromTo2261,2262
+grid:grid2279,2280
+grid2:grid22287,2288
+grid3:grid32301,2302
+drawParamSurf:drawParamSurf2309,2310
+grid2Ratio:grid2Ratio2320,2321
+
 ./AronHtml.hs,410
 module AronHtml AronHtml7,8
 divT divT60,61
@@ -73,7 +244,7 @@ table1 table186,87
 ahref_ ahref_93,94
 table:table95,96
 
-./AronModule.hs,18011
+./AronModule.hs,18442
 module AronModule AronModule9,10
 instance Num Num a => Num [a]104,105
     (+(+)105,106
@@ -224,435 +395,447 @@ toUpperStr:toUpperStr427,428
 toLowerStr:toLowerStr438,439
 concatStr:concatStr448,449
 cat:cat457,458
-timeNowPico:timeNowPico465,466
-timeNowNano:timeNowNano471,472
-timeNowMicro:timeNowMicro477,478
-timeNowMilli:timeNowMilli483,484
-timeNowSecond:timeNowSecond489,490
-getTime:getTime502,503
-getLocalDate:getLocalDate516,517
-readDirMatchKey:readDirMatchKey526,527
-containStr:containStr556,557
-containAscii:containAscii562,563
-containNonAsciiList:containNonAsciiList574,575
-matchAny:matchAny590,591
-matchAnyRegex:matchAnyRegex605,606
-type SKey SKey610,611
-matchScore:matchScore619,620
-matchScoreList:matchScoreList634,635
-fileContainNonAscii:fileContainNonAscii642,643
-filterList:filterList675,676
-filterNonEmpty:filterNonEmpty683,684
-containPrefix:containPrefix695,696
-hasPrefix:hasPrefix703,704
-containSuffix:containSuffix713,714
-replaceList:replaceList722,723
-searchReplaceAny:searchReplaceAny748,749
-searchReplace:searchReplace799,800
-interleave:interleave843,844
-intersperseInner:intersperseInner856,857
-intersperseOuter:intersperseOuter868,869
-repeat':repeat'881,882
-repeatN:repeatN891,892
-replicateN:replicateN901,902
-replicate':replicate'908,909
-fillList:fillList927,928
-c2w_:c2w_940,941
-readFileBSList:readFileBSList947,948
-readFileBS:readFileBS956,957
-readFileSText:readFileSText964,965
-readFileSTextList:readFileSTextList972,973
-charToStrictByteString:charToStrictByteString981,982
-plines plines991,992
-breakNewline breakNewline999,1000
-replaceByteStringFile:replaceByteStringFile1022,1023
-readFileRepPat:readFileRepPat1039,1040
-toStrictBS toStrictBS1047,1048
-strictBSToString strictBSToString1055,1056
-emptySBS:emptySBS1060,1061
-toSBS:toSBS1066,1067
-toLBS:toLBS1085,1086
-toSText:toSText1106,1107
-toLText:toLText1129,1130
-toStr:toStr1154,1155
-catMaybe:catMaybe1178,1179
-removeSpace:removeSpace1190,1191
-isEmpty:isEmpty1194,1195
-escapeHtml:escapeHtml1206,1207
-escapeAmpersand:escapeAmpersand1220,1221
-escapePartial:escapePartial1240,1241
-escapeXML:escapeXML1255,1256
-removeIndex:removeIndex1277,1278
-removeRowCol:removeRowCol1304,1305
-principleSubmatrix:principleSubmatrix1332,1333
-dropEnd:dropEnd1340,1341
-takeEnd:takeEnd1351,1352
-takeBS:takeBS1362,1363
-dropBS:dropBS1371,1372
-splitBS:splitBS1379,1380
-trimWS:trimWS1389,1390
-trimAll:trimAll1396,1397
-trim:trim1404,1405
-trimT:trimT1418,1419
-trimBoth:trimBoth1424,1425
-trimLBS:trimLBS1432,1433
-trimStart:trimStart1445,1446
-trimEnd:trimEnd1454,1455
-splitListEmptyLine:splitListEmptyLine1459,1460
-splitList:splitList1462,1463
-t1 t11467,1468
-t2 t21468,1469
-t3 t31469,1470
-tuplify2:tuplify21472,1473
-tuplify3:tuplify31475,1476
-lengthcurve:lengthcurve1509,1510
-lengthcurveInter:lengthcurveInter1532,1533
-isBalanced2:isBalanced21550,1551
-findBalance:findBalance1570,1571
-isBalanced:isBalanced1592,1593
-strToLazyText:strToLazyText1606,1607
-lazyTextToStr:lazyTextToStr1609,1610
-strToStrictText:strToStrictText1615,1616
-strictTextToStr:strictTextToStr1623,1624
-lazyTextToLazyByteString:lazyTextToLazyByteString1631,1632
-lazyByteStringToLazyText:lazyByteStringToLazyText1634,1635
-strictTextToStrictByteString:strictTextToStrictByteString1640,1641
-strictByteStringToStrictText:strictByteStringToStrictText1646,1647
-strictByteStringToLazyByteString:strictByteStringToLazyByteString1650,1651
-lazyByteStringToStrictByteString:lazyByteStringToStrictByteString1656,1657
-strictTextToLazyText:strictTextToLazyText1659,1660
-lazyTextToStrictText:lazyTextToStrictText1665,1666
-strToStrictByteString:strToStrictByteString1673,1674
-strToLazyByteString:strToLazyByteString1689,1690
-ppad ppad1696,1697
-pf pf1724,1725
-p:p1729,1730
-pp:pp1732,1733
-pp2 pp21735,1736
-fl:fl1737,1738
-pw:pw1748,1749
-fpp:fpp1751,1752
-fw:fw1754,1755
-ff:ff1765,1766
-(<(<<<)1776,1777
-compileJava:compileJava1793,1794
-pm:pm1814,1815
-pls:pls1823,1824
-ps:ps1830,1831
-psTab:psTab1838,1839
-pa:pa1847,1848
-pre pre1860,1861
-paa:paa1865,1866
-partList:partList1882,1883
-partList2 partList21886,1887
-splitStrChar:splitStrChar1905,1906
-splitStrCharTrim:splitStrCharTrim1918,1919
-matchAllBS:matchAllBS1927,1928
-splitStr:splitStr1936,1937
-spanA:spanA1942,1943
-splitSPC:splitSPC1948,1949
-splitBlock:splitBlock1965,1966
-parseFileBlock:parseFileBlock1982,1983
-prefix:prefix1996,1997
-prefixSuffix:prefixSuffix1999,2000
-lengthK:lengthK2012,2013
-substr:substr2023,2024
-allSubstr:allSubstr2034,2035
-unique:unique2047,2048
-uniqueOrder:uniqueOrder2068,2069
-mergeListList:mergeListList2079,2080
-mergeList:mergeList2087,2088
-mergeListLen:mergeListLen2094,2095
-mergeSortList:mergeSortList2104,2105
-iterateList:iterateList2110,2111
-unwrap:unwrap2114,2115
-codeCapture:codeCapture2118,2119
-binarySearch:binarySearch2126,2127
-qqsort:qqsort2144,2145
-sort:sort2151,2152
-sqVec:sqVec2159,2160
-quickSort:quickSort2169,2170
-quickSort':quickSort'2183,2184
-quickSort1:quickSort12194,2195
-quickSortAny:quickSortAny2201,2202
-mergeSortC:mergeSortC2211,2212
-mergeSort:mergeSort2232,2233
-mergeSortM:mergeSortM2261,2262
-groupCount:groupCount2296,2297
-vimLink:vimLink2311,2312
-watchDir:watchDir2340,2341
-dirModified:dirModified2352,2353
-readSnippet:readSnippet2388,2389
-readSnippetStr:readSnippetStr2415,2416
-readSnippetToDatabase:readSnippetToDatabase2439,2440
-queryDatabaseToFile:queryDatabaseToFile2463,2464
-splitStrTuple:splitStrTuple2481,2482
-readConfig:readConfig2510,2511
-createConfigMap:createConfigMap2541,2542
-readFileRemote:readFileRemote2559,2560
-readFileRemoteToList:readFileRemoteToList2568,2569
-readFileLatin1ToList:readFileLatin1ToList2575,2576
-readFileLatin1:readFileLatin12582,2583
-readFile2d:readFile2d2604,2605
-readFileToInteger2d:readFileToInteger2d2620,2621
-orgList:orgList2645,2646
-orgTable:orgTable2654,2655
-writeToFile:writeToFile2668,2669
-writeFileBS:writeFileBS2680,2681
-writeFileListBS:writeFileListBS2691,2692
-writeFileList:writeFileList2704,2705
-wfs:wfs2710,2711
-wf:wf2713,2714
-writeToFileAppend:writeToFileAppend2721,2722
-nToFractMat:nToFractMat2734,2735
-toNum:toNum2740,2741
-nToNumMat nToNumMat2748,2749
-rToRatMat:rToRatMat2757,2758
-writeToFile2dMat:writeToFile2dMat2780,2781
-writeToFileMat:writeToFileMat2788,2789
-filtermap filtermap2803,2804
-putStrLnBS:putStrLnBS2811,2812
-putStrBS:putStrBS2814,2815
-bs:bs2843,2844
-fs:fs2883,2884
-listDot:listDot2900,2901
-listDots:listDots2905,2906
-scaleList:scaleList2909,2910
-listScale:listScale2913,2914
-listAdd:listAdd2918,2919
-listSub:listSub2923,2924
-listMul:listMul2928,2929
-listNeg:listNeg2938,2939
-dim:dim2947,2948
-zipWithArr:zipWithArr2958,2959
-zipWithArrToList:zipWithArrToList2978,2979
-det:det2990,2991
-multiMatInt:multiMatInt3003,3004
-multiMatDouble:multiMatDouble3009,3010
-multiMatR:multiMatR3017,3018
-multiMat:multiMat3040,3041
-matDiv:matDiv3051,3052
-multiRatMat:multiRatMat3055,3056
-sumRatList:sumRatList3058,3059
-addR:addR3063,3064
-ratToInt:ratToInt3079,3080
-normalR:normalR3088,3089
-reduceForm:reduceForm3100,3101
-reduce:reduce3108,3109
-stringToInt:stringToInt3142,3143
-strToInt strToInt3145,3146
-stringToInteger:stringToInteger3162,3163
-strToInteger strToInteger3165,3166
-stringToFloat:stringToFloat3184,3185
-strToF strToF3187,3188
-stringToListInt:stringToListInt3201,3202
-word:word3213,3214
-isWord:isWord3232,3233
-isZeroPos:isZeroPos3239,3240
-sentence:sentence3251,3252
-perm:perm3271,3272
-perm2:perm23336,3337
-rangeNum:rangeNum3349,3350
-perm3 perm33360,3361
-intToString:intToString3376,3377
-integerToInt:integerToInt3384,3385
-splitR:splitR3387,3388
-multR:multR3398,3399
-multRL:multRL3408,3409
-normR:normR3411,3412
-getVec:getVec3416,3417
-normList:normList3432,3433
-proj:proj3438,3439
-projn:projn3455,3456
-rMatrixUpperTri rMatrixUpperTri3481,3482
-rejection:rejection3503,3504
-qrDecompose':qrDecompose'3519,3520
-addRL:addRL3541,3542
-divR:divR3552,3553
-divR':divR'3558,3559
-invR:invR3564,3565
-subR:subR3575,3576
-negR:negR3578,3579
-negList:negList3581,3582
-subRL:subRL3584,3585
-eightQueen:eightQueen3606,3607
-sumLeft:sumLeft3638,3639
-sumRight:sumRight3650,3651
-rep2d rep2d3663,3664
-diag1:diag13670,3671
-uptri:uptri3675,3676
-leftDiagonal:leftDiagonal3693,3694
-rightDiagonal:rightDiagonal3718,3719
-reverseWord:reverseWord3729,3730
-rw rw3732,3733
-tran:tran3750,3751
-sortRow:sortRow3776,3777
-upperTri:upperTri3805,3806
-upperTri':upperTri'3855,3856
-divI:divI3928,3929
-inverse:inverse3949,3950
-odds:odds4029,4030
-evens:evens4033,4034
-isInver:isInver4044,4045
-isInvertible:isInvertible4077,4078
-ident:ident4085,4086
-ident':ident'4092,4093
-identS:identS4097,4098
-mlist:mlist4109,4110
-drawInt:drawInt4118,4119
-drawInteger:drawInteger4122,4123
-randomDouble:randomDouble4132,4133
-randomFloat:randomFloat4144,4145
-randomFrac:randomFrac4162,4163
-randomList:randomList4168,4169
-randomMatrix:randomMatrix4178,4179
-data Mat Mat4186,4187
-data Mat = Zero Zero4186,4187
-data Mat = Zero | IdId4186,4187
-geneMat1ToN:geneMat1ToN4195,4196
-geneMatMN:geneMatMN4205,4206
-geneMat:geneMat4210,4211
-help:help4216,4217
-cmd:cmd4237,4238
-compileHaskellToBin:compileHaskellToBin4309,4310
-strCompareIC:strCompareIC4323,4324
-baseName:baseName4343,4344
-baseNameT:baseNameT4350,4351
-takeFileNameT:takeFileNameT4356,4357
-gotoCurrDir:gotoCurrDir4365,4366
-dirWalk dirWalk4385,4386
-ls:ls4407,4408
-lsFile:lsFile4423,4424
-lsFileFull:lsFileFull4444,4445
-lsRegex:lsRegex4457,4458
-lsRegexFull:lsRegexFull4468,4469
-lsFullRegex:lsFullRegex4481,4482
-rm:rm4488,4489
-isDir:isDir4500,4501
-rmDir:rmDir4509,4510
-pwd:pwd4520,4521
-getPwd:getPwd4528,4529
-cd:cd4534,4535
-en:en4540,4541
-cc:cc4543,4544
-g:g4546,4547
-sleepSec:sleepSec4554,4555
-sleep:sleep4560,4561
-asplitPath:asplitPath4578,4579
-splitPathA:splitPathA4599,4600
-len:len4609,4610
-take':take'4612,4613
-takeIf:takeIf4625,4626
-dropIf:dropIf4641,4642
-takeN:takeN4647,4648
-drop':drop'4651,4652
-pathBase:pathBase4654,4655
-dropPath:dropPath4659,4660
-dropPathEnd:dropPathEnd4665,4666
-takePath:takePath4671,4672
-takePathEnd:takePathEnd4676,4677
-copyRename:copyRename4682,4683
-copyFileToDir:copyFileToDir4693,4694
-isFile:isFile4696,4697
-fExist:fExist4702,4703
-fe fe4708,4709
-createFile:createFile4711,4712
-listDirFilter:listDirFilter4720,4721
-copyDir:copyDir4727,4728
-mv:mv4746,4747
-rename rename4749,4750
-renameAllFile:renameAllFile4752,4753
-mvFiles mvFiles4758,4759
-mvFile mvFile4759,4760
-mkdir:mkdir4762,4763
-mkdirp:mkdirp4765,4766
-sfilter:sfilter4768,4769
-clear clear4772,4773
-sys:sys4816,4817
-typeChar:typeChar4824,4825
-typeListStr:typeListStr4827,4828
-typeByteString:typeByteString4830,4831
-typeString:typeString4833,4834
-linesBS:linesBS4836,4837
-linesSText:linesSText4844,4845
-isHex:isHex4858,4859
-isHexStr:isHexStr4866,4867
-isDigitStr:isDigitStr4874,4875
-isLetterStr:isLetterStr4882,4883
-runRawCmd:runRawCmd4894,4895
-run':run'4922,4923
-run:run4937,4938
-runSh runSh4975,4976
-df:df4993,4994
-tangent:tangent5023,5024
-tangentVec:tangentVec5029,5030
-prime prime5039,5040
-oneRoot:oneRoot5064,5065
-rootList:rootList5077,5078
-outer:outer5093,5094
-out:out5110,5111
-outerSum:outerSum5116,5117
-outerMod:outerMod5123,5124
-outerStr:outerStr5126,5127
-(â(â¦¶)5134,5135
-(â(â)5135,5136
-(â(â§)5137,5138
-(â(â)5138,5139
-vcol:vcol5141,5142
-vrow:vrow5144,5145
-zipWith2:zipWith25161,5162
-data XNode XNode5166,5167
-data XNode = XNode XNode5166,5167
-insertTries:insertTries5179,5180
-insertTriesList:insertTriesList5190,5191
-containsTries:containsTries5202,5203
-data Tree Tree5215,5216
-data Tree a = EmptyEmpty5215,5216
-            | Node Node5216,5217
-insertNode:insertNode5218,5219
-insertFromList:insertFromList5225,5226
-data LeafyTree LeafyTree5232,5233
-data LeafyTree a = Branch Branch5232,5233
-                   | Leaf Leaf5233,5234
-instance Foldable Foldable LeafyTree5263,5264
-    foldMap foldMap5264,5265
-inorder:inorder5270,5271
-maxlen:maxlen5277,5278
-head':head'5285,5286
-isBST:isBST5299,5300
-binsert:binsert5318,5319
-sym:sym5325,5326
-lca:lca5338,5339
-buildTree:buildTree5367,5368
-anagram:anagram5389,5390
-redisExtractAronModule:redisExtractAronModule5430,5431
-redisExtractJavaMethod:redisExtractJavaMethod5462,5463
-redisExtractJavaMethodWithPackage:redisExtractJavaMethodWithPackage5501,5502
-textArea:textArea5530,5531
-htmlTable:htmlTable5560,5561
-htmlTableRowCol:htmlTableRowCol5572,5573
-htmlTableRowColSText:htmlTableRowColSText5581,5582
-getOS:getOS5596,5597
-data ShellHistory ShellHistory5614,5615
-data ShellHistory = ShellHistoryShellHistory5614,5615
-  { shId shId5615,5616
-  , shcmd shcmd5616,5617
-instance FromRow FromRow ShellHistory5621,5622
-   fromRow fromRow5622,5623
-instance ToRow ToRow ShellHistory5625,5626
-   toRow toRow5626,5627
-insertShellHistory:insertShellHistory5658,5659
-queryShellHistory:queryShellHistory5682,5683
-appNotify:appNotify5696,5697
-redisGet:redisGet5718,5719
-redisGetConn:redisGetConn5722,5723
-redisSet:redisSet5739,5740
-redisSetConn:redisSetConn5742,5743
-redisSetConnSByteString:redisSetConnSByteString5752,5753
-redisConnectDefault:redisConnectDefault5762,5763
-checkCSSColorFormat:checkCSSColorFormat5772,5773
-cssToStr:cssToStr5778,5779
-concatStyle:concatStyle5784,5785
+getTime:getTime472,473
+getLocalDate:getLocalDate486,487
+readDirMatchKey:readDirMatchKey496,497
+containStr:containStr526,527
+containAscii:containAscii532,533
+containNonAsciiList:containNonAsciiList544,545
+matchAny:matchAny560,561
+matchAnyRegex:matchAnyRegex575,576
+type SKey SKey580,581
+matchScore:matchScore589,590
+matchScoreList:matchScoreList604,605
+fileContainNonAscii:fileContainNonAscii612,613
+filterList:filterList645,646
+filterNonEmpty:filterNonEmpty653,654
+containPrefix:containPrefix665,666
+hasPrefix:hasPrefix673,674
+containSuffix:containSuffix683,684
+replaceList:replaceList692,693
+searchSplitAny:searchSplitAny707,708
+searchSplitWord:searchSplitWord734,735
+searchReplaceAny:searchReplaceAny776,777
+searchReplace:searchReplace826,827
+interleave:interleave873,874
+intersperseInner:intersperseInner886,887
+intersperseOuter:intersperseOuter898,899
+repeat':repeat'911,912
+repeatN:repeatN921,922
+replicateN:replicateN931,932
+replicate':replicate'938,939
+fillList:fillList957,958
+c2w_:c2w_970,971
+readFileBSList:readFileBSList977,978
+readFileBS:readFileBS986,987
+readFileSText:readFileSText994,995
+readFileSTextList:readFileSTextList1002,1003
+charToStrictByteString:charToStrictByteString1011,1012
+plines plines1021,1022
+breakNewline breakNewline1029,1030
+replaceByteStringFile:replaceByteStringFile1055,1056
+replaceFileWithStr:replaceFileWithStr1073,1074
+replaceDirWithStr:replaceDirWithStr1091,1092
+readFileRepPat:readFileRepPat1112,1113
+toStrictBS toStrictBS1120,1121
+strictBSToString strictBSToString1128,1129
+emptySBS:emptySBS1133,1134
+toSBS:toSBS1139,1140
+toLBS:toLBS1158,1159
+toSText:toSText1179,1180
+toLText:toLText1202,1203
+toStr:toStr1227,1228
+catMaybe:catMaybe1251,1252
+removeSpace:removeSpace1263,1264
+isEmpty:isEmpty1267,1268
+escapeHtml:escapeHtml1279,1280
+escapeAmpersand:escapeAmpersand1293,1294
+escapePartial:escapePartial1313,1314
+escapeXML:escapeXML1328,1329
+removeIndex:removeIndex1350,1351
+removeRowCol:removeRowCol1377,1378
+principleSubmatrix:principleSubmatrix1405,1406
+dropEnd:dropEnd1413,1414
+takeEnd:takeEnd1424,1425
+takeBS:takeBS1435,1436
+dropBS:dropBS1444,1445
+splitBS:splitBS1452,1453
+trimWS:trimWS1462,1463
+trimAll:trimAll1469,1470
+trimT:trimT1484,1485
+trimBoth:trimBoth1490,1491
+trimLBS:trimLBS1498,1499
+trimStart:trimStart1511,1512
+trimEnd:trimEnd1520,1521
+splitListEmptyLine:splitListEmptyLine1528,1529
+splitList:splitList1531,1532
+t1 t11536,1537
+t2 t21537,1538
+t3 t31538,1539
+tuplify2:tuplify21541,1542
+tuplify3:tuplify31544,1545
+lengthcurve:lengthcurve1578,1579
+lengthcurveInter:lengthcurveInter1601,1602
+isBalanced2:isBalanced21619,1620
+findBalance:findBalance1639,1640
+isBalanced:isBalanced1661,1662
+strToLazyText:strToLazyText1675,1676
+lazyTextToStr:lazyTextToStr1678,1679
+strToStrictText:strToStrictText1684,1685
+strictTextToStr:strictTextToStr1692,1693
+lazyTextToLazyByteString:lazyTextToLazyByteString1700,1701
+lazyByteStringToLazyText:lazyByteStringToLazyText1703,1704
+strictTextToStrictByteString:strictTextToStrictByteString1709,1710
+strictByteStringToStrictText:strictByteStringToStrictText1715,1716
+strictByteStringToLazyByteString:strictByteStringToLazyByteString1719,1720
+lazyByteStringToStrictByteString:lazyByteStringToStrictByteString1725,1726
+strictTextToLazyText:strictTextToLazyText1728,1729
+lazyTextToStrictText:lazyTextToStrictText1734,1735
+strToStrictByteString:strToStrictByteString1742,1743
+strToLazyByteString:strToLazyByteString1758,1759
+ppad ppad1765,1766
+compileJava:compileJava1789,1790
+pm:pm1810,1811
+pls:pls1819,1820
+ps:ps1826,1827
+psTab:psTab1834,1835
+pa:pa1843,1844
+pre pre1856,1857
+paa:paa1861,1862
+partList:partList1878,1879
+partList2 partList21882,1883
+spanA:spanA1892,1893
+splitSPC:splitSPC1898,1899
+splitBlock:splitBlock1915,1916
+parseFileBlock:parseFileBlock1932,1933
+prefix:prefix1946,1947
+prefixSuffix:prefixSuffix1949,1950
+lengthK:lengthK1962,1963
+substr:substr1973,1974
+allSubstr:allSubstr1984,1985
+unique:unique1997,1998
+uniqueOrder:uniqueOrder2018,2019
+mergeListList:mergeListList2029,2030
+mergeList:mergeList2037,2038
+mergeListLen:mergeListLen2044,2045
+mergeSortList:mergeSortList2054,2055
+iterateList:iterateList2060,2061
+unwrap:unwrap2064,2065
+codeCapture:codeCapture2068,2069
+binarySearch:binarySearch2076,2077
+qqsort:qqsort2094,2095
+sort:sort2101,2102
+sqVec:sqVec2109,2110
+quickSort:quickSort2119,2120
+quickSort':quickSort'2133,2134
+quickSort1:quickSort12144,2145
+quickSortAny:quickSortAny2151,2152
+mergeSortC:mergeSortC2161,2162
+mergeSort:mergeSort2182,2183
+mergeSortM:mergeSortM2211,2212
+groupCount:groupCount2246,2247
+vimLink:vimLink2261,2262
+watchDir:watchDir2290,2291
+fileModTime:fileModTime2304,2305
+dirModified:dirModified2312,2313
+readSnippet:readSnippet2348,2349
+readSnippetStr:readSnippetStr2375,2376
+readSnippetToDatabase:readSnippetToDatabase2399,2400
+queryDatabaseToFile:queryDatabaseToFile2423,2424
+createConfigMap:createConfigMap2457,2458
+readFileRemote:readFileRemote2475,2476
+readFileRemoteToList:readFileRemoteToList2484,2485
+readFileLatin1:readFileLatin12489,2490
+readFile2d:readFile2d2511,2512
+readFileToInteger2d:readFileToInteger2d2527,2528
+orgList:orgList2552,2553
+orgTable:orgTable2561,2562
+writeToFile:writeToFile2575,2576
+writeFileBS:writeFileBS2587,2588
+writeFileListBS:writeFileListBS2598,2599
+writeFileList:writeFileList2611,2612
+wfs:wfs2617,2618
+wf:wf2620,2621
+writeToFileAppend:writeToFileAppend2628,2629
+nToFractMat:nToFractMat2641,2642
+toNum:toNum2647,2648
+nToNumMat nToNumMat2655,2656
+rToRatMat:rToRatMat2664,2665
+writeToFile2dMat:writeToFile2dMat2687,2688
+writeToFileMat:writeToFileMat2695,2696
+filtermap filtermap2710,2711
+putStrLnBS:putStrLnBS2718,2719
+putStrBS:putStrBS2721,2722
+bs:bs2750,2751
+fs:fs2790,2791
+listDot:listDot2807,2808
+listDots:listDots2812,2813
+scaleList:scaleList2816,2817
+listScale:listScale2820,2821
+listAdd:listAdd2825,2826
+listSub:listSub2830,2831
+listMul:listMul2835,2836
+listNeg:listNeg2845,2846
+dim:dim2854,2855
+zipWithArr:zipWithArr2865,2866
+zipWithArrToList:zipWithArrToList2885,2886
+det:det2897,2898
+multiMatInt:multiMatInt2910,2911
+multiMatDouble:multiMatDouble2916,2917
+multiMatR:multiMatR2924,2925
+multiMat:multiMat2947,2948
+matDiv:matDiv2958,2959
+multiRatMat:multiRatMat2962,2963
+sumRatList:sumRatList2965,2966
+addR:addR2970,2971
+ratToInt:ratToInt2986,2987
+normalR:normalR2995,2996
+reduceForm:reduceForm3007,3008
+reduce:reduce3015,3016
+stringToInt:stringToInt3049,3050
+strToInt strToInt3052,3053
+stringToInteger:stringToInteger3069,3070
+strToInteger strToInteger3072,3073
+stringToFloat:stringToFloat3091,3092
+strToF strToF3094,3095
+stringToListInt:stringToListInt3108,3109
+word:word3120,3121
+isWord:isWord3139,3140
+isZeroPos:isZeroPos3146,3147
+sentence:sentence3158,3159
+perm:perm3178,3179
+perm2:perm23243,3244
+rangeNum:rangeNum3256,3257
+perm3 perm33267,3268
+intToString:intToString3283,3284
+integerToInt:integerToInt3291,3292
+splitR:splitR3294,3295
+multR:multR3305,3306
+multRL:multRL3315,3316
+normR:normR3318,3319
+getVec:getVec3323,3324
+normList:normList3339,3340
+proj:proj3345,3346
+projn:projn3362,3363
+rMatrixUpperTri rMatrixUpperTri3388,3389
+rejection:rejection3410,3411
+qrDecompose':qrDecompose'3426,3427
+addRL:addRL3448,3449
+divR:divR3459,3460
+divR':divR'3465,3466
+invR:invR3471,3472
+subR:subR3482,3483
+negR:negR3485,3486
+negList:negList3488,3489
+subRL:subRL3491,3492
+eightQueen:eightQueen3513,3514
+sumLeft:sumLeft3545,3546
+sumRight:sumRight3557,3558
+rep2d rep2d3570,3571
+diag1:diag13577,3578
+uptri:uptri3582,3583
+leftDiagonal:leftDiagonal3600,3601
+rightDiagonal:rightDiagonal3625,3626
+reverseWord:reverseWord3636,3637
+rw rw3639,3640
+tran:tran3657,3658
+sortRow:sortRow3683,3684
+upperTri:upperTri3712,3713
+upperTri':upperTri'3762,3763
+divI:divI3835,3836
+inverse:inverse3856,3857
+odds:odds3936,3937
+evens:evens3940,3941
+isInver:isInver3951,3952
+isInvertible:isInvertible3984,3985
+ident:ident3992,3993
+ident':ident'3999,4000
+identS:identS4004,4005
+mlist:mlist4016,4017
+drawInt:drawInt4030,4031
+randomInt:randomInt4033,4034
+drawInteger:drawInteger4042,4043
+randomInteger:randomInteger4050,4051
+randomDouble:randomDouble4062,4063
+randomFloat:randomFloat4074,4075
+randomFrac:randomFrac4092,4093
+randomList:randomList4098,4099
+randomMatrix:randomMatrix4108,4109
+data Mat Mat4116,4117
+data Mat = Zero Zero4116,4117
+data Mat = Zero | IdId4116,4117
+geneMat1ToN:geneMat1ToN4125,4126
+geneMatMN:geneMatMN4135,4136
+geneMat:geneMat4140,4141
+help:help4146,4147
+cmd:cmd4167,4168
+compileHaskellToBin:compileHaskellToBin4239,4240
+strCompareIC:strCompareIC4253,4254
+baseName:baseName4273,4274
+takeName:takeName4281,4282
+dropName:dropName4289,4290
+baseNameT:baseNameT4296,4297
+takeFileNameT:takeFileNameT4302,4303
+gotoCurrDir:gotoCurrDir4311,4312
+dirWalk dirWalk4331,4332
+ls:ls4353,4354
+lsFile:lsFile4369,4370
+lsFileFull:lsFileFull4391,4392
+lsRegex:lsRegex4404,4405
+lsRegexFull:lsRegexFull4415,4416
+lsFullRegex:lsFullRegex4428,4429
+rm:rm4435,4436
+isDir:isDir4447,4448
+rmDir:rmDir4456,4457
+pwd:pwd4467,4468
+getPwd:getPwd4475,4476
+cd:cd4481,4482
+en:en4487,4488
+cc:cc4490,4491
+g:g4493,4494
+sleepSec:sleepSec4501,4502
+sleep:sleep4507,4508
+asplitPath:asplitPath4525,4526
+splitPathA:splitPathA4546,4547
+take':take'4550,4551
+takeIf:takeIf4563,4564
+dropIf:dropIf4579,4580
+takeN:takeN4585,4586
+drop':drop'4589,4590
+pathBase:pathBase4592,4593
+dropPath:dropPath4597,4598
+dropPathEnd:dropPathEnd4603,4604
+takePath:takePath4609,4610
+takePathEnd:takePathEnd4614,4615
+copyRename:copyRename4620,4621
+copyFileToDir:copyFileToDir4631,4632
+isFile:isFile4634,4635
+fExist:fExist4640,4641
+fe fe4646,4647
+createFile:createFile4649,4650
+listDirFilter:listDirFilter4658,4659
+copyDir:copyDir4665,4666
+mv:mv4684,4685
+rename rename4687,4688
+renameAllFile:renameAllFile4690,4691
+mvFiles mvFiles4696,4697
+mvFile mvFile4697,4698
+mkdir:mkdir4700,4701
+mkdirp:mkdirp4703,4704
+sfilter:sfilter4706,4707
+clear clear4710,4711
+sys:sys4754,4755
+typeChar:typeChar4762,4763
+typeListStr:typeListStr4765,4766
+typeByteString:typeByteString4768,4769
+typeString:typeString4771,4772
+linesBS:linesBS4774,4775
+linesSText:linesSText4782,4783
+isHex:isHex4796,4797
+isHexStr:isHexStr4804,4805
+isDigitStr:isDigitStr4812,4813
+isLetterStr:isLetterStr4820,4821
+runRawCmd:runRawCmd4832,4833
+run':run'4860,4861
+run:run4875,4876
+runCmd:runCmd4897,4898
+runSh runSh4915,4916
+df:df4933,4934
+tangent:tangent4963,4964
+tangentVec:tangentVec4969,4970
+prime prime4979,4980
+oneRoot:oneRoot5004,5005
+rootList:rootList5017,5018
+outer:outer5033,5034
+out:out5050,5051
+outerSum:outerSum5056,5057
+outerMod:outerMod5063,5064
+outerStr:outerStr5066,5067
+(â(â¦¶)5074,5075
+(â(â)5075,5076
+(â(â§)5077,5078
+(â(â)5078,5079
+vcol:vcol5081,5082
+vrow:vrow5084,5085
+zipWith2:zipWith25101,5102
+data XNode XNode5106,5107
+data XNode = XNode XNode5106,5107
+insertTries:insertTries5119,5120
+insertTriesList:insertTriesList5130,5131
+containsTries:containsTries5142,5143
+data Tree Tree5155,5156
+data Tree a = EmptyEmpty5155,5156
+            | Node Node5156,5157
+insertNode:insertNode5158,5159
+insertFromList:insertFromList5165,5166
+data LeafyTree LeafyTree5172,5173
+data LeafyTree a = Branch Branch5172,5173
+                   | Leaf Leaf5173,5174
+instance Foldable Foldable LeafyTree5203,5204
+    foldMap foldMap5204,5205
+inorder:inorder5210,5211
+maxlen:maxlen5217,5218
+head':head'5225,5226
+isBST:isBST5239,5240
+binsert:binsert5258,5259
+sym:sym5265,5266
+lca:lca5278,5279
+buildTree:buildTree5307,5308
+anagram:anagram5329,5330
+redisExtractAronModule:redisExtractAronModule5370,5371
+redisExtractJavaMethod:redisExtractJavaMethod5402,5403
+redisExtractJavaMethodWithPackage:redisExtractJavaMethodWithPackage5441,5442
+textArea:textArea5470,5471
+htmlTable:htmlTable5500,5501
+htmlTableRowCol:htmlTableRowCol5512,5513
+htmlTableRowColSText:htmlTableRowColSText5521,5522
+getOS:getOS5549,5550
+data ShellHistory ShellHistory5557,5558
+data ShellHistory = ShellHistoryShellHistory5557,5558
+  { shId shId5558,5559
+  , shcmd shcmd5559,5560
+instance FromRow FromRow ShellHistory5564,5565
+   fromRow fromRow5565,5566
+instance ToRow ToRow ShellHistory5568,5569
+   toRow toRow5569,5570
+insertShellHistory:insertShellHistory5605,5606
+queryShellHistory:queryShellHistory5630,5631
+appNotify:appNotify5644,5645
+redisGet:redisGet5666,5667
+redisGetConn:redisGetConn5670,5671
+redisSet:redisSet5687,5688
+redisSetConn:redisSetConn5690,5691
+redisSetConnSByteString:redisSetConnSByteString5700,5701
+redisConnectDefault:redisConnectDefault5710,5711
+checkCSSColorFormat:checkCSSColorFormat5720,5721
+cssToStr:cssToStr5726,5727
+concatStyle:concatStyle5732,5733
+fun444:fun4445737,5738
+fun555:fun5555740,5741
+pf pf5762,5763
+p:p5767,5768
+pp:pp5770,5771
+pp2 pp25773,5774
+fl:fl5775,5776
+pw:pw5786,5787
+fpp:fpp5789,5790
+fw:fw5792,5793
+ff:ff5803,5804
+(<(<<<)5814,5815
+readConfig:readConfig5843,5844
+readFileLatin1ToList:readFileLatin1ToList5859,5860
+timeNowPico:timeNowPico5871,5872
+timeNowNano:timeNowNano5877,5878
+timeNowMicro:timeNowMicro5883,5884
+timeNowMilli:timeNowMilli5889,5890
+timeNowSecond:timeNowSecond5895,5896
+trim:trim5903,5904
+splitStr:splitStr5911,5912
+splitStrChar:splitStrChar5929,5930
+splitStrCharTrim:splitStrCharTrim5942,5943
+matchAllBS:matchAllBS5951,5952
+len:len5961,5962
+splitStrTuple:splitStrTuple5970,5971
 
 ./AronModule_tmp.hs,13207
 module AronModule AronModule7,8
@@ -1203,10 +1386,10 @@ searchForm:searchForm27,28
 ./Main.hs,147
 module Main Main3,4
 config config93,94
-dbname dbname108,109
-configFile configFile109,110
-lookupJust lookupJust111,112
-main main113,114
+dbname dbname107,108
+configFile configFile108,109
+lookupJust lookupJust110,111
+main main112,113
 
 ./PortableLines.hs,91
 module PortableLinesPortableLines0,1
@@ -1230,509 +1413,290 @@ port port65,66
 host host66,67
 hostURL hostURL68,69
 
-./WaiLib.hs,11180
+./WaiLib.hs,11181
 module WaiLib WaiLib27,28
-query_redis query_redis147,148
-eleIdCodeBlock=eleIdCodeBlock148,149
-pdfdir pdfdir149,150
-data Block Block150,151
-data Block = Block{bblock:Block{bblock150,151
-data MBlock MBlock151,152
-data MBlock = MBlock{mblock:MBlock{mblock151,152
-data GeneMatrix GeneMatrix152,153
-data GeneMatrix = GeneMatrix{GeneMatrix{152,153
-                             cmd cmd153,154
-                             ncol ncol154,155
-                             nrow nrow155,156
-instance DA.FromJSON DA-FromJSON GeneMatrix158,159
-instance DA.ToJSON DA-ToJSON GeneMatrix159,160
-    toEncoding toEncoding160,161
-data Bgcolor Bgcolor163,164
-data Bgcolor = Bgcolor{ Bgcolor{163,164
-data Bgcolor = Bgcolor{ colorname colorname163,164
-instance DA.FromJSON DA-FromJSON Bgcolor164,165
-instance DA.ToJSON DA-ToJSON Bgcolor165,166
-    toEncoding toEncoding166,167
-data Textcolor Textcolor168,169
-data Textcolor = Textcolor{ Textcolor{168,169
-data Textcolor = Textcolor{ textcolor textcolor168,169
-instance DA.FromJSON DA-FromJSON Textcolor169,170
-instance DA.ToJSON DA-ToJSON Textcolor170,171
-    toEncoding toEncoding171,172
-data ReplyCode ReplyCode173,174
-data ReplyCode = ReplyCode{ReplyCode{173,174
-                            rcmd rcmd174,175
-                            rerror rerror175,176
-                            stdout stdout176,177
-data User User179,180
-data User = User User179,180
-data User = User   {uid:uid179,180
-data User = User   {uid::Int64, name:name179,180
-data User = User   {uid::Int64, name::TS.Text, email:email179,180
-data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password:password179,180
-data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password::TS.Text, task:task179,180
-data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password::TS.Text, task::TS.Text, money:money179,180
-data Image Image180,181
-data Image = Image Image180,181
-data Image = Image {iid:iid180,181
-data Image = Image {iid::Int64, imagename:imagename180,181
-data Image = Image {iid::Int64, imagename::TS.Text, uid:uid180,181
-instance FromRow FromRow User182,183
-  fromRow fromRow183,184
-instance FromRow FromRow Image185,186
-  fromRow fromRow186,187
-instance ToRow ToRow User188,189
-  toRow toRow189,190
-instance ToRow ToRow Image191,192
-  toRow toRow192,193
-instance DA.FromJSON DA-FromJSON ReplyCode195,196
-instance DA.ToJSON DA-ToJSON ReplyCode196,197
-    toEncoding toEncoding197,198
-data CompileCode CompileCode199,200
-data CompileCode = CompileCode{CompileCode{199,200
-                                compiler compiler200,201
-                                option option201,202
-                                code code202,203
-instance DA.FromJSON DA-FromJSON CompileCode205,206
-instance DA.ToJSON DA-ToJSON CompileCode206,207
-    toEncoding toEncoding207,208
-data MatInt MatInt211,212
-data MatInt = MatInt{name:MatInt{name211,212
-data MatInt = MatInt{name::TS.Text, matrix:matrix211,212
-instance DA.FromJSON DA-FromJSON MatInt212,213
-instance DA.ToJSON DA-ToJSON MatInt213,214
-    toEncoding toEncoding214,215
-data HTMLTable HTMLTable222,223
-data HTMLTable = HTMLTable{name:HTMLTable{name222,223
-data HTMLTable = HTMLTable{name::TS.Text, matrix:matrix222,223
-instance DA.FromJSON DA-FromJSON HTMLTable223,224
-instance DA.ToJSON DA-ToJSON HTMLTable224,225
-    toEncoding toEncoding225,226
-data PreColor PreColor227,228
-data PreColor = PreColor PreColor227,228
-data PreColor = PreColor {color:color227,228
-data PreColor = PreColor {color::TS.Text, background:background227,228
-instance DA.FromJSON DA-FromJSON PreColor228,229
-instance DA.ToJSON DA-ToJSON PreColor229,230
-    toEncoding toEncoding230,231
-data UpCodeBlock UpCodeBlock232,233
-data UpCodeBlock = UpCodeBlock{ok:UpCodeBlock{ok232,233
-instance DA.FromJSON DA-FromJSON UpCodeBlock233,234
-instance DA.ToJSON DA-ToJSON UpCodeBlock234,235
-    toEncoding toEncoding235,236
-data UpdateCodeBlock UpdateCodeBlock238,239
-data UpdateCodeBlock = UpdateCodeBlock{pid:UpdateCodeBlock{pid238,239
-data UpdateCodeBlock = UpdateCodeBlock{pid::Integer, newcode:newcode238,239
-instance DA.FromJSON DA-FromJSON UpdateCodeBlock239,240
-instance DA.ToJSON DA-ToJSON UpdateCodeBlock240,241
-    toEncoding toEncoding241,242
-instance DA.FromJSON DA-FromJSON Block243,244
-instance DA.ToJSON DA-ToJSON Block244,245
-    toEncoding toEncoding249,250
-instance DA.FromJSON DA-FromJSON MBlock252,253
-instance DA.ToJSON DA-ToJSON MBlock253,254
-    toEncoding toEncoding258,259
-data Person Person261,262
-  PersonPerson262,263
-    { personId personId263,264
-    , personName personName264,265
-    , personAge personAge265,266
-data UserInput UserInput294,295
-  UserInputUserInput295,296
-    { cmdId cmdId296,297
-    , xcmd xcmd297,298
-instance FromRow FromRow Person300,301
-  fromRow fromRow301,302
-instance FromRow FromRow UserInput303,304
-  fromRow fromRow304,305
-instance ToRow ToRow Person307,308
-  toRow toRow308,309
-instance ToRow ToRow UserInput311,312
-  toRow toRow312,313
-updir updir314,315
-styleChar:styleChar317,318
-href:href329,330
-changeSymbol:changeSymbol333,334
-listToByteStr:listToByteStr342,343
-cssStrong:cssStrong345,346
-cssHead:cssHead352,353
-htmlLess:htmlLess357,358
-htmlGreater:htmlGreater362,363
-keyWord:keyWord367,368
-keyWord1:keyWord1373,374
-keyDash:keyDash378,379
-keySymbol1:keySymbol1388,389
-keyName:keyName396,397
-specialName:specialName400,401
-javaClassName:javaClassName404,405
-javaFunClass:javaFunClass415,416
-javaKeyWords:javaKeyWords420,421
-javaCmdKeyWords:javaCmdKeyWords425,426
-mysqlKeyWords:mysqlKeyWords431,432
-keyURL:keyURL438,439
-spChar:spChar443,444
-bracketChar:bracketChar451,452
-sbChar:sbChar459,460
-transform transform469,470
-alternateLineColor2:alternateLineColor2519,520
-blockId:blockId531,532
-hiddenForm2:hiddenForm2567,568
-hiddenForm:hiddenForm588,589
-<form <form590,591
-hiddenForm3:hiddenForm3597,598
-<form <form599,600
-hiddenForm4:hiddenForm4611,612
-<form <form613,614
-foldListList:foldListList670,671
-foldListList2:foldListList2702,703
-myfun myfun741,742
-fun4 fun4742,743
-foldListListTxt:foldListListTxt744,745
-foldListListTxt2:foldListListTxt2748,749
-pdfname pdfname755,756
-img img756,757
-pdfPath pdfPath757,758
-docRoot docRoot758,759
-doc doc759,760
-cmdLog cmdLog760,761
-currCmdFile currCmdFile762,763
-logCurrCmd:logCurrCmd764,765
-readCurrCmd:readCurrCmd767,768
-type HMap2 HMap2771,772
-type HMap HMap773,774
-genePDF:genePDF775,776
-app:app794,795
-app2:app2844,845
-plainIndex:plainIndex897,898
-pdfFile:pdfFile904,905
-pdfSent:pdfSent912,913
-insertinfo:insertinfo921,922
-insertUser:insertUser928,929
-loginHtml:loginHtml935,936
-searchUI:searchUI942,943
-notFound notFound950,951
-notFoundStr:notFoundStr957,958
-snippetP snippetP964,965
-insertAll:insertAll974,975
-mapClear:mapClear978,979
-mapClear2:mapClear2982,983
-insertAppend:insertAppend999,1000
-insertAll2:insertAll21006,1007
-insertAppend2:insertAppend21010,1011
-listToPrefixMapOld:listToPrefixMapOld1024,1025
-listToPrefixMap:listToPrefixMap1072,1073
-spanBlock:spanBlock1123,1124
-spanBlockX:spanBlockX1135,1136
-spanBlockX1:spanBlockX11140,1141
-spanBlockFunc:spanBlockFunc1146,1147
-spanBlockXX:spanBlockXX1150,1151
-spanBlockXX2:spanBlockXX21155,1156
-(â(â)1159,1160
-searchForm:searchForm1174,1175
-htmlPre:htmlPre1205,1206
-htmlBodyH:htmlBodyH1216,1217
-replyHtml:replyHtml1232,1233
+query_redis query_redis149,150
+eleIdCodeBlock=eleIdCodeBlock150,151
+pdfdir pdfdir151,152
+data Block Block152,153
+data Block = Block{bblock:Block{bblock152,153
+data MBlock MBlock153,154
+data MBlock = MBlock{mblock:MBlock{mblock153,154
+data GeneMatrix GeneMatrix154,155
+data GeneMatrix = GeneMatrix{GeneMatrix{154,155
+                             cmd cmd155,156
+                             ncol ncol156,157
+                             nrow nrow157,158
+instance DA.FromJSON DA-FromJSON GeneMatrix160,161
+instance DA.ToJSON DA-ToJSON GeneMatrix161,162
+    toEncoding toEncoding162,163
+data Bgcolor Bgcolor165,166
+data Bgcolor = Bgcolor{ Bgcolor{165,166
+data Bgcolor = Bgcolor{ colorname colorname165,166
+instance DA.FromJSON DA-FromJSON Bgcolor166,167
+instance DA.ToJSON DA-ToJSON Bgcolor167,168
+    toEncoding toEncoding168,169
+data Textcolor Textcolor170,171
+data Textcolor = Textcolor{ Textcolor{170,171
+data Textcolor = Textcolor{ textcolor textcolor170,171
+instance DA.FromJSON DA-FromJSON Textcolor171,172
+instance DA.ToJSON DA-ToJSON Textcolor172,173
+    toEncoding toEncoding173,174
+data ReplyCode ReplyCode175,176
+data ReplyCode = ReplyCode{ReplyCode{175,176
+                            rcmd rcmd176,177
+                            rerror rerror177,178
+                            stdout stdout178,179
+data User User181,182
+data User = User User181,182
+data User = User   {uid:uid181,182
+data User = User   {uid::Int64, name:name181,182
+data User = User   {uid::Int64, name::TS.Text, email:email181,182
+data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password:password181,182
+data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password::TS.Text, task:task181,182
+data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password::TS.Text, task::TS.Text, money:money181,182
+data Image Image182,183
+data Image = Image Image182,183
+data Image = Image {iid:iid182,183
+data Image = Image {iid::Int64, imagename:imagename182,183
+data Image = Image {iid::Int64, imagename::TS.Text, uid:uid182,183
+instance FromRow FromRow User184,185
+  fromRow fromRow185,186
+instance FromRow FromRow Image187,188
+  fromRow fromRow188,189
+instance ToRow ToRow User190,191
+  toRow toRow191,192
+instance ToRow ToRow Image193,194
+  toRow toRow194,195
+instance DA.FromJSON DA-FromJSON ReplyCode197,198
+instance DA.ToJSON DA-ToJSON ReplyCode198,199
+    toEncoding toEncoding199,200
+data CompileCode CompileCode201,202
+data CompileCode = CompileCode{CompileCode{201,202
+                                compiler compiler202,203
+                                option option203,204
+                                code code204,205
+instance DA.FromJSON DA-FromJSON CompileCode207,208
+instance DA.ToJSON DA-ToJSON CompileCode208,209
+    toEncoding toEncoding209,210
+data MatInt MatInt213,214
+data MatInt = MatInt{name:MatInt{name213,214
+data MatInt = MatInt{name::TS.Text, matrix:matrix213,214
+instance DA.FromJSON DA-FromJSON MatInt214,215
+instance DA.ToJSON DA-ToJSON MatInt215,216
+    toEncoding toEncoding216,217
+data HTMLTable HTMLTable224,225
+data HTMLTable = HTMLTable{name:HTMLTable{name224,225
+data HTMLTable = HTMLTable{name::TS.Text, matrix:matrix224,225
+instance DA.FromJSON DA-FromJSON HTMLTable225,226
+instance DA.ToJSON DA-ToJSON HTMLTable226,227
+    toEncoding toEncoding227,228
+data PreColor PreColor229,230
+data PreColor = PreColor PreColor229,230
+data PreColor = PreColor {color:color229,230
+data PreColor = PreColor {color::TS.Text, background:background229,230
+instance DA.FromJSON DA-FromJSON PreColor230,231
+instance DA.ToJSON DA-ToJSON PreColor231,232
+    toEncoding toEncoding232,233
+data UpCodeBlock UpCodeBlock234,235
+data UpCodeBlock = UpCodeBlock{ok:UpCodeBlock{ok234,235
+instance DA.FromJSON DA-FromJSON UpCodeBlock235,236
+instance DA.ToJSON DA-ToJSON UpCodeBlock236,237
+    toEncoding toEncoding237,238
+data UpdateCodeBlock UpdateCodeBlock240,241
+data UpdateCodeBlock = UpdateCodeBlock{pid:UpdateCodeBlock{pid240,241
+data UpdateCodeBlock = UpdateCodeBlock{pid::Integer, newcode:newcode240,241
+instance DA.FromJSON DA-FromJSON UpdateCodeBlock241,242
+instance DA.ToJSON DA-ToJSON UpdateCodeBlock242,243
+    toEncoding toEncoding243,244
+instance DA.FromJSON DA-FromJSON Block245,246
+instance DA.ToJSON DA-ToJSON Block246,247
+    toEncoding toEncoding251,252
+instance DA.FromJSON DA-FromJSON MBlock254,255
+instance DA.ToJSON DA-ToJSON MBlock255,256
+    toEncoding toEncoding260,261
+data Person Person263,264
+  PersonPerson264,265
+    { personId personId265,266
+    , personName personName266,267
+    , personAge personAge267,268
+data UserInput UserInput296,297
+  UserInputUserInput297,298
+    { cmdId cmdId298,299
+    , xcmd xcmd299,300
+instance FromRow FromRow Person302,303
+  fromRow fromRow303,304
+instance FromRow FromRow UserInput305,306
+  fromRow fromRow306,307
+instance ToRow ToRow Person309,310
+  toRow toRow310,311
+instance ToRow ToRow UserInput313,314
+  toRow toRow314,315
+updir updir316,317
+styleChar:styleChar319,320
+href:href331,332
+changeSymbol:changeSymbol335,336
+listToByteStr:listToByteStr344,345
+cssStrong:cssStrong347,348
+cssHead:cssHead354,355
+htmlLess:htmlLess359,360
+htmlGreater:htmlGreater364,365
+keyWord:keyWord369,370
+keyWord1:keyWord1375,376
+keyDash:keyDash380,381
+keySymbol1:keySymbol1390,391
+keyName:keyName398,399
+specialName:specialName402,403
+javaClassName:javaClassName406,407
+javaFunClass:javaFunClass417,418
+javaKeyWords:javaKeyWords422,423
+javaCmdKeyWords:javaCmdKeyWords427,428
+mysqlKeyWords:mysqlKeyWords433,434
+keyURL:keyURL440,441
+spChar:spChar445,446
+bracketChar:bracketChar453,454
+sbChar:sbChar461,462
+transform transform471,472
+alternateLineColor2:alternateLineColor2521,522
+blockId:blockId533,534
+hiddenForm2:hiddenForm2569,570
+hiddenForm:hiddenForm590,591
+<form <form592,593
+hiddenForm3:hiddenForm3599,600
+<form <form601,602
+hiddenForm4:hiddenForm4613,614
+<form <form615,616
+foldListList:foldListList672,673
+foldListList2:foldListList2704,705
+myfun myfun743,744
+fun4 fun4744,745
+foldListListTxt:foldListListTxt746,747
+foldListListTxt2:foldListListTxt2750,751
+pdfname pdfname757,758
+img img758,759
+pdfPath pdfPath759,760
+docRoot docRoot760,761
+doc doc761,762
+cmdLog cmdLog762,763
+currCmdFile currCmdFile764,765
+logCurrCmd:logCurrCmd766,767
+readCurrCmd:readCurrCmd769,770
+type HMap2 HMap2773,774
+type HMap HMap775,776
+genePDF:genePDF777,778
+app:app796,797
+app2:app2846,847
+plainIndex:plainIndex899,900
+pdfFile:pdfFile906,907
+pdfSent:pdfSent914,915
+insertinfo:insertinfo923,924
+insertUser:insertUser930,931
+loginHtml:loginHtml937,938
+searchUI:searchUI944,945
+notFound notFound952,953
+notFoundStr:notFoundStr959,960
+snippetP snippetP966,967
+insertAll:insertAll976,977
+mapClear:mapClear980,981
+mapClear2:mapClear2984,985
+insertAppend:insertAppend1001,1002
+insertAll2:insertAll21008,1009
+insertAppend2:insertAppend21012,1013
+listToPrefixMapOld:listToPrefixMapOld1026,1027
+listToPrefixMap:listToPrefixMap1074,1075
+spanBlock:spanBlock1125,1126
+spanBlockX:spanBlockX1137,1138
+spanBlockX1:spanBlockX11142,1143
+spanBlockFunc:spanBlockFunc1148,1149
+spanBlockXX:spanBlockXX1152,1153
+spanBlockXX2:spanBlockXX21157,1158
+(â(â)1161,1162
+searchForm:searchForm1176,1177
+htmlPre:htmlPre1207,1208
+htmlBodyH:htmlBodyH1218,1219
+replyHtml:replyHtml1234,1235
 anyRoute:anyRoute1255,1256
 anyRoute2:anyRoute21286,1287
-uploadPage:uploadPage1325,1326
-data SearchType SearchType1332,1333
-data SearchType = CmdT CmdT1332,1333
-data SearchType = CmdT | JavaT JavaT1332,1333
-data SearchType = CmdT | JavaT | HaskellT HaskellT1332,1333
-data SearchType = CmdT | JavaT | HaskellT | SnippetTSnippetT1332,1333
-readCmd:readCmd1334,1335
-groupCountFilter:groupCountFilter1357,1358
-optionHtml:optionHtml1362,1363
-responseNothing:responseNothing1374,1375
-responseNothingBS:responseNothingBS1380,1381
-responseNothingTest:responseNothingTest1386,1387
-replyTaskHtml:replyTaskHtml1393,1394
-listPageHtml:listPageHtml1411,1412
-listPage:listPage1430,1431
-responseTaskBS:responseTaskBS1439,1440
-responseCmd:responseCmd1465,1466
-responseXCmd:responseXCmd1503,1504
-responseJavaHtml:responseJavaHtml1526,1527
-responseGenePDFHtml:responseGenePDFHtml1546,1547
-responseHaskellHtml:responseHaskellHtml1555,1556
-queryRedisSnippet:queryRedisSnippet1573,1574
-ghcidRun:ghcidRun1596,1597
-queryLibHaskell:queryLibHaskell1626,1627
-queryLibJava:queryLibJava1670,1671
-queryLibJavaPackage:queryLibJavaPackage1689,1690
-responseSearch:responseSearch1709,1710
-responseSnippetHTML:responseSnippetHTML1745,1746
-responseSnippetHTML2:responseSnippetHTML21787,1788
-responseSnippetTxt:responseSnippetTxt1836,1837
-responseSnippetTxt2:responseSnippetTxt21855,1856
-geneRectMat:geneRectMat1888,1889
-geneHTMLTable:geneHTMLTable1920,1921
-getPreFromRedis:getPreFromRedis1960,1961
-updateCodeBlock:updateCodeBlock1983,1984
-insertCodeBlock:insertCodeBlock2013,2014
-deleteCodeBlock:deleteCodeBlock2043,2044
-updatePrefixMap:updatePrefixMap2074,2075
-splitWhenTwo:splitWhenTwo2083,2084
-getPreStyle:getPreStyle2087,2088
-updateBackground:updateBackground2135,2136
-updateTextColor:updateTextColor2178,2179
-receiveCode:receiveCode2208,2209
-receiveCode2:receiveCode22238,2239
-responseEditor:responseEditor2264,2265
-responseJavascript:responseJavascript2276,2277
-responseMyStyle:responseMyStyle2283,2284
-responseHtml:responseHtml2291,2292
-updateMap:updateMap2309,2310
-replyEditor replyEditor2470,2471
-responseHelp responseHelp2477,2478
-replyCssButton replyCssButton2484,2485
-wordcountReply wordcountReply2491,2492
-matrixReply matrixReply2498,2499
-sendHTMLTableCmd sendHTMLTableCmd2505,2506
-replyJS replyJS2512,2513
-insertDatabase:insertDatabase2535,2536
-readDatabaseCodeBlock2:readDatabaseCodeBlock22581,2582
-readDatabaseCodeBlock3:readDatabaseCodeBlock32616,2617
-readSnippet2:readSnippet22658,2659
-createCodeBlockTable:createCodeBlockTable2682,2683
-addCodeBlockTable:addCodeBlockTable2687,2688
-updateDatabaseCodeBlockTable:updateDatabaseCodeBlockTable2695,2696
-updateDatabaseNewCodeTable:updateDatabaseNewCodeTable2724,2725
-insertDatabaseNewCodeTable:insertDatabaseNewCodeTable2735,2736
-deleteDatabaseNewCodeTable:deleteDatabaseNewCodeTable2742,2743
-deleteDatabaseCodeBlockTable:deleteDatabaseCodeBlockTable2747,2748
-loginCheck:loginCheck2755,2756
-securityValidate:securityValidate2780,2781
-insertUserDB:insertUserDB2794,2795
-upload:upload2856,2857
-searchMap:searchMap2887,2888
-type ClientId ClientId2906,2907
-type Client Client2907,2908
-type State State2908,2909
-connectClient connectClient2911,2912
-withoutClient withoutClient2916,2917
-disconnectClient disconnectClient2919,2920
-nextId nextId2923,2924
-httpApp httpApp2927,2928
-listen listen2930,2931
-broadcast broadcast2934,2935
-wsApp wsApp2941,2942
-
-./WaiLib_tmp_move_to_hlib.hs,7769
-module WaiLib WaiLib8,9
-eleIdCodeBlock=eleIdCodeBlock111,112
-toStr toStr113,114
-toBS toBS116,117
-toText toText117,118
-pdfdir pdfdir118,119
-data Block Block120,121
-data Block = Block{bblock:Block{bblock120,121
-data MBlock MBlock121,122
-data MBlock = MBlock{mblock:MBlock{mblock121,122
-data GeneMatrix GeneMatrix122,123
-data GeneMatrix = GeneMatrix{GeneMatrix{122,123
-                             cmd cmd123,124
-                             ncol ncol124,125
-                             nrow nrow125,126
-instance DA.FromJSON DA-FromJSON GeneMatrix128,129
-instance DA.ToJSON DA-ToJSON GeneMatrix129,130
-    toEncoding toEncoding130,131
-data ReplyCode ReplyCode132,133
-data ReplyCode = ReplyCode{ReplyCode{132,133
-                            rcmd rcmd133,134
-                            rerror rerror134,135
-                            stdout stdout135,136
-data User User138,139
-data User = User User138,139
-data User = User   {uid:uid138,139
-data User = User   {uid::Int64, name:name138,139
-data User = User   {uid::Int64, name::TS.Text, email:email138,139
-data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password:password138,139
-data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password::TS.Text, task:task138,139
-data User = User   {uid::Int64, name::TS.Text, email::TS.Text, password::TS.Text, task::TS.Text, money:money138,139
-data Image Image139,140
-data Image = Image Image139,140
-data Image = Image {iid:iid139,140
-data Image = Image {iid::Int64, imagename:imagename139,140
-data Image = Image {iid::Int64, imagename::TS.Text, uid:uid139,140
-instance FromRow FromRow User141,142
-  fromRow fromRow142,143
-instance FromRow FromRow Image144,145
-  fromRow fromRow145,146
-instance ToRow ToRow User147,148
-  toRow toRow148,149
-instance ToRow ToRow Image150,151
-  toRow toRow151,152
-instance DA.FromJSON DA-FromJSON ReplyCode154,155
-instance DA.ToJSON DA-ToJSON ReplyCode155,156
-    toEncoding toEncoding156,157
-data CompileCode CompileCode158,159
-data CompileCode = CompileCode{CompileCode{158,159
-                                compiler compiler159,160
-                                option option160,161
-                                code code161,162
-instance DA.FromJSON DA-FromJSON CompileCode164,165
-instance DA.ToJSON DA-ToJSON CompileCode165,166
-    toEncoding toEncoding166,167
-data MatInt MatInt170,171
-data MatInt = MatInt{name:MatInt{name170,171
-data MatInt = MatInt{name::TS.Text, matrix:matrix170,171
-instance DA.FromJSON DA-FromJSON MatInt171,172
-instance DA.ToJSON DA-ToJSON MatInt172,173
-    toEncoding toEncoding173,174
-instance DA.FromJSON DA-FromJSON Block175,176
-instance DA.ToJSON DA-ToJSON Block176,177
-    toEncoding toEncoding181,182
-instance DA.FromJSON DA-FromJSON MBlock184,185
-instance DA.ToJSON DA-ToJSON MBlock185,186
-    toEncoding toEncoding190,191
-data Person Person193,194
-  PersonPerson194,195
-    { personId personId195,196
-    , personName personName196,197
-    , personAge personAge197,198
-data UserInput UserInput208,209
-  UserInputUserInput209,210
-    { cmdId cmdId210,211
-    , xcmd xcmd211,212
-instance FromRow FromRow Person214,215
-  fromRow fromRow215,216
-instance FromRow FromRow UserInput217,218
-  fromRow fromRow218,219
-instance ToRow ToRow Person221,222
-  toRow toRow222,223
-instance ToRow ToRow UserInput225,226
-  toRow toRow226,227
-updir updir228,229
-runSh runSh230,231
-styleChar:styleChar233,234
-href:href244,245
-changeSymbol:changeSymbol248,249
-listToByteStr:listToByteStr257,258
-cssStrong:cssStrong260,261
-cssHead:cssHead267,268
-htmlLess:htmlLess272,273
-htmlGreater:htmlGreater277,278
-keyWord:keyWord282,283
-keyWord1:keyWord1288,289
-keyDash:keyDash293,294
-keySymbol1:keySymbol1303,304
-keyName:keyName311,312
-specialName:specialName315,316
-javaClassName:javaClassName319,320
-javaFunClass:javaFunClass330,331
-javaKeyWords:javaKeyWords335,336
-javaCmdKeyWords:javaCmdKeyWords340,341
-mysqlKeyWords:mysqlKeyWords346,347
-keyURL:keyURL353,354
-spChar:spChar358,359
-bracketChar:bracketChar366,367
-sbChar:sbChar374,375
-transform transform384,385
-blockId:blockId403,404
-hiddenForm2:hiddenForm2420,421
-hiddenForm:hiddenForm436,437
-<form <form438,439
-hiddenForm3:hiddenForm3445,446
-<form <form447,448
-hiddenForm4:hiddenForm4459,460
-<form <form461,462
-foldListList:foldListList515,516
-myfun myfun546,547
-fun4 fun4547,548
-foldListListTxt:foldListListTxt549,550
-pdfname pdfname558,559
-img img559,560
-pdfPath pdfPath560,561
-docRoot docRoot561,562
-doc doc562,563
-cmdLog cmdLog563,564
-currCmdFile currCmdFile565,566
-logCurrCmd:logCurrCmd567,568
-readCurrCmd:readCurrCmd570,571
-type HMap HMap573,574
-genePDF:genePDF575,576
-app:app592,593
-plainIndex:plainIndex630,631
-pdfFile:pdfFile637,638
-pdfSent:pdfSent645,646
-insertinfo:insertinfo654,655
-insertUser:insertUser661,662
-loginHtml:loginHtml668,669
-searchUI:searchUI675,676
-notFound notFound683,684
-notFoundStr:notFoundStr690,691
-snippetP snippetP698,699
-insertAll:insertAll703,704
-mapClear:mapClear707,708
-snippetMap:snippetMap718,719
-spanBlock:spanBlock763,764
-spanBlockX:spanBlockX770,771
-spanBlockXX:spanBlockXX776,777
-(â(â)781,782
-htmlForm:htmlForm786,787
-htmlPre:htmlPre795,796
-htmlBody:htmlBody800,801
-html_:html_811,812
-body_:body_814,815
-head_:head_817,818
-replyHtml:replyHtml821,822
-anyRoute:anyRoute851,852
-uploadPage:uploadPage886,887
-data SearchType SearchType893,894
-data SearchType = CmdT CmdT893,894
-data SearchType = CmdT | JavaT JavaT893,894
-data SearchType = CmdT | JavaT | HaskellT HaskellT893,894
-data SearchType = CmdT | JavaT | HaskellT | SnippetTSnippetT893,894
-readCmd:readCmd895,896
-groupCountFilter:groupCountFilter918,919
-optionHtml:optionHtml923,924
-responseNothing:responseNothing935,936
-responseNothingBS:responseNothingBS941,942
-responseNothingTest:responseNothingTest947,948
-replyTaskHtml:replyTaskHtml954,955
-listPageHtml:listPageHtml972,973
-listPage:listPage991,992
-responseTaskBS:responseTaskBS1000,1001
-responseCmd:responseCmd1026,1027
-responseXCmd:responseXCmd1066,1067
-responseJavaHtml:responseJavaHtml1089,1090
-responseGenePDFHtml:responseGenePDFHtml1109,1110
-responseHaskellHtml:responseHaskellHtml1118,1119
-queryLibHaskell:queryLibHaskell1144,1145
-queryLibJava:queryLibJava1165,1166
-queryLibJavaPackage:queryLibJavaPackage1182,1183
-responseSnippetHtml:responseSnippetHtml1208,1209
-responseSnippetTxt:responseSnippetTxt1243,1244
-trimBothLBS:trimBothLBS1260,1261
-geneRectMat:geneRectMat1267,1268
-receiveCode:receiveCode1293,1294
-receiveCode2:receiveCode21323,1324
-responseEditor:responseEditor1349,1350
-responseJavascript:responseJavascript1359,1360
-responseMyStyle:responseMyStyle1366,1367
-responseHtml:responseHtml1374,1375
-updateMap:updateMap1392,1393
-replyEditor replyEditor1477,1478
-responseHelp responseHelp1484,1485
-replyCssButton replyCssButton1491,1492
-wordcountReply wordcountReply1498,1499
-matrixReply matrixReply1505,1506
-replyJS replyJS1512,1513
-insertDatabase:insertDatabase1535,1536
-loginCheck:loginCheck1560,1561
-securityValidate:securityValidate1591,1592
-insertUserDB:insertUserDB1611,1612
-upload:upload1674,1675
-searchMap:searchMap1705,1706
-type ClientId ClientId1724,1725
-type Client Client1725,1726
-type State State1726,1727
-connectClient connectClient1728,1729
-withoutClient withoutClient1733,1734
-disconnectClient disconnectClient1736,1737
-nextId nextId1740,1741
-httpApp httpApp1744,1745
-listen listen1747,1748
-broadcast broadcast1751,1752
-wsApp wsApp1758,1759
+uploadPage:uploadPage1326,1327
+data SearchType SearchType1333,1334
+data SearchType = CmdT CmdT1333,1334
+data SearchType = CmdT | JavaT JavaT1333,1334
+data SearchType = CmdT | JavaT | HaskellT HaskellT1333,1334
+data SearchType = CmdT | JavaT | HaskellT | SnippetTSnippetT1333,1334
+readCmd:readCmd1335,1336
+groupCountFilter:groupCountFilter1358,1359
+optionHtml:optionHtml1363,1364
+responseNothing:responseNothing1375,1376
+responseNothingBS:responseNothingBS1381,1382
+responseNothingTest:responseNothingTest1387,1388
+replyTaskHtml:replyTaskHtml1394,1395
+listPageHtml:listPageHtml1412,1413
+listPage:listPage1431,1432
+responseTaskBS:responseTaskBS1440,1441
+responseCmd:responseCmd1466,1467
+responseXCmd:responseXCmd1504,1505
+responseJavaHtml:responseJavaHtml1527,1528
+responseGenePDFHtml:responseGenePDFHtml1547,1548
+responseHaskellHtml:responseHaskellHtml1556,1557
+queryRedisSnippet:queryRedisSnippet1575,1576
+ghcidRun:ghcidRun1598,1599
+queryLibHaskell:queryLibHaskell1634,1635
+queryLibJava:queryLibJava1678,1679
+queryLibJavaPackage:queryLibJavaPackage1697,1698
+responseSearch:responseSearch1720,1721
+responseSnippetHTML:responseSnippetHTML1760,1761
+responseSnippetHTML2:responseSnippetHTML21803,1804
+responseSnippetTxt:responseSnippetTxt1852,1853
+responseSnippetTxt2:responseSnippetTxt21871,1872
+geneRectMat:geneRectMat1904,1905
+geneHTMLTable:geneHTMLTable1936,1937
+getPreFromRedis:getPreFromRedis1976,1977
+updateCodeBlock:updateCodeBlock1999,2000
+insertCodeBlock:insertCodeBlock2029,2030
+deleteCodeBlock:deleteCodeBlock2059,2060
+updatePrefixMap:updatePrefixMap2090,2091
+splitWhenTwo:splitWhenTwo2099,2100
+getPreStyle:getPreStyle2103,2104
+updateBackground:updateBackground2151,2152
+updateTextColor:updateTextColor2194,2195
+receiveCode:receiveCode2224,2225
+receiveCode2:receiveCode22254,2255
+responseEditor:responseEditor2280,2281
+responseJavascript:responseJavascript2292,2293
+responseMyStyle:responseMyStyle2299,2300
+responseHtml:responseHtml2307,2308
+updateMap:updateMap2325,2326
+replyEditor replyEditor2486,2487
+responseHelp responseHelp2493,2494
+replyCssButton replyCssButton2500,2501
+wordcountReply wordcountReply2507,2508
+matrixReply matrixReply2514,2515
+sendHTMLTableCmd sendHTMLTableCmd2521,2522
+replyJS replyJS2528,2529
+insertDatabase:insertDatabase2551,2552
+readDatabaseCodeBlock2:readDatabaseCodeBlock22597,2598
+readDatabaseCodeBlock3:readDatabaseCodeBlock32632,2633
+readSnippet2:readSnippet22674,2675
+createCodeBlockTable:createCodeBlockTable2698,2699
+addCodeBlockTable:addCodeBlockTable2703,2704
+updateDatabaseCodeBlockTable:updateDatabaseCodeBlockTable2711,2712
+updateDatabaseNewCodeTable:updateDatabaseNewCodeTable2740,2741
+insertDatabaseNewCodeTable:insertDatabaseNewCodeTable2751,2752
+deleteDatabaseNewCodeTable:deleteDatabaseNewCodeTable2758,2759
+deleteDatabaseCodeBlockTable:deleteDatabaseCodeBlockTable2763,2764
+loginCheck:loginCheck2771,2772
+securityValidate:securityValidate2796,2797
+insertUserDB:insertUserDB2810,2811
+upload:upload2872,2873
+searchMap:searchMap2903,2904
+type ClientId ClientId2922,2923
+type Client Client2923,2924
+type State State2924,2925
+connectClient connectClient2927,2928
+withoutClient withoutClient2932,2933
+disconnectClient disconnectClient2935,2936
+nextId nextId2939,2940
+httpApp httpApp2943,2944
+listen listen2946,2947
+broadcast broadcast2950,2951
+wsApp wsApp2957,2958

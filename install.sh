@@ -69,8 +69,10 @@ if [[ "$1" == "in" ]]; then
     # Thu 28 May 01:08:15 2020 
     # KEY: rsync exclude directory
     # ignore .git dir
-    cd $sp
-    rsync -av --exclude '.git' haskellwebapp2/ $bindir
+    cd $b
+    # -L copy symbolic link as a actual file
+    rsync -Lav --exclude '.git' --exclude 'pdf' haskellwebapp2/ $bindir
+    rsync -av haskellwebapp2/pdf $bindir
 
 #    cp -av  copy symbolink too
 #

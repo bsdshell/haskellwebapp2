@@ -1,7 +1,8 @@
 os = Darwin
 testdb = myfile/bitbucket/database/test_sqlite3.db
 -- webappdb = myfile/bitbucket/database/haskellwebapp2_sqlite3.db
-webappdb = myfile/bitbucket/database/haskellwebapp2_sqlite3_test.db
+webappdb = myfile/bitbucket/database/haskellwebapp2_sqlite3.db
+-- webappdb = myfile/bitbucket/database/haskellwebapp2_sqlite3_test.db
 host = http://localhost 
 -- snippetpath = myfile/bitbucket/snippets/snippet.hs
 port = 8000

@@ -128,7 +128,7 @@ main = do
     pplist <- readSnippet (home </> snippet) 
 
     -- See src/config.txt 
-    -- Whether to read snippt.hs file to database or not
+    -- Whether to read $b/snippets/snippt.hs file to database or not
     when (useSnippet == "True") $ readSnippetToDatabase (home </> snippet) conn
 
     ref <- newIORef M.empty 

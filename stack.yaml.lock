@@ -25,6 +25,27 @@ packages:
       sha256: 807b326716828a975ee2783c3911687f47ca4c4ff3b458c2578fa71dd884be8e
   original:
     hackage: GLFW-0.5.2.5
+- completed:
+    hackage: mini-egison-1.0.0@sha256:43b1b7a25ff1c4945d3dc0264cfbe22f6ad2f59b3d6dcd2dc109289bacca34ce,2705
+    pantry-tree:
+      size: 748
+      sha256: 1da128494f7fce9e6d6ebc50f3bcf6d1938284e52ed44df3445578d197916eca
+  original:
+    hackage: mini-egison-1.0.0
+- completed:
+    hackage: egison-pattern-src-0.2.1.0@sha256:8f4e72f25abb4f6cf8f1283774ae0d5030c44dad32838de2423c8f9644529c78,4197
+    pantry-tree:
+      size: 2873
+      sha256: 1e840dc453284e8b8a284465fa3191ab82d2c72ac1382ab64be939b55c022e5b
+  original:
+    hackage: egison-pattern-src-0.2.1.0
+- completed:
+    hackage: egison-pattern-src-th-mode-0.2.1.0@sha256:4a5090587d9cacdc5d89328ef4bc4b1213c082fe87b4993c6e366a66628ca2a9,2703
+    pantry-tree:
+      size: 768
+      sha256: 7a4207f4f930c2ff1a113bf613d1224e440d0c3dc8d9ebe6c63d35ba164bf8c0
+  original:
+    hackage: egison-pattern-src-th-mode-0.2.1.0
 snapshots:
 - completed:
     size: 500539

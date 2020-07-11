@@ -47,9 +47,12 @@ packages:
 # http://hackage.haskell.org/package/http-accept-0.2/docs/Network-HTTP-Accept.html 
 extra-deps:
 - wai-util-0.8
-# - wai-util-0.7
 - http-accept-0.2 
 - GLFW-0.5.2.5
+- mini-egison-1.0.0
+- egison-pattern-src-0.2.1.0
+- egison-pattern-src-th-mode-0.2.1.0
+
 
 # flags: {}
 

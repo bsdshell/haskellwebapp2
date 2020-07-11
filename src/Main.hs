@@ -129,7 +129,7 @@ main = do
 
     -- See src/config.txt 
     -- Whether to read $b/snippets/snippt.hs file to database or not
-    when (useSnippet == "True") $ readSnippetToDatabase (home </> snippet) conn
+    when (read useSnippet :: Bool) $ readSnippetToDatabase (home </> snippet) conn
 
     ref <- newIORef M.empty 
     -- newList <- readDatabaseCodeBlock2 conn

@@ -63,5 +63,16 @@ executable haskellwebapp2
                        hedis,
                        OpenGL,
                        GLFW,
-                       ghcid
+                       ghcid,
+                       hashable,
+                       ansi-terminal,
+                       mysql-haskell,
+                       io-streams,
+                       mini-egison,
+                       unix-time,
+                       diagrams-lib,
+                       diagrams-svg,
+                       diagrams,
+                       mysql-haskell,
+                       io-streams
 

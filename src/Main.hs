@@ -120,9 +120,10 @@ main = do
     pp userinputdb
     let host = lookupJust "host" $ lookupJust os configMap
     let snippet = lookupJust "snippetpath" $ lookupJust os configMap
-    let port = lookupJust "port" $ lookupJust os configMap
+    let portStr = lookupJust "port" $ lookupJust os configMap
     let useSnippet = lookupJust "readSnippetFile" $ lookupJust os configMap
 
+    let port = read portStr :: Int 
     conn <- open $ home </> userinputdb 
     createCodeBlockTable conn
     pplist <- readSnippet (home </> snippet) 
@@ -151,8 +152,8 @@ main = do
     pp "http starting"
     pp "test it"
     pp WC.hostURL 
-    pp WC.host 
-    pp WC.port 
+    pp $ "NOTE port => " ++ (show port) 
+     
     -- run WC.port (app conn ref)
-    run WC.port (app2 undefined conn ref)
+    run port (app2 undefined conn ref)
     close conn

@@ -34,7 +34,6 @@ import Network.Wai.Parse
 import Blaze.ByteString.Builder.Char.Utf8 (fromString)
 import Data.ByteString.Builder (byteString, Builder)
 
-
 import Language.Haskell.Ghcid
 
 import qualified Data.Text.Lazy                 as DL 

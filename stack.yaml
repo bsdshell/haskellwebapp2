@@ -52,7 +52,7 @@ extra-deps:
 - mini-egison-1.0.0
 - egison-pattern-src-0.2.1.0
 - egison-pattern-src-th-mode-0.2.1.0
-
+- pretty-terminal-0.1.0.0
 
 # flags: {}
 

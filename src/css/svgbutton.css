@@ -1,0 +1,21 @@
+#header-search {
+    width: 200px;
+    background: white;
+    color: white;
+    font-size: 14pt;
+    border: 0px solid;
+    outline: 0;
+    vertical-align: -50%;
+}
+
+.header-view-logo {
+    vertical-align: middle;
+}
+
+#search-icon {
+    fill:black;
+}
+
+#search-button {
+  width: 60px;
+}

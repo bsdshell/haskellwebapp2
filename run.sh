@@ -54,6 +54,12 @@ sleep 2
 # http://docs.haskellstack.org/en/stable/GUIDE/#flags-and-ghc-options 
 #
 # no optimization 
-# stack build --ghc-options=-O0 haskellwebapp2 
-stack build --ghc-options=-O2 haskellwebapp2_test
-stack exec haskellwebapp2_test
+# stack build --ghc-options=-O0 haskellwebapp2
+
+cmd1="stack build --ghc-options=-O2 haskellwebapp2_test"
+cmd2="stack exec haskellwebapp2_test"
+
+printBox 4 "$cmd1"
+printBox 5 "$cmd2"
+eval "$cmd1"
+eval "$cmd2"

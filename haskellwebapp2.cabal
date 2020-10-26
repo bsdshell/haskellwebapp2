@@ -74,5 +74,6 @@ executable haskellwebapp2_test
                        diagrams-svg,
                        diagrams,
                        mysql-haskell,
-                       io-streams
-
+                       rainbow,
+                       uri-encode,
+                       pretty-terminal

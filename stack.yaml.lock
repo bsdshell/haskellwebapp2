@@ -46,6 +46,13 @@ packages:
       sha256: 7a4207f4f930c2ff1a113bf613d1224e440d0c3dc8d9ebe6c63d35ba164bf8c0
   original:
     hackage: egison-pattern-src-th-mode-0.2.1.0
+- completed:
+    hackage: pretty-terminal-0.1.0.0@sha256:e9135d86ebb2a8e3aaf5a79088de4628dbd49988388e0fbfc26c5ecb3c399ad9,1638
+    pantry-tree:
+      size: 385
+      sha256: fecec01e618890c284e57cb873b8f9531f479562b7cf08497aef097da3ef90ec
+  original:
+    hackage: pretty-terminal-0.1.0.0
 snapshots:
 - completed:
     size: 500539

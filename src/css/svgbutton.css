@@ -14,8 +14,12 @@
 
 #search-icon {
     fill:black;
+    width: 40px;
+    height: 40px;
+    /*! background: -webkit-repeating-radial-gradient; */
+    color: brown;
 }
 
 #search-button {
-  width: 60px;
+  /*width: 60px;*/
 }

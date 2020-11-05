@@ -1,16 +1,600 @@
-html,body {
-  height:10%;
-  width:10%;
-  margin:0;
-}
-body {
-  display:flex;
-}
-form {
-margin:auto;/* nice thing of auto margin if display:flex; it center both horizontal and vertical :) */
+.outer-container {
+    position :relative;
+    display: block;
+    width: 100%; /* This could be ANY width */
+    height: 100%; /* This could be ANY height */
+    background: #484E4C;
 }
 
-.input-element{
-height: 100px !important;
-width: 400px;
+.inner-container {
+    display: table-cell;
+    vertical-align:middle;
+    text-align: center;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
 }
+.centered-content {
+    display: inline-block;
+    text-align: left;
+    background: #FBF7F7;
+    padding: 10px;
+    border: 1px solid #080708;
+    padding-left: 16px;
+    padding-right: 10px;
+}
+.fs{
+    font-size:16px;
+}
+
+.haskellc{
+    background-color: #EFF5E9;
+    text-align:center;
+    box-shadow: 0px 0px 0px 0px #888;
+    font-family: cursive;
+    color: #898A89;
+}
+
+.javac{
+    background-color:#FA8258;
+}
+
+.haskellBox{
+    width:100%;
+}
+
+/*
+table.center {
+    border: 1px solid black;
+    margin-left:auto; 
+    margin-right:auto;
+}
+*/
+
+table.fixed { 
+    table-layout:fixed; 
+
+    width:1000px; 
+    word-break:break-all;
+}
+
+table td, th{
+    border: 1px solid #7d7355;
+    font-size: 20px;
+    color: #312e20;
+    background: #31302f;
+    /*! font-synthesis: weight; */
+}
+
+pre.cmd{
+     font-size: 20px;
+     background: rgba(56, 136, 11, 0.86);
+     color: rgb(254, 255, 254);
+     border-radius: 2px;
+     padding: 2px, 2px, 2px, 1px;
+     font-family: monospace;
+     /* padding: 4px; */
+     padding-right: 5px;
+     padding-left: 4px;
+     display: inline-flex;
+}
+
+
+.latexExample{
+    background: #575957;
+    min-width:400px;        /* Minimum width of layout - remove line if not required */
+    margin: 0 auto;
+    max-width: 1200px;
+    border: 1pt solid #afbb7f;
+    padding: 4px;
+    color: black;
+}
+
+.source{
+     font-size: 29px;
+     background: rgba(20, 80, 26, 0.86);
+     color: rgb(218, 215, 216);
+     border-radius: 2px;
+     padding: 2px, 2px, 2px, 1px;
+     font-family: monospace;
+     padding-right: 10px;
+     padding-left: 10px;
+     padding-bottom: 10px;
+     padding-top: 10px;
+     display: inline-flex;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.bo{
+     font-family: 'Courier New', Courier, Fixed;
+     color:black;
+     font-weight:bold;
+     font-size:16px;
+}
+
+.wbold{
+     font-size: 18px;
+     //color: rgb(179, 150, 36);
+     color: #ffa310;
+}
+
+.redd{
+     color: #FF0000;
+}
+
+.keyw{
+     font-size: 30px;
+     //color: rgb(179, 150, 36);
+     color: #10140f;
+     text-shadow: 2px 2px #827db4;
+}
+
+.microlight {
+    font-family : monospace;
+    white-space : pre;
+}
+
+.box {
+    border: 1px solid while;
+    margin-top:1px;
+    margin-bottom:1px;
+    margin-left:1px;
+    margin-right:1px;
+    float:auto;
+}
+
+.box1 {
+    width: 100%;
+    height: 100px;
+    border: 0px solid #35353A;
+    box-sizing:border-box;
+    margin-left: 0%;
+    margin-top: 21%;
+    font-size: 40px;
+    font-family: cursive;
+    text-align: center;
+    vertical-align: middle;
+    color: #818181;
+    background: #ffffff;
+}
+
+.box2 {
+    width: 300px;
+    height: 100px;    
+    padding: 50px;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+.tcen{
+    float:right;
+    width:80%;
+    font-size:16px;
+}
+.logo{
+    text-align:center;
+    font-size: 40px;
+    /* font-size:16px; */
+    font-family: cursive;
+    margin-top: 200px;
+    margin-left:auto;
+    margin-right:auto;
+    background: #fdfdfb;
+    color: beige;
+}
+
+
+.cen{
+    text-align:center;
+    font-size:16px;
+    margin-left:auto;
+    margin-right:auto;
+    background: #fdfdfb;
+}
+
+.codebg{
+    //
+    color: rgba(37, 43, 14, 0.57);
+    //
+    backgroundrgb(239, 245, 233): wheat;
+    //
+    background: rgb(239, 245, 233);
+    margin:auto;
+    /* width:80%; */
+    color: rgb(236, 237, 241);
+    /* font-size:18px; */
+    background: #444;
+    margin-left: 0px;
+    /* text-indent: 10px; */
+    padding-left: 40px;
+    font-family: 'Courier New', Courier, Fixed;
+    line-height: 20px;
+    padding: 4px 4px 4px 40px;
+    border-radius: 3px;
+    display: block;
+    font-style: normal;
+}
+
+pre.textbox{
+    //
+    color: rgba(37, 43, 14, 0.57);
+    //
+    backgroundrgb(239, 245, 233): wheat;
+    //
+    background: rgb(239, 245, 233);
+    margin:auto;
+    /* width:80%; */
+    color: aliceblue;
+    /* font-size:18px; */
+    background: green;
+    margin-left: 0px;
+    /* text-indent: 10px; */
+    padding-left: 40px;
+    font-family: 'Courier New', Courier, Fixed;
+    line-height: 20px;
+    padding: 4px 4px 4px 40px;
+    border-radius: 0px;
+    display: block;
+    font-style: normal;
+    white-space:pre-line;
+}
+
+pre.mycode{
+    white-space: pre-line;
+    font-family: "Courier New", monospace;
+    background: #f9eedb;
+}
+
+pre.bigcode{
+    /*white-space: pre-line;*/
+    font-family: "Courier New", monospace;
+    font-size:27px;
+    background: #f3d49f33;
+    color: #060901;
+    padding-left: 4px;
+}
+
+pre.cc{
+    white-space: pre;
+    font-family: "Courier New", monospace;
+    padding-left: 0px;
+    /* margin-left: -115px; */
+    /*background: #ffffff;*/
+    background: #f3d49f33;
+    color: #060a10;
+}
+
+/* .mytitle{ */
+/* margin:auto; */
+/* width: 100%; */
+/* color: #000000; */
+/* font-size: 24px; */
+/* text-align:center; */
+/* background: #ade0a6; */
+/* } */
+
+.mytitle{
+    margin:auto;
+    width: 100%;
+    color: #000000;
+    font-size: 24px;
+    text-align:center;
+    /*! font-weight: 600; */
+    background: #e8aad2;
+    font-family:serif
+}
+
+.myarticle{
+    background: #FFFFFF;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.mytext{
+    margin:auto; 
+    width: 100%;
+    color: rgba(33, 30, 20, 0.98);
+    font-size: 17px;
+    background: #fffffb;
+    margin-left: 0px;
+    /* text-indent: 10px; */
+    padding-left: 2px;
+    font-family: monospace;
+    /* border-radius: 3px; */
+/* display: block; */
+    font-style: normal;
+    /* border-left: #674b4b; */
+    /* 
+    Sat Dec  8 21:40:35 2018 
+    Try to wrap the text if it is outside of div?
+    */
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;
+}
+
+.mybutton{
+    /*! margin:auto; */
+    width:100%;
+    color: #e1cae3;
+    font-size: 30px;
+    text-align:center;
+    font-weight: 600;
+}
+
+
+/* .mytext{ */
+/* margin:auto; */
+/* /* width:80%; */ */
+/* color: rgba(33, 30, 20, 0.98); */
+/* /* font-size:18px; */ */
+/* background: #e2f1e2; */
+/* margin-left: 0px; */
+/* /* text-indent: 10px; */ */
+/* padding-left: 40px; */
+/* font-family: 'Courier New', Courier, Fixed; */
+/* line-height: 20px; */
+/* padding: 4px 4px 4px 4px; */
+/* border-radius: 3px; */
+/* display: block; */
+/* font-style: normal; */
+/* border-left: red; */
+/* /*  */
+/* Sat Dec  8 21:40:35 2018  */
+/* Try to wrap the text if it is outside of div? */
+/* */ */
+/* white-space: pre-wrap;       /* Since CSS 2.1 */ */
+/* white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */ */
+/* white-space: -pre-wrap;      /* Opera 4-6 */ */
+/* white-space: -o-pre-wrap;    /* Opera 7 */ */
+/* word-wrap: break-word; */
+/* } */
+
+
+.mysubtitle{
+   margin:auto;
+    width:100%;
+    color: #6C824D;
+    font-size:20px;
+    text-align:left;
+}
+
+.mytable{
+    border:1px solid gray;
+    margin:auto;
+    width:11%;
+    color: #919C88;
+    font-size:18px;
+}
+
+.centered{
+    margin-left:21%;
+    margin-right:auto;
+}
+
+
+.note{
+    /*width: 100%;*/
+    border:0px solid gray;
+    padding: 4px;
+    margin-top:2px;
+    /*margin-left: 0.1%;*/
+    font-size: 17px;
+    background: #ffffff;
+    /* color: floralwhite; */
+}
+
+.latexbox{
+    /* width:90%; */
+    border: 1px solid #151313;
+    padding:4px;
+    margin-top: 2px;
+    /* margin-left:4%; */
+    font-size: 20px;
+    max-width: 1000px;
+    background: rgba(24, 27, 21, 0.73);
+    margin: auto;
+    color: #4aca27;
+}
+
+.mathdef{
+    margin-top: 1px;
+    border: 1px solid gray;
+    padding: 2px;
+    font-size:14px;
+    background:#FFFFFF;
+}
+
+.mathdef_box1{
+    /*width:80%;*/
+    border:1px solid gray;
+    padding: 4px;
+    margin-top: 2px;
+    /*margin-left:14%;*/
+    font-size:14px;
+    background:#FFFFFF;
+}
+
+.mathdef_box2{
+    /* width:80%; */
+    border: 1px solid gray;
+    padding: 4px;
+    margin-top: 2px;
+    /* margin-left:11%; */
+    font-size:16px;
+    background:#324226;
+    font-size:18px;
+}
+
+.codebox{
+    background-color: black;
+    color:white;
+    border-radius: 2px;
+    font-size:20px;
+    font-family:"Lucida Console", Courier, monospace;
+    margin-top:4px;
+    margin-bottom:4px;
+    margin-left:4px;
+    margin-right:4px;
+
+}
+
+.mathdef_box3{
+    width:98%;
+    border: 1px solid gray;
+    margin-top: 2px;
+    padding: 4px;
+    margin-left:8%;
+    font-size:14px;
+    background:#FFFFFF;
+}
+
+
+.mathbox {
+    border: 1px solid green;
+    margin-top:1px;
+    margin-bottom:1px;
+    margin-left:1px;
+    margin-right:1px;
+    background-color:#F8F7DB;
+    float:auto;
+}
+
+.mytextbox{
+    border: 1px solid #E8E0E0;
+    padding:1px;
+    margin-top:1px;
+    margin-bottom:1px;
+    margin-left:1px;
+    margin-right:1px;
+    font-size:16px;
+}
+
+.bigtext{
+    font-weight: 500;
+    color: rgb(10, 10, 10);
+    background: rgba(197, 133, 9, 0.62);
+}
+
+.bigsyntax{
+    margin:auto;
+    width:100%;
+    color: hotpink;
+    font-size: 30px;
+    /*text-align:center;*/
+    font-weight: 600;
+    background: #FFf;
+    font-weight: 500;
+    color: rgb(207, 44, 171);
+}
+
+
+
+.cmdoutbox{
+    background: rgba(7, 10, 10, 0.66);
+    font-size: 20px;
+    box-shadow:3px 3px 5px 1px #888;
+    font-family:"Lucida Console", Courier, monospace;
+    line-height:1.2em;
+    letter-spacing:0.05em;
+    border-radius: 10px;
+    padding:1em;
+    font-weight:500;
+    color: #E4D333;
+    text-align:center;
+}
+
+.cmdbox{
+    color:rgba(104, 236, 69, 0.71); 
+    border-radius:0px; 
+    padding:2px;
+}
+
+.lbox{
+    background: #EFF5E9;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px 2px #150909;
+    font-family:"Lucida Console", Courier, monospace;
+    line-height:1.2em;
+    letter-spacing:0.05em;
+    border-radius: 0px;
+    color: #808080;
+    text-align:left;
+    margin: 0px 1px;
+}
+
+.tooltip-wrap {
+  position: relative;
+  margin-right: 900px;
+  margin-left: 4px;
+  margin-top: 4px;
+  /*! margin-bottom: 4px; */
+  /*! padding-left: 0px; */
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background: #fcefe6;
+  display: inline-block;
+  min-width: 300px;
+}
+
+.tooltip-wrap .tooltip-content {
+  display: none;
+  position: absolute;
+  bottom: 0%;
+  left: 101%;
+  background-color: #fafcfc;
+  padding: 0px;
+  border: 0px solid brown;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+.tooltip-wrap:hover .tooltip-content {
+  display: inline-block;
+}
+
+.button {
+    background-color: #a6ab53;
+    border: none;
+    color: #fbf9f7;
+    padding: 6px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 30%;
+    margin-left: 35%;
+}
+
+#red {
+    color: red;
+    font-family: monospace;
+    font-weight:bold;
+}
+
+#blue {
+    color: blue;
+    font-family: monospace;
+    font-weight:bold;
+}
+
+#square {
+	width: 20px;
+	height: 20px;
+	background: pink;
+}
+
+#wp{
+    white-space: pre-line;
+}
+
+

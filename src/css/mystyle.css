@@ -30,6 +30,8 @@ pre {
     border-width: thin;
     color: #52a45f;
     /*! background: blanchedalmond; */
+    /*! margin-left: 0px; */
+    padding-left: 4px;
 }
 
 textarea {

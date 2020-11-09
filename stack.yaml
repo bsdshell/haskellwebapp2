@@ -17,7 +17,11 @@
 #
 # resolver: ./custom-snapshot.yaml
 # resolver: https://example.com/snapshots/2018-01-01.yaml
-resolver: lts-13.28
+# resolver: lts-13.28
+# 
+#   
+# ghc 8.8.4, test ~/.local/bin/haskell-language-server
+resolver: lts-16.17
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
@@ -53,6 +57,14 @@ extra-deps:
 - egison-pattern-src-0.2.1.0
 - egison-pattern-src-th-mode-0.2.1.0
 - pretty-terminal-0.1.0.0
+
+# resolver 16.17  ghc 8.8.4
+- mysql-haskell-0.8.4.3
+- sqlite-simple-0.4.18.0
+- wai-predicates-1.0.0
+- direct-sqlite-2.3.26
+- tcp-streams-1.0.1.1
+- wire-streams-0.1.1.0
 
 # flags: {}
 

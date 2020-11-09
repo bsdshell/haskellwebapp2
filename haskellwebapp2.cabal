@@ -62,7 +62,6 @@ executable             haskellwebapp2
                        neat-interpolation,
                        hedis,
                        OpenGL,
-                       GLFW,
                        ghcid,
                        hashable,
                        ansi-terminal,

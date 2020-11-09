@@ -1,14 +1,11 @@
-{-# LANGUAGE QuasiQuotes       #-}
-{-# LANGUAGE MultiWayIf #-}
+-- {-# LANGUAGE QuasiQuotes       #-}
+-- {-# LANGUAGE MultiWayIf #-}
 
 module Main where
 
 import PortableLines 
-import Text.RawString.QQ
 
 import Data.Typeable (typeOf)
-import Network.Wai
-import Network.HTTP.Types
 import Control.Monad
 import Data.Char
 import Data.Maybe
@@ -109,6 +106,8 @@ configFile = "./config.txt"
 
 lookupJust s m = fromJust $ M.lookup s m
 
+
+                 
 main :: IO ()
 main = do
     home <- getEnv "HOME"
@@ -151,8 +150,10 @@ main = do
     pp "http starting"
     pp "test it"
     pp WC.hostURL 
-    pp $ "NOTE port => " ++ (show port) 
-     
+    pp $ "NOTE port => " ++ show port
+
+                
+        
     -- run WC.port (app conn ref)
     run port (app2 undefined conn ref)
     close conn

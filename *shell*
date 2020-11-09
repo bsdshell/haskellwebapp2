@@ -1,0 +1,987 @@
+Sat  7 Nov 2020 22:24:39 PST
+		Concate all histories using allHistory() in AronLib.sh
+\$(uname) => Darwin
+Identity added: /Users/cat/.ssh/id_rsa_new (/Users/cat/.ssh/id_rsa_new)
+ 
+~/myfile/bitbucket/haskellwebapp2/src
+cat [3]$ cd ..
+ 
+~/myfile/bitbucket/haskellwebapp2
+cat [3]$ ghcid_run.sh 
+		[/Users/cat/myfile/bitbucket/haskellwebapp2]
+		[/Users/cat/myfile/bitbucket/haskellwebapp2]
+		ghcid --command 'stack ghci'
+Loading stack ghci ...
+Using main module: 1. Package `haskellwebapp2' component haskellwebapp2:exe:haskellwebapp2 with main-is file: /Users/cat/myfile/bitbucket/haskellwebapp2/src/Main.hs
+haskellwebapp2> configure (exe)
+Configuring haskellwebapp2-0.1.0.0...
+haskellwebapp2> initial-build-steps (exe)
+The following GHC options are incompatible with GHCi and have not been passed to it: -O2
+Configuring GHCi with the following packages: haskellwebapp2
+GHCi, version 8.6.5: http://www.haskell.org/ghc/  :? for help
+[1 of 1] Compiling AronModule       ( AronModule.hs, interpreted )
+Ok, one module loaded.
+[1 of 2] Compiling AronModule       ( /Users/cat/myfile/bitbucket/haskellwebapp2/src/AronModule.hs, interpreted )
+[2 of 2] Compiling AronGraphic      ( AronGraphic.hs, interpreted )
+
+AronGraphic.hs:15:1: error:
+    Could not find module ‘Graphics.UI.GLUT’
+    Perhaps you meant
+      Graphics.UI.GLFW (from GLFW-0.5.2.5)
+      Graphics.GLU (needs flag -package-key GLURaw-2.0.0.4)
+    Use -v to see a list of the files searched for.
+   |
+15 | import qualified                            Graphics.UI.GLUT as GLUT
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Failed, one module loaded.
+[1 of 2] Compiling AronModule       ( /Users/cat/myfile/bitbucket/haskellwebapp2/src/AronModule.hs, interpreted )
+[2 of 2] Compiling AronAlias        ( AronAlias.hs, interpreted )
+Ok, two modules loaded.
+Loaded GHCi configuration from /Users/cat/myfile/bitbucket/haskell_config/ghci.conf
+[1 of 9] Compiling AronHtml         ( AronHtml.hs, interpreted ) [flags changed]
+[4 of 9] Compiling AronHtml2        ( AronHtml2.hs, interpreted )
+[5 of 9] Compiling GenePDFHtmlLib   ( GenePDFHtmlLib.hs, interpreted )
+[6 of 9] Compiling PortableLines    ( PortableLines.hs, interpreted )
+[7 of 9] Compiling WaiConstant      ( WaiConstant.hs, interpreted )
+[8 of 9] Compiling WaiLib           ( WaiLib.hs, interpreted )
+[9 of 9] Compiling Main             ( /Users/cat/myfile/bitbucket/haskellwebapp2/src/Main.hs, interpreted )
+Ok, 9 modules loaded.
+Loaded GHCi configuration from /private/var/folders/5l/j6pwwv411q1blk7nxb7nnb7c0000gn/T/haskell-stack-ghci/a357ab9c/ghci-script
+]0;1 error - haskellwebapp2
+AronGraphic.hs:15:1: error:
+    Could not find module ‘Graphics.UI.GLUT’
+    Perhaps you meant
+      Graphics.UI.GLFW (from GLFW-0.5.2.5)
+      Graphics.GLU (needs flag -package-key GLURaw-2.0.0.4)
+    Use -v to see a list of the files searched for.
+   |
+15 | import qualified                            Graphics.UI.GLUT as GLUT
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reloading...
+  /private/var/folders/5l/j6pwwv411q1blk7nxb7nnb7c0000gn/T/haskell-stack-ghci/a357ab9c/ghci-script
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]0;All good, at 22:25:53 - haskellwebapp2
+All good (9 modules, at 22:25:53)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reloading...
+  /Users/cat/myfile/bitbucket/haskelllib/WaiLib.hs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]0;1 error - haskellwebapp2
+WaiLib.hs:2096:15-21: error:
+    • Variable not in scope: respond :: Response -> IO ResponseReceived
+    • Perhaps you meant ‘response’ (line 2087)
+     |
+2096 |               respond sendHTMLTableCmd              
+     |               ^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reloading...
+  /Users/cat/myfile/bitbucket/haskelllib/WaiLib.hs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]0;2 errors - haskellwebapp2
+WaiLib.hs:2096:15: error:
+    Variable not in scope: k :: t0 -> Response -> IO ResponseReceived
+     |
+2096 |               k respond sendHTMLTableCmd              
+     |               ^
+WaiLib.hs:2096:17-23: error:
+    • Variable not in scope: respond
+    • Perhaps you meant ‘response’ (line 2087)
+     |
+2096 |               k respond sendHTMLTableCmd              
+     |                 ^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reloading...
+  /Users/cat/myfile/bitbucket/haskelllib/WaiLib.hs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]0;1 error - haskellwebapp2
+WaiLib.hs:2096:15-21: error:
+    • Variable not in scope: respond :: Response -> IO ResponseReceived
+    • Perhaps you meant ‘response’ (line 2087)
+     |
+2096 |               respond sendHTMLTableCmd              
+     |               ^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reloading...
+  /Users/cat/myfile/bitbucket/haskelllib/WaiLib.hs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]0;All good, at 22:27:55 - haskellwebapp2
+All good (9 modules, at 22:27:55)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reloading...
+  /Users/cat/myfile/bitbucket/haskelllib/WaiLib.hs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]0;All good, at 22:29:40 - haskellwebapp2
+All good (9 modules, at 22:29:40)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reloading...
+  /Users/cat/myfile/bitbucket/haskelllib/WaiLib.hs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]0;1 error - haskellwebapp2
+WaiLib.hs:2098:17-18: error:
+    • Couldn't match expected type ‘BL.ByteString’
+                  with actual type ‘BS.ByteString’
+      NB: ‘BS.ByteString’ is defined in ‘Data.ByteString.Internal’
+          ‘BL.ByteString’ is defined in ‘Data.ByteString.Lazy.Internal’
+    • In the third argument of ‘responseLBS’, namely ‘bs’
+      In the second argument of ‘($)’, namely
+        ‘responseLBS status200 [("Content-Type", "text/html")] bs’
+      In a stmt of a 'do' block:
+        response $ responseLBS status200 [("Content-Type", "text/html")] bs
+     |
+2098 |                 bs
+     |                 ^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reloading...
+  /Users/cat/myfile/bitbucket/haskelllib/WaiLib.hs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]0;1 error - haskellwebapp2
+WaiLib.hs:2100:1-3: error:
+    Parse error: module header, import declaration
+    or top-level declaration expected.
+     |
+2100 | ikk
+     | ^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+n

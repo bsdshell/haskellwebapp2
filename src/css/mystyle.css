@@ -20,7 +20,7 @@ pre {
     display: block;
     font-family: monospace;
     font-size: 14pt;
-    white-space: pre;
+    /*! white-space: pre; */
     margin-top: 1px;
     /* margin-right: 1px; */
     margin-bottom: 1px;
@@ -30,7 +30,6 @@ pre {
     border-width: thin;
     color: #52a45f;
     /*! background: blanchedalmond; */
-    /*! margin-left: 0px; */
     padding-left: 4px;
 }
 
@@ -47,9 +46,9 @@ textarea {
     outline: 0;
     box-shadow: none;
     border-radius: 0;
-    box-sizing: content-box;
+    /*! box-sizing: content-box; */
 /* background: #e8e4db; */
-    background: #78826d;
+    background: #848c7b;
     padding: 1px 0;
     resize: yes;
 }

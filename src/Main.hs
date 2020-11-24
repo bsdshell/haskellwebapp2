@@ -151,9 +151,9 @@ main = do
     pp "test it"
     pp WC.hostURL 
     pp $ "NOTE port => " ++ show port
-
-                
         
+                       
     -- run WC.port (app conn ref)
     run port (app2 undefined conn ref)
     close conn
+    

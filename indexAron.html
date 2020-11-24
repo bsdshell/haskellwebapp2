@@ -46,14 +46,21 @@
     window.onload = function(){
         document.getElementById('tmpCode').innerHTML = tmpCode;
     }
+  
+  function clickMe(){
+      alert(editor.getValue());
+  }
 </script>
+
 <div id="tmpCode">
 </div>
 
+<!-- KEY: ace, get editor data, editor text, editor value -->
 <form action="/action_page.php">
   First name:<br><input type="text" name="firstname" value="Mickey"><br>
   <input type="submit" value="Submit">
 </form>
 
+<input type="button" value="Open a Popup Window" onclick="clickMe();">
 </body>
 </html>

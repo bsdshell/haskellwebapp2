@@ -13,7 +13,7 @@ build-type:          Simple
 cabal-version:       >=1.10
 extra-source-files:  README.md
 
-executable             haskellwebapp2
+executable             haskellwebapp2_test
   hs-source-dirs:      src
   main-is:             Main.hs
   ghc-options:         -O2 
@@ -75,4 +75,6 @@ executable             haskellwebapp2
                        mysql-haskell,
                        rainbow,
                        uri-encode,
-                       pretty-terminal
+                       criterion-measurement,
+                       pretty-terminal,
+                       strict

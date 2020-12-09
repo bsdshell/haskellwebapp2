@@ -130,6 +130,7 @@ main = do
     -- Whether to read $b/snippets/snippt.hs file to database or not
     when (read useSnippet :: Bool) $ readSnippetToDatabase (home </> snippet) conn
 
+    pdfRef <- newIORef M.empty
     ref <- newIORef M.empty 
     -- newList <- readDatabaseCodeBlock2 conn
     newList <- readDatabaseCodeBlock3 conn 
@@ -154,6 +155,6 @@ main = do
         
                        
     -- run WC.port (app conn ref)
-    run port (app2 undefined conn ref)
+    run port (app2 undefined conn ref pdfRef)
     close conn
     

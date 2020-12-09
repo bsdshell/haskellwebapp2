@@ -1,0 +1,12 @@
+# Fdb version 3
+["pdflatex"] 1606265186 "/Users/cat/myfile/bitbucket/math/latex.tex" "latex.pdf" "latex" 1606265186
+  "/Users/cat/myfile/bitbucket/math/latex.tex" 1606265186 183 6791b904dc2db3921fbe8a6ca585cca5 ""
+  "/opt/local/etc/texmf/texmf.cnf" 1356257316 29842 6babcf7c3298e6041d07a408fc6a468e ""
+  "/opt/local/share/texmf-texlive-dist/tex/latex/base/article.cls" 1308083286 20571 b8bd218bf2e18b4f5817ee643cd9c515 ""
+  "/opt/local/share/texmf-texlive-dist/tex/latex/base/size10.clo" 1308083286 9042 248dfba326a1b8733d6bb8e0a3ac1e49 ""
+  "/opt/local/var/db/texmf/web2c/pdftex/pdflatex.fmt" 1356257832 1745693 13662d806b77094039b44e99a9f13cec ""
+  "aronlib.tex" 0 -1 0 ""
+  "latex.aux" 1606264714 8 a94a2480d3289e625eea47cd1b285758 ""
+  (generated)
+  "latex.log"
+  "latex.pdf"

@@ -1,0 +1,9 @@
+PWD /Users/cat/myfile/bitbucket/haskellwebapp2
+INPUT /opt/local/etc/texmf/texmf.cnf
+INPUT /opt/local/var/db/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /Users/cat/myfile/bitbucket/math/latex.tex
+OUTPUT latex.log
+INPUT /opt/local/share/texmf-texlive-dist/tex/latex/base/article.cls
+INPUT /opt/local/share/texmf-texlive-dist/tex/latex/base/article.cls
+INPUT /opt/local/share/texmf-texlive-dist/tex/latex/base/size10.clo
+INPUT /opt/local/share/texmf-texlive-dist/tex/latex/base/size10.clo

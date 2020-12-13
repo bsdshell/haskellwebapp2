@@ -2,90 +2,90 @@
 <html lang="en">
 <head>
   <title>ACE in Action</title>
-  
+  <!-- <link rel="stylesheet" href="leftRightDiv.css"> -->
   <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
   <style type="text/css" media="screen">
 
-    .butSize {
-    width : 100px;
-    height: 40px;
-    }
-    
-    .rowBox {
-    display: flex;
-    align-items: stretch;
-    }
-    
-    #editor { 
-      position: relative;
-      margin-right: 10px;
-      margin-left: 10px;
-      margin-top: 1px;
-      padding-right: 0px;
-      padding-bottom: 10px;
-      padding-top: 10px;
-      background: #FFFFFF;
-    }
-    #container {
-	height: 100%;
-	width: 100%;
-	display: flex;
-    }
-    #leftThing {
-	width: 50%;
-	background-color: gray;
-    }
-    #rightThing {
-	width: 50%;
-	background-color: black;
-    }
-    
-</style>
+   .butSize {
+       width : 100px;
+       height: 40px;
+   }
+   
+   .rowBox {
+       display: flex;
+       align-items: stretch;
+   }
+
+   #editor { 
+       position: relative;
+       margin-right: 10px;
+       margin-left: 10px;
+       margin-top: 1px;
+       padding-right: 0px;
+       padding-bottom: 10px;
+       padding-top: 10px;
+       background: #FFFFFF;
+   }
+   #container {
+       height: 100%;
+       width: 100%;
+       display: flex;
+   }
+   #leftThing {
+       width: 50%;
+       background-color: gray;
+   }
+   #rightThing {
+       width: 50%;
+       background-color: black;
+   }
+   
+   
+  </style>
 </head>
 <body>
   
-  <div class="rowBox">
-    <div>
-      <input class="butSize" type="button" value="Compile" onclick="compileClick();">
+    <div class="rowBox">
+	<div>
+	    <input class="butSize" type="button" value="Compile" onclick="compileClick();">
+	</div>
+	<div>
+	    <input class="butSize" type="button" value="Save" onclick="saveClick();"><br>
+	</div>
     </div>
-    <div>
-      <input class="butSize" type="button" value="Save" onclick="saveClick();"><br>
-    </div>
-  </div>
-  
+    
     <div id="container">
-    <div id="leftThing">
-      <div id="editor">
-      \documentclass[UTF8]{article}
-      % Update Tue Dec 18 12:55:04 2018 
-      % Move include head to aronlib.tex
-      % Add aronlib.tex
-      \usepackage{xcolor}
-      \usepackage{amsmath}
-      \begin{document}
-      \pagecolor{black}
-      \color{green}
-      Hello World OK
-      \[
-	 \begin{pmatrix}
-	 a & b \\
-	 c & d \\
-	 c & d
-	 \end{pmatrix}
-      \]
-      %
-      \end{document}
-      </div><br>
-    <input type="text" id="idurl" style="display:none;font-size:18px;width:100%;" class="hide" value="Mandlebrotset" />
-    
-    <textarea name="textarea" id="iddebug"   rows="5" cols="30" style="display:block;font-size:18px;width:100%;">I am a disabled textarea</textarea>
-    
-       </div>
-       <div id="rightThing">
-	 <canvas id="the-canvas"></canvas>
+	<div id="leftThing">
+	    <div id="editor">
+		\documentclass[UTF8]{article}
+		% Update Tue Dec 18 12:55:04 2018 
+		% Move include head to aronlib.tex
+		% Add aronlib.tex
+		\usepackage{xcolor}
+		\usepackage{amsmath}
+		\begin{document}
+		\pagecolor{black}
+		\color{green}
+		Hello World OK
+		\[
+		\begin{pmatrix}
+		a & b \\
+		c & d \\
+		c & d
+		\end{pmatrix}
+		\]
+		%
+		\end{document}
+	    </div><br>
+	    <input type="text" id="idurl" style="display:none;font-size:18px;width:100%;" class="hide" value="Mandlebrotset" />
+	    <textarea name="textarea" id="iddebug"   rows="5" cols="30" style="display:block;font-size:18px;width:100%;">I am a disabled textarea</textarea>
+	    
+	</div>
+	<div id="rightThing">
+	    <canvas id="the-canvas"></canvas>
+	</div>
+	hidden123
     </div>
-    hidden123
-</div>
 
 
   <script src="ace.js" type="text/javascript" charset="utf-8"></script>
@@ -145,18 +145,16 @@ document.addEventListener('readystatechange', event => {
 
     // When HTML/DOM elements are ready:
     if (event.target.readyState === "interactive") {   //does same as:  ..addEventListener("DOMContentLoaded"..
-	// postEditorData('compile', editor.getValue());
-	// insertEmbeddedPDF('./latex.pdf');
 	var latex = document.getElementById('idlatex');
-	loadPDF('./' + latex.value);
-        // alert("hi 1");
+	postEditorData('./' + latex.value, 'compile', editor.getValue());
     }
 
-    // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
+       // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
     if (event.target.readyState === "complete") {
-        // alert("hi 2");
+	// var latex = document.getElementById('idlatex');
+	// postEditorData('./' + latex.value, 'compile', editor.getValue());
     }
-});
+   });
     
     
 </script>

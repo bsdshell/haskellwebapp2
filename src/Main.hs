@@ -37,7 +37,7 @@ import qualified Data.Text.Lazy                 as DL
 
 import qualified Control.Concurrent             as Concurrent
 import qualified Data.List as L
-import qualified Data.HashMap.Strict as M 
+import qualified Data.HashMap.Strict            as M 
 import qualified Control.Exception              as Exception
 import qualified Safe
 
@@ -139,6 +139,11 @@ main = do
     -- snippetMap newList ref
     listToPrefixMap newList ref
     hmap <- readIORef ref
+
+    lstup <- resourceList
+    logFile2 "/tmp/x.x" $ map show lstup
+    let rmap = M.fromList lstup
+    
     fw "hmap"
 
     let f::Stream -> String -> IO()
@@ -155,6 +160,6 @@ main = do
         
                        
     -- run WC.port (app conn ref)
-    run port (app2 undefined conn ref pdfRef)
+    run port (app2 undefined conn ref pdfRef rmap)
     close conn
     

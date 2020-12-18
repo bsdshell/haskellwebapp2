@@ -26,18 +26,11 @@
        padding-top: 10px;
        background: #FFFFFF;
    }
+   
    #container {
        height: 100%;
        width: 100%;
        display: flex;
-   }
-   #leftThing {
-       width: 50%;
-       background-color: gray;
-   }
-   #rightThing {
-       width: 50%;
-       background-color: black;
    }
    
    
@@ -55,7 +48,7 @@
     </div>
     
     <div id="container">
-	<div id="leftThing">
+	<div id="leftThing" style="width:50%; background-color:gray;">
 	    <div id="editor">
 		\documentclass[UTF8]{article}
 		% Update Tue Dec 18 12:55:04 2018 
@@ -81,7 +74,7 @@
 	    <textarea name="textarea" id="iddebug"   rows="5" cols="30" style="display:block;font-size:18px;width:100%;">I am a disabled textarea</textarea>
 	    
 	</div>
-	<div id="rightThing">
+	<div id="rightThing" style="width:50%; background-color:#A9A9A9;">
 	    <canvas id="the-canvas"></canvas>
 	</div>
 	hidden123
@@ -101,20 +94,20 @@
         // theme: "ace/theme/tomorrow_night_blue",
 	theme: "ace/theme/monokai",
         // mode: "ace/mode/java",
-	mode: "ace/mode/latex",
+	// mode: "ace/mode/latex",
         autoScrollEditorIntoView: true,
         maxLines: 60,
         minLines: 3,
     });
 
-    document.getElementById('editor').style.fontSize='16px';
+    document.getElementById('editor').style.fontSize='14px';
     // editor.setTheme("ace/theme/xcode");
-    editor.setTheme("ace/theme/monokai");
-    // editor.session.setMode("ace/mode/javascript");
-    // editor.session.setMode("ace/mode/java");
-    editor.session.setMode("ace/mode/latex");
-    editor.container.style.background="black";
-    editor.setAutoScrollEditorIntoView(true);
+   editor.setTheme("ace/theme/monokai");
+   // editor.session.setMode("ace/mode/javascript");
+   editor.session.setMode("ace/mode/latex");
+   // editor.session.setMode("ace/mode/haskell");
+   editor.container.style.background="black";
+   editor.setAutoScrollEditorIntoView(true);
 
     /*
     var tmpCode = editor.getValue();
@@ -154,11 +147,114 @@ document.addEventListener('readystatechange', event => {
 	// var latex = document.getElementById('idlatex');
 	// postEditorData('./' + latex.value, 'compile', editor.getValue());
     }
-   });
-    
-    
-</script>
+   });        
+  </script>
+  
+<script>
+ 
+ let initPos = null
+ let isDown = false
+ let isMove = true
+ let isInEpsilon = false
+ const rangeInterval = 40  
+ 
+ let leftThingDiv = getElem('leftThing')
+ let rightThingDiv = getElem('rightThing')
 
+ // Mouse Enter => MouseMove
+ leftThingDiv.addEventListener('mousemove', mouseMoveFun, false);
+ // Mouse Enter => MouseDown
+ leftThingDiv.addEventListener('mousedown', function(event){
+     isDown = true
+     initPos = event.pageX
+ }, false);
+
+ document.addEventListener('mouseup', function(event){
+     isDown = false
+     initPos = null
+     isMove = false
+     isInEpsilon = false
+ }, false);
+ 
+ // let info = getElem('info');
+
+ // Creating function that will tell the position of cursor
+ // PageX and PageY will getting position values and show them in P
+ 
+ function mouseMoveFun(event){
+     isMove = true
+     let right = leftThingDiv.getBoundingClientRect().right
+     log('right=' + right)
+     log('event.pageX=' + event.pageX)
+     
+     if(Math.abs(event.pageX - right) <= rangeInterval){
+	 isInEpsilon = true
+	 leftThingDiv.style.cursor = 'col-resize'
+     }else{
+	 isInEpsilon = false
+	 leftThingDiv.style.cursor = 'default'
+     }
+
+     if(isDown && isInEpsilon){
+	 if(initPos === null){
+	     initPos = event.pageX
+	 }
+	 let diffx = event.pageX - initPos
+	 // alert('diffx=' + diffx)
+	 
+	 if(Math.abs(diffx) > 0){
+	     let ws = leftThingDiv.style.width
+	     let rightws = rightThingDiv.style.width
+	     const widthObj = new Object()
+	     const s2f = strToFloat
+	     const rep = (s, x) => s.replace(/%/g, x)
+
+	     if(ws.match(/%/g)){
+		 widthObj.width = s2f(rep(ws, '%'))
+		 widthObj.type = '%'
+	     }else if(ws.match(/px/g)){
+		 widthObj.width = s2f(rep(ws, 'px'))
+		 widthObj.type = 'px'
+	     }else{
+		 log('ERROR => width:' + ws)
+	     }
+	     
+	     if(widthObj.type === '%'){
+		 if(diffx != 0){
+		     let nwidth = widthObj.width + (diffx > 0 ? 0.4 : -0.4)
+		     let nw = nwidth + '%'
+		     let rightnw = (100 - nwidth) + '%'
+		     log('diffx=' + diffx)
+		     log('nw = ' + nw)
+		     log('origin leftThingDiv.style.width = ' + leftThingDiv.style.width)
+		     leftThingDiv.style.width = nw
+		     rightThingDiv.style.width = rightnw
+		     log('after leftThingDiv.style.width = ' + leftThingDiv.style.width)
+		     initPos = event.pageX
+		 }
+	     }else if(widthObj.type === 'px'){
+		 let newWidth = widthObj.width + diffx
+		 let rightnewWidth = widthObj.width - diffx
+		 leftThingDiv.style.width = newWidth + 'px'
+		 rightThingDiv.style.width = rightnewWidth + 'px'
+		 initPos = event.pageX
+	     }
+	     leftThingDiv.style.border = 'solid'
+
+	     // leftThingDiv.style.width = 10 + (diffx/10) + '%'
+	     log('move ws               =' + ws)
+	     log('move widthObj.width   =' + widthObj.width)
+	     log('move widthObj.type    =' + widthObj.type)
+	     log('move leftThingDiv.style.width=' + leftThingDiv.style.width)
+	     log('move initPos          =' + initPos)
+	     log('move diffx            =' + diffx)
+	 }
+	 
+     }
+ }
+
+ 
+</script>
 
 <!-- KEY: ace, get editor data, editor text, editor value -->
 

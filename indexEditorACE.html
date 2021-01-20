@@ -212,6 +212,8 @@
 	<a href="#news" onclick="changebgClick();">BackGround</a>
 	<a href="#news" onclick="halfClick();">Half</a>
 	<a href="#news" onclick="copyClick();">Copy</a>
+	hidden444
+	
 	<div class="dropdown">
 	    <div class="select">
 		<select onchange="selectChange(this);">
@@ -221,6 +223,7 @@
 		</select>
 	    </div>
 	</div>
+	
 	<div class="dropdown">
 	    <div class="select">
 		<select onchange="selectKeyBinding(this);">
@@ -238,6 +241,7 @@
 		</select>
 	    </div>
 	</div>
+	<a href="#news" onclick="snippetClick();">Snippet</a>
     </div>
 
 
@@ -316,22 +320,61 @@
    editor.container.style.background = 'black';
    editor.setAutoScrollEditorIntoView(true);
 
-    /*
-    var tmpCode = editor.getValue();
-    // alert(editor.getValue());
 
-    window.onload = function(){
-        document.getElementById('tmpCode').innerHTML = tmpCode;
-    }
+   /*
+   alert(editor.getTheme());
+   alert(editor.container.style.background);
+   alert(editor.getOption('mode'));
+   alert(editor.getOption('theme'));
+   alert(JSON.stringify(editor.getKeyboardHandler()));
+   */
+
+   /*
+      var tmpCode = editor.getValue();
+      // alert(editor.getValue());
+
+      window.onload = function(){
+      document.getElementById('tmpCode').innerHTML = tmpCode;
+      }
     */
-  
-  function compileClick(){
-      var latex = document.getElementById('idlatex');
-      postEditorData('./' + latex.value, 'compile', editor.getValue());
-  }
-  function saveClick(){
-      var latex = document.getElementById('idlatex');
-      postEditorData('./' + latex.value, 'save', editor.getValue());
+   
+   function compileClick(){
+       var latex = document.getElementById('idlatex');
+       let editorCode = createEditorCode('compile', latex.value)
+       const myHost = 'http://localhost:8081'
+       let url = myHost + '/' + 'editordata'
+       
+       postRequestJson(0, url, editorCode);
+   }
+   // "save"
+   function saveClick(){
+       var latex = document.getElementById('idlatex');
+       var latexName = null
+       let userPDFName = prompt('Input PDF File Name')
+       if (userPDFName != null){
+           alert('userPDFName=' + userPDFName)
+           latexName = userPDFName
+       }else{
+	   latexName = latex.value
+       }
+       alert('latexName=' + latexName)
+       
+       /*
+	  // Browser => Server
+	  data EditorCode = EditorCode{
+	  editorbeg::Integer,
+	  editorend::Integer,
+	  editorfile::String,
+	  editorcmd::String,
+	  editorcode::String,
+	  editortheme::String,
+	  editormode::String
+	  } deriving (Generic, Show)
+	*/
+       let editorCode = createEditorCode('save', latexName)
+       const myHost = 'http://localhost:8081'
+       let url = myHost + '/' + 'editordata'
+       postRequestJson(0, url, editorCode);
    }
    
    function changebgClick(){
@@ -395,24 +438,62 @@
        editor.execCommand("copy") // or cut
        navigator.clipboard.writeText(text)
    }
-
-
-
    
+   function snippetClick(){
+       var canvasId = getElem('the-canvas');
+       alert(canvasId)
+       var mydiv = getElem('the-canvas')
+       mydiv.className = 'hide'
+       mydiv.style.display = 'none';
+   }
+
+   function downloadPDFClick(){
+       alert('download PDF')
+   }
+
+   function createEditorCode(cmd, latexName){
+       // var latex = document.getElementById('idlatex');
+       var obj = new Object()
+       obj.editorbeg = nowInt()
+       obj.editorend = 0
+       obj.editorfile = latexName
+       obj.editorcmd  = cmd
+       obj.editorcode = editor.getValue()
+       obj.editortheme = editor.getOption('theme')
+       obj.editormode = editor.getOption('mode')
+       
+       return obj
+   }
 
    // KEY: call function after load page
    document.addEventListener('readystatechange', event => { 
-
        // When HTML/DOM elements are ready:
        if (event.target.readyState === "interactive") {   //does same as:  ..addEventListener("DOMContentLoaded"..
 	   var latex = document.getElementById('idlatex');
-	postEditorData('./' + latex.value, 'compile', editor.getValue());
-    }
+	   let editorCode = createEditorCode('compile', latex.value);
+	   const myHost = 'http://localhost:8081'
+	   let url = myHost + '/' + 'editordata'
+	   
+	   /*
+	      // DELETE:
+	      var latex = document.getElementById('idlatex');
+	      const myHost = 'http://localhost:8081'
+	      let url = myHost + '/' + 'editordata'
+	      var obj = new Object()
+	      obj.editorbeg = nowInt()
+	      obj.editorend = 0
+	      obj.editorfile = latex.value
+	      obj.editorcmd  = 'compile'
+	      obj.editorcode = editor.getValue()
+	      obj.editortheme = editor.getOption('theme')
+	      obj.editormode = editor.getOption('mode')
+	    */
+	   
+	   postRequestJson(0, url, editorCode);
+       }
 
        // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
     if (event.target.readyState === "complete") {
-	// var latex = document.getElementById('idlatex');
-	// postEditorData('./' + latex.value, 'compile', editor.getValue());
     }
    });        
   </script>

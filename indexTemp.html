@@ -92,20 +92,37 @@
     */
   
   function clickMe(){
-      // alert(editor.getValue());
       var latex = document.getElementById('idlatex');
-      postEditorData('./' + latex.value, 'compile', editor.getValue());
-      // var latex = document.getElementById('idlatex');
-      // insertEmbeddedPDF('./' + latex.value);
-      // loadPDF('./' + latex.value);
+      
+      const myHost = 'http://localhost:8081'
+      let url = myHost + '/' + 'editordata'
+      var obj = new Object()
+      obj.editorbeg = nowInt()
+      obj.editorend = 0
+      obj.editorfile = latex.value
+      obj.editorcmd  = 'compile'
+      obj.editorcode = editor.getValue()
+      obj.editortheme = editor.getOption('theme')
+      obj.editormode = editor.getOption('mode')
+      
+      postRequestJson(0, url, obj);
   }
+
   function clickSaveURL(){
-      // alert(editor.getValue());
       var latex = document.getElementById('idlatex');
-      postEditorData('./' + latex.value, 'save', editor.getValue());
-      // var latex = document.getElementById('idlatex');
-      // insertEmbeddedPDF('./' + latex.value);
-      // loadPDF('./' + latex.value);
+
+      const myHost = 'http://localhost:8081'
+      let url = myHost + '/' + 'editordata'
+      var obj = new Object()
+      obj.editorbeg = nowInt()
+      obj.editorend = 0
+      obj.editorfile = latex.value
+      obj.editorcmd  = 'save'
+      obj.editorcode = editor.getValue()
+      obj.editortheme = editor.getOption('theme')
+      obj.editormode = editor.getOption('mode')
+       
+      postRequestJson(0, url, obj);
   }
 
 // KEY: call function after load page
@@ -115,17 +132,23 @@ document.addEventListener('readystatechange', event => {
     if (event.target.readyState === "interactive") {   //does same as:  ..addEventListener("DOMContentLoaded"..
         // alert("hi 1");
 	var latex = document.getElementById('idlatex');
-	postEditorData('./' + latex.value, 'compile', editor.getValue());
-	// insertEmbeddedPDF('./' + latex.value);
-	// loadPDF('./' + latex.value);
+
+	const myHost = 'http://localhost:8081'
+	let url = myHost + '/' + 'editordata'
+	var obj = new Object()
+	obj.editorbeg = nowInt()
+	obj.editorend = 0
+	obj.editorfile = latex.value
+	obj.editorcmd  = 'compile'
+	obj.editorcode = editor.getValue()
+	obj.editortheme = editor.getOption('theme')
+	obj.editormode = editor.getOption('mode')
+	
+	postRequestJson(0, url, obj);
     }
 
     // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
     if (event.target.readyState === "complete") {
-	// postEditorData('compile', editor.getValue());
-	// var latex = document.getElementById('idlatex');
-	// insertEmbeddedPDF('./' + latex.value);
-        // alert("hi 2");
     }
 });
     

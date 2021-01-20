@@ -68,7 +68,7 @@ import Network.HTTP.Types.Status
 
 import qualified Network.Wai.Handler.WebSockets as WS
 import qualified Network.WebSockets             as WS
-import qualified WaiConstant                    as WC 
+-- import qualified WaiConstant                    as WC 
 
 import Text.RawString.QQ
 
@@ -101,25 +101,39 @@ config =[ [("os", "darwin")],
          
 -- NOTE: the project does not use the shared Haskell lib in $b/haskelllib
 -- FIX it ASAP
-dbname = "webappdb"
-configFile = "./config.txt"
+-- dbname = "webappdb"
+-- configFile = "./config.txt"
 
-lookupJust s m = fromJust $ M.lookup s m
+-- lookupJust s m = fromJust $ M.lookup s m
 
+-- confMap::FilePath -> IO (M.HashMap String String)
+-- confMap fp = do
+  -- os <- getOS
+  -- configMap <- readConfig fp
+  -- return $ lookupJust os configMap
+ -- where
+   -- lookupJust s m = fromJust $ M.lookup s m
 
-                 
+-- hostName::String -> String -> IO String
+-- hostName host port = do
+  -- osMap <- confMap configFile
+  -- let host = lookupJust "host" osMap
+  -- let portStr = lookupJust "port" osMap
+  -- return $ host ++ ":" ++ portStr
+  
+                    
 main :: IO ()
 main = do
     home <- getEnv "HOME"
-    configMap <- readConfig configFile 
-    os <- getOS
-    pre os
-    let userinputdb = lookupJust dbname $ lookupJust os configMap
+    osMap <- confMap configFile
+    let userinputdb = lookupJust dbname osMap
     pp userinputdb
-    let host = lookupJust "host" $ lookupJust os configMap
-    let snippet = lookupJust "snippetpath" $ lookupJust os configMap
-    let portStr = lookupJust "port" $ lookupJust os configMap
-    let useSnippet = lookupJust "readSnippetFile" $ lookupJust os configMap
+    let host = lookupJust "host" osMap
+    let snippet = lookupJust "snippetpath" osMap
+    let portStr = lookupJust "port" osMap
+    let useSnippet = lookupJust "readSnippetFile" osMap
+    let datadir = lookupJust "datadir" osMap
+    let datadirlatex = lookupJust "datadirlatex" osMap
 
     let port = read portStr :: Int 
     conn <- open $ home </> userinputdb 
@@ -143,6 +157,10 @@ main = do
     lstup <- resourceList
     logFile2 "/tmp/x.x" $ map show lstup
     let rmap = M.fromList lstup
+
+    -- create datadir and datadir/latex
+    mkdir datadir
+    mkdir datadirlatex
     
     fw "hmap"
 
@@ -152,14 +170,12 @@ main = do
     -- (g, _) <- startGhciProcess (shell "ghci_stack.sh") f
     -- pre hmap 
     fw "main.hs newList end"
-    putStrLn host 
+    putStrLn $ "host=" ++ host
+    putStrLn $ "port=" ++ show port
     pp "http starting"
     pp "test it"
-    pp WC.hostURL 
     pp $ "NOTE port => " ++ show port
         
-                       
-    -- run WC.port (app conn ref)
     run port (app2 undefined conn ref pdfRef rmap)
     close conn
     

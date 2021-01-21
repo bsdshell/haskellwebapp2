@@ -212,7 +212,7 @@
 	<a href="#news" onclick="changebgClick();">BackGround</a>
 	<a href="#news" onclick="halfClick();">Half</a>
 	<a href="#news" onclick="copyClick();">Copy</a>
-	hidden444
+	<a href="try400244.pdf" onclick='promptPDFName()'>PDF</a> 
 	
 	<div class="dropdown">
 	    <div class="select">
@@ -244,6 +244,11 @@
 	<a href="#news" onclick="snippetClick();">Snippet</a>
     </div>
 
+
+    
+
+    
+    
     <div id="container">
 	<div id="leftThing" style="width:50%; background-color:gray;">
 	    <div id="editor">
@@ -274,7 +279,7 @@
 	<div id="rightThing" style="width:50%; background-color:#A9A9A9;">
 	    <canvas id="the-canvas"></canvas>
 	</div>
-	hidden123
+	<input  type="hidden" id='idlatex' name="myname" value="try400244.pdf" /> 
     </div>
 
 
@@ -336,13 +341,15 @@
    function compileClick(){
        var latex = document.getElementById('idlatex');
 
+
        let editorConfig = new Object();
        editorConfig.value = editor.getValue()
        editorConfig.theme = editor.getOption('theme')
        editorConfig.mode = editor.getOption('mode')
        
        let editorCode = createEditorCode('compile', latex.value, editorConfig)
-       let url = HOST.LOCALHOST + '/' + 'editordata'
+       const myHost = 'http://localhost:8081'
+       let url = myHost + '/' + 'editordata'
        
        postRequestJson(0, url, editorCode);
    }
@@ -378,7 +385,8 @@
        editorConfig.mode = editor.getOption('mode')
        
        let editorCode = createEditorCode('save', latexName, editorConfig)
-       let url = HOST.LOCALHOST + '/' + 'editordata'
+       const myHost = 'http://localhost:8081'
+       let url = myHost + '/' + 'editordata'
        postRequestJson(0, url, editorCode);
    }
    
@@ -469,6 +477,21 @@
       editormode::String
       } deriving (Generic, Show)
     */
+   
+   /*
+   function createEditorCode(cmd, latexName, editorConfig){
+       // var latex = document.getElementById('idlatex');
+       var editorCode = new Object()
+       editorCode.editorbeg   = nowInt()                 
+       editorCode.editorend   = 0                        
+       editorCode.editorfile  = latexName                
+       editorCode.editorcmd   = cmd                      
+       editorCode.editorcode  = editorConfig.value
+       editorCode.editortheme = editorConfig.theme
+       editorCode.editormode  = editorConfig.mode
+       return editorCode
+   }
+   */
 
    // KEY: call function after load page
    document.addEventListener('readystatechange', event => { 
@@ -482,7 +505,8 @@
 	   editorConfig.mode = editor.getOption('mode')
 	   
 	   let editorCode = createEditorCode('compile', latex.value, editorConfig);
-	   let url = HOST.LOCALHOST + '/' + 'editordata'
+	   const myHost = 'http://localhost:8081'
+	   let url = myHost + '/' + 'editordata'
 	   
 	   postRequestJson(0, url, editorCode);
        }

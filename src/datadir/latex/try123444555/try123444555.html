@@ -197,11 +197,11 @@
 <body>
     <div class="navbar">
 	<a href="#home" onclick="compileClick();">Compile</a>
-	<a href="#news" onclick="saveClick('false');">Save</a>
+	<a href="#news" onclick="saveClick('true');">Save</a>
 	<a href="#news" onclick="changebgClick();">BackGround</a>
 	<a href="#news" onclick="halfClick();">Half</a>
 	<a href="#news" onclick="copyClick();">Copy</a>
-	hidden444
+	<a href="try123444555.pdf" onclick='promptPDFName()'>PDF</a> 
 	
 	<div class="dropdown">
 	    <div class="select">
@@ -236,6 +236,8 @@
     <div id="container">
 	<div id="leftThing" style="width:50%; background-color:gray;">
 	    <div id="editor">
+
+
 		\documentclass[UTF8]{article}
 		% Update Tue Dec 18 12:55:04 2018 
 		% Move include head to aronlib.tex
@@ -250,11 +252,13 @@
 		\begin{pmatrix}
 		a & b \\
 		c & d \\
-		c & d
+		c & 2233366999
 		\end{pmatrix}
 		\]
 		%
 		\end{document}
+	    
+	    
 	    </div>
 	    <input type="text" id="idurl" style="display:none;font-size:18px;width:100%;background-color:black;color:green;" class="hide" value="Mandlebrotset" />
 	    <textarea name="textarea" id="iddebug"   rows="5" cols="30" style="display:block;font-size:18px;width:100%;background-color:black;color:green">I am a disabled textarea</textarea>
@@ -263,7 +267,7 @@
 	<div id="rightThing" style="width:50%; background-color:#A9A9A9;">
 	    <canvas id="the-canvas"></canvas>
 	</div>
-	hidden123
+	<input  type="hidden" id='idlatex' name="myname" value="try123444555.pdf" /> 
     </div>
 
 

@@ -32,6 +32,10 @@
        width: 100%;
        display: flex;
    }
+
+
+
+
    
    .navbar {
        overflow: hidden;
@@ -92,6 +96,8 @@
    .dropdown:hover .dropdown-content {
        display: block;
    }
+
+
 
    *,
    *::before,
@@ -191,7 +197,12 @@
        padding: 1rem;
    }
    */
+   
 
+
+
+   
+   
   </style>
 </head>
 <body>
@@ -201,7 +212,7 @@
 	<a href="#news" onclick="changebgClick();">BackGround</a>
 	<a href="#news" onclick="halfClick();">Half</a>
 	<a href="#news" onclick="copyClick();">Copy</a>
-	hidden444
+	<a href="try913874.pdf" onclick='promptPDFName()'>PDF</a> 
 	
 	<div class="dropdown">
 	    <div class="select">
@@ -263,7 +274,7 @@
 	<div id="rightThing" style="width:50%; background-color:#A9A9A9;">
 	    <canvas id="the-canvas"></canvas>
 	</div>
-	hidden123
+	<input  type="hidden" id='idlatex' name="myname" value="try913874.pdf" /> 
     </div>
 
 
@@ -304,6 +315,7 @@
    editor.container.style.background = 'black';
    editor.setAutoScrollEditorIntoView(true);
 
+
    /*
    alert(editor.getTheme());
    alert(editor.container.style.background);
@@ -343,6 +355,7 @@
 	   // click 'save' on main page
 	   latexName = latex.value
        }else{
+	   alert('isOverride is false')
 	   // click 'save' on http://localhost/aceeditor?id=try919591 page
 	   if (userPDFName != null){
                alert('userPDFName=' + userPDFName)

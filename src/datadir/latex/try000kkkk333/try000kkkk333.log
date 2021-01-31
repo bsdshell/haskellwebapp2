@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_4) (format=pdflatex 2012.12.23)  22 JAN 2021 23:26
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_4) (format=pdflatex 2012.12.23)  24 JAN 2021 14:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -117,7 +117,9 @@ LaTeX Info: Redefining \] on input line 2667.
 LaTeX Warning: Unused global option(s):
     [UTF8].
 
-No file try000kkkk333.aux.
+
+(/Users/cat/myfile/bitbucket/haskellwebapp2/src/datadir/latex/try000kkkk333/try
+000kkkk333.aux)
 \openout1 = `try000kkkk333.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -132,6 +134,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
+
 (/opt/local/share/texmf-texlive-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count100
@@ -153,8 +156,8 @@ LaTeX Font Info:    ... okay on input line 8.
 (/Users/cat/myfile/bitbucket/haskellwebapp2/src/datadir/latex/try000kkkk333/try
 000kkkk333.aux) ) 
 Here is how much of TeX's memory you used:
- 1960 strings out of 494763
- 24139 string characters out of 3171441
+ 1962 strings out of 494763
+ 24323 string characters out of 3171441
  80635 words of memory out of 3000000
  5233 multiletter control sequences out of 15000+200000
  4094 words of font info for 16 fonts, out of 3000000 for 9000
@@ -165,7 +168,7 @@ ts/cm/cmex10.pfb></opt/local/share/texmf-texlive-dist/fonts/type1/public/amsfon
 ts/cm/cmmi10.pfb></opt/local/share/texmf-texlive-dist/fonts/type1/public/amsfon
 ts/cm/cmr10.pfb>
 Output written on /Users/cat/myfile/bitbucket/haskellwebapp2/src/datadir/latex/
-try000kkkk333/try000kkkk333.pdf (1 page, 27795 bytes).
+try000kkkk333/try000kkkk333.pdf (1 page, 27600 bytes).
 PDF statistics:
  20 PDF objects out of 1000 (max. 8388607)
  13 compressed objects within 1 object stream

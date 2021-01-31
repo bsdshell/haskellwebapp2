@@ -1,0 +1,24 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_4) (format=pdflatex 2012.12.23)  24 JAN 2021 23:17
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**/Users/cat/myfile/bitbucket/math/try612630.tex
+(/Users/cat/myfile/bitbucket/math/try612630.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, cz
+ech, slovak, dutch, ukenglish, usenglishmax, basque, french, german-x-2012-05-3
+0, ngerman-x-2012-05-30, german, ngerman, swissgerman, italian, polish, portugu
+ese, spanish, catalan, galician, loaded.
+! Undefined control sequence.
+l.2 \n
+      \t\t\\documentclass[UTF8]{article}\n\t\t% Update Tue Dec 18 12:55:04 2...
+ 
+Here is how much of TeX's memory you used:
+ 7 strings out of 494763
+ 389 string characters out of 3171441
+ 45673 words of memory out of 3000000
+ 3333 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 134 hyphenation exceptions out of 8191
+ 5i,0n,1p,467b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

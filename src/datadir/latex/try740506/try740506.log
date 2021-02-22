@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_4) (format=pdflatex 2012.12.23)  6 FEB 2021 10:35
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_4) (format=pdflatex 2012.12.23)  19 FEB 2021 19:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/Users/cat/myfile/bitbucket/math/try333675.tex
-(/Users/cat/myfile/bitbucket/math/try333675.tex
+**/Users/cat/myfile/bitbucket/math/try740506.tex
+(/Users/cat/myfile/bitbucket/math/try740506.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, cz
 ech, slovak, dutch, ukenglish, usenglishmax, basque, french, german-x-2012-05-3
@@ -118,9 +118,9 @@ LaTeX Warning: Unused global option(s):
     [UTF8].
 
 
-(/Users/cat/myfile/bitbucket/haskellwebapp2/src/datadir/latex/try333675/try3336
-75.aux)
-\openout1 = `try333675.aux'.
+(/Users/cat/myfile/bitbucket/haskellwebapp2/src/datadir/latex/try740506/try7405
+06.aux)
+\openout1 = `try740506.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
@@ -152,8 +152,8 @@ LaTeX Font Info:    ... okay on input line 9.
  [1
 
 {/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(/Users/cat/myfile/bitbucket/haskellwebapp2/src/datadir/latex/try333675/try3336
-75.aux) ) 
+(/Users/cat/myfile/bitbucket/haskellwebapp2/src/datadir/latex/try740506/try7405
+06.aux) ) 
 Here is how much of TeX's memory you used:
  1962 strings out of 494763
  24259 string characters out of 3171441
@@ -167,7 +167,7 @@ ex10.pfb></opt/local/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cm
 mi10.pfb></opt/local/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cm
 r10.pfb>
 Output written on /Users/cat/myfile/bitbucket/haskellwebapp2/src/datadir/latex/
-try333675/try333675.pdf (1 page, 27600 bytes).
+try740506/try740506.pdf (1 page, 27600 bytes).
 PDF statistics:
  20 PDF objects out of 1000 (max. 8388607)
  13 compressed objects within 1 object stream

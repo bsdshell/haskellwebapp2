@@ -128,11 +128,11 @@ main = do
     osMap <- confMap configFile
     let userinputdb = lookupJust dbname osMap
     pp userinputdb
-    let host = lookupJust "host" osMap
-    let snippet = lookupJust "snippetpath" osMap
-    let portStr = lookupJust "port" osMap
-    let useSnippet = lookupJust "readSnippetFile" osMap
-    let datadir = lookupJust "datadir" osMap
+    let host         = lookupJust "host" osMap
+    let snippet      = lookupJust "snippetpath" osMap
+    let portStr      = lookupJust "port" osMap
+    let useSnippet   = lookupJust "readSnippetFile" osMap
+    let datadir      = lookupJust "datadir" osMap
     let datadirlatex = lookupJust "datadirlatex" osMap
 
     let port = read portStr :: Int 

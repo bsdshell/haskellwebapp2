@@ -10,6 +10,8 @@ snippetpath = myfile/bitbucket/snippets/snippet_test.hs
 readSnippetFile = False 
 datadir = src/datadir
 datadirlatex = src/datadir/latex
+rootdir = myfile/bitbucket/haskellwebapp2
+-- rootdir = myfile/mybin/haskellwebapp2Bin
 
 os = freebsd 
 testdb = myfile/bitbucket/database/test_sqlite3.db

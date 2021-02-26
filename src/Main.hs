@@ -128,13 +128,13 @@ main = do
     osMap <- confMap configFile
     let userinputdb = lookupJust dbname osMap
     pp userinputdb
-    let host         = lookupJust "host" osMap
+    let host         = lookupJust "host" osMap  -- localhost
     let snippet      = lookupJust "snippetpath" osMap
-    let portStr      = lookupJust "port" osMap
+    let portStr      = lookupJust "port" osMap  -- 8081
     let useSnippet   = lookupJust "readSnippetFile" osMap
     let datadir      = lookupJust "datadir" osMap
     let datadirlatex = lookupJust "datadirlatex" osMap
-
+    let hostName     = "http://" ++ host ++ ":" ++ portStr  -- http://localhost:8081
     let port = read portStr :: Int 
     conn <- open $ home </> userinputdb 
     createCodeBlockTable conn
@@ -161,7 +161,11 @@ main = do
     -- create datadir and datadir/latex
     mkdir datadir
     mkdir datadirlatex
-    
+
+    fullrootdir <- getRootDirFull    
+    -- replaceFileListStr [("hostid", hostName)] (fullrootdir </> "help.html")
+    logFile2 "/tmp/x1.x" [fullrootdir </> "help.html"]
+    replaceFileWithStrToNew (fullrootdir </> "helpTemp.html") ("hostid", hostName) (fullrootdir </> "help.html")
     fw "hmap"
 
     let f::Stream -> String -> IO()

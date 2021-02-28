@@ -26,6 +26,8 @@
 # Copy haskellwebapp2 to $HOME/myfile/mybin (Thu 25 Feb 23:18:43 2021)
 * NOTE: Change/Rename hakellwebapp2_test to haskellwebapp2 in haskellwebapp2.cabal when the project is copy to $HOME/myfile/mybin
 * NOTE: Modify config.txt file to use different hostname and port number
-* NOTE: Rename hostname and port number in aronlib.js file
+* NOTE: Rename HOSTNAME to different host name and port number in $b/jslib/aronlib.js
+* NOTE: Goto $ff/mybin/haskellwebapp2Bin  and run `stack build haskellwebapp2 && stack exec haskellwebapp2`
+
 * Install project: `install.sh in`
 

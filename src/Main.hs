@@ -38,7 +38,7 @@ import qualified Data.Text.Lazy                 as DL
 import qualified Control.Concurrent             as Concurrent
 import qualified Data.List as L
 import qualified Data.HashMap.Strict            as M 
-import qualified Control.Exception              as Exception
+import qualified Control.Exception              as EXP
 import qualified Safe
 
 import qualified Data.ByteString.UTF8 as BU
@@ -59,14 +59,16 @@ import qualified Data.Text as DT
 
 import Network.HTTP.Types (status200)
 import Network.Wai
-import Network.Wai.Handler.Warp (run)
+-- import Network.Wai.Handler.Warp (run)
+import qualified Network.Wai.Handler.Warp as WARP
 import Network.Wai.Util
 import Network.Wai.Session (withSession)
 import Network.URI
 import Network.HTTP.Types.Status
 
 
-import qualified Network.Wai.Handler.WebSockets as WS
+import Network.Wai.Handler.WebSockets (websocketsOr)
+-- import qualified Network.Wai.Handler.WebSockets as WS
 import qualified Network.WebSockets             as WS
 -- import qualified WaiConstant                    as WC 
 
@@ -120,8 +122,8 @@ config =[ [("os", "darwin")],
   -- let host = lookupJust "host" osMap
   -- let portStr = lookupJust "port" osMap
   -- return $ host ++ ":" ++ portStr
-  
-                    
+
+                 
 main :: IO ()
 main = do
     home <- getEnv "HOME"
@@ -179,7 +181,9 @@ main = do
     pp "http starting"
     pp "test it"
     pp $ "NOTE port => " ++ show port
-        
-    run port (app2 undefined conn ref pdfRef rmap)
+    wsref <- newIORef []    
+    let setting = WARP.setPort port WARP.defaultSettings
+    -- WARP.run port (app2 conn ref pdfRef rmap)
+    WARP.runSettings setting $ websocketsOr WS.defaultConnectionOptions wsApp (app2 conn ref pdfRef rmap)
     close conn
     

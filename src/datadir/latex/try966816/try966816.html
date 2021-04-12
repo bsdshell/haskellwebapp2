@@ -195,14 +195,14 @@
   </style>
 </head>
 <body>
-    hidden_compile_save
+    <input  type="hidden" id='compilesaveID' name="compilesave" value="savepage" /> 
     <div class="navbar">
 	<a href="#home" onclick="compileClick();">Compile</a>
 	<a href="#news" onclick="saveClick('false');">Save</a>
 	<a href="#news" onclick="changebgClick();">BackGround</a>
 	<a href="#news" onclick="halfClick();">Half</a>
 	<a href="#news" onclick="copyClick();">Copy</a>
-	hidden444
+	<a href="try966816.pdf" onclick='promptPDFName()'>PDF</a> 
 	
 	<div class="dropdown">
 	    <div class="select">
@@ -237,7 +237,21 @@
     <div id="container">
 	<div id="leftThing" style="width:50%; background-color:gray;">
 	    <div id="editor">
-        latexcode_replace314
+\documentclass[border=5mm]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+\fill (-1,0.5) circle [radius=2pt];
+\draw[rounded corners] (-3.5,0) rectangle (-0.5,2);
+\draw[rounded corners,red,rotate around={30:(-1,0.5)}] (-3.5,0) rectangle (-0.5,2);
+\end{tikzpicture}
+%
+\end{document}
+	    
+
+	    
+	    
+	    
 	    </div>
 	    <input type="text" id="idurl" style="display:none;font-size:18px;width:100%;background-color:black;color:green;" class="hide" value="Mandlebrotset" />
 	    <textarea name="textarea" id="iddebug"   rows="5" cols="30" style="display:block;font-size:18px;width:100%;background-color:black;color:green">I am a disabled textarea</textarea>
@@ -246,7 +260,7 @@
 	<div id="rightThing" style="width:50%; background-color:#A9A9A9;">
 	    <canvas id="the-canvas"></canvas>
 	</div>
-	hidden123
+	<input  type="hidden" id='idlatex' name="myname" value="try966816.pdf" /> 
     </div>
 
 
@@ -325,17 +339,23 @@
        // compile_save => compilepage or savepage
        //   compilepage => latex file name is in getElem('idlatex')
        //   savepage    => latex file name uses [getElem('idlatex')] or [user input name]
-
+       var compileOrSave = getElem('compilesaveID');
        var latexName = null
        let userPDFName = prompt('Input PDF File Name')
-
-	if (userPDFName != null){
-            alert('userPDFName=' + userPDFName)
-	    latexName = userPDFName
-	}else{
-	    latexName = latex.value
-	}   
-
+       if(compileOrSave.value == 'compilepage'){
+	   // click 'save' on main page
+	   latexName = latex.value
+       }else if(compileOrSave.value == 'savepage'){
+	   // NOTE: click 'save' on http://localhost:8081/aceeditor?id=try919591 page
+	   if (userPDFName != null){
+               alert('userPDFName=' + userPDFName)
+	       latexName = userPDFName
+	   }else{
+	       latexName = latex.value
+	   }   
+       }else{
+	   alert('Invalid hidden value check getElem => compile_save');
+       }
 
        alert('latexName=' + latexName)
        

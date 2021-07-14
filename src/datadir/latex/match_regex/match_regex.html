@@ -195,14 +195,14 @@
   </style>
 </head>
 <body>
-    hidden_compile_save
+    <input  type="hidden" id='compilesaveID' name="compilesave" value="savepage" /> 
     <div class="navbar">
 	<a href="#home" onclick="compileClick();">Compile</a>
 	<a href="#news" onclick="saveClick('false');">Save</a>
 	<a href="#news" onclick="changebgClick();">BackGround</a>
 	<a href="#news" onclick="halfClick();">Half</a>
 	<a href="#news" onclick="copyClick();">Copy</a>
-	hidden444
+	<a href="match_regex.pdf" onclick='promptPDFName()'>PDF</a> 
 	
 	<div class="dropdown">
 	  <div class="select">
@@ -238,7 +238,45 @@
     <div id="container">
 	<div id="leftThing" style="width:50%; background-color:gray;">
 	    <div id="editor">
-        latexcode_replace314
+
+
+	 /* match: search for regexp anywhere in text */
+    int match(char *regexp, char *text)
+    {
+        if (regexp[0] == '^')
+            return matchhere(regexp+1, text);
+        do {    /* must look even if string is empty */
+            if (matchhere(regexp, text))
+                return 1;
+        } while (*text++ != '\0');
+        return 0;
+    }
+
+    /* matchhere: search for regexp at beginning of text */
+    int matchhere(char *regexp, char *text)
+    {
+        if (regexp[0] == '\0')
+            return 1;
+        if (regexp[1] == '*')
+            return matchstar(regexp[0], regexp+2, text);
+        if (regexp[0] == '$' && regexp[1] == '\0')
+            return *text == '\0';
+        if (*text!='\0' && (regexp[0]=='.' || regexp[0]==*text))
+            return matchhere(regexp+1, text+1);
+        return 0;
+    }
+
+    /* matchstar: search for c*regexp at beginning of text */
+    int matchstar(int c, char *regexp, char *text)
+    {
+        do {    /* a * matches zero or more instances */
+            if (matchhere(regexp, text))
+                return 1;
+        } while (*text != '\0' && (*text++ == c || c == '.'));
+        return 0;
+    }
+	    
+	    
 	    </div>
 	    <input type="text" id="idurl" style="display:none;font-size:18px;width:100%;background-color:black;color:green;" class="hide" value="Mandlebrotset" />
 	    <textarea name="textarea" id="iddebug"   rows="5" cols="30" style="display:block;font-size:18px;width:100%;background-color:black;color:green">I am a disabled textarea</textarea>
@@ -247,7 +285,7 @@
 	<div id="rightThing" style="width:50%; background-color:#A9A9A9;">
 	    <canvas id="the-canvas"></canvas>
 	</div>
-	hidden123
+	<input  type="hidden" id='idlatex' name="myname" value="match_regex.pdf" /> 
     </div>
 
 

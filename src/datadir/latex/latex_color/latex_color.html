@@ -195,24 +195,23 @@
   </style>
 </head>
 <body>
-    hidden_compile_save
+    <input  type="hidden" id='compilesaveID' name="compilesave" value="savepage" /> 
     <div class="navbar">
 	<a href="#home" onclick="compileClick();">Compile</a>
 	<a href="#news" onclick="saveClick('false');">Save</a>
 	<a href="#news" onclick="changebgClick();">BackGround</a>
 	<a href="#news" onclick="halfClick();">Half</a>
 	<a href="#news" onclick="copyClick();">Copy</a>
-	hidden444
+	<a href="latex_color.pdf" onclick='promptPDFName()'>PDF</a> 
 	
 	<div class="dropdown">
-	  <div class="select">
-	    <select onchange="selectChange(this);">
-	      <option value='100'>Latex</option>
-	      <option value='101'>Haskell</option>
-	      <option value='102'>Javascript</option>
-	      <option value='103'>C_CPP</option>
-	    </select>
-	  </div>
+	    <div class="select">
+		<select onchange="selectChange(this);">
+		    <option value='100'>Latex</option>
+		    <option value='101'>Haskell</option>
+		    <option value='102'>Javascript</option>
+		</select>
+	    </div>
 	</div>
 	
 	<div class="dropdown">
@@ -238,7 +237,21 @@
     <div id="container">
 	<div id="leftThing" style="width:50%; background-color:gray;">
 	    <div id="editor">
-        latexcode_replace314
+\documentclass{article}
+\usepackage{xcolor}
+
+\definecolor{ultramarine}{RGB}{0,32,96}
+
+\definecolor{wrongultramarine}{rgb}{0.07, 0.04, 0.56}
+
+\begin{document}
+
+\textcolor{ultramarine}{Ultramarine \rule{1cm}{1cm}}
+
+\textcolor{wrongultramarine}{Wrong Ultramarine \rule{1cm}{1cm}}
+
+\end{document}
+	    
 	    </div>
 	    <input type="text" id="idurl" style="display:none;font-size:18px;width:100%;background-color:black;color:green;" class="hide" value="Mandlebrotset" />
 	    <textarea name="textarea" id="iddebug"   rows="5" cols="30" style="display:block;font-size:18px;width:100%;background-color:black;color:green">I am a disabled textarea</textarea>
@@ -247,7 +260,7 @@
 	<div id="rightThing" style="width:50%; background-color:#A9A9A9;">
 	    <canvas id="the-canvas"></canvas>
 	</div>
-	hidden123
+	<input  type="hidden" id='idlatex' name="myname" value="latex_color.pdf" /> 
     </div>
 
 
@@ -381,8 +394,6 @@
 	   editor.session.setMode("ace/mode/haskell");
        }else if(obj.selectedIndex == 2){
 	   editor.session.setMode("ace/mode/javascript");
-       }else if(obj.selectedIndex == 3){
-	   editor.session.setMode("ace/mode/c_cpp");
        }
    }
 

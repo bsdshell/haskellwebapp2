@@ -56,7 +56,7 @@ sleep 2
 # no optimization 
 # stack build --ghc-options=-O0 haskellwebapp2
 
-cmd1="stack build --ghc-options=-O2 haskellwebapp2_test"
+cmd1="stack build --ghc-options=-O2 haskellwebapp2"
 cmd2="stack exec haskellwebapp2_test"
 
 printBox 4 "$cmd1"

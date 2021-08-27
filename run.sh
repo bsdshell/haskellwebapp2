@@ -36,7 +36,7 @@ function help(){
     printc 196 "help message"
 }
 
-source $HOME/myfile/bitbucket/script/color.sh  
+source $HOME/myfile/bitbucket/script/AronLib.sh  
 getpwd
 
 MySymbin="$HOME/myfile/symbin"
@@ -56,7 +56,9 @@ sleep 2
 # no optimization 
 # stack build --ghc-options=-O0 haskellwebapp2
 
-cmd1="stack build --ghc-options=-O2 haskellwebapp2_test"
+cmd1="stack build --ghc-options=-O2 haskellwebapp2"
+
+# See haskellwebapp2.cabal => haskellwebapp2_test
 cmd2="stack exec haskellwebapp2_test"
 
 printBox 4 "$cmd1"

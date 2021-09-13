@@ -57,6 +57,7 @@ extra-deps:
 - egison-pattern-src-0.2.1.0
 - egison-pattern-src-th-mode-0.2.1.0
 - pretty-terminal-0.1.0.0
+- strict-io-0.2.2
 
 # resolver 16.17  ghc 8.8.4
 - mysql-haskell-0.8.4.3

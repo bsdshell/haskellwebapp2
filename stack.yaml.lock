@@ -54,6 +54,13 @@ packages:
   original:
     hackage: pretty-terminal-0.1.0.0
 - completed:
+    hackage: strict-io-0.2.2@sha256:1cc96f9a123a919ff9ee479f740cbc9fa9edf7c8ac65334de3fdce07638949ed,1012
+    pantry-tree:
+      size: 345
+      sha256: 2fd47d6f9374805075d176012d95d8ea28e643639b8d028f35f732618b5d1683
+  original:
+    hackage: strict-io-0.2.2
+- completed:
     hackage: mysql-haskell-0.8.4.3@sha256:d3ca21ae8cc88670f8adb17c7cacb8bb770f1a58d60b5bff346d1f3fc843d98c,3489
     pantry-tree:
       size: 1754

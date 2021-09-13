@@ -183,7 +183,7 @@ main = do
     pp $ "NOTE port => " ++ show port
     wsref <- newIORef []    
     let setting = WARP.setPort port WARP.defaultSettings
-    -- WARP.run port (app2 conn ref pdfRef rmap)
-    WARP.runSettings setting $ websocketsOr WS.defaultConnectionOptions wsApp (app2 conn ref pdfRef rmap)
+    WARP.run port (app2 conn ref pdfRef rmap)
+    -- WARP.runSettings setting $ websocketsOr WS.defaultConnectionOptions wsApp (app2 conn ref pdfRef rmap)
     close conn
     

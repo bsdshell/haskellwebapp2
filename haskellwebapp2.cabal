@@ -77,4 +77,4 @@ executable             haskellwebapp2_test
                        uri-encode,
                        criterion-measurement,
                        pretty-terminal,
-                       strict
+                       strict-io

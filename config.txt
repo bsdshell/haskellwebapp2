@@ -1,17 +1,23 @@
 os = Darwin
+-- test 8081
 testdb = myfile/bitbucket/database/test_sqlite3.db
--- webappdb = myfile/bitbucket/database/haskellwebapp2_sqlite3.db
 webappdb = myfile/bitbucket/database/haskellwebapp2_sqlite3_test.db
+port = 8081
+rootdir = myfile/bitbucket/haskellwebapp2
 host = localhost 
+--
+-- live 8080
+-- webappdb = myfile/bitbucket/database/haskellwebapp2_sqlite3.db
+-- rootdir = myfile/mybin/haskellwebapp2Bin
+-- host = localhost 
 -- snippetpath = myfile/bitbucket/snippets/snippet.hs
--- port = 8081 
-port = 8081 
+-- port = 8080
+--
 snippetpath = myfile/bitbucket/snippets/snippet_test.hs
 readSnippetFile = False 
 datadir = src/datadir
 datadirlatex = src/datadir/latex
-rootdir = myfile/bitbucket/haskellwebapp2
--- rootdir = myfile/mybin/haskellwebapp2Bin
+
 
 os = freebsd 
 testdb = myfile/bitbucket/database/test_sqlite3.db

@@ -6,13 +6,17 @@
   hash: 2f8fb59740d334fd829a7caadda13c773c0784382178f13bbcd990023b0d1bc9
 /Users/aaa/.stack/programs/x86_64-osx/ghc-8.8.4/lib/ghc-8.8.4/include/ghcversion.h:
   hash: 297e8571427d670d413977834f5cdfc77cb89051d2f5b8302303c442346d15d0
+/Users/aaa/myfile/bitbucket/haskellwebapp2/src/AronHtml.hs:
+  hash: b6b52c1e33ba8560eca22adb3209b6503a0463ae8e99d3ddde837f32ec3b7c78
 ? /Users/aaa/myfile/bitbucket/haskellwebapp2/.stack-work/dist/x86_64-osx/Cabal-3.0.1.0/build/haskellwebapp2_test/autogen/cabal_macros.h
-: hash: d3df8fec44bf967b68e3c3f836dcb20078ef49c514ef5663fbf590d08b9fe32e
+: hash: a89f41fa40ca8f57ad08f4dad047d5aad978226289a5ec8c835aef4dfdcf1755
 /Users/aaa/myfile/bitbucket/haskellwebapp2/src/PortableLines.hs:
   hash: 85d6946fc772a61ccef37ba395a16f092fb14e043ee55bef6301b51050000d9d
 /Users/aaa/myfile/bitbucket/haskellwebapp2/src/AronModule.hs:
-  hash: c395ec1f164b7e7ec0c3216ccea4215468f245ea2596f15abbb565ce7fbbdfbe
+  hash: 2c79bfa7738b20bff6f0dacaf16398d1000708e16393dae842843b24eab1c21c
+/Users/aaa/myfile/bitbucket/haskellwebapp2/src/WaiLib.hs:
+  hash: b6f7591bb7fbc41349f7b1ec624e7cbfbd1b8114329a2a8f415013d6bcfaba13
 /Users/aaa/myfile/bitbucket/haskellwebapp2/haskellwebapp2.cabal:
-  hash: 933697afc1eede4f57973bf5f8da9027c5bd412145c10a599dde53a1ef8f4a95
+  hash: ef0ad4b0c71c7c5b892c2add328596b4149fda12fbc5839eec47cdd40c0409a0
 /Users/aaa/myfile/bitbucket/haskellwebapp2/src/GenePDFHtmlLib.hs:
-  hash: 16049d92faf4a752bbd1392167156d1c224b5ac3fc19ff3a3747c0ec1e30d6af
+  hash: e0fb0d0b8d6c9fd3c3edb1543e5d49230447526effcb540233e9bc8b899fc44b

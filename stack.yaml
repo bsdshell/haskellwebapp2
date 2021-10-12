@@ -17,11 +17,21 @@
 #
 # resolver: ./custom-snapshot.yaml
 # resolver: https://example.com/snapshots/2018-01-01.yaml
-# resolver: lts-13.28
+# ghc-8.6.5
+resolver: lts-13.28
+
+# Tue 14 Sep 12:27:19 2021 
+# https://github.com/commercialhaskell/stack/issues/5491
 # 
-#   
 # ghc 8.8.4, test ~/.local/bin/haskell-language-server
+# There is bug in Big Sur for following tls-16.7
 resolver: lts-16.17
+
+# Tue 14 Sep 12:28:30 2021 
+# FIXED: 
+#  https://github.com/commercialhaskell/stack/issues/5491
+# ghc-8.10.4 
+# resolver: lts-17.12
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
@@ -66,6 +76,8 @@ extra-deps:
 - direct-sqlite-2.3.26
 - tcp-streams-1.0.1.1
 - wire-streams-0.1.1.0
+
+
 
 # flags: {}
 

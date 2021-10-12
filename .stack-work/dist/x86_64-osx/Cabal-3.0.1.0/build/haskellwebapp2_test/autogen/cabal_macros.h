@@ -11,17 +11,6 @@
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_haskellwebapp2 */
 
-/* package OpenGL-3.0.3.0 */
-#ifndef VERSION_OpenGL
-#define VERSION_OpenGL "3.0.3.0"
-#endif /* VERSION_OpenGL */
-#ifndef MIN_VERSION_OpenGL
-#define MIN_VERSION_OpenGL(major1,major2,minor) (\
-  (major1) <  3 || \
-  (major1) == 3 && (major2) <  0 || \
-  (major1) == 3 && (major2) == 0 && (minor) <= 3)
-#endif /* MIN_VERSION_OpenGL */
-
 /* package aeson-1.4.7.1 */
 #ifndef VERSION_aeson
 #define VERSION_aeson "1.4.7.1"
@@ -120,39 +109,6 @@
   (major1) == 0 && (major2) <  7 || \
   (major1) == 0 && (major2) == 7 && (minor) <= 1)
 #endif /* MIN_VERSION_data_default */
-
-/* package diagrams-1.4 */
-#ifndef VERSION_diagrams
-#define VERSION_diagrams "1.4"
-#endif /* VERSION_diagrams */
-#ifndef MIN_VERSION_diagrams
-#define MIN_VERSION_diagrams(major1,major2,minor) (\
-  (major1) <  1 || \
-  (major1) == 1 && (major2) <  4 || \
-  (major1) == 1 && (major2) == 4 && (minor) <= 0)
-#endif /* MIN_VERSION_diagrams */
-
-/* package diagrams-lib-1.4.3 */
-#ifndef VERSION_diagrams_lib
-#define VERSION_diagrams_lib "1.4.3"
-#endif /* VERSION_diagrams_lib */
-#ifndef MIN_VERSION_diagrams_lib
-#define MIN_VERSION_diagrams_lib(major1,major2,minor) (\
-  (major1) <  1 || \
-  (major1) == 1 && (major2) <  4 || \
-  (major1) == 1 && (major2) == 4 && (minor) <= 3)
-#endif /* MIN_VERSION_diagrams_lib */
-
-/* package diagrams-svg-1.4.3 */
-#ifndef VERSION_diagrams_svg
-#define VERSION_diagrams_svg "1.4.3"
-#endif /* VERSION_diagrams_svg */
-#ifndef MIN_VERSION_diagrams_svg
-#define MIN_VERSION_diagrams_svg(major1,major2,minor) (\
-  (major1) <  1 || \
-  (major1) == 1 && (major2) <  4 || \
-  (major1) == 1 && (major2) == 4 && (minor) <= 3)
-#endif /* MIN_VERSION_diagrams_svg */
 
 /* package directory-1.3.6.0 */
 #ifndef VERSION_directory
@@ -660,15 +616,15 @@
   (major1) == 0 && (major2) == 1 && (minor) <= 3)
 #endif /* MIN_VERSION_word8 */
 
-/* tool gcc-4.2.1 */
+/* tool gcc-12.0.5 */
 #ifndef TOOL_VERSION_gcc
-#define TOOL_VERSION_gcc "4.2.1"
+#define TOOL_VERSION_gcc "12.0.5"
 #endif /* TOOL_VERSION_gcc */
 #ifndef MIN_TOOL_VERSION_gcc
 #define MIN_TOOL_VERSION_gcc(major1,major2,minor) (\
-  (major1) <  4 || \
-  (major1) == 4 && (major2) <  2 || \
-  (major1) == 4 && (major2) == 2 && (minor) <= 1)
+  (major1) <  12 || \
+  (major1) == 12 && (major2) <  0 || \
+  (major1) == 12 && (major2) == 0 && (minor) <= 5)
 #endif /* MIN_TOOL_VERSION_gcc */
 
 /* tool ghc-8.8.4 */
@@ -760,7 +716,7 @@
 #endif /* MIN_TOOL_VERSION_runghc */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-KvY1nX99A8HFm21i19zT9L-haskellwebapp2_test"
+#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-CUQvMCHgLpJJTTVwLY2M4B-haskellwebapp2_test"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

@@ -31,3 +31,8 @@
 
 * Install project: `install.sh in`
 
+## Add function to find the full path of binary like the following
+
+``` bash
+which pdflatex
+```

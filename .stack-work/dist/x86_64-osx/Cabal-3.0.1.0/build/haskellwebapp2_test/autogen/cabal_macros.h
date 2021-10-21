@@ -330,6 +330,17 @@
   (major1) == 1 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_regex */
 
+/* package regex-applicative-0.3.3.1 */
+#ifndef VERSION_regex_applicative
+#define VERSION_regex_applicative "0.3.3.1"
+#endif /* VERSION_regex_applicative */
+#ifndef MIN_VERSION_regex_applicative
+#define MIN_VERSION_regex_applicative(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  3 || \
+  (major1) == 0 && (major2) == 3 && (minor) <= 3)
+#endif /* MIN_VERSION_regex_applicative */
+
 /* package regex-base-0.94.0.0 */
 #ifndef VERSION_regex_base
 #define VERSION_regex_base "0.94.0.0"
@@ -341,16 +352,16 @@
   (major1) == 0 && (major2) == 94 && (minor) <= 0)
 #endif /* MIN_VERSION_regex_base */
 
-/* package regex-compat-0.95.2.0 */
-#ifndef VERSION_regex_compat
-#define VERSION_regex_compat "0.95.2.0"
-#endif /* VERSION_regex_compat */
-#ifndef MIN_VERSION_regex_compat
-#define MIN_VERSION_regex_compat(major1,major2,minor) (\
+/* package regex-compat-tdfa-0.95.1.4 */
+#ifndef VERSION_regex_compat_tdfa
+#define VERSION_regex_compat_tdfa "0.95.1.4"
+#endif /* VERSION_regex_compat_tdfa */
+#ifndef MIN_VERSION_regex_compat_tdfa
+#define MIN_VERSION_regex_compat_tdfa(major1,major2,minor) (\
   (major1) <  0 || \
   (major1) == 0 && (major2) <  95 || \
-  (major1) == 0 && (major2) == 95 && (minor) <= 2)
-#endif /* MIN_VERSION_regex_compat */
+  (major1) == 0 && (major2) == 95 && (minor) <= 1)
+#endif /* MIN_VERSION_regex_compat_tdfa */
 
 /* package regex-posix-0.96.0.0 */
 #ifndef VERSION_regex_posix
@@ -716,7 +727,7 @@
 #endif /* MIN_TOOL_VERSION_runghc */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-CUQvMCHgLpJJTTVwLY2M4B-haskellwebapp2_test"
+#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-55xvnwWWt5c9ItAvikpjDH-haskellwebapp2_test"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

@@ -36,3 +36,22 @@
 ``` bash
 which pdflatex
 ```
+
+## Add code to padding CodeBlock header (Thursday, 21 October 2021 12:47 PDT)
+* If the following format is found, no padding
+
+``` bash
+	dot:cat:pig
+	line 1
+```
+* If other format, then padding the header
+
+``` bash
+    dog cat
+	line 1
+	
+	# Padding with random number 314
+	314:*:dog cat
+	line 1
+```
+

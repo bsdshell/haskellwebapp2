@@ -84,4 +84,5 @@ executable             haskellwebapp2
                        criterion-measurement,
                        pretty-terminal,
                        strict-io,
-                       regex-applicative
+                       regex-applicative,
+                       lens

@@ -209,6 +209,17 @@
   (major1) == 1 && (major2) == 5 && (minor) <= 2)
 #endif /* MIN_VERSION_io_streams */
 
+/* package lens-4.18.1 */
+#ifndef VERSION_lens
+#define VERSION_lens "4.18.1"
+#endif /* VERSION_lens */
+#ifndef MIN_VERSION_lens
+#define MIN_VERSION_lens(major1,major2,minor) (\
+  (major1) <  4 || \
+  (major1) == 4 && (major2) <  18 || \
+  (major1) == 4 && (major2) == 18 && (minor) <= 1)
+#endif /* MIN_VERSION_lens */
+
 /* package mini-egison-1.0.0 */
 #ifndef VERSION_mini_egison
 #define VERSION_mini_egison "1.0.0"
@@ -727,7 +738,7 @@
 #endif /* MIN_TOOL_VERSION_runghc */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-55xvnwWWt5c9ItAvikpjDH-haskellwebapp2"
+#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-DgFju6TIKv9718lJklEulV-haskellwebapp2"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

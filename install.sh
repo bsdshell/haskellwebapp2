@@ -58,8 +58,8 @@ printc 200 "[fname=$fname]"
 printc 200 "[dir=$dir]"
 printc 200 "[bindir=$bindir]"
 
-echo "install in => install"
-echo "install un => uninstall"
+printc 222 "install in => install"
+printc 222 "install un => uninstall"
 
 if [[ "$1" == "in" ]]; then
     mkdir "$bindir"
@@ -71,7 +71,11 @@ if [[ "$1" == "in" ]]; then
     # ignore .git dir
     cd $b
     # -L copy symbolic link as a actual file
-    rsync -Lav --exclude '.git' --exclude 'pdf' haskellwebapp2/ $bindir
+    rsync -Lav --exclude '.git' --exclude 'pdf'                         \
+               --exclude '.stack-work'  --exclude 'config.txt'          \
+               --exclude 'config_prod.txt' --exclude 'config_test.txt'  \
+               haskellwebapp2/ $bindir
+
     rsync -av haskellwebapp2/pdf $bindir
 
 #    cp -av  copy symbolink too
@@ -91,6 +95,11 @@ if [[ "$1" == "in" ]]; then
     ln -s $scr/haskellwebapp2.sh haskellwebapp2.sh 
 #    ls -lah $mybin
     ls -lah $sym | grep $fname
+
+    printc 222 "exclude .git pdf and .stack-work"
+    cd "$bindir"
+    replaceFileWithStr  haskellwebapp2_test haskellwebapp2 haskellwebapp2.cabal
+    cp $hw/config_prod.txt ./config.txt
 elif [[ "$1" == "un" ]]; then
     rm -rf $bindir
     cd $sym

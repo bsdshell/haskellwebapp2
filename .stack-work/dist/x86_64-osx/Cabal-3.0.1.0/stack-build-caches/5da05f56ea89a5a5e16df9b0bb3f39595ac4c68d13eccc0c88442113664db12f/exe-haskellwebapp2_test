@@ -1,22 +1,24 @@
 /Users/aaa/myfile/bitbucket/haskellwebapp2/src/Main.hs:
   hash: 764593db1dfe1fb4f2df1ede1aac4471f5d19c10f7d2a49bac92d74890a9ebcf
 /Users/aaa/myfile/bitbucket/haskellwebapp2/src/AronHtml2.hs:
-  hash: 4f4eb38a5cd0a81d5a7deb4b68a336eb520db4d3a3d7efc4cea62d32bae72686
+  hash: 08e7f55ae44a91d81921c08fe3cd5f8d31906f543f2617166d6e637fae4f5e35
 /Users/aaa/myfile/bitbucket/haskellwebapp2/README.md:
-  hash: 05526d2e7882ebf8dcda553045720523532bb805282a85bdaa3871b77a347ffc
+  hash: a19aaf797ce09448184378886c4a7137d0c0efcf3c2fc1901ff9fdcb22aa226b
 /Users/aaa/.stack/programs/x86_64-osx/ghc-8.8.4/lib/ghc-8.8.4/include/ghcversion.h:
   hash: 297e8571427d670d413977834f5cdfc77cb89051d2f5b8302303c442346d15d0
 /Users/aaa/myfile/bitbucket/haskellwebapp2/src/AronHtml.hs:
   hash: b6b52c1e33ba8560eca22adb3209b6503a0463ae8e99d3ddde837f32ec3b7c78
 ? /Users/aaa/myfile/bitbucket/haskellwebapp2/.stack-work/dist/x86_64-osx/Cabal-3.0.1.0/build/haskellwebapp2_test/autogen/cabal_macros.h
-: hash: 8bca7c79505066445dd357ba3938c0df85393a2beb597b9613d1b6880a526378
+: hash: b4213b020a922f969a3b3889733715f88cf8d7d9fbb986985c9bbbaccd31afe8
 /Users/aaa/myfile/bitbucket/haskellwebapp2/src/PortableLines.hs:
   hash: 85d6946fc772a61ccef37ba395a16f092fb14e043ee55bef6301b51050000d9d
 /Users/aaa/myfile/bitbucket/haskellwebapp2/src/AronModule.hs:
-  hash: 3cd69da40941b34934d0ef7e5bbc0bae0ec8c96209e797b5d9b2f95885f8f6fc
+  hash: 1c303f13a6c888309180bd21e36a47b9ab8d03170b872d041b27f8b616320eea
 /Users/aaa/myfile/bitbucket/haskellwebapp2/src/WaiLib.hs:
-  hash: 81f6bb03daa95406d0f1eb2db331f278c3aedf1f467fbdf7e4f27a7c9ea72229
+  hash: 6be2c9a1a602e2b6a29346ca3b632794ea18c0843805dcb1691caf29468b10eb
 /Users/aaa/myfile/bitbucket/haskellwebapp2/haskellwebapp2.cabal:
-  hash: 715ecd46d34d1493345de3caf6c656032c003693038842cf66ebed9c98e76b34
+  hash: 6103a017da8b05144503a2a0cd7c56112190ff6be509e4145178f00019ed55fb
+/Users/aaa/myfile/bitbucket/haskellwebapp2/src/AronAlias.hs:
+  hash: 904d855c786e272a1d0f3fb315662bb7d59f2324986397c2df19fc7cc175aeb4
 /Users/aaa/myfile/bitbucket/haskellwebapp2/src/GenePDFHtmlLib.hs:
   hash: e0fb0d0b8d6c9fd3c3edb1543e5d49230447526effcb540233e9bc8b899fc44b

@@ -26,9 +26,9 @@ pre {
     margin-bottom: 1px;
     /*! margin-left: 4px; */
     /* background: #c1bfab69;*/
-    border-style: outset;
+    border-style: ridge;
     border-width: thin;
-    color: #52a45f;
+    /*! color: #52a45f; */
     /*! background: blanchedalmond; */
     padding-left: 4px;
 }

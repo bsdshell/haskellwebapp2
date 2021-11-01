@@ -55,3 +55,38 @@ which pdflatex
 	line 1
 ```
 
+## Change CodeBlock table to the following (Sunday, 31 October 2021 13:37 PDT)
+### Old CodeBlock schema
+``` sql
+CREATE TABLE CodeBlock (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    header TEXT, 
+    codeblock TEXT
+);
+```
+### New CodeBlock schema
+
+``` sql
+CREATE TABLE CodeBlock (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    header TEXT, 
+    codeblock TEXT, 
+    addedtime DATETIME DEFAULT (stftime('%s', 'now')), 
+    score INTEGER DEFAULT 0
+);
+```
+* **score** can be **NEGATIVE**
+
+### Now, we can sort column according score (from table **CodeBlock**)
+* Currently, we sort score in reverse order. In other words, the highest score will be on top.
+* The code can be changed to sort according addedtime
+
+### Background color and Font color are store in Redis
+``` sql
+    redis-cli
+	keys 'HTMLPre.color'
+	keys 'HTMLPre.background-color'
+
+	Redis KEYS 'color'
+	Redis KEYS 'background-color'
+```

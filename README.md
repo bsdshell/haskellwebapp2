@@ -77,7 +77,7 @@ CREATE TABLE CodeBlock (
 ```
 * **score** can be **NEGATIVE**
 
-### Now, we can sort column according score (from table **CodeBlock**)
+### Add code to sort score column according to *score* (from table **CodeBlock**)
 * Currently, we sort score in reverse order. In other words, the highest score will be on top.
 * The code can be changed to sort according addedtime
 
@@ -90,3 +90,8 @@ CREATE TABLE CodeBlock (
 	Redis KEYS 'color'
 	Redis KEYS 'background-color'
 ```
+### BUG: Background color and Font color are not change after Javascript changes css attribute.
+* It seems to me Firefox is caching css attribute. I have no idea how to remove or reload with Javascript
+* If private mode is used, the colors are changed.
+
+### Add buttons to increase or decrease score

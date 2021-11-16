@@ -36,7 +36,7 @@ function help(){
     printc 196 "help message"
 }
 
-source $HOME/myfile/bitbucket/script/color.sh  
+source $HOME/myfile/bitbucket/script/AronLib.sh  
 getpwd
 
 MySymbin="$HOME/myfile/symbin"
@@ -62,3 +62,6 @@ cmd2="stack exec haskellwebapp2_test"
 printBox 4 "$cmd1"
 printBox 5 "$cmd2"
 eval "$cmd1" && eval "$cmd2"
+
+ogG "$(fullDate)"
+

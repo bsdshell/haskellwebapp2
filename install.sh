@@ -99,7 +99,19 @@ if [[ "$1" == "in" ]]; then
     printc 222 "exclude .git pdf and .stack-work"
     cd "$bindir"
     replaceFileWithStr  haskellwebapp2_test haskellwebapp2 haskellwebapp2.cabal
-    cp $hw/config_prod.txt ./config.txt
+
+    cmd4="cp $hw/config_prod.txt ./config.txt"
+    eval "$cmd4"
+    printBox 2 "$cmd4"
+    logG "$cmd4"
+
+    cmd5="cp $hw/run_prod.sh ./run.sh"
+    eval "$cmd5"
+    printBox 2 "$cmd5"
+    logG "$cmd5"
+
+    ./run.sh
+    logG "$PWD/run.sh"
 elif [[ "$1" == "un" ]]; then
     rm -rf $bindir
     cd $sym

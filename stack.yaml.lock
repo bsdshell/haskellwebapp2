@@ -102,6 +102,13 @@ packages:
       sha256: c99a12bfcbeacc5da8f166fbed1eb105a45f08be1a3a071fe9f903b386b14e1d
   original:
     hackage: wire-streams-0.1.1.0
+- completed:
+    hackage: juicy-draw-0.2.0.0@sha256:436a9b67e8c1d976a08bd5932c00a7204848589df6c18df0dcec00aea584614a,1253
+    pantry-tree:
+      size: 395
+      sha256: 67f1e16fe07671969621bf2e79848472bae9e949a28f75fca7867fe0af951c28
+  original:
+    hackage: juicy-draw-0.2.0.0
 snapshots:
 - completed:
     size: 532386

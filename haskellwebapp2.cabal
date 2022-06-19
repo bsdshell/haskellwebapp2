@@ -85,4 +85,7 @@ executable             haskellwebapp2_test
                        pretty-terminal,
                        strict-io,
                        regex-applicative,
-                       lens
+                       lens,
+                       JuicyPixels,
+                       juicy-draw,
+                       primitive

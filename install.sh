@@ -110,8 +110,10 @@ if [[ "$1" == "in" ]]; then
     printBox 2 "$cmd5"
     logG "$cmd5"
 
-    ./run.sh
-    logG "$PWD/run.sh"
+    # ./run.sh
+    # logG "$PWD/run.sh"
+
+    printBox 2 "NOTE: change port from 8081 to 8080 in aronlib.js"
 elif [[ "$1" == "un" ]]; then
     rm -rf $bindir
     cd $sym

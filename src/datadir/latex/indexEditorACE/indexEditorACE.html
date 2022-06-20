@@ -218,8 +218,9 @@
 	<div class="dropdown">
 	    <div class="select">
 		<select onchange="selectKeyBinding(this);">
-		    <option value='100'>Emacs</option>
-		    <option value='101'>Vim</option>
+		    <option value='100'>Textinput</option>
+		    <option value='101'>Emacs</option>
+		    <option value='102'>Vim</option>
 		</select>
 	    </div>
 	</div>
@@ -241,7 +242,7 @@
         latexcode_replace314
 	    </div>
 	    <input type="text" id="idurl" style="display:none;font-size:18px;width:100%;background-color:black;color:green;" class="hide" value="Mandlebrotset" />
-	    <textarea name="textarea" id="iddebug"   rows="5" cols="30" style="display:block;font-size:18px;width:100%;background-color:black;color:green">I am a disabled textarea</textarea>
+	    <textarea name="textarea" id="iddebug"   rows="5" cols="30" style="display:block;font-size:18px;width:100%;background-color:black;color:green"  spellcheck="false" >I am a disabled textarea</textarea>
 	    
 	</div>
 	<div id="rightThing" style="width:50%; background-color:#A9A9A9;">
@@ -283,7 +284,7 @@
    editor.setTheme("ace/theme/monokai");
    // editor.session.setMode("ace/mode/javascript");
    editor.session.setMode("ace/mode/latex");
-   editor.setKeyboardHandler('ace/keyboard/emacs');
+   editor.setKeyboardHandler('ace/keyboard/textinput');
    // editor.session.setMode("ace/mode/haskell");
    editor.container.style.background = 'black';
    editor.setAutoScrollEditorIntoView(true);
@@ -406,9 +407,11 @@
        // alert('obj.value=' + obj.value)
        // alert('obj.selectedIndex=' + obj.selectedIndex)
        if(obj.selectedIndex == 0){
-	   editor.setKeyboardHandler('ace/keyboard/emacs');
+           editor.setKeyboardHandler('ace/keyboard/textinput');
        }else if(obj.selectedIndex == 1){
-	   editor.setKeyboardHandler('ace/keyboard/vim');
+           editor.setKeyboardHandler('ace/keyboard/emacs');
+       }else if(obj.selectedIndex == 2){
+           editor.setKeyboardHandler('ace/keyboard/vim');
        }
    }
 

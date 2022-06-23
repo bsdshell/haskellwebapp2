@@ -43,7 +43,7 @@ function help(){
     printc 196 "help message"
 }
 
-source "$HOME/myfile/bitbucket/script/color.sh"  
+source "$HOME/myfile/bitbucket/script/AronLib.sh"  
 
 getpwd
 
@@ -110,10 +110,19 @@ if [[ "$1" == "in" ]]; then
     printBox 2 "$cmd5"
     logG "$cmd5"
 
+    cd "$bindir"
+    cmd6="replaceFileWithStr  'http://localhost:8081'  'http://localhost:8080' src/js/aronlib.js"
+    printBox 2 "$cmd6"
+    eval "$cmd6"
+
+    cmd7="replaceFileWithStr  'http://localhost:8081'  'http://localhost:8080' $bindir/help.html" 
+    printBox 2 "$cmd7"
+    eval "$cmd7"
+
     # ./run.sh
     # logG "$PWD/run.sh"
+    printBox 2 "NOTE: http://localhost:8081 ⟹  http://localhost:8080 in aronlib.js"
 
-    printBox 2 "NOTE: change port from 8081 to 8080 in aronlib.js"
 elif [[ "$1" == "un" ]]; then
     rm -rf $bindir
     cd $sym

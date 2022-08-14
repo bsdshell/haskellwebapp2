@@ -123,6 +123,10 @@ if [[ "$1" == "in" ]]; then
     # logG "$PWD/run.sh"
     printBox 2 "NOTE: http://localhost:8081 ⟹  http://localhost:8080 in aronlib.js"
 
+    cd $bindir
+    printBox 2 "NOTE: Need to run => stack build haskellwebapp2 in haskellwebapp2Bin => to generate binary file haskellwebapp2"
+    stack build haskellwebapp2
+
 elif [[ "$1" == "un" ]]; then
     rm -rf $bindir
     cd $sym

@@ -11,6 +11,17 @@
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_haskellwebapp2 */
 
+/* package JuicyPixels-3.3.5 */
+#ifndef VERSION_JuicyPixels
+#define VERSION_JuicyPixels "3.3.5"
+#endif /* VERSION_JuicyPixels */
+#ifndef MIN_VERSION_JuicyPixels
+#define MIN_VERSION_JuicyPixels(major1,major2,minor) (\
+  (major1) <  3 || \
+  (major1) == 3 && (major2) <  3 || \
+  (major1) == 3 && (major2) == 3 && (minor) <= 5)
+#endif /* MIN_VERSION_JuicyPixels */
+
 /* package aeson-1.4.7.1 */
 #ifndef VERSION_aeson
 #define VERSION_aeson "1.4.7.1"
@@ -209,6 +220,17 @@
   (major1) == 1 && (major2) == 5 && (minor) <= 2)
 #endif /* MIN_VERSION_io_streams */
 
+/* package juicy-draw-0.2.0.0 */
+#ifndef VERSION_juicy_draw
+#define VERSION_juicy_draw "0.2.0.0"
+#endif /* VERSION_juicy_draw */
+#ifndef MIN_VERSION_juicy_draw
+#define MIN_VERSION_juicy_draw(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  2 || \
+  (major1) == 0 && (major2) == 2 && (minor) <= 0)
+#endif /* MIN_VERSION_juicy_draw */
+
 /* package lens-4.18.1 */
 #ifndef VERSION_lens
 #define VERSION_lens "4.18.1"
@@ -285,6 +307,17 @@
   (major1) == 0 && (major2) <  1 || \
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_pretty_terminal */
+
+/* package primitive-0.7.0.1 */
+#ifndef VERSION_primitive
+#define VERSION_primitive "0.7.0.1"
+#endif /* VERSION_primitive */
+#ifndef MIN_VERSION_primitive
+#define MIN_VERSION_primitive(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  7 || \
+  (major1) == 0 && (major2) == 7 && (minor) <= 0)
+#endif /* MIN_VERSION_primitive */
 
 /* package process-1.6.9.0 */
 #ifndef VERSION_process
@@ -738,7 +771,7 @@
 #endif /* MIN_TOOL_VERSION_runghc */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-DgFju6TIKv9718lJklEulV-haskellwebapp2"
+#define CURRENT_COMPONENT_ID "haskellwebapp2-0.1.0.0-kRiFqDtxrmAgwAQdxwEym-haskellwebapp2"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

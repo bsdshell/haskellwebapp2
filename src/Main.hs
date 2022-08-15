@@ -85,6 +85,7 @@ import           Database.SQLite.Simple.Ok
 import GHC.Generics
 import qualified Data.Aeson as DA
 
+
 -- from config.txt
 -- OS -> darwin
 --       darwin -> [("", ""), ("", "") ]
@@ -122,8 +123,8 @@ config =[ [("os", "darwin")],
   -- let host = lookupJust "host" osMap
   -- let portStr = lookupJust "port" osMap
   -- return $ host ++ ":" ++ portStr
-
                  
+
 main :: IO ()
 main = do
     home <- getEnv "HOME"

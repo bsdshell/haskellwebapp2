@@ -124,8 +124,22 @@ if [[ "$1" == "in" ]]; then
     printBox 2 "NOTE: http://localhost:8081 ⟹  http://localhost:8080 in aronlib.js"
 
     cd $bindir
-    printBox 2 "NOTE: Need to run => stack build haskellwebapp2 in haskellwebapp2Bin => to generate binary file haskellwebapp2"
+    getpwd
+    printcText "NOTE: Need to run => stack build haskellwebapp2 in haskellwebapp2Bin => Generate binary file: haskellwebapp2"
+    printcText "ENTER to run"
+    read input
     stack build haskellwebapp2
+    execPath=$(stack path --local-install-root)
+    execFile="$execPath/bin/haskellwebapp2"
+    ret=$(fileExist $execFile)
+
+    if [[ "$ret" -eq 0 ]]; then
+        ftime=$(fileTimeName "$execFile")
+        printcText "$ftime => $execFile"
+    else 
+        printBox 2 "$execFile" 
+        printBox 2 "haskellwebapp2 not found"
+    fi
 
 elif [[ "$1" == "un" ]]; then
     rm -rf $bindir

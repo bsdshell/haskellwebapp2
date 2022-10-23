@@ -49,10 +49,10 @@ getpwd
 
 
 # getName -> $ff/mybin/getName  is Haskell code
-mybin=$HOME/myfile/mybin
+mybin="$HOME/myfile/mybin"
 fname=$(getName "$PWD")
-dir=${fname}Bin
-bindir=$mybin/$dir
+dir="${fname}Bin"
+bindir="$mybin/$dir"
 
 printc 200 "[fname=$fname]"
 printc 200 "[dir=$dir]"

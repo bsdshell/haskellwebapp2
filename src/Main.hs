@@ -102,7 +102,7 @@ config =[ [("os", "darwin")],
         ]
 -- [("a", "b") [("a", "b"), ("c", "d")]]
          
--- NOTE: the project does not use the shared Haskell lib in $b/haskelllib
+-- NOTE: The project does not use the shared Haskell lib in $b/haskelllib
 -- FIX it ASAP
 -- dbname = "webappdb"
 -- configFile = "./config.txt"

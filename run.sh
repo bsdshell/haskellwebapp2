@@ -59,9 +59,9 @@ sleep 2
 cmd1="stack build --ghc-options=-O2 haskellwebapp2"
 cmd2="stack exec haskellwebapp2_test"
 
-printBox 4 "$cmd1"
-printBox 5 "$cmd2"
+printc 100 "$cmd1"
+printc 100 "$cmd2"
 eval "$cmd1" && eval "$cmd2"
 
-logG "$(fullDate)"
+# logG "$(fullDate)"
 

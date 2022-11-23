@@ -95,3 +95,16 @@ CREATE TABLE CodeBlock (
 * If private mode is used, the colors are changed.
 
 ### Add buttons to increase or decrease score
+
+Sun 20 Nov 11:50:23 2022 
+### Fixed bug: Send the wrong Http header
+```
+    ("Content-type", "application/pdf") => ("Content-type", "image/png")
+```
+Sun 20 Nov 11:47:58 2022
+### Move all *.png file to **pdfimage** dir
+
+Wed 23 Nov 14:17:01 2022 
+### Fixed missing png file in Safari browser 
+* Move all png files to pdfimage folder
+

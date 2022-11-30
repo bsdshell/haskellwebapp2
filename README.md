@@ -124,5 +124,3 @@ Wed 23 Nov 14:17:01 2022
     * In aronlib.js, call doneTyping(json.retdata);
         * json.retdata = 's tt'
 
-    * Test me
-

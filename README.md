@@ -108,3 +108,21 @@ Wed 23 Nov 14:17:01 2022
 ### Fixed missing png file in Safari browser 
 * Move all png files to pdfimage folder
 
+Wed 30 Nov 12:10:03 2022 
+### NEW: After Update, Delete, Add Score, Subtract Socre buttons are pressed => Reload data from Server
+    * Store the last command in Redis database
+        * redisSet 'keyLastKey' 's tt'
+    * upateCodeBlock
+        * lastCmd <- redisGet 'keyLastKey'
+        * Send lastCmd `jason.retdata` in JSON to Client
+        * In aronlib.js, capture the JSON object => lastCmd
+            * updateCodeBlock
+            * deleteCodeBlock
+            * addScoreCodeBlock
+            * subtractScoreCodeBlock
+
+        * In aronlib.js, call doneTyping(json.retdata);
+            * json.retdata = 's tt'
+
+
+

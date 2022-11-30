@@ -108,7 +108,7 @@ Wed 23 Nov 14:17:01 2022
 ### Fixed missing png file in Safari browser 
 * Move all png files to pdfimage folder
 
-Wed 30 Nov 12:10:03 2022 
+#### Wed 30 Nov 12:10:03 2022 
 ### NEW: After Update, Delete, Add score, Subtract score buttons are pressed => Reload data from Server
 * Store the last command in Redis database
     * redisSet 'keyLastKey' 's tt'

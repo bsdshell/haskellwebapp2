@@ -40,6 +40,7 @@ executable             haskellwebapp2_test
                        unordered-containers,
                        vector,
                        array,
+                       -- pretty-simple >= 3.2.3.0,
                        pretty-simple,
                        regex-posix,
                        regex-base,
@@ -73,7 +74,7 @@ executable             haskellwebapp2_test
                        ansi-terminal,
                        mysql-haskell,
                        io-streams,
-                       mini-egison,
+                       -- mini-egison,
                        unix-time,
                        -- diagrams-lib,
                        -- diagrams-svg,
@@ -88,4 +89,18 @@ executable             haskellwebapp2_test
                        lens,
                        JuicyPixels,
                        juicy-draw,
-                       primitive
+                       primitive,
+                       orthotope,
+                       ascii-char,
+                       transformers,
+                       hxt,
+                       mtl,
+                       text-format-simple,
+                       text-icu,
+                       regex-applicative-text,
+                       -- Network.Socket
+                       network,
+                       stm
+
+
+

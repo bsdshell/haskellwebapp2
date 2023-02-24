@@ -26,27 +26,6 @@ packages:
   original:
     hackage: GLFW-0.5.2.5
 - completed:
-    hackage: mini-egison-1.0.0@sha256:43b1b7a25ff1c4945d3dc0264cfbe22f6ad2f59b3d6dcd2dc109289bacca34ce,2705
-    pantry-tree:
-      size: 748
-      sha256: 1da128494f7fce9e6d6ebc50f3bcf6d1938284e52ed44df3445578d197916eca
-  original:
-    hackage: mini-egison-1.0.0
-- completed:
-    hackage: egison-pattern-src-0.2.1.0@sha256:8f4e72f25abb4f6cf8f1283774ae0d5030c44dad32838de2423c8f9644529c78,4197
-    pantry-tree:
-      size: 2873
-      sha256: 1e840dc453284e8b8a284465fa3191ab82d2c72ac1382ab64be939b55c022e5b
-  original:
-    hackage: egison-pattern-src-0.2.1.0
-- completed:
-    hackage: egison-pattern-src-th-mode-0.2.1.0@sha256:4a5090587d9cacdc5d89328ef4bc4b1213c082fe87b4993c6e366a66628ca2a9,2703
-    pantry-tree:
-      size: 768
-      sha256: 7a4207f4f930c2ff1a113bf613d1224e440d0c3dc8d9ebe6c63d35ba164bf8c0
-  original:
-    hackage: egison-pattern-src-th-mode-0.2.1.0
-- completed:
     hackage: pretty-terminal-0.1.0.0@sha256:e9135d86ebb2a8e3aaf5a79088de4628dbd49988388e0fbfc26c5ecb3c399ad9,1638
     pantry-tree:
       size: 385
@@ -109,9 +88,41 @@ packages:
       sha256: 67f1e16fe07671969621bf2e79848472bae9e949a28f75fca7867fe0af951c28
   original:
     hackage: juicy-draw-0.2.0.0
+- completed:
+    hackage: text-format-simple-1.1.0@sha256:5815236396328f556b9896fdcb949d15b485ef05394c9dc846e94b0306cb4036,735
+    pantry-tree:
+      size: 215
+      sha256: 026136165778e83cb04c587b3609d95731ccf35da07249c9eb0f29ceb6946cbb
+  original:
+    hackage: text-format-simple-1.1.0
+- completed:
+    hackage: orthotope-0.1.2.0@sha256:bc541ef055c3ad4adeb8617d6727a96778b8aff02c84989a59d3a69d65961f76,2915
+    pantry-tree:
+      size: 2555
+      sha256: ba29d3f95445cc5460488aafe13119fc0dae6616842d3e41ce40a152d3e9c12a
+  original:
+    hackage: orthotope-0.1.2.0
+- completed:
+    hackage: prettyprinter-1.7.1@sha256:9c43c9d8c3cd9f445596e5a2379574bba87f935a4d1fa41b5407ee3cf4edc743,6987
+    pantry-tree:
+      size: 3460
+      sha256: cd6f393bf7cba603a1958a139915fc343efd5488e36fd7b3b5c6956c002d04fa
+  original:
+    hackage: prettyprinter-1.7.1
+- completed:
+    size: 52415
+    filepath: /Users/aaa/myfile/bitbucket/publicfile/haskell_package/text-icu-0.7.1.0.tar.gz
+    name: text-icu
+    version: 0.7.1.0
+    sha256: d3c88fbb02b0b341fc9755a647af7e766a1b5bffb1d40ffcf74a8f258ba415db
+    pantry-tree:
+      size: 2307
+      sha256: f0d80f3c5c2de3683e6a6fb51151313ec95bd537f78f895d3d694a53d0cb1fa5
+  original:
+    filepath: /Users/aaa/myfile/bitbucket/publicfile/haskell_package/text-icu-0.7.1.0.tar.gz
 snapshots:
 - completed:
-    size: 532386
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/16/17.yaml
-    sha256: d3ee1ae797cf63189c95cf27f00700304946c5cb3c1e6a82001cd6584a221e1b
-  original: lts-16.17
+    size: 563099
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/17/2.yaml
+    sha256: 92b1a17e31d0a978fca4bf270305d4d1dd8092271bf60eafbc9349c890854026
+  original: lts-17.2

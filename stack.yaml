@@ -18,14 +18,19 @@
 # resolver: ./custom-snapshot.yaml
 # resolver: https://example.com/snapshots/2018-01-01.yaml
 # ghc-8.6.5
-resolver: lts-13.28
+# resolver: lts-13.28
 
 # Tue 14 Sep 12:27:19 2021 
 # https://github.com/commercialhaskell/stack/issues/5491
 # 
 # ghc 8.8.4, test ~/.local/bin/haskell-language-server
 # There is bug in Big Sur for following tls-16.7
-resolver: lts-16.17
+# resolver: lts-16.17
+
+# Thu 23 Feb 14:32:51 2023 
+# Previous lts has bug on prettyprinter
+# ghc-8.10.3
+resolver: lts-17.2
 
 # Tue 14 Sep 12:28:30 2021 
 # FIXED: 
@@ -63,9 +68,9 @@ extra-deps:
 - wai-util-0.8
 - http-accept-0.2 
 - GLFW-0.5.2.5
-- mini-egison-1.0.0
-- egison-pattern-src-0.2.1.0
-- egison-pattern-src-th-mode-0.2.1.0
+# - mini-egison-1.0.0
+# - egison-pattern-src-0.2.1.0
+# - egison-pattern-src-th-mode-0.2.1.0
 - pretty-terminal-0.1.0.0
 - strict-io-0.2.2
 
@@ -77,7 +82,16 @@ extra-deps:
 - tcp-streams-1.0.1.1
 - wire-streams-0.1.1.0
 - juicy-draw-0.2.0.0
+- text-format-simple-1.1.0
+- orthotope-0.1.2.0
 
+
+# Thu 23 Feb 13:08:20 2023 
+- prettyprinter-1.7.1
+
+# KEY: icu issue on macOS
+# - text-icu-0.7.1.0
+- archive: /Users/aaa/myfile/bitbucket/publicfile/haskell_package/text-icu-0.7.1.0.tar.gz
 
 
 # flags: {}

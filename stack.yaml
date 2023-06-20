@@ -28,7 +28,7 @@
 # resolver: lts-16.17
 
 # Thu 23 Feb 14:32:51 2023 
-# Previous lts has bug on prettyprinter
+# Previous lts has bug on prettyprinter ??
 # ghc-8.10.3
 resolver: lts-17.2
 

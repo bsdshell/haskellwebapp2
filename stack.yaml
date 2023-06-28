@@ -91,7 +91,16 @@ extra-deps:
 
 # KEY: icu issue on macOS
 # - text-icu-0.7.1.0
-- archive: /Users/aaa/myfile/bitbucket/publicfile/haskell_package/text-icu-0.7.1.0.tar.gz
+- archive: /Users/aaa/myfile/bitbucket/publicfile/haskell_package/text-icu-0.7.1.0.tar
+
+# Wed 28 Jun 11:40:49 2023
+# SEE: $sp/AronModuleLib/stack.yaml
+# Fixed: Missing icu4, text-icu-0.7.1.0 when ghci is loading
+extra-include-dirs:
+- /usr/local/opt/icu4c/include
+
+extra-lib-dirs:
+- /usr/local/opt/icu4c/lib
 
 
 # flags: {}

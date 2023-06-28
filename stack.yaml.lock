@@ -110,16 +110,16 @@ packages:
   original:
     hackage: prettyprinter-1.7.1
 - completed:
-    size: 52415
-    filepath: /Users/aaa/myfile/bitbucket/publicfile/haskell_package/text-icu-0.7.1.0.tar.gz
+    size: 246784
+    filepath: /Users/aaa/myfile/bitbucket/publicfile/haskell_package/text-icu-0.7.1.0.tar
     name: text-icu
     version: 0.7.1.0
-    sha256: d3c88fbb02b0b341fc9755a647af7e766a1b5bffb1d40ffcf74a8f258ba415db
+    sha256: 77a59bb5291419b5f33e6f7aa99f7ace1f320b278d1dc001085880c8abe2451b
     pantry-tree:
       size: 2307
-      sha256: f0d80f3c5c2de3683e6a6fb51151313ec95bd537f78f895d3d694a53d0cb1fa5
+      sha256: 334a1d7fa81b10fc8bb66abd47b07b50830328c5dc09737294133e63a2efcbed
   original:
-    filepath: /Users/aaa/myfile/bitbucket/publicfile/haskell_package/text-icu-0.7.1.0.tar.gz
+    filepath: /Users/aaa/myfile/bitbucket/publicfile/haskell_package/text-icu-0.7.1.0.tar
 snapshots:
 - completed:
     size: 563099

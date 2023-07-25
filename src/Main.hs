@@ -150,7 +150,7 @@ main = do
     pdfRef <- newIORef M.empty
     ref <- newIORef M.empty 
     -- newList <- readDatabaseCodeBlock2 conn
-    newList <- readDatabaseCodeBlock3 conn 
+    newList <- readDatabaseCodeBlock conn 
     pre newList
     -- snippetMap pplist ref
     -- snippetMap newList ref

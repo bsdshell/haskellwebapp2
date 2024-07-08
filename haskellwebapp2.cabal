@@ -100,7 +100,8 @@ executable             haskellwebapp2_test
                        regex-applicative-text,
                        -- Network.Socket
                        network,
-                       stm
+                       stm,
+                       silently
 
 
 

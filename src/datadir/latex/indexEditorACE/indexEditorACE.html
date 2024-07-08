@@ -246,7 +246,8 @@
 	    
 	</div>
 	<div id="rightThing" style="width:50%; background-color:#A9A9A9;">
-	    <canvas id="the-canvas"></canvas>
+    <!-- <canvas id="the-canvas"></canvas> -->
+    <embed id="embedpdf">
 	</div>
 	hidden123
     </div>
@@ -307,17 +308,16 @@
     */
    
    function compileClick(){
+	   // ./datadir/latex/try784226/try784226.html:279:   <input  type="hidden" id='idlatex' name="myname" value="try784226.pdf" />
        var latex = document.getElementById('idlatex');
-
        let editorConfig = new Object();
        editorConfig.value = editor.getValue()
        editorConfig.theme = editor.getOption('theme')
        editorConfig.mode = editor.getOption('mode')
-       
        let editorCode = createEditorCode('compile', latex.value, editorConfig)
        let url = HOST.LOCALHOST + '/' + 'editordata'
-       
        postRequestJson(0, url, editorCode);
+	   // requestPDFAfterCompile(latex.value);
    }
     function saveClick(isOverride){
        var latex = getElem('idlatex');

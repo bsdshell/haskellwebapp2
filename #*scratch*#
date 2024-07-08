@@ -1,0 +1,13 @@
+shader, glsl shader, opengl shader
+
+mat2(
+     float, float,      # first column
+     float, float       # second column
+    );
+
+
+mat4(1.0f)                    # identify matrix
+
+mat4(vec4,  vec4,  vec4, vec4);
+      |      |      |     |
+     co1    co2    co3   co4

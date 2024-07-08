@@ -124,3 +124,19 @@ Wed 23 Nov 14:17:01 2022
     * In aronlib.js, call doneTyping(json.retdata);
         * json.retdata = 's tt'
 
+### index.html
+Fri  5 Jul 13:58:31 2024 
+
+http://localhost:8080/snippet
+
+```
+index.html is from `src/htmlBody.html`
+```
+
+### tab icon link
+Mon  8 Jul 14:19:08 2024 
+
+```
+<link rel="icon" type="image/png" href="https://xfido.com/publicfile/myicon.png" sizes="96x96" />
+```
+

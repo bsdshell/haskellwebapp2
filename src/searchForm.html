@@ -5,12 +5,20 @@
              </form>
              </div>
              <div>
-                <input id='bgidcolor' type="color" onchange="submitUpdateBackground('background:' + this.value)" name="colorname"
+                <input id='bgidcolor' type="color" onchange="submitUpdateColor('background:' + this.value)" name="colorname"
                 value="#e66465" style='background:none; border:0'>
                 <label for="body_background">Background</label>
-                <input id='textcolorid' type="color" onchange="submitUpdateBackground('color:' + this.value)" name="textcolorname"
+				
+                <input id='textcolorid' type="color" onchange="submitUpdateColor('color:' + this.value)" name="textcolorname"
                 value="#e66465" style='background:none; border:0'>
                 <label for="text_color">TextColor</label>
+
+				<select id="sortorder" onchange="submitUpdateSortOrder()">
+				 <option value="pid">pid</option>
+				 <option value="time">time</option>
+	             <option value="score">score</option>
+			    </select>
+				
                 <svg width="20" height="20">
                   <rect width="20" height="20" style="fill:rgb(10,10,255);stroke-width:3;stroke:rgb(0,0,0)" />
                 </svg>

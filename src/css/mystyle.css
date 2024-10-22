@@ -1,9 +1,10 @@
 body {
- background-color: #000000;
- margin: 0 auto;
- max-width: 1200px;
- border: 1pt solid #695b43;
- padding: 4px;
+    background-color: #000000;
+    margin: 0 auto;
+    max-width: 1200px;
+    /* border: 1pt solid #e0d1b8; */
+    padding: 4px;
+
 }    
 
 .colorclick{
@@ -20,17 +21,14 @@ pre {
     display: block;
     font-family: monospace;
     font-size: 14pt;
-    /*! white-space: pre; */
     margin-top: 1px;
-    /* margin-right: 1px; */
-    margin-bottom: 1px;
-    /*! margin-left: 4px; */
-    /* background: #c1bfab69;*/
-    border-style: ridge;
+    margin-right: 1px;
+    margin-bottom: 4px;
+    /* background: #c1bfab69; */
+    /* border-style: ridge; */
     border-width: thin;
-    /*! color: #52a45f; */
-    /*! background: blanchedalmond; */
     padding-left: 4px;
+
 }
 
 textarea {

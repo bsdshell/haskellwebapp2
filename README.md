@@ -152,3 +152,10 @@ Mon  8 Jul 14:29:44 2024
   # product file
   config_prod.txt
 ```
+
+Fri 18 Oct 16:39:31 2024 
+### Redis global keys
+
+```
+for k in $(redis-cli "KEYS" "HTMLPre.*"); do redis-cli "GET" "$k"; done
+```

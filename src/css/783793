@@ -1,0 +1,46 @@
+redis:*:redis config, redis command line, redis cmd, redis redirect, redis data location, redis shell
+KEY: current redis database
+redis-cli INFO | grep ^db
+=> db0:keys=115846,expires=0,avg_ttl=0
+KEY: redis config info, maximum 16 databases, default one is 0
+redis-cli CONFIG GET database
+=> 1) "databases"
+=> 2) "16"
+redis-cli info keyspace
+# Keyspace
+db0:keys=115846,expires=0,avg_ttl=0
+for k in $(redis-cli "KEYS" "AronLib.*"); do echo "$k"; done                    # echo keys
+for k in $(redis-cli "KEYS" "AronLib.*"); do redis-cli "GET" "$k"; done         # echo keys values
+for k in $(redis-cli "KEYS" "AronLib.*"); do echo "$k" | grep 'toString'; done  # grep keys
+for k in $(redis-cli "KEYS" "AronLib.*"); do redis-cli "DEL" "$k"; done         # delete all keys
+get "key1"                        # get value from key1
+keys "try*"                       # pattern match key try*
+redis-cli -x foo < /tmp/f.x       # redirect file to redis database
+redis-cli getRange foo 0 100      # get value from redis database, 0 100 => # of char
+p="set foo 'cat'"
+echo $p | redis-cli
+redis-cli getRange foo 0 100      # output 'cat', pipe stdin => redis
+https://redis.io/topics/rediscli
+/usr/local/etc/redis.conf         # redis config file, MacOS
+Change redis data location search 'dir' in redis.conf
+/usr/local/var/db/redis/dump.rdb  # redis data location,redis_command_line:*: redis command line, redis cmd, redis redirect, redie remote
+redis-cli -x foo < /tmp/f.x     # redirect file to redis database
+redis-cli getRange foo 0 10     # get value from redis database
+--
+sudo vim /etc/redis/redis.conf  # add following
+bind 127.0.0.1
+bind 0.0.0.0
+protected-mode no
+requirepass dumppassword        # set passwword
+--
+redis-cli -p xfido.com -p 6379 -a 'dumppassword'
+--
+redis-cli
+AUTH 'dumppassword'
+redis-cli -p xfido.com -p 6379 -a 'dumppassword' -n 0 set 'key1' 'value1'
+redis-cli -n 0 LPUSH mylist "hello". # KEY: specify database number
+|
++ -> database number
+/etc/init.d/redis-server stop        # redis stop
+/etc/init.d/redis-server start       # redis start
+https://redis.io/topics/rediscli

@@ -5,26 +5,26 @@
              </form>
              </div>
              <div>
-                <input id='bgidcolor' type="color" onchange="submitUpdateColor('background:' + this.value)" name="colorname"
-                value="#e66465" style='background:none; border:0'>
-                <label for="body_background">Background</label>
+                <input id='bgidcolor' type="color" onchange="updateCSS('background:' + this.value)" name="colorname"
+                value="#e66465" style='background:none; border-width:1px; width:20px; height:20px;'>
 				
-                <input id='textcolorid' type="color" onchange="submitUpdateColor('color:' + this.value)" name="textcolorname"
-                value="#e66465" style='background:none; border:0'>
-                <label for="text_color">TextColor</label>
-
-				<select id="sortorder" onchange="submitUpdateSortOrder()">
+                <input id='textcolorid' type="color" onchange="updateCSS('color:' + this.value)" name="textcolorname"
+                value="#e66465" style='background:none; border-width:1px; width:20px; height:20px;'>
+				
+				<select id="sortorder" onchange="updateSortOrder()" style="height:20px; border:1px;">
 				 <option value="pid">pid</option>
 				 <option value="time">time</option>
 	             <option value="score">score</option>
 			    </select>
 				
-                <svg width="20" height="20">
-                  <rect width="20" height="20" style="fill:rgb(10,10,255);stroke-width:3;stroke:rgb(0,0,0)" />
-                </svg>
-                <svg width="20" height="20">
-                  <rect width="20" height="20" style="fill:rgb(0,99,55);stroke-width:3;stroke:rgb(0,4,2)" />
-                </svg>
+          <svg width="20" height="20">
+            <rect width="20" height="20" style="fill:rgb(10,10,255);stroke-width:3;stroke:rgb(0,0,0)" />
+          </svg>
+          <svg width="20" height="20">
+            <rect width="20" height="20" style="fill:rgb(0,99,55);stroke-width:3;stroke:rgb(0,4,2)" />
+          </svg>
+				<div id='difftime' style="color:white; display:inline-block;">
+				</div>
 		<script>
 		  document.addEventListener('readystatechange', event => { 
 		      // When HTML/DOM elements are ready:

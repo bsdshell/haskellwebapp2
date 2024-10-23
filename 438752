@@ -1,0 +1,30 @@
+shell_grep:*: grep, shell, shell grep, grep logic, grep or, grep me@=364
+echo "/dog/cat" | grep "\bdog\b"                      # grep word only
+grep -Hnris --include="*.hs" 'KEY:' *                 # search in dir recursivly
+grep -v  notme    *.hs                                # NOT containing, inverse, not
+grep -i 'string' *.hs                                 # ignore case, case sensitive
+grep -I 'string' *                                    # ignore binary data
+grep --color -Hnirs class\s\+\w\+\s\+\(extends\s\+[A-Za-z_\]\+\)*\s\+\(implements\s\+\([A-Za-z_\]\+\)\)\?\(\s\+\)*\(,\s\+[A-Za-z_\]\+\)*
+grep --include="*.java" "\"[a-zA-Z]\+\""  ./          # grep include
+grep -l pattern *                                     # print file name only
+grep --include="*.[mh]"  --color -Hnris CATextLayer   # grep color
+grep 'wai\|filewatcher'                               # grep or, logic operator, grep and
+grep -E --color=always -Hnris 'build|String' *.java | more -R
+|
++ -> never
+grep --color=always -Hnris 'build\|String' *.java   | more -R
+grep -E '[[:alnum:]-]+.hs$'       # all haskell file name from a full path
+cat ~/.bash_history | grep --color "$1" | sed -E 's/^[0-9]+\s*|\s*$//g' > $tmpFile
+grep -E --color=always -l 'cat' *.java                # show file name that matches the pattern
+grep -E --color=always -hnris 'cat' *.java            # -h => no file name, -H => filename, ignore filename
+grep --exclude-dir='stack-work' -Hnris pattern *      # exclude dir
+grep -o 'http[^>]\+' '<a href=http://google.com>google</a>' # capture group sort of
+grep -Eo 'http[^>]+' '<a href=http://google.com>google</a>' # capture group sort of
+--
+grep -E 'try[0-9]{4,9}.tex'                            # range of repeating
+grep 'try[0-9]\{4,9\}.tex'                             # range of repeating
+--
+vim $(grep -l --include="*.java" pattern .)
+vim $(grep -l --include="*.java" pattern .) #vim open all files from grep
+vimgrep /MyString/ /home/mycode/**/*.m   // Search MyString pattern recursively[**/*.m] two arsterisks
+<a href=http://google.com>google</a>

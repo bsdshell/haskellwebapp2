@@ -1,0 +1,3 @@
+grep:*: grep group@=945
+# print url only, -o only matches
+hoogle search --count 5 --link bracket | grep -o https.*

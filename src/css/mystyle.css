@@ -28,7 +28,7 @@ pre {
     /* border-style: ridge; */
     border-width: thin;
     padding-left: 4px;
-
+    width:100%;
 }
 
 textarea {
@@ -92,3 +92,29 @@ textarea {
     color: #000000;
     border: 1px solid #212921; 
 }
+
+.combobox {
+    margin: 0;
+    padding: 0;
+    width:100%;
+    display:inline-flex;
+}
+
+.combobox input {
+    height: 100px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.combobox .dropdown_btn {
+    width: 18px;
+    height: 20px;
+    margin-left: -20px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: blue;
+    vertical-align: middle;
+}
+
